@@ -1,0 +1,58 @@
+{
+  "collection": [
+    {
+      "woman": [
+        {
+          "Title" : "WOMEN'S CLOTHING", 
+          "desc": "Get up to 40% off",
+          "pic" : "https://avatars.dicebear.com/api/micah/ds.svg" 
+        }
+      ] 
+    },
+    {
+      "man" : [
+        {
+          "Title" : "MEN'S CLOTHING", 
+          "desc": "Get up to 40% off",
+          "pic" : "https://avatars.dicebear.com/api/micah/ds.svg" 
+        }
+      ]
+    },
+    {
+      "kids" : [
+        {
+          "Title" : "KIDS'S CLOTHING", 
+          "desc": "Get up to 40% off",
+          "pic" : "https://avatars.dicebear.com/api/micah/ds.svg" 
+        }
+      ]
+    },
+    {
+      "lingerie": [
+        {
+          "Title" : "LINGERIE", 
+          "desc": "Get up to 40% off",
+          "pic" : "https://avatars.dicebear.com/api/micah/ds.svg" 
+        }
+      ]
+    },
+    {
+      "offers": [
+        {
+          "Title" : "CLEARANCE!", 
+          "desc": "Get up to 40% off",
+          "pic" : "https://avatars.dicebear.com/api/micah/ds.svg" 
+        }
+      ]
+    },
+    {
+     "new arrivals": [
+      {
+        "Title" : "NEW ARRIVALS", 
+        "desc": "Get up to 40% off",
+        "pic" : "https://avatars.dicebear.com/api/micah/ds.svg" 
+      }
+     ]
+    }
+  ]
+}

@@ -16,12 +16,15 @@ export const Layout = () => {
   return (
     <>
     <Header/>
+    
     <Header2/>
+    <div style={{background:"white"}}>
     <Menu/>
     <Carrousel/>
     <Collection/>
     <Cards/>
     <SocialMedia/>
+    </div>
     <Footer/>
     </>
   )

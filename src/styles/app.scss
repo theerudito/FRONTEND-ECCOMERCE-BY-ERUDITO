@@ -16,6 +16,11 @@ $top: 0;
 $right: 0;
 $bottom: 0;
 
+body {
+  background-color: rgb(235, 229, 229);
+  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Merriweather Sans', sans-serif;
+}
 
 .header1 {
   display: $display;
@@ -105,36 +110,44 @@ $bottom: 0;
   margin: $margin;
   align-items: $align-items;
   justify-content: $justify-content;
-  background-color: #6C4B58;
+  background-color: #cc5f8b;
 }
 
 .collection{
   background-color: rgb(104, 79, 79);
-  display: $display;
-  margin: 40px $margin;
-  list-style: $list-item;
-  gap: $gap;
+  display: grid;
+  margin: 5px auto;
+  grid-template-columns: auto auto auto;
+  width: auto;
+  height:auto;
+  padding-top: 5px;
+  padding-bottom: 5px;
   align-items: $align-items;
   justify-content: $justify-content;
-
+  gap: 20px;
+  
   .bodyColections {
+    background-color: rgba(114, 106, 106, 0.637);
     width: 400px;
     height: 200px;
     border: solid 1px #E5E5E5;
-    
+    background-color: none;
   }
+
   .titleCollection {
     position: absolute;
     margin-top: -180px;
     margin-left: 20px;
-    color: #6C4B58;
+    color: white;
   }
+
   .infoColection {
     position: absolute;
     margin-top: -105px;
     margin-left: 20px;
-    color: orange;
+    color: rgb(217, 255, 0);
   }
+
   .buttonShop {
     position: absolute;
     margin-top: -50px;
@@ -144,6 +157,7 @@ $bottom: 0;
     border-radius: $border-radius;
     border: $border;
   }
+
   .imageCollection {
     width: 400px;
     height: 200px;
@@ -152,19 +166,24 @@ $bottom: 0;
 
 
 .contenedorCard {
-  display: $display;
-  margin: 40px $margin;
-  list-style: $list-item;
-  gap: $gap;
+  background-color: #21965f;
+  margin: 10px auto;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
   align-items: $align-items;
   justify-content: $justify-content;
-  background-color: orange;
+  gap: 30px;
+  padding-top: 30px;
+  padding-bottom: 10px;
+  
 }
 
 .bodyCard {
-  border: silver 1px solid;
+  border-radius: 5px;
+  border: black 1px solid;
   width: 280px;
   height: 430px;
+  background-color: #fff;
 
   .containerImagen {
     display: $display;
@@ -174,10 +193,14 @@ $bottom: 0;
     align-items: $align-items;
     justify-content: $justify-content;
     margin-top: -20px;
+    
     .imagenCard {
+        object-fit: contain;
         width: 260px;
-        height: 250px;
-        border: solid 1px silver;
+        height: 200px;
+        border: solid 1px black;
+        background-color: #fff;
+        border-radius: 5px;
       }
   }
 
@@ -186,7 +209,7 @@ $bottom: 0;
     .name {
       margin-top: 1px;
       margin-left: 20px;
-      color: #6C4B58;
+      color: #ad3a68;
     }
     .description {
       margin-top: -25px;
@@ -248,7 +271,7 @@ $bottom: 0;
 }
 
 .socialMedia {
-  background-color: aqua;
+  background-color: rgb(71, 70, 70);
   display: $display;
   margin: auto;
   align-items: $align-items;
@@ -258,7 +281,7 @@ $bottom: 0;
   
   .facebook {
     border: solid 1px silver;
-    background-color: #3b5998;
+    
     transform: lowercase;
     width: 300px;
     margin: $margin;
@@ -273,14 +296,14 @@ $bottom: 0;
       margin: 10px auto;
       width: 100px;
       border: solid 1px silver;
-      color: #fff;
+      color: rgb(0, 0, 0);
       padding: 3px 5px 3px 20px;
     }
   }
 
 
   .offers {
-    background-color: rgb(111, 150, 150);
+    
     border: solid 1px silver;
     width: 400px;
     height: 200px;
@@ -303,7 +326,7 @@ $bottom: 0;
 
 
   .store {
-    background-color: #282c34;
+    
     border: solid 1px silver;
     width: 400px;
     height: 200px;
@@ -320,7 +343,7 @@ $bottom: 0;
 }
 
 .containerFooter {
-  background-color: orange;
+  
   display: $display;
   margin: $margin;
   align-items: $align-items;
@@ -328,7 +351,7 @@ $bottom: 0;
   gap: 20px;
 
   .containerLogo2 {
-    background-color: #3b5998;
+    
     display: $display;
     margin: $margin;
     align-items: $align-items;
@@ -342,7 +365,7 @@ $bottom: 0;
       margin-left: 5px;
     }
     .build {
-      background-color: #282c34;
+     
       font-size: 16px;
       margin-left: 5px;
     }
@@ -350,21 +373,21 @@ $bottom: 0;
   
 
   .information {
-    background-color: #264d99;
+  
     p {
       margin-left: 5px;
     }
   }
 
   .account {
-    background-color: #21965f;
+    
     p {
       margin-left: 5px;
     }
   }
 
   .follow {
-    background-color: #7b828f;
+    
     p {
       margin-left: 5px;
     }
