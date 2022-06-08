@@ -10,21 +10,59 @@ export const SocialMedia = () => {
 
       <div className="offers">
         <h1 className="titleOffers">HOT OFFERS</h1>
-        <p className="titleDescription">Loren ddfsdsadasdasdasdasdasdasdasdasd</p>
+        <p className="titleDescription">
+          Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+        </p>
         <ul className="listOfferts">
-          <li> -- Nam elit magna hendrerit </li>
-          <li> -- Nam elit magna hendrerit </li>
-          <li> -- Nam elit magna hendrerit </li>
+
+          <li>
+            <i class="fa-solid fa-angle-right"></i>Nam elit magna hendrerit
+          </li>
+
+          <li>
+            <i class="fa-solid fa-angle-right"></i>Nam elit magna hendrerit
+          </li>
+
+
+          <li>
+            <i class="fa-solid fa-angle-right"></i>Nam elit magna hendrerit
+          </li>
+
+
+          <li>
+            <i class="fa-solid fa-angle-right"></i>Nam elit magna hendrerit
+          </li>
+
+
+          <li>
+            <i class="fa-solid fa-angle-right"></i>Nam elit magna hendrerit
+          </li>
+
         </ul>
       </div>
 
       <div className="store">
         <h1 className="titlestore">STORE INFORMATION</h1>
         <ul className="listStore">
-          <li>Direction: Quito Ecuador</li>
-          <li>Phone: 88544545464</li>
-          <li>Email: email@buy.com</li>
-          <li>Suport: suport@helpme.com</li>
+          <li>
+            <i className="fa-solid fa-location-dot"></i>
+            Direction: Quito - Ecuador
+          </li>
+
+          <li>
+            <i className="fa-solid fa-mobile"></i>
+            Phone: 88544545464
+          </li>
+
+          <li>
+            <i className="fa-solid fa-envelope-circle-check"></i>
+            Email: email@buy.com
+          </li>
+
+          <li>
+            <i className="fa-solid fa-circle-info"></i>
+            Suport: suport@helpme.com
+          </li>
         </ul>
       </div>
     </div>

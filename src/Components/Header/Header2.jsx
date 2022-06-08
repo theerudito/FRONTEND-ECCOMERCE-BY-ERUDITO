@@ -1,11 +1,13 @@
 import React from "react";
 
+
+
 export const Header2 = () => {
   return (
     <div className="header2">
 
       <div className="contenedorLogo1">
-        <img className='logo1' src="https://www.facebook.com/images/fb_icon_325x325.png" alt="facebook" />
+        <img className='logo1' src="https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Avatares%2FCategories%2Flogo1.svg?alt=media&token=29b3a6cc-833a-4fa7-b739-fa02027db8bf" alt="logo1" />
       </div>
 
       <div className="containerSeach">
@@ -14,7 +16,8 @@ export const Header2 = () => {
       </div>
 
       <div className="containerCart">
-        <button className="buttonCart">Cart</button>
+      
+        <button className="buttonCart"><i class="fa-solid fa-cart-shopping"></i></button>
         <p className="add">1</p>
       </div>
 

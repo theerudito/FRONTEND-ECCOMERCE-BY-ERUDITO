@@ -21,8 +21,8 @@ export const Cards = () => {
             <p className="starts">{item.star} </p>
   
             <div className="containerInforPrice">
-              <p className="price">${item.price} </p>
-              <p className="offert">${item.priceDesc}</p>
+              <p className="price">{item.price} </p>
+              <p className="offert">{item.priceDesc}</p>
               <p className="desc">{item.desc} </p>
             </div>
   

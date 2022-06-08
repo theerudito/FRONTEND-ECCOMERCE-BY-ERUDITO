@@ -5,8 +5,8 @@ export const Footer = () => {
     <div className='containerFooter'>
 
         <div className='containerLogo2'>
-          <img className='logo2' src="https://www.facebook.com/images/fb_icon_325x325.png" alt="facebook" />
-          <h1 className='build'> © 2022 ecommerce software by @theerudito</h1>
+          <img className='logo2' src="https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Avatares%2FCategories%2Flogo2.svg?alt=media&token=fda67e02-c113-488a-b82c-77e3bacb2ab0" alt='logo2' />
+          
         </div>
 
         <div className='information'>

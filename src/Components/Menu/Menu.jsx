@@ -11,6 +11,11 @@ export const Menu = () => {
       <li>ACCESSORIES</li>
     </ul>
 
-    </div>
+ 
+</div>
+
+
+
+ 
   )
 }
