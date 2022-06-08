@@ -27,7 +27,7 @@ export const Collection1 = [
   {
     Title: "VIDEO CARDS",
     desc: "Get up to 40% off",
-    pic: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Avatares%2FCategories%2Fvt.png?alt=media&token=76167bd6-6ea2-40d5-97d2-87d06f366920",
+    pic: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Avatares%2FCategories%2Fvc.png?alt=media&token=52dd4d55-a398-480f-ad84-1d5f2c099fb2",
   },
 ];
 
