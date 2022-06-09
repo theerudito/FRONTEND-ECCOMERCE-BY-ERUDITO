@@ -715,6 +715,75 @@ body {
         padding: 3px 5px 3px 20px;
       }
     }
+
+    .offers {
+    
+      border: solid 1px silver;
+      width: 360px;
+      height: 200px;
+      margin: $margin;
+      display: grid;
+      align-items: $align-items;
+      justify-content: $justify-content;
+
+      .titleOffers {
+        font-size: 24px;
+        padding-left: 35px;
+        margin: 0px $margin;
+        display: grid;
+        align-items: $align-items;
+        justify-content: $justify-content;
+      }
+      .titleDescription {
+        padding-left: 20px;
+        font-size: 16px;
+      }
+  
+        .listOfferts {
+          list-style: $list-item;
+  
+          li {
+            font-size: 12px;
+            margin: 0px 0px 2px 0px;
+  
+            i {
+              color: #F4BF1E;
+              padding-right: 5px;
+            }
+          }
+        }
+    }
+  
+  
+    .store {
+      border: solid 1px silver;
+      width: 360px;
+      height: 200px;
+      
+      .titlestore {
+        font-size: 24px;
+        margin: 5px $margin;
+        display: flex;
+        align-items: $align-items;
+        justify-content: $justify-content;
+      }
+      .listStore {
+        list-style: $list-item;
+        
+  
+        li {
+          margin: 10px 0px 10px 0px;
+  
+          i {
+          color: #F4BF1E;
+          padding-right: 10px;
+          width: 20px;
+        }
+        }
+  
+        
+      }
+    }     
   }
   
   @media screen and (min-width: 425px) {
@@ -794,6 +863,69 @@ body {
         padding: 3px 5px 3px 20px;
       }
     }
+
+    .offers {
+    
+      border: solid 1px silver;
+      width: 400px;
+      height: 200px;
+      .titleOffers {
+        font-size: 24px;
+        padding-left: 35px;
+        margin: 5px $margin;
+        display: grid;
+        align-items: $align-items;
+        justify-content: $justify-content;
+      }
+      .titleDescription {
+        padding-left: 20px;
+        font-size: 16px;
+      }
+  
+        .listOfferts {
+          list-style: $list-item;
+  
+          li {
+            font-size: 12px;
+            margin: 0px 0px 2px 0px;
+  
+            i {
+              color: #F4BF1E;
+              padding-right: 5px;
+            }
+          }
+        }
+    }
+  
+  
+    .store {
+      border: solid 1px silver;
+      width: 400px;
+      height: 200px;
+      .titlestore {
+        font-size: 24px;
+        margin: 5px $margin;
+        display: flex;
+        align-items: $align-items;
+        justify-content: $justify-content;
+      }
+      .listStore {
+        list-style: $list-item;
+        
+  
+        li {
+          margin: 10px 0px 10px 0px;
+  
+          i {
+          color: #F4BF1E;
+          padding-right: 10px;
+          width: 20px;
+        }
+        }
+  
+        
+      }
+    }     
   }
   
   @media screen and (min-width: 1440px) {
@@ -805,68 +937,7 @@ body {
   }
 
 
-  .offers {
-    
-    border: solid 1px silver;
-    width: 400px;
-    height: 200px;
-    .titleOffers {
-      font-size: 24px;
-      padding-left: 35px;
-      margin: 5px $margin;
-      display: grid;
-      align-items: $align-items;
-      justify-content: $justify-content;
-    }
-    .titleDescription {
-      padding-left: 20px;
-      font-size: 16px;
-    }
-
-      .listOfferts {
-        list-style: $list-item;
-
-        li {
-          font-size: 12px;
-          margin: 0px 0px 2px 0px;
-
-          i {
-            color: #F4BF1E;
-            padding-right: 5px;
-          }
-        }
-      }
-  }
-
-
-  .store {
-    border: solid 1px silver;
-    width: 400px;
-    height: 200px;
-    .titlestore {
-      font-size: 24px;
-      margin: 5px $margin;
-      display: flex;
-      align-items: $align-items;
-      justify-content: $justify-content;
-    }
-    .listStore {
-      list-style: $list-item;
-      
-
-      li {
-        margin: 10px 0px 10px 0px;
-
-        i {
-        color: #F4BF1E;
-        padding-right: 10px;
-        width: 20px;
-      }
-      }
-
-      
-    }
-  }      
+   
 }
 
 .containerFooter {
