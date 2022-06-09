@@ -22,27 +22,138 @@ body {
   font-family: 'Merriweather Sans', sans-serif;
 }
 
+
+.s{
+  @media screen and (max-width: 320px) {
+    background-color: #eef218;
+  }
+
+  @media screen and (min-width: 375px) {
+    background-color: #ec4a0a;
+  }
+
+  @media screen and (min-width: 425px) {
+    background-color: #490f0f;
+  }
+
+  @media screen and (min-width: 768px) {
+    background-color: #18f261;
+  }
+
+  @media screen and (min-width: 1024px) {
+    background-color: #ce18f2;
+  }
+
+  @media screen and (min-width: 1440px) {
+    background-color: #e4c307;
+  }
+
+  @media screen and (min-width: 2560px) {
+    background-color: #b1f218;
+  }
+}
+
 .header1 {
-  
-  ul {
-    display: $display;
-    margin-left: auto;
-    li {
-    list-style: $list-item;
-    margin: 10px;
+  font-size: 12px;
+ 
+  @media screen and (max-width: 320px) {
+    background-color: #eef218;
+  }
+
+  @media screen and (min-width: 375px) {
+    background-color: #ec4a0a;
+
+    ul {
+      display: $display;
+      margin-left: auto;
+      font-size: 12px;
+      li {
+      list-style: $list-item;
+      margin: 10px;
+      }
+    }
+
+  }
+
+  @media screen and (min-width: 425px) {
+    background-color: #490f0f;
+
+    ul {
+      display: $display;
+      margin-left: auto;
+      font-size: 12px;
+      li {
+      list-style: $list-item;
+      margin: 10px;
+      }
+    }
+
+  }
+
+  @media screen and (min-width: 768px) {
+    background-color: #18f261;
+  }
+
+  @media screen and (min-width: 1024px) {
+    background-color: #ce18f2;
+  }
+
+  @media screen and (min-width: 1440px) {
+    background-color: #e4c307;
+  }
+
+  @media screen and (min-width: 2560px) {
+    background-color: #b1f218;
+  }
     
-  }
-  }
+  
+  
+
+  
 }
 
 
 .header2 {
-  display: $display;
-  margin: 20px $margin;
-  list-style: $list-item;
-  gap: 400px;
-  align-items: $align-items;
-  justify-content: $justify-content;
+  @media screen and (max-width: 320px) {
+    background-color: #eef218;
+  }
+
+  @media screen and (min-width: 375px) {
+    background-color: #ec4a0a;
+  }
+
+  @media screen and (min-width: 425px) {
+    background-color: #490f0f;
+    display: $display;
+    margin: 20px $margin;
+    list-style: $list-item;
+    gap: 10px;
+    align-items: $align-items;
+    justify-content: $justify-content;
+
+  }
+
+  @media screen and (min-width: 768px) {
+    background-color: #18f261;
+  }
+
+  @media screen and (min-width: 1024px) {
+    background-color: #ce18f2;
+    display: $display;
+    margin: 20px $margin;
+    list-style: $list-item;
+    gap: 400px;
+    align-items: $align-items;
+    justify-content: $justify-content;
+  }
+
+  @media screen and (min-width: 1440px) {
+    
+  }
+
+  @media screen and (min-width: 2560px) {
+    background-color: #b1f218;
+  }
 
   .contenedorLogo1 {
     .logo1 {
@@ -93,22 +204,66 @@ body {
 }
 
 .menu {
-  background-color: #282c34;
-  width: auto;
-  height: 60px;
-  display: $display;
-  margin: 10px auto;
-  align-items: $align-items;
-  justify-content: $justify-content;
- 
-
-  .ulMenu {
-    display: $display;
-    margin: auto;
-    list-style: $list-item;
-    gap: 20px;
-    color: $color;
+  @media screen and (max-width: 320px) {
+    background-color: #eef218;
   }
+
+  @media screen and (min-width: 375px) {
+    background-color: #ec4a0a;
+  }
+
+  @media screen and (min-width: 425px) {
+    background-color: #490f0f;
+    width: auto;
+    height: 60px;
+    display: $display;
+    margin: 10px auto;
+    align-items: $align-items;
+    justify-content: $justify-content;
+    padding-right: 20px;
+
+    .ulMenu {
+      display: flex;
+      margin: auto;
+      list-style: $list-item;
+      gap: 10px;
+      color: $color;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    background-color: #18f261;
+  }
+
+  @media screen and (min-width: 1024px) {
+    background-color: #ce18f2;
+
+    width: auto;
+    height: 60px;
+    display: $display;
+    margin: 10px auto;
+    align-items: $align-items;
+    justify-content: $justify-content;
+
+    .ulMenu {
+      display: flex;
+      margin: auto;
+      list-style: $list-item;
+      gap: 20px;
+      color: $color;
+    }
+  }
+
+  @media screen and (min-width: 1440px) {
+    background-color: #e4c307;
+  }
+
+  @media screen and (min-width: 2560px) {
+    background-color: #b1f218;
+  }
+
+
+  
 }
 
 .divCarrousel {
@@ -148,18 +303,62 @@ body {
 
 
 .collection{
-  background-color: white;
-  display: grid;
-  margin: 5px auto;
-  grid-template-columns: auto auto auto;
-  width: auto;
-  height:auto;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  align-items: $align-items;
-  justify-content: $justify-content;
-  gap: 20px;
-  
+
+  @media screen and (max-width: 320px) {
+    background-color: #eef218;
+  }
+
+  @media screen and (min-width: 375px) {
+    background-color: #ec4a0a;
+  }
+
+  @media screen and (min-width: 425px) {
+    background-color: #490f0f;
+
+    background-color: white;
+    display: grid;
+    margin: 5px auto;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    width: auto;
+    height:auto;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    align-items: $align-items;
+    justify-content: $justify-content;
+    gap: 20px;
+
+
+  }
+
+  @media screen and (min-width: 768px) {
+    background-color: #18f261;
+  }
+
+  @media screen and (min-width: 1024px) {
+    background-color: #ce18f2;
+
+    background-color: white;
+    display: grid;
+    margin: 5px auto;
+    grid-template-columns: auto auto auto;
+    width: auto;
+    height:auto;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    align-items: $align-items;
+    justify-content: $justify-content;
+    gap: 20px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    background-color: #e4c307;
+  }
+
+  @media screen and (min-width: 2560px) {
+    background-color: #b1f218;
+  }
+
+
   .bodyColections {
     width: 400px;
     height: 200px;
@@ -226,18 +425,55 @@ body {
 
 
 .contenedorCard {
-  background-color: #fff;
-  margin: 10px auto;
-  display: grid;
-  grid-template-columns: auto auto auto auto;
-  align-items: $align-items;
-  justify-content: $justify-content;
-  gap: 30px;
-  padding-top: 30px;
-  padding-bottom: 10px;
-  
-}
 
+  @media screen and (max-width: 320px) {
+    background-color: #eef218;
+  }
+  
+  @media screen and (min-width: 375px) {
+    background-color: #ec4a0a;
+  }
+  
+  @media screen and (min-width: 425px) {
+  
+    background-color: #fff;
+    margin: 10px auto;
+    display: grid;
+    grid-template-columns: repeat(1);
+    align-items: $align-items;
+    justify-content: $justify-content;
+    gap: 30px;
+    padding-top: 30px;
+    padding-bottom: 10px;
+  }
+  
+  @media screen and (min-width: 768px) {
+    background-color: #18f261;
+  }
+  
+  @media screen and (min-width: 1024px) {
+    background-color: #ce18f2;
+
+    background-color: #fff;
+    margin: 10px auto;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    align-items: $align-items;
+    justify-content: $justify-content;
+    gap: 30px;
+    padding-top: 30px;
+    padding-bottom: 10px;
+  }
+  
+  @media screen and (min-width: 1440px) {
+    background-color: #e4c307;
+  }
+  
+  @media screen and (min-width: 2560px) {
+    background-color: #b1f218;
+  }
+
+  
 .bodyCard {
 
   border: #E3E7E8 1px solid;
@@ -353,37 +589,106 @@ body {
 
 }
 
-.socialMedia {
-  background-color: #FFFFFF;
-  display: $display;
-  margin: auto;
-  align-items: $align-items;
-  justify-content: $justify-content;
-  gap: $gap;
-  height: 300px;
   
-  .facebook {
-    border: solid 1px #E3E7E8;
-    
-    transform: lowercase;
-    width: 300px;
-    margin: $margin;
+  
+}
+
+
+.socialMedia {
+  
+  @media screen and (max-width: 320px) {
+    background-color: #eef218;
+  }
+  
+  @media screen and (min-width: 375px) {
+    background-color: #ec4a0a;
+  }
+  
+  @media screen and (min-width: 425px) {
+    background-color: #490f0f;
+
+    //background-color: #FFFFFF;
     display: grid;
+    margin: 10px auto;
+    grid-template-columns: repeat(1);
     align-items: $align-items;
     justify-content: $justify-content;
+    gap: $gap;
+    height: auto;
 
-    .titlefb {
-      transform: uppercase;
-      font-size: 20px;
+
+    .facebook {
+      border: solid 1px #E3E7E8;
+      transform: lowercase;
+      width: auto;
+      margin: $margin;
+      display: flex;
+      align-items: $align-items;
+      justify-content: $justify-content;
+  
+      .titlefb {
+        transform: uppercase;
+        font-size: 16px;
+        margin-left: 15px;
+      }
+      .user {
+        margin: 10px auto;
+        width: 100px;
+        background-color: #1877F2;
+        border-radius: 10px;
+        color: white;
+        padding: 3px 5px 3px 20px;
+      }
     }
-    .user {
-      margin: 10px auto;
-      width: 100px;
-      background-color: #1877F2;
-      border-radius: 10px;
-      color: white;
-      padding: 3px 5px 3px 20px;
+  }
+  
+  @media screen and (min-width: 768px) {
+    background-color: #18f261;
+  }
+  
+  @media screen and (min-width: 1024px) {
+    background-color: #ce18f2;
+
+    background-color: #FFFFFF;
+    display: $display;
+    margin: auto;
+    align-items: $align-items;
+    justify-content: $justify-content;
+    gap: $gap;
+    height: 300px;
+
+
+    .facebook {
+      border: solid 1px #E3E7E8;
+      
+      transform: lowercase;
+      width: 300px;
+      margin: $margin;
+      display: grid;
+      align-items: $align-items;
+      justify-content: $justify-content;
+  
+      .titlefb {
+        transform: uppercase;
+        font-size: 20px;
+      }
+      .user {
+        margin: 10px auto;
+        width: 100px;
+        background-color: #1877F2;
+        border-radius: 10px;
+        color: white;
+        padding: 3px 5px 3px 20px;
+      }
     }
+  }
+  
+  @media screen and (min-width: 1440px) {
+    background-color: #e4c307;
+  }
+  
+  @media screen and (min-width: 2560px) {
+    background-color: #b1f218;
   }
 
 
@@ -452,78 +757,161 @@ body {
 }
 
 .containerFooter {
-  
-  display: $display;
-  margin: $margin;
-  align-items: $align-items;
-  justify-content: $justify-content;
-  gap: 20px;
 
-  .containerLogo2 {
+  @media screen and (max-width: 320px) {
+    background-color: #eef218;
+  }
+  
+  @media screen and (min-width: 375px) {
+    background-color: #ec4a0a;
+  }
+  
+  @media screen and (min-width: 425px) {
     
+    display: grid;
+    margin: $margin;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: $align-items;
+    justify-content: $justify-content;
+    gap: $gap;
+
+    .containerLogo2 {
+      display: $display;
+      margin: $margin;
+      align-items: $align-items;
+      justify-content: $justify-content;
+      width: 100px;
+      height: 100px;
+      .logo2 {
+        object-fit: contain;
+        width: 100px;
+        height: 120px;
+        margin: auto;
+        margin-left: 5px;
+      }
+      .build {
+        font-size: 16px;
+        margin-left: 5px;
+        background-color: red;
+      }
+    }
+    .information {  
+      h1 {
+      font-size: 16px;
+      border-bottom: silver solid 1px;
+      }
+      p {
+        margin-left: px;
+        color: black;
+        font-size: 14px;
+      }
+    }
+    .account {
+      h1 {
+        font-size: 16px;
+        border-bottom: silver solid 1px;
+        }
+        p {
+          margin-left: 5px;
+          color: black;
+          font-size: 14px;
+        }
+    }
+    .follow {
+      h1 {
+        font-size: 16px;
+        border-bottom: silver solid 1px;
+        }
+        p {
+          margin-left: 5px;
+          color: black;
+          font-size: 14px;
+        }
+    }
+  }
+  
+  @media screen and (min-width: 768px) {
+    background-color: #18f261;
+  }
+  
+  @media screen and (min-width: 1024px) {
+    background-color: #ce18f2;
+
+
     display: $display;
     margin: $margin;
     align-items: $align-items;
     justify-content: $justify-content;
-    width: 330px;
-    height: 100px;
-    .logo2 {
-     
-      object-fit: contain;
-      width: 300px;
-      height: 120px;
-      margin: auto;
-      margin-left: 5px;
-    }
-    .build {
-     
-      font-size: 16px;
-      margin-left: 5px;
-    }
-  }
-  
+    gap: 20px;
 
-  .information {
-    
-    h1 {
-    font-size: 24px;
-    border-bottom: silver solid 1px;
+    .containerLogo2 {
+      display: $display;
+      margin: $margin;
+      align-items: $align-items;
+      justify-content: $justify-content;
+      width: 330px;
+      height: 100px;
+      .logo2 {
+        object-fit: contain;
+        width: 300px;
+        height: 120px;
+        margin: auto;
+        margin-left: 5px;
+      }
+      .build {
+        font-size: 16px;
+        margin-left: 5px;
+      }
     }
-
-    p {
-      margin-left: 5px;
-      color: black;
-      font-size: 16px;
-    }
-  }
-
-  .account {
-    
-    h1 {
+    .information {  
+      h1 {
       font-size: 24px;
       border-bottom: silver solid 1px;
       }
-  
       p {
         margin-left: 5px;
         color: black;
         font-size: 16px;
       }
+    }
+    .account {
+      h1 {
+        font-size: 24px;
+        border-bottom: silver solid 1px;
+        }
+        p {
+          margin-left: 5px;
+          color: black;
+          font-size: 16px;
+        }
+    }
+    .follow {
+      h1 {
+        font-size: 24px;
+        border-bottom: silver solid 1px;
+        }
+        p {
+          margin-left: 5px;
+          color: black;
+          font-size: 16px;
+        }
+    }
+  }
+  
+  @media screen and (min-width: 1440px) {
+    background-color: #e4c307;
+  }
+  
+  @media screen and (min-width: 2560px) {
+    background-color: #b1f218;
   }
 
-  .follow {
-    
-    h1 {
-      font-size: 24px;
-      border-bottom: silver solid 1px;
-      }
+
+
   
-      p {
-        margin-left: 5px;
-        color: black;
-        font-size: 16px;
-      }
-  }
+ 
+
+  
 }
 
 
