@@ -390,7 +390,7 @@ body {
 
     
   .bodyColections {
-    width: 420px;
+    width: 365px;
     height: 200px;
     border: solid 1px silver;
     background-color: #F5F5F5;
@@ -456,11 +456,6 @@ body {
     grid-template-columns: repeat(2 , 1fr);
     width: auto;
     height:auto;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    align-items: $align-items;
-    justify-content: $justify-content;
-
 
 
     .bodyColections {
