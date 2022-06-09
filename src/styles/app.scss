@@ -62,10 +62,29 @@ body {
 
   @media screen and (min-width: 768px) {
     background-color: #18f261;
+    ul {
+      display: $display;
+      margin-left: auto;
+      font-size: 14px;
+      li {
+      list-style: $list-item;
+      margin: 10px;
+      }
+    }
   }
 
   @media screen and (min-width: 1024px) {
     background-color: #ce18f2;
+
+    ul {
+      display: $display;
+      margin-left: auto;
+      font-size: 15px;
+      li {
+      list-style: $list-item;
+      margin: 10px;
+      }
+    }
   }
 
   @media screen and (min-width: 1440px) {
@@ -74,9 +93,7 @@ body {
 
   @media screen and (min-width: 2560px) {
     background-color: #b1f218;
-  }
-  
-  
+  }  
 }
 
 
@@ -123,6 +140,7 @@ body {
 
   @media screen and (min-width: 425px) {
     background-color: #490f0f;
+   
     display: $display;
     margin: 20px $margin;
     list-style: $list-item;
@@ -130,10 +148,41 @@ body {
     align-items: $align-items;
     justify-content: $justify-content;
 
+    .contenedorLogo1 {
+      .logo1 {
+        width: 50px;
+      }
+    }
+
+    .containerSeach {
+      .seach {
+        color: #21965f;
+        border: $border;
+        border: solid 1px #21965f;
+        width: 200px;
+        height: 30px;
+      }
+    }
+
+   .lupa {
+    background-color: orange;
+    border: $border;
+    width: 30px;
+    height: 34px;
+  }
+
   }
 
   @media screen and (min-width: 768px) {
     background-color: #18f261;
+
+    background-color: #490f0f;
+    display: $display;
+    margin: 20px $margin;
+    list-style: $list-item;
+    gap: 100px;
+    align-items: $align-items;
+    justify-content: $justify-content;
   }
 
   @media screen and (min-width: 1024px) {
@@ -155,7 +204,7 @@ body {
         color: #21965f;
         border: $border;
         border: solid 1px #21965f;
-        width: 200px;
+        width: 260px;
         height: 30px;
     }
     .lupa {
@@ -399,6 +448,43 @@ body {
 
   @media screen and (min-width: 768px) {
     background-color: #18f261;
+
+
+    background-color: white;
+    display: grid;
+    margin: 5px auto;
+    grid-template-columns: repeat(2 , 1fr);
+    width: auto;
+    height:auto;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    align-items: $align-items;
+    justify-content: $justify-content;
+
+
+
+    .bodyColections {
+      width: 350px;
+      height: 200px;
+      border: solid 1px silver;
+      background-color: #F5F5F5;
+      display: grid;
+      margin: auto;
+      grid-template-columns: auto auto;
+      align-items: $align-items;
+      justify-content: $justify-content;
+      
+      &:hover {
+        background-color: #e0d9d9;
+  
+        .titleCollection {
+          color: rgb(218, 69, 24);
+        }
+        .infoColection {
+          color: rgb(218, 69, 24);
+        }
+      }
+    }
   }
 
   @media screen and (min-width: 1024px) {
@@ -526,8 +612,18 @@ body {
     padding-bottom: 10px;
   }
   
+
   @media screen and (min-width: 768px) {
     background-color: #18f261;
+
+    margin: 10px auto;
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: $align-items;
+    justify-content: $justify-content;
+
+    padding-top: 30px;
+    padding-bottom: 10px;
   }
   
   @media screen and (min-width: 1024px) {
