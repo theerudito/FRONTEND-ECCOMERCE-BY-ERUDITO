@@ -232,12 +232,14 @@ body {
 }
 
 .menu {
+  
   @media screen and (max-width: 320px) {
     background-color: #282C34;
   }
 
   @media screen and (min-width: 375px) {
     background-color: #282C34;
+    font-size: 18px;
     width: auto;
     height: 60px;
     display: $display;
@@ -250,8 +252,9 @@ body {
       display: flex;
       margin: auto;
       list-style: $list-item;
-      gap: 10px;
+      gap: 5px;
       color: $color;
+      font-size: 11px;
     }
   }
 
@@ -263,7 +266,7 @@ body {
     margin: 10px auto;
     align-items: $align-items;
     justify-content: $justify-content;
-    padding-right: 20px;
+    padding-right: 40px;
 
     .ulMenu {
       display: flex;
@@ -271,6 +274,7 @@ body {
       list-style: $list-item;
       gap: 10px;
       color: $color;
+      font-size: 14px;
     }
   }
 
@@ -286,6 +290,7 @@ body {
     margin: 10px auto;
     align-items: $align-items;
     justify-content: $justify-content;
+  
 
     .ulMenu {
       display: flex;
@@ -293,6 +298,7 @@ body {
       list-style: $list-item;
       gap: 20px;
       color: $color;
+      font-size: 20px;
     }
   }
 
