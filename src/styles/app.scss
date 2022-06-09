@@ -42,11 +42,9 @@ body {
       margin: 10px;
       }
     }
-
   }
 
   @media screen and (min-width: 425px) {
-    background-color: #490f0f;
 
     ul {
       display: $display;
@@ -57,11 +55,9 @@ body {
       margin: 10px;
       }
     }
-
   }
 
   @media screen and (min-width: 768px) {
-    background-color: #18f261;
     ul {
       display: $display;
       margin-left: auto;
@@ -74,8 +70,6 @@ body {
   }
 
   @media screen and (min-width: 1024px) {
-    background-color: #ce18f2;
-
     ul {
       display: $display;
       margin-left: auto;
@@ -88,36 +82,32 @@ body {
   }
 
   @media screen and (min-width: 1440px) {
-    background-color: #e4c307;
+    
   }
 
   @media screen and (min-width: 2560px) {
-    background-color: #b1f218;
+    
   }  
 }
 
 
 .header2 {
   @media screen and (max-width: 320px) {
-    background-color: #eef218;
+    
   }
 
   @media screen and (min-width: 375px) {
-    
-
     display: $display;
     margin: 20px $margin;
     list-style: $list-item;
     gap: 10px;
     align-items: $align-items;
     justify-content: $justify-content;
-
     .contenedorLogo1 {
       .logo1 {
         width: 50px;
       }
     }
-
     .containerSeach {
       .seach {
         color: #21965f;
@@ -134,26 +124,20 @@ body {
     width: 30px;
     height: 34px;
   }
-    
-    
-  }
+}
 
   @media screen and (min-width: 425px) {
-    background-color: #490f0f;
-   
     display: $display;
     margin: 20px $margin;
     list-style: $list-item;
     gap: 10px;
     align-items: $align-items;
     justify-content: $justify-content;
-
     .contenedorLogo1 {
       .logo1 {
         width: 50px;
       }
     }
-
     .containerSeach {
       .seach {
         color: #21965f;
@@ -170,13 +154,9 @@ body {
     width: 30px;
     height: 34px;
   }
-
   }
 
   @media screen and (min-width: 768px) {
-    background-color: #18f261;
-
-    background-color: #490f0f;
     display: $display;
     margin: 20px $margin;
     list-style: $list-item;
@@ -186,14 +166,12 @@ body {
   }
 
   @media screen and (min-width: 1024px) {
-    background-color: #ce18f2;
     display: $display;
     margin: 20px $margin;
     list-style: $list-item;
     gap: 400px;
     align-items: $align-items;
     justify-content: $justify-content;
-
     .contenedorLogo1 {
       .logo1 {
         width: 50px;
@@ -255,11 +233,11 @@ body {
 
 .menu {
   @media screen and (max-width: 320px) {
-    background-color: #eef218;
+    background-color: #282C34;
   }
 
   @media screen and (min-width: 375px) {
-    background-color: #ec4a0a;
+    background-color: #282C34;
     width: auto;
     height: 60px;
     display: $display;
@@ -278,7 +256,7 @@ body {
   }
 
   @media screen and (min-width: 425px) {
-    background-color: #490f0f;
+    background-color: #282C34;
     width: auto;
     height: 60px;
     display: $display;
@@ -297,12 +275,11 @@ body {
   }
 
   @media screen and (min-width: 768px) {
-    background-color: #18f261;
+    background-color: #282C34;
   }
 
   @media screen and (min-width: 1024px) {
-    background-color: #ce18f2;
-
+    background-color: #282C34;
     width: auto;
     height: 60px;
     display: $display;
@@ -320,11 +297,11 @@ body {
   }
 
   @media screen and (min-width: 1440px) {
-    background-color: #e4c307;
+    background-color: #282C34;
   }
 
   @media screen and (min-width: 2560px) {
-    background-color: #b1f218;
+    background-color: #282C34;
   }
 
 
@@ -342,6 +319,9 @@ body {
   .carrousel {
     background-color: #FFFFFF;
     width: 100%; 
+    .dot {
+      background-color: purple;
+    }
   }
 
   .thumbs {
@@ -368,13 +348,12 @@ body {
 
 
 .collection{
-
   @media screen and (max-width: 320px) {
-    background-color: #eef218;
+  
   }
 
   @media screen and (min-width: 375px) {
-    background-color: #ec4a0a;
+  
     background-color: white;
     display: grid;
     margin: 5px auto;
@@ -429,8 +408,6 @@ body {
   }
 
   @media screen and (min-width: 425px) {
-    background-color: #490f0f;
-
     background-color: white;
     display: grid;
     margin: 5px auto;
@@ -442,21 +419,15 @@ body {
     align-items: $align-items;
     justify-content: $justify-content;
     gap: 20px;
-
-
   }
 
   @media screen and (min-width: 768px) {
-    background-color: #18f261;
-
-
     background-color: white;
     display: grid;
     margin: 5px auto;
     grid-template-columns: repeat(2 , 1fr);
     width: auto;
     height:auto;
-
 
     .bodyColections {
       width: 350px;
@@ -483,8 +454,6 @@ body {
   }
 
   @media screen and (min-width: 1024px) {
-    background-color: #ce18f2;
-
     background-color: white;
     display: grid;
     margin: 5px auto;
@@ -520,8 +489,7 @@ body {
       }
     }
 
-    .containerImageCollection {
-      
+    .containerImageCollection { 
       width: 140px;
       height: 140px;
       display: grid;
@@ -539,11 +507,9 @@ body {
   }
 
   @media screen and (min-width: 1440px) {
-    background-color: #e4c307;
   }
 
   @media screen and (min-width: 2560px) {
-    background-color: #b1f218;
   }
 
 
@@ -577,12 +543,9 @@ body {
 .contenedorCard {
 
   @media screen and (max-width: 320px) {
-    background-color: #eef218;
   }
   
   @media screen and (min-width: 375px) {
-    background-color: #ec4a0a;
-
     background-color: #fff;
     margin: 10px auto;
     display: grid;
@@ -595,7 +558,6 @@ body {
   }
   
   @media screen and (min-width: 425px) {
-  
     background-color: #fff;
     margin: 10px auto;
     display: grid;
@@ -607,9 +569,7 @@ body {
     padding-bottom: 10px;
   }
   
-
   @media screen and (min-width: 768px) {
-    background-color: #18f261;
 
     margin: 10px auto;
     display: grid;
@@ -622,8 +582,6 @@ body {
   }
   
   @media screen and (min-width: 1024px) {
-    background-color: #ce18f2;
-
     background-color: #fff;
     margin: 10px auto;
     display: grid;
@@ -636,11 +594,9 @@ body {
   }
   
   @media screen and (min-width: 1440px) {
-    background-color: #e4c307;
   }
   
   @media screen and (min-width: 2560px) {
-    background-color: #b1f218;
   }
 
   
@@ -677,7 +633,6 @@ body {
   }
 
   .containerInforCard {
-    
     .name {
       margin-top: 1px;
       margin-left: 20px;
@@ -764,16 +719,11 @@ body {
 }
 
 
-.socialMedia {
-  
+.socialMedia { 
   @media screen and (max-width: 320px) {
-    background-color: #eef218;
   }
   
   @media screen and (min-width: 375px) {
-    background-color: #ec4a0a;
-
-
     display: grid;
     margin: 10px auto;
     grid-template-columns: repeat(1);
@@ -781,7 +731,6 @@ body {
     justify-content: $justify-content;
     gap: $gap;
     height: auto;
-
 
     .facebook {
       border: solid 1px #E3E7E8;
@@ -808,7 +757,6 @@ body {
     }
 
     .offers {
-    
       border: solid 1px silver;
       width: 375px;
       height: 200px;
@@ -878,9 +826,7 @@ body {
   }
   
   @media screen and (min-width: 425px) {
-    background-color: #490f0f;
-
-    //background-color: #FFFFFF;
+    background-color: #FFFFFF;
     display: grid;
     margin: 10px auto;
     grid-template-columns: repeat(1);
@@ -916,12 +862,9 @@ body {
   }
   
   @media screen and (min-width: 768px) {
-    background-color: #18f261;
   }
   
   @media screen and (min-width: 1024px) {
-    background-color: #ce18f2;
-
     background-color: #FFFFFF;
     display: $display;
     margin: auto;
@@ -933,7 +876,6 @@ body {
 
     .facebook {
       border: solid 1px #E3E7E8;
-      
       transform: lowercase;
       width: 300px;
       margin: $margin;
@@ -956,14 +898,14 @@ body {
     }
 
     .offers {
-    
       border: solid 1px silver;
       width: 400px;
       height: 200px;
+
       .titleOffers {
         font-size: 24px;
         padding-left: 35px;
-        margin: 5px $margin;
+        margin: 20px $margin;
         display: grid;
         align-items: $align-items;
         justify-content: $justify-content;
@@ -971,6 +913,7 @@ body {
       .titleDescription {
         padding-left: 20px;
         font-size: 16px;
+        margin-top: -20px;
       }
   
         .listOfferts {
@@ -1020,11 +963,9 @@ body {
   }
   
   @media screen and (min-width: 1440px) {
-    background-color: #e4c307;
   }
   
   @media screen and (min-width: 2560px) {
-    background-color: #b1f218;
   }
 
 
@@ -1034,13 +975,10 @@ body {
 .containerFooter {
 
   @media screen and (max-width: 320px) {
-    background-color: #eef218;
+
   }
   
   @media screen and (min-width: 375px) {
-    background-color: #ec4a0a;
-
-
     display: grid;
     margin: $margin;
     grid-template-columns: repeat(4, 1fr);
@@ -1106,7 +1044,6 @@ body {
   }
   
   @media screen and (min-width: 425px) {
-    
     display: grid;
     margin: $margin;
     grid-template-columns: repeat(4, 1fr);
@@ -1170,13 +1107,9 @@ body {
   }
   
   @media screen and (min-width: 768px) {
-    background-color: #18f261;
   }
   
   @media screen and (min-width: 1024px) {
-    background-color: #ce18f2;
-
-
     display: $display;
     margin: $margin;
     align-items: $align-items;
@@ -1238,11 +1171,9 @@ body {
   }
   
   @media screen and (min-width: 1440px) {
-    background-color: #e4c307;
   }
   
   @media screen and (min-width: 2560px) {
-    background-color: #b1f218;
   }
   
 }

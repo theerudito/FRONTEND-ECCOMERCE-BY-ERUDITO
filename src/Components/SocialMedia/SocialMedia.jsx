@@ -14,30 +14,25 @@ export const SocialMedia = () => {
           Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
         </p>
         <ul className="listOfferts">
-
           <li>
-            <i class="fa-solid fa-angle-right"></i>Nam elit magna hendrerit
+            <i className="fa-solid fa-angle-right"></i>Nam elit magna hendrerit
           </li>
 
           <li>
-            <i class="fa-solid fa-angle-right"></i>Nam elit magna hendrerit
+            <i className="fa-solid fa-angle-right"></i>Nam elit magna hendrerit
           </li>
-
 
           <li>
-            <i class="fa-solid fa-angle-right"></i>Nam elit magna hendrerit
+            <i className="fa-solid fa-angle-right"></i>Nam elit magna hendrerit
           </li>
-
 
           <li>
-            <i class="fa-solid fa-angle-right"></i>Nam elit magna hendrerit
+            <i className="fa-solid fa-angle-right"></i>Nam elit magna hendrerit
           </li>
-
 
           <li>
-            <i class="fa-solid fa-angle-right"></i>Nam elit magna hendrerit
+            <i className="fa-solid fa-angle-right"></i>Nam elit magna hendrerit
           </li>
-
         </ul>
       </div>
 

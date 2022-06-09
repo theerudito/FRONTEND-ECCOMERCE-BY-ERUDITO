@@ -11,13 +11,13 @@ export const Header2 = () => {
       </div>
 
       <div className="containerSeach">
-        <input type="text" placeholder="Search"  className="seach"/>
-        <button className="lupa">O</button>
+        <input type="text" placeholder="Search" className="seach"/>
+        <button className="lupa"><i className="fa-solid fa-magnifying-glass"></i></button>
       </div>
 
       <div className="containerCart">
       
-        <button className="buttonCart"><i class="fa-solid fa-cart-shopping"></i></button>
+        <button className="buttonCart"><i className="fa-solid fa-cart-shopping"></i></button>
         <p className="add">1</p>
       </div>
 
