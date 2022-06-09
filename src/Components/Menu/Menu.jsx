@@ -4,10 +4,10 @@ export const Menu = () => {
   return (
     <div className='menu'>
     <ul className='ulMenu'>
-      <li>WOMEN</li>
-      <li>MEN</li>
-      <li>JUNIORS</li>
-      <li>KIDS</li>
+      <li>COMPUTERS</li>
+      <li>HARDWARE</li>
+      <li>GAMES</li>
+      <li>SOFTWARE</li>
       <li>ACCESSORIES</li>
     </ul>
 

@@ -51,7 +51,7 @@ export const SocialMedia = () => {
 
           <li>
             <i className="fa-solid fa-envelope-circle-check"></i>
-            Email: email@buy.com
+            Email: erudito.tv@gmail.com
           </li>
 
           <li>

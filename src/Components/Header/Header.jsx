@@ -7,7 +7,7 @@ export const Header = () => {
       <ul  >
         <li>Contact Us</li>
         <li>English</li>
-        <li>Currenn: USD</li>
+        <li>Current: USD</li>
         <li>Sing In</li>
       </ul>
     </div>
