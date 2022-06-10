@@ -1,10 +1,10 @@
 import React from "react";
-import { Card } from "../Helpers/Data";
+import { STORE } from "../Helpers/Data";
 
 export const Cards = () => {
   return (
     <div className="contenedorCard">
-      {Card.map((item) => (
+      {STORE[0].CARDS.map((item) => (
         <div className="bodyCard" key={item.id}>
           <div className="containerImagen">
             <img className="imagenCard" src={item.pic} alt="foto" />

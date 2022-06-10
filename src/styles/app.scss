@@ -637,19 +637,23 @@ body {
 
   .containerImagen {
     display: $display;
-    margin: $margin;
+    margin: auto;
     list-style: $list-item;
     gap: $gap;
     align-items: $align-items;
     justify-content: $justify-content;
     margin-top: -20px;
+    width: 260px;
+    height: 200px;
+    background-color: red;
+    border: solid 1px #E3E7E8;
+    background-color: #fff;
+  
     
     .imagenCard {
-        object-fit: contain;
-        width: 260px;
-        height: 200px;
-        border: solid 1px #E3E7E8;
-        background-color: #fff;
+        object-fit: cover;
+        width: 150px;
+        height: 150px;
         
       }
   }

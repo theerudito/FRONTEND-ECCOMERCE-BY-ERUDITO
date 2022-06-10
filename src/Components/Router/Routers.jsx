@@ -9,7 +9,6 @@ import { Keyboards } from "../Pages/Categories/Keyboards";
 import { Laptops } from "../Pages/Categories/Laptops";
 import { Monitors } from "../Pages/Categories/Monitors";
 import { Software } from "../Pages/Categories/Software";
-import { VideoCard } from "../Pages/Categories/VideoCard";
 import { PageHome } from "../Pages/Home";
 import { Page404 } from "../Pages/Page404";
 
@@ -20,7 +19,6 @@ export const RoutesApps = {
   laptops: "/laptops",
   monitors: "/monitors",
   keyboards: "/keyboards",
-  videocards: "/video-cards",
   hardware: "/hardware",
   software: "/software",
   games: "/games",
@@ -44,7 +42,6 @@ export const Router = () => {
         <Route path={RoutesApps.laptops} element={<Laptops />} />
         <Route path={RoutesApps.monitors} element={<Monitors />} />
         <Route path={RoutesApps.keyboards} element={<Keyboards />} />
-        <Route path={RoutesApps.videocards} element={<VideoCard />} />
         <Route path={RoutesApps.hardware} element={<HardWare />} />
         <Route path={RoutesApps.software} element={<Software />} />
         <Route path={RoutesApps.games} element={<Games />} />

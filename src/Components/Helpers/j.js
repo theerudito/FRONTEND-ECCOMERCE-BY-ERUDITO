@@ -1,4 +1,4 @@
-export const STORE = [
+ const STORE = [
   {
     COLLECTIONS: [
       {
@@ -635,3 +635,11 @@ export const STORE = [
     ],
   },
 ];
+
+
+//console.log(STORE[0]);
+
+
+let r = STORE.map(item => item)
+
+console.log(r);
