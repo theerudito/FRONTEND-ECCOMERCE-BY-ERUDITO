@@ -17,7 +17,7 @@ $right: 0;
 $bottom: 0;
 
 body {
-  background-color: #F5F5F5;
+  background-color: #5f5757;
   font-family: 'Josefin Sans', sans-serif;
   font-family: 'Merriweather Sans', sans-serif;
 }
@@ -252,7 +252,7 @@ body {
       display: flex;
       margin: auto;
       list-style: $list-item;
-      gap: 5px;
+      gap: 10px;
       color: $color;
       font-size: 11px;
     }
@@ -737,6 +737,7 @@ body {
     justify-content: $justify-content;
     gap: $gap;
     height: auto;
+    height: 475px;
 
     .facebook {
       border: solid 1px #E3E7E8;
@@ -834,12 +835,12 @@ body {
   @media screen and (min-width: 425px) {
     background-color: #FFFFFF;
     display: grid;
-    margin: 10px auto;
+    margin: 5px auto;
     grid-template-columns: repeat(1);
     align-items: $align-items;
     justify-content: $justify-content;
     gap: $gap;
-    height: auto;
+    height: 500px;
 
 
     .facebook {
@@ -946,6 +947,7 @@ body {
       border: solid 1px silver;
       width: 400px;
       height: 200px;
+      
       .titlestore {
         font-size: 24px;
         margin: 5px $margin;
