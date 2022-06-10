@@ -1,12 +1,17 @@
-
-import { Layout } from './Components/Layout/Layout';
-import './styles/app.scss';
+import { Layout } from "./Components/Layout/Layout";
+import "./styles/app.scss";
+import { BrowserRouter } from "react-router-dom";
+import { Router } from "./Components/Router/Routers";
 
 function App() {
   return (
-    <div className="App">
-     <Layout/>
-    </div>
+    <>
+      <BrowserRouter>
+        <Layout>
+          <Router />
+        </Layout>
+      </BrowserRouter>
+    </>
   );
 }
 

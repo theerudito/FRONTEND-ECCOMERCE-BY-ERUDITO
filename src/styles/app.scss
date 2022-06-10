@@ -17,7 +17,7 @@ $right: 0;
 $bottom: 0;
 
 body {
-  background-color: #5f5757;
+  background-color: #f1ebeb;
   font-family: 'Josefin Sans', sans-serif;
   font-family: 'Merriweather Sans', sans-serif;
 }
@@ -92,6 +92,7 @@ body {
 
 
 .header2 {
+  cursor: pointer;
   @media screen and (max-width: 320px) {
     
   }
@@ -232,7 +233,22 @@ body {
 }
 
 .menu {
-  
+
+  .Link {
+    text-decoration: none;
+    color: #ffffff;
+    &:hover {
+      color: rgb(214, 75, 11);
+    }
+  }
+ 
+  li {
+     cursor: pointer;
+     user-select: none;
+     
+     
+  }
+ 
   @media screen and (max-width: 320px) {
     background-color: #282C34;
   }
@@ -726,6 +742,7 @@ body {
 
 
 .socialMedia { 
+  
   @media screen and (max-width: 320px) {
   }
   
@@ -760,6 +777,10 @@ body {
         border-radius: 10px;
         color: white;
         padding: 3px 5px 3px 20px;
+        &:hover{
+          background-color: #0a5bc5;
+          color: white;
+        }
       }
     }
 
@@ -901,10 +922,7 @@ body {
         border-radius: 10px;
         color: white;
         padding: 3px 5px 3px 20px;
-        &:hover{
-          background-color: #0a5bc5;
-          color: white;
-        }
+        
       }
     }
 

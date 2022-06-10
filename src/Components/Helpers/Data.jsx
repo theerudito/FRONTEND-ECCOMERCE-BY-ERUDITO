@@ -4,36 +4,42 @@ export const Collection1 = [
     Title: "COMPUTERS",
     desc: "Get up to 40% off",
     pic: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Avatares%2FCategories%2Fcomputer.png?alt=media&token=f3645104-3089-4cf5-a581-a68c069e588b",
+    categogy: "/computers"
   },
   {
     id: 2,
     Title: "HEADSETS",
     desc: "Get up to 40% off",
     pic: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Avatares%2FCategories%2Fheased.png?alt=media&token=75138bb0-39a3-46e6-8685-775e9d9151fd",
+    categogy: "/headsets"
   },
   {
     id: 3,
     Title: "LAPTOPS",
     desc: "Get up to 40% off",
     pic: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Avatares%2FCategories%2Flapto.png?alt=media&token=007931be-b1db-4112-955b-8652a5486050",
+    categogy: "/laptops"
   },
   {
     id: 4,
     Title: "MONITORS",
     desc: "Get up to 40% off",
     pic: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Avatares%2FCategories%2Fmonitor.png?alt=media&token=9969b9dd-4768-4345-96a6-de0351598470",
+    categogy: "/monitors"
   },
   {
     id: 5,
     Title: "KEYBOARDS",
     desc: "Get up to 40% off",
     pic: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Avatares%2FCategories%2Fkeboard.png?alt=media&token=961d6a85-7aab-451e-be3b-0b34e46daf7e",
+    categogy: "/keyboards"
   },
   {
     id: 6,
     Title: "VIDEO CARDS",
     desc: "Get up to 40% off",
     pic: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Avatares%2FCategories%2Fvc.png?alt=media&token=52dd4d55-a398-480f-ad84-1d5f2c099fb2",
+    categogy: "/videocards"
   },
 ];
 
@@ -77,6 +83,7 @@ export const Card = [
     priceDesc: "$19.00",
     desc: "10%",
     star: "****",
+    categogy: "/computers"
   },
   {
     id: 5,
@@ -87,6 +94,7 @@ export const Card = [
     priceDesc: "$19.00",
     desc: "10%",
     star: "****",
+    categogy: "/dfsdf"
   },
   {
     id: 6,
@@ -97,6 +105,7 @@ export const Card = [
     priceDesc: "$19.00",
     desc: "10%",
     star: "****",
+    categogy: "/monitors"
   },
   {
     id: 7,
@@ -107,6 +116,7 @@ export const Card = [
     priceDesc: "$39.99",
     desc: "50%",
     star: "**",
+    categogy: "/computers"
   },
   {
     id: 8,
@@ -117,5 +127,6 @@ export const Card = [
     //priceDesc: "$38.00",
     //desc: "8%",
     star: "*****",
+    categogy: "/laptops"
   },
 ];
