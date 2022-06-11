@@ -818,28 +818,29 @@ body {
     gap: $gap;
     height: auto;
     height: 475px;
-
+    background-color: #fff;
     .contenedor {
       display: grid;
       gap: $gap;
     }
 
     .instagram {
-      border: solid 1px #E3E7E8;
-      transform: lowercase;
-      width: auto;
-      margin: $margin;
+      border: solid 1px silver;
+      text-transform: uppercase;
+      width: 350px;
+      margin: auto;
       display: flex;
       align-items: $align-items;
       justify-content: $justify-content;
   
       .titlefb {
         transform: uppercase;
-        font-size: 16px;
+        font-size: 14px;
         margin-left: 15px;
       }
       .user {
         margin: 10px auto;
+        font-size: 12px;
         width: 100px;
         background-color: #1877F2;
         border-radius: 10px;
@@ -862,7 +863,7 @@ body {
       justify-content: $justify-content;
 
       .titleOffers {
-        font-size: 24px;
+        font-size: 18px;
         padding-left: 35px;
         margin: 0px $margin;
         display: grid;
@@ -896,7 +897,7 @@ body {
       height: 200px;
 
       .titlestore {
-        font-size: 24px;
+        font-size: 18px;
         margin: 5px $margin;
         display: flex;
         align-items: $align-items;
