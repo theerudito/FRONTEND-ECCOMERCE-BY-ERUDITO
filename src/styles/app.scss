@@ -23,9 +23,8 @@ body {
 }
 
 
-.titlecategory {
-  
 
+.titlecategory {
 
   @media screen and (max-width: 320px) {
     
@@ -384,9 +383,22 @@ body {
   .carrousel {
     background-color: #FFFFFF;
     width: 100%; 
+
+    
     .dot {
-      background-color: purple;
+      background-color: rgb(70, 187, 86);
     }
+
+    
+
+    li.dot {
+      background: orange;
+    }
+
+    li.dot.selected {
+      background: purple;
+    }
+
   }
 
   .thumbs {
