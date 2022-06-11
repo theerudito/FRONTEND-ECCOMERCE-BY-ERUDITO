@@ -13,28 +13,35 @@ export const Menu = () => {
         </li>
 
         <li>
-          <Link className="Link" to={RoutesApps.hardware}>
-            HARDWARE
+          <Link className="Link" to={RoutesApps.headsets}>
+            HEASETS
           </Link>
         </li>
 
         <li>
-          <Link className="Link" to={RoutesApps.games}>
-            GAMES
+          <Link className="Link" to={RoutesApps.laptops}>
+          LAPTOPS
           </Link>
         </li>
 
         <li>
-          <Link className="Link" to={RoutesApps.software}>
-            SOFTWARE
+          <Link className="Link" to={RoutesApps.monitors}>
+          MONITORS
+          </Link>
+        </li>
+
+        <li>
+          <Link className="Link" to={RoutesApps.keyboards}>
+          KEYBOARDS
           </Link>
         </li>
 
         <li>
           <Link className="Link" to={RoutesApps.accessories}>
-            ACCESSORIES
+          ACCESSORIES
           </Link>
         </li>
+
       </ul>
     </div>
   );

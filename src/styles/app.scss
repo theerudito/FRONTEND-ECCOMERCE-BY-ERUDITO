@@ -23,6 +23,44 @@ body {
 }
 
 
+.titlecategory {
+  
+
+
+  @media screen and (max-width: 320px) {
+    
+  }
+
+  @media screen and (min-width: 375px) {
+    font-size: 12px;
+    color: #1877F2;
+    
+  }
+
+  @media screen and (min-width: 425px) {
+    font-size: 14px;
+    color: #1877F2;
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+    color: #1877F2;
+  }
+  @media screen and (min-width: 1024px) {
+    font-size: 20px;
+    color: #1877F2;
+  }
+
+  @media screen and (min-width: 1440px) {
+    
+  }
+
+  @media screen and (min-width: 2560px) {
+    
+  }  
+}
+
+
 
 .header1 {
   font-size: 12px;
@@ -45,6 +83,7 @@ body {
   }
 
   @media screen and (min-width: 425px) {
+    
 
     ul {
       display: $display;
@@ -55,7 +94,11 @@ body {
       margin: 10px;
       }
     }
+
+    
   }
+
+  
 
   @media screen and (min-width: 768px) {
     ul {
@@ -270,7 +313,7 @@ body {
       list-style: $list-item;
       gap: 10px;
       color: $color;
-      font-size: 11px;
+      font-size: 8px;
     }
   }
 
@@ -290,7 +333,7 @@ body {
       list-style: $list-item;
       gap: 10px;
       color: $color;
-      font-size: 14px;
+      font-size: 12px;
     }
   }
 
@@ -666,17 +709,32 @@ body {
         margin-left: 10px; 
         width: 240px;
         font-size: 18px;
+        text-transform: uppercase;
       }
-      p {
+
+      .description {
         margin-left: 10px; 
         width: 240px;
         margin-top: -10px;
-        text-transform: lowercase;
+        text-transform: capitalize;
       }
+    
+    .marc {
+        margin-left: 10px; 
+        width: 240px;
+        margin-top: -10px;
+        text-transform:  uppercase;
+      }
+
     }
     .starts {
-      color: purple
+      color: purple;
+      margin-left: 10px; 
+      width: 240px;
+      margin-top: -10px;
     }
+
+   
   }
 
 

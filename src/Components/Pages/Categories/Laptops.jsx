@@ -12,7 +12,7 @@ export const Laptops = () => {
       <Header />
       <Header2 />
       <Menu />
-      <h2>LAPTOPS</h2>
+      <h2 className="titlecategory">LAPTOPS</h2>
       <div className="contenedorCard">
         {STORE[0].PRODUCTS[0].LAPTOPS.map((item) => (
           <div className="bodyCard" key={item.id}>
@@ -21,7 +21,6 @@ export const Laptops = () => {
             </div>
 
             <div className="containerInforCard">
-              
               <div className="info">
                 <h1 className="name">{item.name} </h1>
                 <p className="description">{item.description} </p>

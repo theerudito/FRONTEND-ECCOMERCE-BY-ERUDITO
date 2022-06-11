@@ -12,7 +12,7 @@ export const Monitors = () => {
       <Header />
       <Header2 />
       <Menu />
-      <h2>MONITORS </h2>
+      <h2 className="titlecategory">MONITORS </h2>
       <div className="contenedorCard">
         {STORE[0].PRODUCTS[0].MONITOR.map((item) => (
           <div className="bodyCard" key={item.id}>

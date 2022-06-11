@@ -12,7 +12,7 @@ export const Accessories = () => {
       <Header />
       <Header2 />
       <Menu />
-      <h2>COMPUTERS </h2>
+      <h2 className="titlecategory">COMPUTERS </h2>
       <div className="contenedorCard">
         { STORE[0].PRODUCTS[0].ACCESSORIES.map((item) => (
           <div className="bodyCard" key={item.id}>

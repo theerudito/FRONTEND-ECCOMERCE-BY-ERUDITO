@@ -650,6 +650,43 @@ let d = STORE[0].PRODUCTS.map((item) => [
   ...item.MONITOR,
 ]).reduce((a, b) => a.concat(b), []);
 
-
 //console.log(STORE[0].PRODUCTS[0].COLLECTIONS);
-console.log(d);
+//console.log(d);
+
+
+let ram = Math.floor(Math.random() * d.length);
+
+
+console.log(ram);
+
+let array = [
+  {
+    productos: [
+      {
+        cat1: [
+          {
+            id: 1,
+            name: "a",
+          },
+        ],
+        cat2: [
+          {
+            id: 2,
+            name: "b",
+          },
+        ],
+        cat3: [
+          {
+            id: 3,
+            name: "c",
+          },
+          {
+            id: 3.1,
+            name: "c.1",
+          },
+        ],
+      },
+    ],
+  },
+];
+

@@ -12,7 +12,7 @@ export const Keyboards = () => {
       <Header />
       <Header2 />
       <Menu />
-      <h2>KEYBOARDS </h2>
+      <h2 className="titlecategory">KEYBOARDS </h2>
       <div className="contenedorCard">
         {STORE[0].PRODUCTS[0].KEYBOARDS.map((item) => (
           <div className="bodyCard" key={item.id}>

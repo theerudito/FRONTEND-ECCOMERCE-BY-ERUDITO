@@ -11,40 +11,39 @@ export const Headset = () => {
   return (
     <>
       <Header />
-      <Header2/>
-      <Menu/>
-      <h2>HEADSETS</h2>
+      <Header2 />
+      <Menu />
+      <h2 className="titlecategory">HEADSETS</h2>
       <div className="contenedorCard">
-      {STORE[0].PRODUCTS[0].HEADSET.map((item) => (
-        <div className="bodyCard" key={item.id}>
-          <div className="containerImagen">
-            <img className="imagenCard" src={item.pic} alt="foto" />
-          </div>
+        {STORE[0].PRODUCTS[0].HEADSET.map((item) => (
+          <div className="bodyCard" key={item.id}>
+            <div className="containerImagen">
+              <img className="imagenCard" src={item.pic} alt="foto" />
+            </div>
 
-          <div className="containerInforCard">
-
-          <div className="info">
+            <div className="containerInforCard">
+              <div className="info">
                 <h1 className="name">{item.name} </h1>
                 <p className="description">{item.description} </p>
                 <p className="marc">{item.marc} </p>
                 <p className="starts">{item.star} </p>
               </div>
 
-            <div className="containerInforPrice">
-              <p className="price">{item.price} </p>
-              <p className="offert">{item.priceDesc}</p>
-              <p className="desc">{item.desc} </p>
-            </div>
+              <div className="containerInforPrice">
+                <p className="price">{item.price} </p>
+                <p className="offert">{item.priceDesc}</p>
+                <p className="desc">{item.desc} </p>
+              </div>
 
-            <div className="buttonsAdd">
-              <button className="buttoAddCart">ADD TO CART</button>
-              <button className="moreInfo">MORE</button>
+              <div className="buttonsAdd">
+                <button className="buttoAddCart">ADD TO CART</button>
+                <button className="moreInfo">MORE</button>
+              </div>
             </div>
           </div>
-        </div>
-      ))}
-    </div>
-      <SocialMedia/>
+        ))}
+      </div>
+      <SocialMedia />
       <Footer />
     </>
   );
