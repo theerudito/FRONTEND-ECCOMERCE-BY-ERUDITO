@@ -5,7 +5,8 @@ import { STORE } from "../Helpers/Data";
 export const Collection = () => {
   return (
     <div className="collection">
-      {STORE[0].COLLECTIONS.map((item) => (
+      {STORE[0].PRODUCTS[0].COLLECTIONS.map((item) => (
+        
         <div className="bodyColections" key={item.id}>
           <div>
             <h1 className="titleCollection">{item.Title} </h1>

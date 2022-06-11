@@ -15,16 +15,20 @@ export const Headset = () => {
       <Menu/>
       <h2>HEADSETS</h2>
       <div className="contenedorCard">
-      {STORE[0].HEADSET.map((item) => (
+      {STORE[0].PRODUCTS[0].HEADSET.map((item) => (
         <div className="bodyCard" key={item.id}>
           <div className="containerImagen">
             <img className="imagenCard" src={item.pic} alt="foto" />
           </div>
 
           <div className="containerInforCard">
-            <h1 className="name">{item.name} </h1>
-            <p className="description">{item.description} </p>
-            <p className="starts">{item.star} </p>
+
+          <div className="info">
+                <h1 className="name">{item.name} </h1>
+                <p className="description">{item.description} </p>
+                <p className="marc">{item.marc} </p>
+                <p className="starts">{item.star} </p>
+              </div>
 
             <div className="containerInforPrice">
               <p className="price">{item.price} </p>

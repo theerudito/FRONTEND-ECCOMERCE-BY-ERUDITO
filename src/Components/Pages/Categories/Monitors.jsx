@@ -14,16 +14,19 @@ export const Monitors = () => {
       <Menu />
       <h2>MONITORS </h2>
       <div className="contenedorCard">
-        {STORE[0].MONITOR.map((item) => (
+        {STORE[0].PRODUCTS[0].MONITOR.map((item) => (
           <div className="bodyCard" key={item.id}>
             <div className="containerImagen">
               <img className="imagenCard" src={item.pic} alt="foto" />
             </div>
 
             <div className="containerInforCard">
-              <h1 className="name">{item.name} </h1>
-              <p className="description">{item.description} </p>
-              <p className="starts">{item.star} </p>
+              <div className="info">
+                <h1 className="name">{item.name} </h1>
+                <p className="description">{item.description} </p>
+                <p className="marc">{item.marc} </p>
+                <p className="starts">{item.star} </p>
+              </div>
 
               <div className="containerInforPrice">
                 <p className="price">{item.price} </p>

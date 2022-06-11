@@ -14,29 +14,34 @@ export const Accessories = () => {
       <Menu />
       <h2>COMPUTERS </h2>
       <div className="contenedorCard">
-        {STORE[0].ACCESSORIES.map((item) => (
+        { STORE[0].PRODUCTS[0].ACCESSORIES.map((item) => (
           <div className="bodyCard" key={item.id}>
-            <div className="containerImagen">
-              <img className="imagenCard" src={item.pic} alt="foto" />
-            </div>
 
-            <div className="containerInforCard">
+          <div className="containerImagen">
+            <img className="imagenCard" src={item.pic} alt="foto" />
+          </div>
+
+          <div className="containerInforCard">
+            
+            <div className="info">
               <h1 className="name">{item.name} </h1>
               <p className="description">{item.description} </p>
+              <p className="marc">{item.marc} </p>
               <p className="starts">{item.star} </p>
+            </div>
 
-              <div className="containerInforPrice">
-                <p className="price">{item.price} </p>
-                <p className="offert">{item.priceDesc}</p>
-                <p className="desc">{item.desc} </p>
-              </div>
+            <div className="containerInforPrice">
+              <p className="price">{item.price} </p>
+              <p className="offert">{item.priceDesc}</p>
+              <p className="desc">{item.desc} </p>
+            </div>
 
-              <div className="buttonsAdd">
-                <button className="buttoAddCart">ADD TO CART</button>
-                <button className="moreInfo">MORE</button>
-              </div>
+            <div className="buttonsAdd">
+              <button className="buttoAddCart">ADD TO CART</button>
+              <button className="moreInfo">MORE</button>
             </div>
           </div>
+        </div>
         ))}
       </div>
       <SocialMedia />

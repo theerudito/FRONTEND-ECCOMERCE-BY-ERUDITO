@@ -659,22 +659,24 @@ body {
   }
 
   .containerInforCard {
-    .name {
-      margin-top: 1px;
-      margin-left: 20px;
-      color: black;
-    }
-    .description {
-      margin-top: -25px;
-      margin-left: 20px;
-      color: black;
+    .info {
+      width: 260px;
+      margin-left: 10px;
+      h1 {
+        margin-left: 10px; 
+        width: 240px;
+        font-size: 18px;
+      }
+      p {
+        margin-left: 10px; 
+        width: 240px;
+        margin-top: -10px;
+        text-transform: lowercase;
+      }
     }
     .starts {
-      margin-top: -10px;
-      margin-left: 20px;
-      color: gold;
+      color: purple
     }
-
   }
 
 
