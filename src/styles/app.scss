@@ -827,7 +827,7 @@ body {
     .instagram {
       border: solid 1px silver;
       text-transform: uppercase;
-      width: 350px;
+      width: 375px;
       margin: auto;
       display: flex;
       align-items: $align-items;
@@ -895,6 +895,7 @@ body {
       border: solid 1px silver;
       width: 375px;
       height: 200px;
+      margin: 0 0 10px 0;
 
       .titlestore {
         font-size: 18px;
