@@ -3,10 +3,13 @@ import React from "react";
 export const SocialMedia = () => {
   return (
     <div className="socialMedia">
+
       <div className="instagram">
         <h1 className="titlefb">FOLLOW US ON INSTAGRAM</h1>
         <p className="user">@theerudito</p>
       </div>
+
+      <div className="contenedor">
 
       <div className="offers">
         <h1 className="titleOffers">HOT OFFERS</h1>
@@ -60,6 +63,9 @@ export const SocialMedia = () => {
           </li>
         </ul>
       </div>
+
+      </div>
+
     </div>
   );
 };

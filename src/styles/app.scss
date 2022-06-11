@@ -806,7 +806,6 @@ body {
 
 
 .socialMedia { 
-  
   @media screen and (max-width: 320px) {
   }
   
@@ -819,6 +818,11 @@ body {
     gap: $gap;
     height: auto;
     height: 475px;
+
+    .contenedor {
+      display: grid;
+      gap: $gap;
+    }
 
     .instagram {
       border: solid 1px #E3E7E8;
@@ -927,6 +931,11 @@ body {
     gap: $gap;
     height: 500px;
 
+    .contenedor {
+      display: grid;
+      gap: $gap;
+    }
+
 
     .instagram {
       border: solid 1px #E3E7E8;
@@ -954,16 +963,54 @@ body {
   }
   
   @media screen and (min-width: 768px) {
+
+    height: auto;
+    display: grid;
+    margin: auto;
+    grid-template-columns: repeat(1, 2fr);
+
+    .instagram {
+      width: 400px;
+      display: flex;
+      margin: 5px auto;
+      h1 {
+        display: flex;
+        width: 230px;
+      }
+    }
+
+    .offers {
+      
+      width: 360px;
+      margin: 0px 0px 5px 0px;
+    }
+    .store {
+      width: 360px;
+      margin: 0px 0px 5px 0px;
+    }
+
+    .contenedor {
+      display: grid;
+      margin: auto ;
+      gap: $gap;
+      grid-template-columns: auto auto  ;
+    }
+
+    
   }
   
   @media screen and (min-width: 1024px) {
-    background-color: #FFFFFF;
-    display: $display;
+    height: 240px;
+    display: grid;
     margin: auto;
-    align-items: $align-items;
-    justify-content: $justify-content;
-    gap: $gap;
-    height: 300px;
+    grid-template-columns: auto auto  auto;
+
+    .contenedor {
+      display: grid;
+      margin: auto ;
+      gap: $gap;
+      grid-template-columns: auto auto  ;
+    }
 
 
     .instagram {
@@ -974,21 +1021,19 @@ body {
       display: grid;
       align-items: $align-items;
       justify-content: $justify-content;
-  
-      .titlefb {
-        transform: uppercase;
-        font-size: 20px;
-        background-color: #1877F2;
-        margin-right: 8px;
+      h1 {
+
+        font-size: 11px;
       }
+  
+      
       .user {
         margin: 10px auto;
         width: 100px;
         background-color: #1877F2;
         border-radius: 10px;
         color: white;
-        padding: 3px 5px 3px 20px;
-        
+        padding: 3px 5px 3px 20px; 
       }
     }
 
@@ -1063,10 +1108,15 @@ body {
   
   @media screen and (min-width: 2560px) {
   }
-
-
    
 }
+
+
+
+
+
+
+
 
 .containerFooter {
 
