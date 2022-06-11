@@ -3,8 +3,8 @@ import React from "react";
 export const SocialMedia = () => {
   return (
     <div className="socialMedia">
-      <div className="facebook">
-        <h1 className="titlefb">FOLLOW US ON FACEBOOK</h1>
+      <div className="instagram">
+        <h1 className="titlefb">FOLLOW US ON INSTAGRAM</h1>
         <p className="user">@theerudito</p>
       </div>
 

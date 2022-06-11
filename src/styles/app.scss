@@ -820,7 +820,7 @@ body {
     height: auto;
     height: 475px;
 
-    .facebook {
+    .instagram {
       border: solid 1px #E3E7E8;
       transform: lowercase;
       width: auto;
@@ -928,7 +928,7 @@ body {
     height: 500px;
 
 
-    .facebook {
+    .instagram {
       border: solid 1px #E3E7E8;
       transform: lowercase;
       width: auto;
@@ -966,10 +966,10 @@ body {
     height: 300px;
 
 
-    .facebook {
+    .instagram {
       border: solid 1px #E3E7E8;
       transform: lowercase;
-      width: 300px;
+      width: 310px;
       margin: $margin;
       display: grid;
       align-items: $align-items;
@@ -978,6 +978,8 @@ body {
       .titlefb {
         transform: uppercase;
         font-size: 20px;
+        background-color: #1877F2;
+        margin-right: 8px;
       }
       .user {
         margin: 10px auto;
