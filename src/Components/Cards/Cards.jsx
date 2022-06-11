@@ -41,7 +41,7 @@ export const Cards = () => {
             </div>
           </div>
         ))
-        .reduce((acc, item) => [...acc, item], [])}
+        }
     </div>
   );
 };
