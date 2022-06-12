@@ -787,7 +787,7 @@ body {
     
     color: #F4BF1E;
     background-color: white;
-    border: solid 1px gray;
+    border: solid 1px #E3E7E8;
     width: 120px;
     height: 40px;
     &:hover{
@@ -797,7 +797,7 @@ body {
   }
   .moreInfo {
     background-color: #F4BF1E;
-    border: solid 1px gray;
+    border: solid 1px #E3E7E8;
     color: black;
     width: 120px;
     height: 40px;
@@ -824,6 +824,7 @@ body {
   @media screen and (min-width: 375px) {
     display: grid;
     margin: 10px auto;
+    margin-top: -10px;
     grid-template-columns: repeat(1);
     align-items: $align-items;
     justify-content: $justify-content;
@@ -837,9 +838,10 @@ body {
     }
 
     .instagram {
-      border: solid 1px silver;
+      border: solid 1px #E3E7E8;
       text-transform: uppercase;
       width: 365px;
+      height: 30px;
       margin: auto;
       display: flex;
       align-items: $align-items;
@@ -850,23 +852,28 @@ body {
         font-size: 14px;
         margin-left: 15px;
       }
-      .user {
-        margin: 10px auto;
-        font-size: 12px;
-        width: 100px;
+      
+
+      .user{
+        width: 90px;
+        font-size: 13px;
+        margin: auto;
+        display: flex;
+        text-transform: lowercase;
         background-color: #1877F2;
         border-radius: 10px;
         color: white;
-        padding: 3px 5px 3px 20px;
         &:hover{
           background-color: #0a5bc5;
           color: white;
         }
-      }
+       }
+
+
     }
 
     .offers {
-      border: solid 1px silver;
+      border: solid 1px #E3E7E8;
       width: 365px;
       height: 200px;
       margin: $margin;
@@ -904,7 +911,7 @@ body {
   
   
     .store {
-      border: solid 1px silver;
+      border: solid 1px #E3E7E8;
       width: 365px;
       height: 200px;
       margin: 0 0 10px 0;
@@ -953,7 +960,6 @@ body {
 
     .instagram {
       border: solid 1px #E3E7E8;
-      transform: lowercase;
       width: auto;
       margin: $margin;
       display: flex;
@@ -961,18 +967,16 @@ body {
       justify-content: $justify-content;
   
       .titlefb {
-        transform: uppercase;
+        text-transform: uppercase;
         font-size: 16px;
         margin-left: 15px;
       }
-      .user {
-        margin: 10px auto;
-        width: 100px;
-        background-color: #1877F2;
-        border-radius: 10px;
-        color: white;
-        padding: 3px 5px 3px 20px;
-      }
+      
+        .user{
+          width: 80px;
+          text-transform: lowercase;
+         }
+      
     }
   }
   
@@ -987,11 +991,17 @@ body {
       width: 400px;
       display: flex;
       margin: 5px auto;
+
       h1 {
         display: flex;
-        width: 230px;
+        width: 230px;    
+      }
+
+      .user{
+       width: 80px;
       }
     }
+
 
     .offers {
       
@@ -1031,28 +1041,29 @@ body {
       border: solid 1px #E3E7E8;
       transform: lowercase;
       width: 310px;
-      margin: $margin;
+      height: 60px;
       display: grid;
-      align-items: $align-items;
-      justify-content: $justify-content;
-      h1 {
+      margin: auto ;
+      grid-template-columns: repeat(1)  ;
 
+      h1 {
         font-size: 11px;
       }
   
-      
-      .user {
-        margin: 10px auto;
+      .user{
         width: 100px;
-        background-color: #1877F2;
-        border-radius: 10px;
-        color: white;
-        padding: 3px 5px 3px 20px; 
-      }
+        margin-top: -10px;
+        font-size: 14px;
+       }
+
+      
     }
 
+
+    
+
     .offers {
-      border: solid 1px silver;
+      border: solid 1px #E3E7E8;
       width: 400px;
       height: 200px;
 
@@ -1087,7 +1098,7 @@ body {
   
   
     .store {
-      border: solid 1px silver;
+      border: solid 1px #E3E7E8;
       width: 400px;
       height: 200px;
       
@@ -1267,6 +1278,7 @@ body {
   }
   
   @media screen and (min-width: 768px) {
+    
   }
   
   @media screen and (min-width: 1024px) {
