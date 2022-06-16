@@ -15,7 +15,7 @@ export const Headset = () => {
       <Menu />
       <h2 className="titlecategory">HEADSETS</h2>
       <div className="contenedorCard">
-        {STORE[0].PRODUCTS[0].HEADSET.map((item) => (
+        {STORE[0][1].map((item) => (
           <div className="bodyCard" key={item.id}>
             <div className="containerImagen">
               <img className="imagenCard" src={item.pic} alt="foto" />

@@ -653,40 +653,23 @@ let d = STORE[0].PRODUCTS.map((item) => [
 //console.log(STORE[0].PRODUCTS[0].COLLECTIONS);
 //console.log(d);
 
+//let ram = Math.floor(Math.random() * d.length);
 
-let ram = Math.floor(Math.random() * d.length);
+//console.log(ram);
 
-
-console.log(ram);
-
+let id = Date.now();
 let array = [
   {
-    productos: [
-      {
-        cat1: [
-          {
-            id: 1,
-            name: "a",
-          },
-        ],
-        cat2: [
-          {
-            id: 2,
-            name: "b",
-          },
-        ],
-        cat3: [
-          {
-            id: 3,
-            name: "c",
-          },
-          {
-            id: 3.1,
-            name: "c.1",
-          },
-        ],
-      },
-    ],
+    0: [{ id, nombre: "Camisa1", precio: "5.00" }],
+    1: [{ id, nombre: "Camisa2", precio: "10.00" }],
+    2: [{ id, nombre: "Camisa3", precio: "15.00" }],
+    3: [{ id, nombre: "Camisa4", precio: "20.00" }],
+    4: [{ id, nombre: "Camisa4", precio: "25.00" }],
   },
-];
+]
 
+let a = array[0];
+console.log(a);
+
+let ram = Math.floor(Math.random() * array[0]);
+console.log(ram.lenght);

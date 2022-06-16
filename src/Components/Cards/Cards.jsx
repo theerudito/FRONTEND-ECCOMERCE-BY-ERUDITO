@@ -2,20 +2,15 @@ import React from "react";
 import { STORE } from "../Helpers/Data";
 
 export const Cards = () => {
-  let products = STORE[0].PRODUCTS.map((item) => [
-    ...item.ACCESSORIES,
-    ...item.LAPTOPS,
-    ...item.COMPUTERS,
-    ...item.HEADSET,
-    ...item.KEYBOARDS,
-    ...item.MONITOR,
-  ])
-    .reduce((a, b) => a.concat(b), [])
-    .slice(0, 12);
+  //console.log(STORE[0]);
+
+  let numRamdom = [0, 2, 3, 4, 5];
+
+  let ramdom = Math.floor(Math.random() * numRamdom.length);
 
   return (
     <div className="contenedorCard">
-      {products.map((item) => (
+      {STORE[0][ramdom].map((item) => (
         <div className="bodyCard" key={item.id}>
           <div className="containerImagen">
             <img className="imagenCard" src={item.pic} alt="foto" />

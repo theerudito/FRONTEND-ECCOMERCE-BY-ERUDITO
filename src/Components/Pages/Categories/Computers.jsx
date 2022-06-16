@@ -14,15 +14,14 @@ export const Computers = () => {
       <Menu />
       <h2 className="titlecategory">COMPUTERS </h2>
       <div className="contenedorCard">
-        {STORE[0].PRODUCTS[0].COMPUTERS.map((item) => (
+        {STORE[0][0].map((item) => (
           <div className="bodyCard" key={item.id}>
             <div className="containerImagen">
               <img className="imagenCard" src={item.pic} alt="foto" />
             </div>
 
             <div className="containerInforCard">
-
-            <div className="info">
+              <div className="info">
                 <h1 className="name">{item.name} </h1>
                 <p className="description">{item.description} </p>
                 <p className="marc">{item.marc} </p>

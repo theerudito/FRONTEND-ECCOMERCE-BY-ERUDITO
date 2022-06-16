@@ -1,12 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { STORE } from "../Helpers/Data";
+import { CATEGORIES } from "../Helpers/Data";
 
 export const Collection = () => {
   return (
     <div className="collection">
-      {STORE[0].PRODUCTS[0].COLLECTIONS.map((item) => (
-        
+      {CATEGORIES.map((item) => (
         <div className="bodyColections" key={item.id}>
           <div>
             <h1 className="titleCollection">{item.Title} </h1>

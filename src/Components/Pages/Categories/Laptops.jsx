@@ -14,7 +14,7 @@ export const Laptops = () => {
       <Menu />
       <h2 className="titlecategory">LAPTOPS</h2>
       <div className="contenedorCard">
-        {STORE[0].PRODUCTS[0].LAPTOPS.map((item) => (
+        {STORE[0][2].map((item) => (
           <div className="bodyCard" key={item.id}>
             <div className="containerImagen">
               <img className="imagenCard" src={item.pic} alt="foto" />

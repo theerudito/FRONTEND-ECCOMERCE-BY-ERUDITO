@@ -14,7 +14,7 @@ export const Keyboards = () => {
       <Menu />
       <h2 className="titlecategory">KEYBOARDS </h2>
       <div className="contenedorCard">
-        {STORE[0].PRODUCTS[0].KEYBOARDS.map((item) => (
+        {STORE[0][4].map((item) => (
           <div className="bodyCard" key={item.id}>
             <div className="containerImagen">
               <img className="imagenCard" src={item.pic} alt="foto" />
