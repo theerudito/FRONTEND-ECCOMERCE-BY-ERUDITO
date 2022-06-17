@@ -846,19 +846,34 @@ body {
       display: flex;
       align-items: $align-items;
       justify-content: $justify-content;
-  
-      .titlefb {
-        transform: uppercase;
-        font-size: 14px;
-        margin-left: 15px;
-      }
       
+      .containerFollow {
+        height: 20px;
+        .titlefb {
+          font-size: 14px;
+          margin: $margin;
+          display: flex;
+          align-items: $align-items;
+          justify-content: $justify-content;
+        }
+       }
 
-      .user{
-        width: 90px;
-        font-size: 13px;
+       .containderUser {
+        margin: $margin;
+        padding-left: 10px;
+        display: grid;
+        align-items: $align-items;
+        justify-content: $justify-content;
+    
+        
+        .user{
+        width: 80px;
         margin: auto;
         display: flex;
+        align-items: $align-items;
+        justify-content: $justify-content;
+        height: 18px;
+        font-size: 12px;
         text-transform: lowercase;
         background-color: #1877F2;
         border-radius: 10px;
@@ -868,6 +883,12 @@ body {
           color: white;
         }
        }
+
+       }
+      
+      
+
+      
 
 
     }
@@ -966,16 +987,35 @@ body {
       align-items: $align-items;
       justify-content: $justify-content;
   
-      .titlefb {
-        text-transform: uppercase;
-        font-size: 16px;
-        margin-left: 15px;
-      }
-      
+      .containerFollow {
+        height: 20px;
+        .titlefb {
+          font-size: 14px;
+          margin: $margin;
+          display: flex;
+          align-items: $align-items;
+          justify-content: $justify-content;
+        }
+       }
+
+       .containderUser {
+        margin: $margin;
+        padding-left: 10px;
+        display: grid;
+        align-items: $align-items;
+        justify-content: $justify-content;
+    
+        
         .user{
-          width: 80px;
-          text-transform: lowercase;
-         }
+        width: 80px;
+        margin: auto;
+        display: flex;
+        align-items: $align-items;
+        justify-content: $justify-content;
+        height: 18px;
+       }
+
+       }
       
     }
   }
@@ -992,14 +1032,35 @@ body {
       display: flex;
       margin: 5px auto;
 
-      h1 {
-        display: flex;
-        width: 230px;    
-      }
+      .containerFollow {
+        
+        height: 20px;
 
-      .user{
-       width: 80px;
-      }
+        .titlefb {
+          font-size: 14px;
+          margin: $margin;
+          display: flex;
+          align-items: $align-items;
+          justify-content: $justify-content;
+        }
+       }
+
+       .containderUser {
+        margin: $margin;
+        display: grid;
+        align-items: $align-items;
+        justify-content: $justify-content;
+        
+        .user{
+        width: 80px;
+        margin: auto;
+        display: flex;
+        align-items: $align-items;
+        justify-content: $justify-content;
+        height: 20px;
+       }
+
+       }
     }
 
 
@@ -1046,14 +1107,35 @@ body {
       margin: auto ;
       grid-template-columns: repeat(1)  ;
 
-      h1 {
-        font-size: 11px;
-      }
-  
-      .user{
-        width: 100px;
-        margin-top: -10px;
-        font-size: 14px;
+     
+       .containerFollow {
+        
+        height: 20px;
+
+        .titlefb {
+          font-size: 14px;
+          margin: $margin;
+          display: flex;
+          align-items: $align-items;
+          justify-content: $justify-content;
+        }
+       }
+
+       .containderUser {
+        margin: $margin;
+        display: grid;
+        align-items: $align-items;
+        justify-content: $justify-content;
+        
+        .user{
+        width: 80px;
+        margin: auto;
+        display: flex;
+        align-items: $align-items;
+        justify-content: $justify-content;
+        height: 20px;
+       }
+
        }
 
       

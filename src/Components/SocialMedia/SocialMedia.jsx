@@ -4,9 +4,13 @@ export const SocialMedia = () => {
   return (
     <div className="socialMedia">
       <div className="instagram">
-        <h1 className="titlefb">FOLLOW US ON INSTAGRAM</h1>
+        <div className="containerFollow">
+          <h1 className="titlefb">FOLLOW US ON INSTAGRAM</h1>
+        </div>
 
-        <p className="user">@theerudito</p>
+        <div className="containderUser" >
+          <p className="user">@theerudito</p>
+        </div>
       </div>
 
       <div className="contenedor">
