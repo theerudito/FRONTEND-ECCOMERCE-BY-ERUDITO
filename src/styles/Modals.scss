@@ -1,0 +1,203 @@
+$margin: auto;
+$display: flex;
+$justify-content: center;
+$align-items: center;
+$gap: 10px;
+$borderRadius: 5px;
+$border: none;
+$boxShadow: 0 0 10px rgba(0, 0, 0, 0.1);
+$background: #fff;
+$color: #fff;
+$templateColumns: repeat(3, 1fr);
+$cover: cover;
+$marginT: 0;
+$marginB: 0;
+$marginL: 0;
+$marginR: 0;
+
+
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+  width: 100%;
+  min-height: 100vh;
+  display: none;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.modal.is-open{
+  display: flex;
+}
+
+.modal-container {
+  position: relative;
+  min-width: 700px;
+  max-width: 800px;
+  min-height: 400px;
+  max-height: 500px;
+  overflow-y: auto;
+  padding: 1rem;
+  background-color: rgb(231, 226, 226);
+  border-radius: 5px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.modal-close {
+  position: absolute;
+  top: 115px;
+  right: 330px;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: orange;
+  border: none;
+  height: 30px;
+  width: 30px;
+  &:hover {
+    background-color: #ffc107;
+  }
+}
+
+@mixin contaninerModal ($background, $borderRadius) {
+  background-color: $background;
+  border-radius: $borderRadius;
+} 
+
+.contaninerModal {
+  @include contaninerModal(#fff, 5px)
+}
+
+
+@mixin bodyModal ($background, $display, $margin, $templateColumns, $width, $height, $gap) {
+    background-color: $background;
+    display: $display;
+    margin: $margin;
+    grid-template-columns: $templateColumns;
+    width: $width;
+    height: $height;
+    gap: $gap;
+
+}
+
+
+.bodyModal {
+  @include bodyModal(none, grid, auto auto auto, repeat(3, 1fr),  680px, 400px, 10px);
+}
+
+
+@mixin containerImagenModal ($width, $height, $background, $border, $cover,$margin, $marginT, $borderRadius) {
+  width: $width;
+  height: $height;
+  background-color: $background;
+  border: $border;
+  object-fit: $cover;
+  margin: $margin;
+  margin-top: $marginT;
+  border-radius: $borderRadius
+}
+
+.containerImagenModal  {
+  @include containerImagenModal(260px, 200px, none,  1px solid #E3E7E8, cover, auto, 10px, 5px);
+  img {
+    width: 160px;
+    height: 160px;
+    margin: $margin;
+    display:$display;
+  }
+}
+
+
+@mixin carrosusel ($width, $height, $background) {
+  width: $width;
+  height: $height;
+  background-color: $background;
+}
+
+.carrosusel {
+  @include carrosusel(200px, 170px, none);
+  p {
+    color: black;
+    font-size: 12px;
+    padding-left: 5px;
+  }
+}
+
+@mixin containerInfor ($width, $height, $background, $margin, $marginT) {
+  width: $width;
+  height: $height;
+  background-color: $background;
+  margin: $margin;
+  margin-top: $marginT
+}
+
+.containerInfor {
+  @include containerInfor(200px, 170px, none,  auto, 30px);
+  p {
+    color: black;
+    font-size: 12px;
+    padding-left: 5px;
+  }
+}
+
+
+
+
+@mixin containerPrices ($width, $height, $background, $margin, $marginT) {
+  width: $width;
+  height: $height;
+  background-color: $background;
+  margin: $margin;
+  margin-top: $marginT
+}
+
+.containerPrices {
+  @include containerPrices(200px, 170px, none,  auto, 30px);
+  p {
+    color: black;
+    font-size: 12px;
+    padding-left: 5px;
+  }
+
+  input {
+    width: 40px;
+  }
+}
+
+
+
+@mixin contenedorBoton ($width, $height, $background, $margin, $marginT) {
+  width: $width;
+  height: $height;
+  background-color: $background;
+  margin: $margin;
+  margin-top: $marginT
+}
+
+.contenedorBoton {
+  @include contenedorBoton(140px, 40px, none,  auto, 160px );
+  button {
+    background-color: #ffc107;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    font-weight: bold;
+    user-select: none;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #350b30;
+      color: #fff;
+      font-weight: bold;
+    }
+  }
+}
+
+
+
+
