@@ -870,6 +870,7 @@ body {
         width: 80px;
         margin: auto;
         display: flex;
+        user-select: none;
         align-items: $align-items;
         justify-content: $justify-content;
         height: 18px;
@@ -1008,6 +1009,7 @@ body {
         
         .user{
         width: 80px;
+        user-select: none;
         margin: auto;
         display: flex;
         align-items: $align-items;
@@ -1129,6 +1131,7 @@ body {
         
         .user{
         width: 80px;
+        user-select: none;
         margin: auto;
         display: flex;
         align-items: $align-items;
