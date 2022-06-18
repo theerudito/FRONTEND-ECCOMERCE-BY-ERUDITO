@@ -10,10 +10,10 @@ $background: #fff;
 $color: #fff;
 $templateColumns: repeat(3, 1fr);
 $cover: cover;
-$marginT: 0;
-$marginB: 0;
-$marginL: 0;
-$marginR: 0;
+$marginT: 0px;
+$marginB: 0px;
+$marginL: 0px;
+$marginR: 0px;
 
 
 
@@ -49,18 +49,24 @@ $marginR: 0;
 }
 
 .modal-close {
-  position: absolute;
-  top: 115px;
-  right: 330px;
+  position: relative;
+  top: -170px;
+  right: 60px;
   border-radius: 50%;
-  cursor: pointer;
-  background-color: orange;
-  border: none;
-  height: 30px;
-  width: 30px;
-  &:hover {
-    background-color: #ffc107;
+  
+
+  i {
+    border: none;
+    cursor: pointer;
+    font-size: 30px;
+    border-radius: 50%;
+    color: #ffc107;
+    background-color: white;
+    &:hover {
+      color: orangered;
+    }
   }
+
 }
 
 @mixin contaninerModal ($background, $borderRadius) {
@@ -98,32 +104,60 @@ $marginR: 0;
   object-fit: $cover;
   margin: $margin;
   margin-top: $marginT;
-  border-radius: $borderRadius
+  border-radius: $borderRadius;
+  
 }
+
+@mixin imge ($margin, $display, $align-items, $justify-content) {
+  margin: $margin;
+  display: $display;
+  align-items: $align-items;
+  justify-content: $justify-content;
+  width: 100%;
+  height: 100%;
+}
+
+.img {
+  @include imge(auto, flex, center, center);
+    img {
+      width: 160px;
+      height: 160px;
+      
+      
+    }
+}
+
 
 .containerImagenModal  {
-  @include containerImagenModal(260px, 200px, none,  1px solid #E3E7E8, cover, auto, 10px, 5px);
-  img {
-    width: 160px;
-    height: 160px;
-    margin: $margin;
-    display:$display;
-  }
+  @include containerImagenModal(250px, 290px, none,  1px solid #E3E7E8, cover, auto, 10px, 5px);
+  margin: 15px 5px 5px 5px;
+  
 }
 
 
-@mixin carrosusel ($width, $height, $background) {
+@mixin carrosusel ($width, $height, $background, $display, $margin, $templateColumns, $marginT, $marginL) {
   width: $width;
   height: $height;
   background-color: $background;
+  display: $display;
+  margin: $margin;
+  grid-template-columns: $templateColumns;
+  margin-top: $marginT;
+  margin-left: $marginL;
+
 }
 
 .carrosusel {
-  @include carrosusel(200px, 170px, none);
-  p {
-    color: black;
-    font-size: 12px;
-    padding-left: 5px;
+  @include carrosusel(50px, 50px, none, flex, 10px, repeat(3, 1fr), 15px, 0px);
+  
+  img {
+    background-color: none;
+    border: 2px solid black;
+    gap: 5px;
+    width: 60px;
+    height: 60px;
+    margin: 0px 1px;
+    
   }
 }
 
@@ -189,10 +223,11 @@ $marginR: 0;
     font-weight: bold;
     user-select: none;
     cursor: pointer;
+    color: white;
 
     &:hover {
-      background-color: #350b30;
-      color: #fff;
+      background-color: orangered;
+      color: black;
       font-weight: bold;
     }
   }

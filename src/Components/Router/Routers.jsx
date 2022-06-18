@@ -1,5 +1,6 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
+import { Cart } from "../Pages/Cart";
 import { Accessories } from "../Pages/Categories/Accessories";
 import { Computers } from "../Pages/Categories/Computers";
 import { Headset } from "../Pages/Categories/Headset";
@@ -40,6 +41,7 @@ export const Router = () => {
         <Route path={RoutesApps.monitors} element={<Monitors />} />
         <Route path={RoutesApps.keyboards} element={<Keyboards />} />
         <Route path={RoutesApps.accessories} element={<Accessories />} />
+        <Route path={RoutesApps.cart} element={<Cart/>} />
         <Route path={RoutesApps.register} element={""} />
         <Route path={RoutesApps.login} element={""} />
         <Route path={RoutesApps.logout} element={""} />

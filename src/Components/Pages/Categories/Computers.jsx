@@ -1,12 +1,17 @@
 import React from "react";
+import { useModal } from "../../CustomHooks/useModal";
 import { Footer } from "../../Footer/Footer";
 import { Header } from "../../Header/Header";
 import { Header2 } from "../../Header/Header2";
 import { STORE } from "../../Helpers/Data";
 import { Menu } from "../../Menu/Menu";
+import { DataModalComputer } from "../../Modals/DataModal";
+
+import { ModalMore } from "../../Modals/ModalMore";
 import { SocialMedia } from "../../SocialMedia/SocialMedia";
 
 export const Computers = () => {
+  const [isOpenMore, openModalMore, closeModalMore] = useModal(false);
   return (
     <>
       <Header />
@@ -36,7 +41,13 @@ export const Computers = () => {
 
               <div className="buttonsAdd">
                 <button className="buttoAddCart">ADD TO CART</button>
-                <button className="moreInfo">MORE</button>
+                <button className="moreInfo" onClick={openModalMore}>
+                  MORE
+                </button>
+
+                <ModalMore isOpen={isOpenMore} closeModal={closeModalMore}>
+                  <DataModalComputer item={item}/>
+                </ModalMore>
               </div>
             </div>
           </div>

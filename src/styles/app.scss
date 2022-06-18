@@ -1,5 +1,5 @@
 @import "./Modals.scss";
-
+@import "./Cart.scss";
 
 $margin: 0px;
 $padding: 0px;
@@ -252,29 +252,27 @@ body {
 
 
   .containerCart {
-    background-color: #282c32;
-    width: 100px;
+    width: 150px;
     display: $display;
     height: 30px;
+    gap: 10px;
+    align-items: $align-items;
+    justify-content: $justify-content;
     
-    .buttonCart{
-      color: #ffffff;
-      width: 100px;
-      border: $border;
-      background-color: #282c34;
-    }
-    .add {
+    i {
+      color: orangered;
+      font-size: 22px;
+      &:hover {
+        color: orange;
+      }
      
-      color: #ffffff;
-      width: 50px;
-      margin: auto;
-      display: $display;
-      align-items: $align-items;
-      justify-content: $justify-content;
+    }
+
+    p {
+      font-size: 12px;
     }
   }
-  
-  
+
 }
 
 .menu {
@@ -289,9 +287,7 @@ body {
  
   li {
      cursor: pointer;
-     user-select: none;
-     
-     
+     user-select: none;    
   }
  
   @media screen and (max-width: 320px) {
@@ -1437,5 +1433,6 @@ body {
   }
   
 }
+
 
 

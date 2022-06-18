@@ -1,7 +1,7 @@
 import React from "react";
 import { useModal } from "../CustomHooks/useModal";
 import { STORE } from "../Helpers/Data";
-import { DataModal } from "../Modals/DataModal";
+import { DataModalBody } from "../Modals/DataModal";
 import { ModalMore } from "../Modals/ModalMore";
 
 export const Cards = () => {
@@ -39,8 +39,8 @@ export const Cards = () => {
               <button className="buttoAddCart">ADD TO CART</button>
               <button className="moreInfo" onClick={openModalMore}>MORE</button>
               
-              <ModalMore isOpen={isOpenMore} closeModal={closeModalMore}>
-                  <DataModal/>
+              <ModalMore isOpen={isOpenMore} closeModal={closeModalMore} >
+                 <DataModalBody/>
               </ModalMore>
             </div>
           </div>

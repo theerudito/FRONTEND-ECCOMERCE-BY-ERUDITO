@@ -23,10 +23,12 @@ export const Header2 = () => {
       </div>
 
       <div className="containerCart">
-        <button className="buttonCart">
-          <i className="fa-solid fa-cart-shopping"></i>
-        </button>
-        <p className="add">1</p>
+        <Link to={RoutesApps.cart}>
+          <span>
+            <i className="fa-solid fa-cart-shopping"></i>
+          </span>
+        </Link>
+        <p>Credit: 10000</p>
       </div>
     </div>
   );

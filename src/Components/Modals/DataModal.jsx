@@ -1,34 +1,106 @@
 import React from "react";
 
-export const DataModal = () => {
+export const DataModalBody = ({ item }) => {
   return (
     <>
       <div className="contaninerModal">
         <div className="bodyModal">
           <div className="containerImagenModal">
-            <img
-              src="https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Ecommers%2Fkeyboard%2F1.png?alt=media&token=4a5e67d6-609a-4708-868e-3051b57197e3"
-              alt="foto"
-              className="imagenData"
-            />
+            <div className="img">
+              <img
+                src="https://avatars.dicebear.com/api/micah/weds.svg"
+                alt="foto"
+                className="imagenData"
+              />
+            </div>
             <div className="carrosusel">
-              <p>Image1</p>
-              <p>Image2</p>
-              <p>Image3</p>
-              <p>Image4</p>
+              <img
+                src="https://avatars.dicebear.com/api/micah/weds.svg"
+                alt="pic"
+              />
+              <img
+                src="https://avatars.dicebear.com/api/micah/weds.svg"
+                alt="pic"
+              />
+              <img
+                src="https://avatars.dicebear.com/api/micah/weds.svg"
+                alt="pic"
+              />
+              <img
+                src="https://avatars.dicebear.com/api/micah/weds.svg"
+                alt="pic"
+              />
             </div>
           </div>
           <div className="containerInfor">
             Info
-            <p>Nombre: Keyboard</p>
-            <p>Descripcion: Teclado</p>
-            <p>Marca: Logitech</p>
+            <p>Nombre: Lapto</p>
+            <p>Descripcion: 15 Pulgadas </p>
+            <p>Marca: HP </p>
           </div>
           <div className="containerPrices">
             Precio
-            <p>Price: $100</p>
-            <p>Desc: $80</p>
-            <p>Offer: $50</p>
+            <p>Price: 200 </p>
+            <p>Desc: 8% </p>
+            <p>Offer: 180 </p>
+            <p>Quantity</p>
+            <input type="number" placeholder="1" />
+            <button>-</button>
+            <button>+</button>
+            <div className="contenedorBoton">
+              <button>Add Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export const DataModalComputer = ({ item }) => {
+  console.log(item);
+  return (
+    <>
+      <div className="contaninerModal">
+        <div className="bodyModal">
+          <div className="containerImagenModal">
+            <div className="img">
+              <img
+                src={item.pic}
+                alt="foto"
+                className="imagenData"
+              />
+            </div>
+            <div className="carrosusel">
+              <img
+                src={item.pic}
+                alt="pic"
+              />
+              <img
+                src={item.pic}
+                alt="pic"
+              />
+              <img
+                src={item.pic}
+                alt="pic"
+              />
+              <img
+                src={item.pic}
+                alt="pic"
+              />
+            </div>
+          </div>
+          <div className="containerInfor">
+            Info
+            <p>Nombre: {item.name} </p>
+            <p>Descripcion: {item.description} </p>
+            <p>Marca: HP {item.marc} </p>
+          </div>
+          <div className="containerPrices">
+            Precio
+            <p>Price: {item.price} </p>
+            <p>Desc: {item.desc} </p>
+            <p>Offer: {item.priceDesc} </p>
             <p>Quantity</p>
             <input type="number" placeholder="1" />
             <button>-</button>
