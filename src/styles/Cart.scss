@@ -16,13 +16,42 @@ $marginL: 0px;
 $marginR: 0px;
 
 .containerPayment {
-  background-color: white;
   margin-top: 10px;
-  height: 400px;
+  height: auto;
 }
 
 
 .details {
+@media screen and (max-width: 320px) {
+    
+}
+
+@media screen and (min-width: 375px) {
+  
+}
+
+@media screen and (min-width: 425px) {
+  background-color: #282C34;
+  display: flex;
+  gap: 15px;
+  margin: 1px auto;
+  width: 400px;
+  height: 30px;
+  align-items: center;
+  justify-content: center;
+  border: solid 1px silver;
+  color: white;
+
+  .Name {
+    width: 240px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  
+}
+@media screen and (min-width: 1024px) {
+  
   background-color: #282C34;
   display: flex;
   gap: 50px;
@@ -39,7 +68,71 @@ $marginR: 0px;
   }
 }
 
+@media screen and (min-width: 1440px) {
+  
+}
+
+@media screen and (min-width: 2560px) {
+  
+}  
+}
+
+
 .containerInfoPago {
+@media screen and (max-width: 320px) {
+    
+}
+
+@media screen and (min-width: 375px) {
+  
+}
+
+@media screen and (min-width: 425px) {
+  background-color: rgb(132, 165, 128);
+  display: flex;
+  gap: 10px;
+  margin: auto;
+  width: 400px;
+  height: 30px;
+  align-items: center;
+  justify-content: center;
+  border: solid 1px silver;
+  border-top:  solid 1px silver;
+  border-left:  solid 1px silver;
+  border-right:  solid 1px silver;
+  &:hover {
+    background-color: rgb(160, 180, 158);
+  }
+
+  img {
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+    margin: 0px ;
+    display: block;
+  }
+
+  p {
+    background-color: none;
+  }
+
+  .Name {
+    width: 240px;
+  }
+
+  i {
+    color: black;
+    &:hover {
+     color: red;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  
+}
+@media screen and (min-width: 1024px) {
+  
   background-color: rgb(132, 165, 128);
   display: flex;
   gap: 50px;
@@ -72,7 +165,7 @@ $marginR: 0px;
   }
 
   .Name {
-    width: 240px;
+    width: 200px;
   }
 
   i {
@@ -82,7 +175,80 @@ $marginR: 0px;
     }
   }
 }
+
+@media screen and (min-width: 1440px) {
+  
+}
+
+@media screen and (min-width: 2560px) {
+ 
+}  
+}
+
+
+
 .containerTotals {
+  
+  @media screen and (max-width: 320px) {
+ 
+}
+
+@media screen and (min-width: 375px) {
+  
+}
+
+@media screen and (min-width: 425px) {
+  display: grid;
+  margin: auto;
+  grid-template-columns: auto auto;
+  border: solid 1px silver;
+  width: 400px;
+
+  img {
+    width: 100px;
+    height: 100px;
+    
+  }
+}
+
+.logo3 {
+  margin: auto;
+  display: flex;
+  width: 200px;
+}
+
+.payment {
+  display: grid;
+  justify-content: center;
+  margin: 10px;
+  width: 200px;
+  margin-left: auto;
+
+    p {
+      color: black;
+      font-size: 14px;
+      margin: 10px;
+    }
+  
+
+  button {
+    border: none;
+    background: orange;
+    border-radius: 10px;
+    width: 100px;
+    height: 30px;
+
+    &:hover {
+      background: orangered;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  
+}
+@media screen and (min-width: 1024px) {
+  
   display: grid;
   margin: auto;
   grid-template-columns: auto auto;
@@ -127,4 +293,13 @@ $marginR: 0px;
       background: orangered;
     }
   }
+}
+
+@media screen and (min-width: 1440px) {
+  
+}
+
+@media screen and (min-width: 2560px) {
+  
+}  
 }

@@ -46,11 +46,10 @@ export const DataModalBody = ({ item }) => {
             <p>Offer: 180 </p>
             <p>Quantity</p>
 
-            <div className="botons">
-              <input type="number" placeholder="1" />
+            <input type="number" placeholder="1" />
               <button>-</button>
               <button>+</button>
-            </div>
+           
 
             <div className="contenedorBoton">
               <button>Add Cart</button>
@@ -91,9 +90,14 @@ export const DataModalComputer = ({ item }) => {
             <p>Desc: {item.desc} </p>
             <p>Offer: {item.priceDesc} </p>
             <p>Quantity</p>
-            <input type="number" placeholder="1" />
-            <button>-</button>
-            <button>+</button>
+          
+            
+              <input type="number" placeholder="1" />
+              <button>-</button>
+              <button>+</button>
+           
+
+
             <div className="contenedorBoton">
               <button>Add Cart</button>
             </div>

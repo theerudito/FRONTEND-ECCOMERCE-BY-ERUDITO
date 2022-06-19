@@ -630,10 +630,12 @@ $height: 100%;
 
   input {
     width: 50px;
+    height: 20px;
     display: flex;
     margin: 5px;
     button {
       width: 20px;
+      height: 20px;
     }  
   }
 }
@@ -648,10 +650,12 @@ $height: 100%;
   }
   input {
     width: 50px;
+    height: 20px;
     display: flex;
     margin: 5px;
     button {
       width: 20px;
+      height: 20px;
     }  
   }
  
@@ -660,10 +664,13 @@ $height: 100%;
 @media screen and (min-width: 2560px) {
   input {
     width: 50px;
+    height: 20px;
     display: flex;
     margin: 5px;
     button {
+      background-color: #ffc107;
       width: 20px;
+      height: 20px;
     }  
   }
 }  
