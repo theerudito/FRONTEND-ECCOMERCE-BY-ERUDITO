@@ -40,17 +40,15 @@ $height: 100%;
 
 
 .modal-container {
-  background-color: orangered;
     @media screen and (max-width: 320px) {
     
     }
   
     @media screen and (min-width: 375px) {
-      background-color: tomato;
       position: relative;
       min-width: 300px;
       max-width: 310px;
-      min-height: 300px;
+      min-height: 400px;
       max-height: 400px;
       overflow-y: auto;
       padding: 1rem;
@@ -60,7 +58,7 @@ $height: 100%;
     }
   
     @media screen and (min-width: 425px) {
-      background-color: tomato;
+
       position: relative;
       min-width: 400px;
       max-width: 300px;
@@ -74,7 +72,6 @@ $height: 100%;
     }
   
     @media screen and (min-width: 768px) {
-      background-color: tomato;
       position: relative;
       min-width: 610px;
       max-width: 650px;
@@ -88,7 +85,7 @@ $height: 100%;
       
     }
     @media screen and (min-width: 1024px) {
-      background-color: tomato;
+
       position: relative;
       min-width: 610px;
       max-width: 800px;
@@ -123,7 +120,6 @@ $height: 100%;
 }
 
 @media screen and (min-width: 425px) {
-  background-color: pink;
 
   .modal-close {
     position: relative;
@@ -178,8 +174,6 @@ $height: 100%;
   background-color: purple;
 }  
 
-
-
   position: relative;
   top: -130px;
   right: 55px;
@@ -222,34 +216,31 @@ $height: 100%;
 
 .bodyModal {
   @media screen and (max-width: 320px) {
-    background-color: tomato;
 }
 
 @media screen and (min-width: 375px) {
-  background-color: orange; 
-  @include bodyModal(red, grid, auto auto auto, repeat(3, 1fr),  300px, 300px, 10px);
+  @include bodyModal(white, grid, auto auto auto, repeat(2, 1fr),  300px, 300px, 10px);
 }
 
 @media screen and (min-width: 425px) {
-  background-color: pink;
-  @include bodyModal(pink, grid, auto auto auto, repeat(3, 1fr),  400px, 300px, 10px);
+  @include bodyModal(none, grid, auto auto auto, repeat(3, 1fr),  400px, 300px, 10px);
 }
 
 @media screen and (min-width: 768px) {
-  background-color: blue;
-  @include bodyModal(red, grid, auto auto auto, repeat(3, 1fr),  600px, 300px, 10px);
+  
+  @include bodyModal(white, grid, auto auto auto, repeat(3, 1fr),  600px, 300px, 10px);
 }
 @media screen and (min-width: 1024px) {
-  background-color: green;
-  @include bodyModal(red, grid, auto auto auto, repeat(3, 1fr),  700px, 400px, 10px);
+  
+  @include bodyModal(white, grid, auto auto auto, repeat(3, 1fr),  700px, 400px, 10px);
 }
 
 @media screen and (min-width: 1440px) {
-  background-color: red;
+  
 }
 
 @media screen and (min-width: 2560px) {
-  background-color: purple;
+  
 }  
   @include bodyModal(none, grid, auto auto auto, repeat(3, 1fr),  700px, 400px, 10px);
 
@@ -279,11 +270,11 @@ $height: 100%;
 
 .img {
   @media screen and (max-width: 320px) {
-    background-color: tomato;
+    
 }
 
 @media screen and (min-width: 375px) {
-  background-color: orange; 
+  
   @include imge(auto, flex, center, center , 100%, 100%);
   img {
     width: 100px;
@@ -292,7 +283,6 @@ $height: 100%;
 }
 
 @media screen and (min-width: 425px) {
-  background-color: pink;
   @include imge(auto, flex, center, center , 100%, 100%);
   img {
     width: 100px;
@@ -301,7 +291,7 @@ $height: 100%;
 }
 
 @media screen and (min-width: 768px) {
-  background-color: blue;
+  
   @include imge(auto, flex, center, center , 100%, 100%);
   img {
     width: 100px;
@@ -309,7 +299,7 @@ $height: 100%;
   }
 }
 @media screen and (min-width: 1024px) {
-  background-color: green;
+  
   img {
     width: 200px;
     height: 200px;
@@ -317,11 +307,11 @@ $height: 100%;
 }
 
 @media screen and (min-width: 1440px) {
-  background-color: red;
+  
 }
 
 @media screen and (min-width: 2560px) {
-  background-color: gray;
+  
 }  
 
 }
@@ -329,38 +319,36 @@ $height: 100%;
 
 .containerImagenModal  {
   @media screen and (max-width: 320px) {
-    background-color: tomato;
+    
 }
 
 @media screen and (min-width: 375px) {
-  background-color: orange; 
+   
   @include containerImagenModal(100px, 100px, none,  1px solid #E3E7E8, cover, auto, 10px, 5px);
   margin: 15px 5px 5px 5px;
 }
 
 @media screen and (min-width: 425px) {
-  background-color: pink;
   @include containerImagenModal(100px, 100px, none,  1px solid #E3E7E8, cover, auto, 10px, 5px);
   margin: 15px 5px 5px 5px;
 }
 
 @media screen and (min-width: 768px) {
-  background-color: blue;
+  
   @include containerImagenModal(200px, 200px, none,  1px solid #E3E7E8, cover, auto, 10px, 5px);
   margin: 15px 5px 5px 5px;
 }
 @media screen and (min-width: 1024px) {
-  background-color: green;
   @include containerImagenModal(250px, 290px, none,  1px solid #E3E7E8, cover, auto, 10px, 5px);
   margin: 15px 5px 5px 5px;
 }
 
 @media screen and (min-width: 1440px) {
-  background-color: red;
+  
 }
 
 @media screen and (min-width: 2560px) {
-  background-color: gray;
+  
 }  
 
 }
@@ -382,36 +370,36 @@ $height: 100%;
 @include carrosusel(50px, 50px, none, flex, 10px, repeat(3, 1fr), 15px, 0px);
 
 @media screen and (max-width: 320px) {
-    background-color: tomato;
+    
 }
 
 @media screen and (min-width: 375px) {
-  background-color: orange; 
-  background-color: pink;
+  margin-top: 180px;
   img {
     background-color: none;
     border: 2px solid black;
     gap: 5px;
-    width: 20px;
-    height: 20px;
+    width: 40px;
+    height: 40px;
     margin: 0px 1px;
   }
 }
 
 @media screen and (min-width: 425px) {
-  background-color: pink;
+  margin-top: 120px;
   img {
     background-color: none;
     border: 2px solid black;
     gap: 5px;
-    width: 20px;
-    height: 20px;
+    width: 40px;
+    height: 40px;
     margin: 0px 1px;
   }
 }
 
 @media screen and (min-width: 768px) {
-  background-color: blue;
+  
+  margin-top: 15px;
   img {
     background-color: none;
     border: 2px solid black;
@@ -422,7 +410,8 @@ $height: 100%;
   }
 }
 @media screen and (min-width: 1024px) {
-  background-color: green;
+  
+  margin-top: 15px;
   img {
     background-color: none;
     border: 2px solid black;
@@ -434,11 +423,11 @@ $height: 100%;
 }
 
 @media screen and (min-width: 1440px) {
-  background-color: red;
+ 
 }
 
 @media screen and (min-width: 2560px) {
-  background-color: gray;
+  
 }  
 
   
@@ -455,35 +444,36 @@ $height: 100%;
 .containerInfor {
   
   @media screen and (max-width: 320px) {
-    background-color: tomato;
+    
 }
 
 @media screen and (min-width: 375px) {
-  background-color: orange; 
-  @include containerInfor(120px, 170px, none,  auto, 30px);
+  
+  @include containerInfor(170px, 170px, none,  auto, 15px);
+  margin-left: -150px;
 }
 
 @media screen and (min-width: 425px) {
   @include containerInfor(150px, 170px, none,  auto, 30px);
-  background-color: #ffc107;
+  
 }
 
 @media screen and (min-width: 768px) {
-  background-color: blue;
+  
   @include containerInfor(200px, 170px, none,  auto, 30px);
 }
 @media screen and (min-width: 1024px) {
-  background-color: green;
-  @include containerInfor(200px, 170px, none,  auto, 30px);
-  background-color: #ffc107;
+  
+  @include containerInfor(200px, 200px, none,  auto, 30px);
+  
 }
 
 @media screen and (min-width: 1440px) {
-  background-color: red;
+  
 }
 
 @media screen and (min-width: 2560px) {
-  background-color: purple;
+  
 }  
   p {
     color: black;
@@ -500,31 +490,40 @@ $height: 100%;
   height: $height;
   background-color: $background;
   margin: $margin;
-  margin-top: $marginT
+  margin-top: $marginT;
+  
 }
 
 .containerPrices {
 
-  @media screen and (max-width: 320px) {
-    background-color: tomato;
+@media screen and (max-width: 320px) {
+    
 }
 
 @media screen and (min-width: 375px) {
-  background-color: orange; 
-  @include containerPrices(60px, 170px, none,  auto, 30px);
+  
+  @include containerPrices(250px, 150px, none,  auto, -60px);
   p {
     color: black;
     font-size: 12px;
     padding-left: 5px;
+    margin: 5px;
   }
 
+
   input {
-    width: 40px;
+    width: 50px;
+    display: flex;
+    margin: 5px;
+    button {
+      width: 20px;
+    }  
   }
+  
 }
 
 @media screen and (min-width: 425px) {
-  background-color: pink;
+  
   @include containerPrices(100px, 170px, none,  auto, 30px);
   p {
     color: black;
@@ -533,52 +532,92 @@ $height: 100%;
   }
 
   input {
-    width: 40px;
+    width: 50px;
+    display: flex;
+    margin: 5px;
+    button {
+      width: 20px;
+    }  
   }
+
+  
 }
 
 @media screen and (min-width: 768px) {
-  background-color: blue;
+  
   @include containerPrices(160px, 170px, none,  auto, 30px);
    p {
     color: black;
     font-size: 12px;
     padding-left: 5px;
   }
+  input {
+    width: 50px;
+    display: flex;
+    margin: 5px;
+    button {
+      width: 20px;
+    }  
+  }
 }
+
 @media screen and (min-width: 1024px) {
-  background-color: green;
-  @include containerPrices(200px, 170px, none,  auto, 30px);
+  
+
+  @include containerPrices(200px, 200px, none,  auto, 30px);
   p {
     color: black;
     font-size: 12px;
     padding-left: 5px;
+    display: grid;
+  }
+
+  .botons {
+
+    width: 100px;
+    height: 100px;
+    display: flex;
   }
 
   input {
-    width: 40px;
+    width: 50px;
+    display: flex;
+    margin: 5px;
+    button {
+      width: 20px;
+    }  
   }
 }
 
 @media screen and (min-width: 1440px) {
-  background-color: red;
+  
   @include containerPrices(200px, 170px, none,  auto, 30px);
   p {
     color: black;
     font-size: 12px;
     padding-left: 5px;
   }
-
   input {
-    width: 40px;
+    width: 50px;
+    display: flex;
+    margin: 5px;
+    button {
+      width: 20px;
+    }  
   }
+ 
 }
 
 @media screen and (min-width: 2560px) {
-  background-color: purple;
+  input {
+    width: 50px;
+    display: flex;
+    margin: 5px;
+    button {
+      width: 20px;
+    }  
+  }
 }  
-
-  background-color: aqua;
   
 }
 
@@ -600,13 +639,14 @@ $height: 100%;
 }
 
 @media screen and (min-width: 375px) {
-  background-color: orange; 
-}
+  @include contenedorBoton(120px, 30px, none,  auto, 70px, auto);
 
-@media screen and (min-width: 425px) {
-  @include contenedorBoton(120px, 30px, none,  auto, 70px, -20px);
 
   button {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: #ffc107;
     border: none;
     border-radius: 5px;
@@ -625,10 +665,16 @@ $height: 100%;
   }
 }
 
-@media screen and (min-width: 768px) {
-  background-color: blue;
+@media screen and (min-width: 425px) {
+  @include contenedorBoton(120px, 30px, none,  auto, 50px, -20px);
+  display: flex;
+  
+}
 
-  @include contenedorBoton(120px, 30px, none,  auto, 70px, 20px);
+@media screen and (min-width: 768px) {
+  
+
+  @include contenedorBoton(120px, 30px, none,  auto, 40px, 20px);
 
   button {
     background-color: #ffc107;
@@ -651,9 +697,7 @@ $height: 100%;
 
 
 @media screen and (min-width: 1024px) {
-  background-color: green;
-  @include contenedorBoton(140px, 40px, none,  auto, 160px, 20px );
-
+  @include contenedorBoton(140px, 40px, none,  auto, 120px, 20px );
   button {
     background-color: #ffc107;
     border: none;
