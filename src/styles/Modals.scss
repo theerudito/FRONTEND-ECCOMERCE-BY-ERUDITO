@@ -236,9 +236,7 @@ $height: 100%;
   
 }  
 
-
 }
-
 
 
 @mixin contaninerModal ($background, $borderRadius) {
@@ -264,6 +262,7 @@ $height: 100%;
 
 
 .bodyModal {
+  border-radius: 5px;
   @media screen and (max-width: 320px) {
 }
 
