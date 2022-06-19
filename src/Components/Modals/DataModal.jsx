@@ -33,7 +33,8 @@ export const DataModalBody = ({ item }) => {
             </div>
           </div>
           <div className="containerInfor">
-            Info
+
+            <span className="pri">Info</span>
             <p>Nombre: Lapto</p>
             <p>Descripcion: 15 Pulgadas </p>
             <p>Marca: HP </p>

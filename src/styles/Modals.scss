@@ -17,9 +17,12 @@ $marginR: 0px;
 $width: 100%;
 $height: 100%;
 
-
-
 .modal {
+  @media screen and (max-width: 320px) {
+   
+}
+
+@media screen and (min-width: 375px) {
   position: fixed;
   top: 0;
   left: 0;
@@ -32,12 +35,76 @@ $height: 100%;
   align-items: center;
 }
 
+@media screen and (min-width: 425px) {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+  width: 100%;
+  min-height: 100vh;
+  display: none;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+  width: 100%;
+  min-height: 100vh;
+  display: none;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (min-width: 1024px) {
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+  width: 100%;
+  min-height: 100vh;
+  display: none;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 1440px) {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+  width: 100%;
+  min-height: 100vh;
+  display: none;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 2560px) {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+  width: 100%;
+  min-height: 100vh;
+  display: none;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+}
+}
+
 
 .modal.is-open{
   display: flex;
 }
-
-
 
 .modal-container {
     @media screen and (max-width: 320px) {
@@ -45,7 +112,7 @@ $height: 100%;
     }
   
     @media screen and (min-width: 375px) {
-      position: relative;
+      margin: auto;
       min-width: 300px;
       max-width: 310px;
       min-height: 400px;
@@ -58,7 +125,6 @@ $height: 100%;
     }
   
     @media screen and (min-width: 425px) {
-
       position: relative;
       min-width: 400px;
       max-width: 300px;
@@ -116,80 +182,64 @@ $height: 100%;
 }
 
 @media screen and (min-width: 375px) {
-  background-color: orange; 
+  color: orange;
+  margin-top: -350px;
+  position: absolute;
+  margin-right: -250px;
+  border-radius: 50%;
+  font-size: 25px;
+  &:hover {
+    color: orangered;
+  }
 }
 
 @media screen and (min-width: 425px) {
-
-  .modal-close {
-    position: relative;
-    top: -60px;
-    right: 60px;
-    border-radius: 50%;
-    i {
-      border: none;
-      cursor: pointer;
-      font-size: 30px;
-      border-radius: 50%;
-      color: #ffc107;
-      background-color: white;
-      &:hover {
-        color: orangered;
-      }
-    }
+  color: orange;
+  margin-top: -250px;
+  position: absolute;
+  margin-right: -345px;
+  border-radius: 50%;
+  font-size: 25px;
+  &:hover {
+    color: orangered;
   }
 }
 
 @media screen and (min-width: 768px) {
-  background-color: blue;
+  color: orange;
+  margin-top: -250px;
+  position: absolute;
+  margin-right: -560px;
+  border-radius: 50%;
+  font-size: 25px;
+  &:hover {
+    color: orangered;
+  }
 }
 @media screen and (min-width: 1024px) {
-  background-color: green;
-
-
-  .modal-close {
-    position: relative;
-    top: -200px;
-    right: 60px;
-    border-radius: 50%;
-    i {
-      border: none;
-      cursor: pointer;
-      font-size: 30px;
-      border-radius: 50%;
-      color: #ffc107;
-      background-color: white;
-      &:hover {
-        color: orangered;
-      }
-    }
+  color: orange;
+  margin-top: -345px;
+  position: absolute;
+  margin-right: -650px;
+  border-radius: 50%;
+  font-size: 25px;
+  &:hover {
+    color: orangered;
   }
 }
 
 @media screen and (min-width: 1440px) {
-  background-color: red;
+  
 }
 
 @media screen and (min-width: 2560px) {
-  background-color: purple;
+  
 }  
 
-  position: relative;
-  top: -130px;
-  right: 55px;
-  border-radius: 50%;
-  i {
-    border: none;
-    cursor: pointer;
-    font-size: 30px;
-    border-radius: 50%;
-    color: #ffc107;
-    background-color: white;
-    &:hover {
-      color: orangered;
-    }
-  }
+
 }
+
+
 
 @mixin contaninerModal ($background, $borderRadius) {
   background-color: $background;
@@ -197,8 +247,8 @@ $height: 100%;
 }
 
 .contaninerModal {
-  
-  @include contaninerModal(#fff, 5px)
+  @include contaninerModal(#fff, 5px);
+  height: auto;
 }
 
 
@@ -210,7 +260,6 @@ $height: 100%;
     width: $width;
     height: $height;
     gap: $gap;
-
 }
 
 
@@ -219,16 +268,16 @@ $height: 100%;
 }
 
 @media screen and (min-width: 375px) {
-  @include bodyModal(white, grid, auto auto auto, repeat(2, 1fr),  300px, 300px, 10px);
+  @include bodyModal(white, grid, auto auto auto, repeat(2, 1fr),  300px, 400px, 10px);
 }
 
 @media screen and (min-width: 425px) {
-  @include bodyModal(none, grid, auto auto auto, repeat(3, 1fr),  400px, 300px, 10px);
+  @include bodyModal(white, grid, auto auto auto, repeat(3, 1fr),  400px, 300px, 10px);
 }
 
 @media screen and (min-width: 768px) {
   
-  @include bodyModal(white, grid, auto auto auto, repeat(3, 1fr),  600px, 300px, 10px);
+  @include bodyModal(white, grid, auto auto auto, repeat(3, 1fr),  400px, 300px, 10px);
 }
 @media screen and (min-width: 1024px) {
   
@@ -337,6 +386,7 @@ $height: 100%;
   
   @include containerImagenModal(200px, 200px, none,  1px solid #E3E7E8, cover, auto, 10px, 5px);
   margin: 15px 5px 5px 5px;
+  margin-left: -100px;
 }
 @media screen and (min-width: 1024px) {
   @include containerImagenModal(250px, 290px, none,  1px solid #E3E7E8, cover, auto, 10px, 5px);
@@ -367,7 +417,7 @@ $height: 100%;
 }
 
 .carrosusel {
-@include carrosusel(50px, 50px, none, flex, 10px, repeat(3, 1fr), 15px, 0px);
+@include carrosusel(50px, 50px, white, flex, 10px, repeat(3, 1fr), 15px, 0px);
 
 @media screen and (max-width: 320px) {
     
@@ -376,7 +426,7 @@ $height: 100%;
 @media screen and (min-width: 375px) {
   margin-top: 180px;
   img {
-    background-color: none;
+    background-color: white;
     border: 2px solid black;
     gap: 5px;
     width: 40px;
@@ -442,25 +492,23 @@ $height: 100%;
 }
 
 .containerInfor {
-  
-  @media screen and (max-width: 320px) {
-    
+  @media screen and (max-width: 320px) { 
 }
 
 @media screen and (min-width: 375px) {
-  
   @include containerInfor(170px, 170px, none,  auto, 15px);
-  margin-left: -150px;
+  margin-left: -140px;
 }
 
 @media screen and (min-width: 425px) {
   @include containerInfor(150px, 170px, none,  auto, 30px);
-  
+  .pri {
+    color: red;
+  }
 }
 
 @media screen and (min-width: 768px) {
-  
-  @include containerInfor(200px, 170px, none,  auto, 30px);
+  @include containerInfor(140px, 170px, none,  auto, 30px);
 }
 @media screen and (min-width: 1024px) {
   
@@ -485,6 +533,8 @@ $height: 100%;
 
 
 
+
+
 @mixin containerPrices ($width, $height, $background, $margin, $marginT) {
   width: $width;
   height: $height;
@@ -502,7 +552,7 @@ $height: 100%;
 
 @media screen and (min-width: 375px) {
   
-  @include containerPrices(250px, 150px, none,  auto, -60px);
+  @include containerPrices(250px, 150px, none,  auto, -170px);
   p {
     color: black;
     font-size: 12px;
@@ -545,7 +595,7 @@ $height: 100%;
 
 @media screen and (min-width: 768px) {
   
-  @include containerPrices(160px, 170px, none,  auto, 30px);
+  @include containerPrices(140px, 170px, none,  auto, 30px);
    p {
     color: black;
     font-size: 12px;
@@ -564,7 +614,7 @@ $height: 100%;
 @media screen and (min-width: 1024px) {
   
 
-  @include containerPrices(200px, 200px, none,  auto, 30px);
+  @include containerPrices(200px, 200px, none,  auto, 70px);
   p {
     color: black;
     font-size: 12px;
@@ -639,8 +689,7 @@ $height: 100%;
 }
 
 @media screen and (min-width: 375px) {
-  @include contenedorBoton(120px, 30px, none,  auto, 70px, auto);
-
+  @include contenedorBoton(120px, 30px, none,  auto, 85px, 90px);
 
   button {
     margin: auto;
@@ -666,15 +715,14 @@ $height: 100%;
 }
 
 @media screen and (min-width: 425px) {
-  @include contenedorBoton(120px, 30px, none,  auto, 50px, -20px);
+  @include contenedorBoton(120px, 30px, none,  auto, 75px, -30px);
   display: flex;
-  
 }
 
 @media screen and (min-width: 768px) {
   
 
-  @include contenedorBoton(120px, 30px, none,  auto, 40px, 20px);
+  @include contenedorBoton(120px, 30px, none,  auto, 70px, 90px);
 
   button {
     background-color: #ffc107;
@@ -697,7 +745,7 @@ $height: 100%;
 
 
 @media screen and (min-width: 1024px) {
-  @include contenedorBoton(140px, 40px, none,  auto, 120px, 20px );
+  @include contenedorBoton(140px, 40px, none,  auto, 120px, 40px );
   button {
     background-color: #ffc107;
     border: none;
