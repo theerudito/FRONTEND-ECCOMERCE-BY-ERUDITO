@@ -495,8 +495,9 @@ $height: 100%;
 }
 
 @media screen and (min-width: 375px) {
-  @include containerInfor(170px, 170px, none,  auto, 15px);
-  margin-left: -140px;
+  @include containerInfor(170px, 150px, none,  auto, 130px);
+  margin-left: -150px;
+  
 }
 
 @media screen and (min-width: 425px) {
@@ -550,8 +551,9 @@ $height: 100%;
 }
 
 @media screen and (min-width: 375px) {
-  
-  @include containerPrices(250px, 150px, none,  auto, -170px);
+ 
+  @include containerPrices(150px, 150px, none,  auto, -330px);
+  margin-right: -150px;
   p {
     color: black;
     font-size: 12px;
@@ -562,8 +564,7 @@ $height: 100%;
 
   input {
     width: 50px;
-    display: flex;
-    margin: 5px;
+    margin: 1px;
     button {
       width: 20px;
     }  
@@ -612,8 +613,7 @@ $height: 100%;
 
 @media screen and (min-width: 1024px) {
   
-
-  @include containerPrices(200px, 200px, none,  auto, 70px);
+  @include containerPrices(200px, 200px, none,  auto, 30px);
   p {
     color: black;
     font-size: 12px;
@@ -695,7 +695,7 @@ $height: 100%;
 }
 
 @media screen and (min-width: 375px) {
-  @include contenedorBoton(120px, 30px, none,  auto, 85px, 90px);
+  @include contenedorBoton(120px, 30px, none,  auto, 220px, -50px );
 
   button {
     margin: auto;
@@ -751,7 +751,7 @@ $height: 100%;
 
 
 @media screen and (min-width: 1024px) {
-  @include contenedorBoton(140px, 40px, none,  auto, 120px, 40px );
+  @include contenedorBoton(140px, 40px, none,  auto, 160px, 40px );
   button {
     background-color: #ffc107;
     border: none;
