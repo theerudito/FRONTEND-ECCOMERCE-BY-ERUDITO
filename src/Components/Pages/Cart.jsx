@@ -14,7 +14,7 @@ export const Cart = () => {
       <div className="contenedorP">
         <div className="containerPayment">
           <div className="details">
-            <p>Pinture</p>
+            <p className="pinture">Pinture</p>
             <p className="Name">Name</p>
             <p>Cant</p>
             <p>Price/Unit</p>
@@ -25,6 +25,7 @@ export const Cart = () => {
             <img
               src="https://avatars.dicebear.com/api/micah/weds.svg"
               alt="pic"
+              className="pinture"
             />
 
             <p className="Name">Name</p>

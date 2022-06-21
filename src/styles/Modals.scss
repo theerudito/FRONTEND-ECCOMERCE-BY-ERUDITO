@@ -495,25 +495,56 @@ $height: 100%;
 }
 
 @media screen and (min-width: 375px) {
+  
   @include containerInfor(170px, 150px, none,  auto, 130px);
   margin-left: -150px;
+  p {
+    color: black;
+    font-size: 12px;
+    padding-left: 5px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
   
 }
 
 @media screen and (min-width: 425px) {
+  
   @include containerInfor(150px, 170px, none,  auto, 30px);
-  .pri {
-    color: red;
+
+  p {
+    color: black;
+    font-size: 12px;
+    padding-left: 5px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
   }
 }
 
 @media screen and (min-width: 768px) {
-  @include containerInfor(140px, 170px, none,  auto, 30px);
+  @include containerInfor(215px, 170px, none,  auto, 30px);
+  p {
+    color: black;
+    font-size: 12px;
+    padding-left: 5px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
 }
 @media screen and (min-width: 1024px) {
   
   @include containerInfor(200px, 200px, none,  auto, 30px);
-  
+  p {
+    color: black;
+    font-size: 12px;
+    padding-left: 5px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
 }
 
 @media screen and (min-width: 1440px) {
@@ -523,11 +554,7 @@ $height: 100%;
 @media screen and (min-width: 2560px) {
   
 }  
-  p {
-    color: black;
-    font-size: 12px;
-    padding-left: 5px;
-  }
+  
 }
 
 
@@ -551,30 +578,38 @@ $height: 100%;
 }
 
 @media screen and (min-width: 375px) {
- 
-  @include containerPrices(150px, 150px, none,  auto, -330px);
+  @include containerPrices(120px, 150px, none,  auto, -330px);
   margin-right: -150px;
   p {
     color: black;
     font-size: 12px;
     padding-left: 5px;
-    margin: 5px;
   }
-
 
   input {
-    width: 50px;
-    margin: 1px;
-    button {
-      width: 20px;
-    }  
+    width: 40px;
+    display: flex;
+    margin: 5px;
+    
   }
+  button {
+    width: 20px;
+    background-color: purple;
+    margin-left: 5px;
+    border: none;
+    color: white;
+    &:hover {
+      background-color: rgb(226, 10, 226);
+      color: black;
+    }
+  }  
   
 }
 
 @media screen and (min-width: 425px) {
+ 
+  @include containerPrices(100px, 210px, none,  auto, 30px);
   
-  @include containerPrices(100px, 170px, none,  auto, 30px);
   p {
     color: black;
     font-size: 12px;
@@ -582,27 +617,34 @@ $height: 100%;
   }
 
   input {
-    width: 50px;
+    width: 40px;
     display: flex;
     margin: 5px;
-    button {
-      width: 20px;
-    }  
+    
   }
-
-  
+  button {
+    width: 20px;
+    background-color: purple;
+    margin-left: 5px;
+    border: none;
+    color: white;
+    &:hover {
+      background-color: rgb(226, 10, 226);
+      color: black;
+    }
+  }  
 }
 
 @media screen and (min-width: 768px) {
   
-  @include containerPrices(140px, 170px, none,  auto, 30px);
-   p {
+  @include containerPrices(140px, 210px, none,  auto, 30px);
+  p {
     color: black;
     font-size: 12px;
     padding-left: 5px;
   }
   input {
-    width: 50px;
+    width: 40px;
     display: flex;
     margin: 5px;
     button {
@@ -613,7 +655,7 @@ $height: 100%;
 
 @media screen and (min-width: 1024px) {
   
-  @include containerPrices(200px, 200px, none,  auto, 30px);
+  @include containerPrices(200px, 220px, none,  auto, 30px);
   p {
     color: black;
     font-size: 12px;
@@ -622,14 +664,13 @@ $height: 100%;
   }
 
   .botons {
-
     width: 100px;
     height: 100px;
     display: flex;
   }
 
   input {
-    width: 50px;
+    width: 40px;
     height: 20px;
     display: flex;
     margin: 5px;
@@ -662,6 +703,11 @@ $height: 100%;
 }
 
 @media screen and (min-width: 2560px) {
+  p {
+    color: black;
+    font-size: 12px;
+    padding-left: 5px;
+  }
   input {
     width: 50px;
     height: 20px;
@@ -695,14 +741,13 @@ $height: 100%;
 }
 
 @media screen and (min-width: 375px) {
-  @include contenedorBoton(120px, 30px, none,  auto, 220px, -50px );
+  @include contenedorBoton(120px, 30px, none,  auto, 145px, -80px );
 
   button {
     margin: auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #ffc107;
     border: none;
     border-radius: 5px;
     width: 100%;
@@ -711,9 +756,9 @@ $height: 100%;
     user-select: none;
     cursor: pointer;
     color: white;
-
+    background-color: purple;
     &:hover {
-      background-color: orangered;
+      background-color: rgb(226, 10, 226);
       color: black;
       font-weight: bold;
     }
@@ -721,17 +766,32 @@ $height: 100%;
 }
 
 @media screen and (min-width: 425px) {
-  @include contenedorBoton(120px, 30px, none,  auto, 75px, -30px);
-  display: flex;
+  @include contenedorBoton(120px, 30px, none,  auto, 25px, -30px);
+  
+    button {
+      background-color: purple;
+      border: none;
+      border-radius: 5px;
+      width: 100%;
+      height: 100%;
+      font-weight: bold;
+      user-select: none;
+      cursor: pointer;
+      color: white;
+  
+      &:hover {
+        background-color: rgb(226, 10, 226);
+        color: black;
+        font-weight: bold;
+      }
+    }
 }
 
 @media screen and (min-width: 768px) {
-  
-
-  @include contenedorBoton(120px, 30px, none,  auto, 70px, 90px);
+  @include contenedorBoton(120px, 30px, none,  auto, 25px, 20px);
 
   button {
-    background-color: #ffc107;
+    background-color: purple;
     border: none;
     border-radius: 5px;
     width: 100%;
@@ -742,7 +802,7 @@ $height: 100%;
     color: white;
 
     &:hover {
-      background-color: orangered;
+      background-color: rgb(226, 10, 226);
       color: black;
       font-weight: bold;
     }
@@ -751,9 +811,9 @@ $height: 100%;
 
 
 @media screen and (min-width: 1024px) {
-  @include contenedorBoton(140px, 40px, none,  auto, 160px, 40px );
+  @include contenedorBoton(140px, 40px, none,  auto, 105px, 40px );
   button {
-    background-color: #ffc107;
+    background-color: purple;
     border: none;
     border-radius: 5px;
     width: 100%;
@@ -764,7 +824,7 @@ $height: 100%;
     color: white;
 
     &:hover {
-      background-color: orangered;
+      background-color: rgb(226, 10, 226);
       color: black;
       font-weight: bold;
     }
@@ -776,24 +836,6 @@ $height: 100%;
 
 @media screen and (min-width: 2560px) {
 }  
-
-  button {
-    background-color: #ffc107;
-    border: none;
-    border-radius: 5px;
-    width: 100%;
-    height: 100%;
-    font-weight: bold;
-    user-select: none;
-    cursor: pointer;
-    color: white;
-
-    &:hover {
-      background-color: orangered;
-      color: black;
-      font-weight: bold;
-    }
-  }
 }
 
 
