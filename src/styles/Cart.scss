@@ -26,25 +26,41 @@ $marginR: 0px;
 @media screen and (min-width: 375px) {
   margin:  auto;
   width: 365px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 @media screen and (min-width: 425px) {
   margin:  auto;
   width: 400px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  
 }
 
 @media screen and (min-width: 768px) {
   margin:  auto;
   width: 600px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 @media screen and (min-width: 1024px) {
   margin:  auto;
   width: 800px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 @media screen and (min-width: 1440px) {
   margin:  auto;
   width: 800px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 @media screen and (min-width: 2560px) {
@@ -178,11 +194,13 @@ $marginR: 0px;
   display: flex;
   gap: 15px;
   margin: auto;
-  width: 345px;
+  width: 350px;
   height: 30px;
   align-items: center;
   justify-content: center;
   color : black;
+  border-top: solid 1px silver;
+  border-bottom: solid 1px silver;
   background-color: rgb(247, 244, 244);
   &:hover {
     background-color: silver;
@@ -229,7 +247,6 @@ $marginR: 0px;
   }
 
   img {
-    
     display: none;
   }
 
@@ -349,9 +366,6 @@ $marginR: 0px;
 }
 
 
-
-
-
 .containerTotals {
 @media screen and (max-width: 320px) {
  
@@ -366,7 +380,7 @@ $marginR: 0px;
     width: 50px;
     height: 50px;
     padding-left: 5px;
-    margin-top: 40px;
+    margin-top: 60px;
   }
 
   .logo3 {
@@ -377,7 +391,7 @@ $marginR: 0px;
 .dataUser {
   height: 55px;
   display: grid;
-  margin-top: -30px;
+  margin-top: -50px;
   margin-left: 70px;
   
   input {
