@@ -182,26 +182,26 @@ $height: 100%;
 }
 
 @media screen and (min-width: 375px) {
-  color: orange;
+  color: purple;
   margin-top: -350px;
   position: absolute;
   margin-right: -250px;
   border-radius: 50%;
   font-size: 25px;
   &:hover {
-    color: orangered;
+    color: rgb(180, 66, 180);
   }
 }
 
 @media screen and (min-width: 425px) {
-  color: orange;
+  color: purple;
   margin-top: -250px;
   position: absolute;
   margin-right: -345px;
   border-radius: 50%;
   font-size: 25px;
   &:hover {
-    color: orangered;
+    color: rgb(180, 66, 180);
   }
 }
 
@@ -217,14 +217,14 @@ $height: 100%;
   }
 }
 @media screen and (min-width: 1024px) {
-  color: orange;
+  color: purple;
   margin-top: -345px;
   position: absolute;
   margin-right: -650px;
   border-radius: 50%;
   font-size: 25px;
   &:hover {
-    color: orangered;
+    color: rgb(180, 66, 180);
   }
 }
 
@@ -558,10 +558,6 @@ $height: 100%;
 }
 
 
-
-
-
-
 @mixin containerPrices ($width, $height, $background, $margin, $marginT) {
   width: $width;
   height: $height;
@@ -599,7 +595,7 @@ $height: 100%;
     border: none;
     color: white;
     &:hover {
-      background-color: rgb(226, 10, 226);
+      background-color: rgb(180, 66, 180);
       color: black;
     }
   }  
@@ -629,7 +625,7 @@ $height: 100%;
     border: none;
     color: white;
     &:hover {
-      background-color: rgb(226, 10, 226);
+      background-color: rgb(180, 66, 180);
       color: black;
     }
   }  
@@ -714,7 +710,7 @@ $height: 100%;
     display: flex;
     margin: 5px;
     button {
-      background-color: #ffc107;
+      
       width: 20px;
       height: 20px;
     }  
@@ -758,7 +754,7 @@ $height: 100%;
     color: white;
     background-color: purple;
     &:hover {
-      background-color: rgb(226, 10, 226);
+      background-color: rgb(180, 66, 180);
       color: black;
       font-weight: bold;
     }
@@ -780,7 +776,7 @@ $height: 100%;
       color: white;
   
       &:hover {
-        background-color: rgb(226, 10, 226);
+        background-color: rgb(180, 66, 180);
         color: black;
         font-weight: bold;
       }
@@ -802,7 +798,7 @@ $height: 100%;
     color: white;
 
     &:hover {
-      background-color: rgb(226, 10, 226);
+      background-color: rgb(180, 66, 180);
       color: black;
       font-weight: bold;
     }
@@ -824,7 +820,7 @@ $height: 100%;
     color: white;
 
     &:hover {
-      background-color: rgb(226, 10, 226);
+      background-color: rgb(180, 66, 180);
       color: black;
       font-weight: bold;
     }

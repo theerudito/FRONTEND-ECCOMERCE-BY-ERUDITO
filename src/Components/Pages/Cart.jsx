@@ -55,7 +55,7 @@ export const Cart = () => {
               <p>Impuest</p>
               <p>Subtotal</p>
               <p>Total</p>
-              <button>Pay</button>
+              <button type="submit">Pay</button>
             </div>
           </div>
         </div>
