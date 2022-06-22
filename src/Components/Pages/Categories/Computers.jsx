@@ -1,17 +1,26 @@
-import React from "react";
+import { useContext, useEffect } from "react";
 import { useModal } from "../../CustomHooks/useModal";
 import { Footer } from "../../Footer/Footer";
 import { Header } from "../../Header/Header";
 import { Header2 } from "../../Header/Header2";
-import { STORE } from "../../Helpers/Data";
 import { Menu } from "../../Menu/Menu";
 import { DataModalComputer } from "../../Modals/DataModal";
 
 import { ModalMore } from "../../Modals/ModalMore";
+import computerContext from "../../Providers/ProviderComputer";
 import { SocialMedia } from "../../SocialMedia/SocialMedia";
 
 export const Computers = () => {
   const [isOpenMore, openModalMore, closeModalMore] = useModal(false);
+  const { computer,  getComputer, getOneComputer } = useContext(computerContext);
+
+  useEffect(() => {
+    getComputer();
+  }, []);
+
+
+  
+
   return (
     <>
       <Header />
@@ -19,10 +28,10 @@ export const Computers = () => {
       <Menu />
       <h2 className="titlecategory">COMPUTERS </h2>
       <div className="contenedorCard">
-        {STORE[0][0].map((item) => (
+        {computer.map((item) => (
           <div className="bodyCard" key={item.id}>
             <div className="containerImagen">
-              <img className="imagenCard" src={item.pic} alt="foto" />
+              <img className="imagenCard" src={item.pic1} alt="foto" />
             </div>
 
             <div className="containerInforCard">
@@ -41,12 +50,15 @@ export const Computers = () => {
 
               <div className="buttonsAdd">
                 <button className="buttoAddCart">ADD TO CART</button>
-                <button className="moreInfo" onClick={openModalMore}>
+                <button
+                  className="moreInfo"
+                  onClick={() => openModalMore(getOneComputer(item.id, item))}
+                >
                   MORE
                 </button>
 
                 <ModalMore isOpen={isOpenMore} closeModal={closeModalMore}>
-                  <DataModalComputer item={item}/>
+                  <DataModalComputer item={item} />
                 </ModalMore>
               </div>
             </div>
