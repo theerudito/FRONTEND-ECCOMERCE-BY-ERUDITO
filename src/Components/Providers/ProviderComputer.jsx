@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { createContext } from "react";
 import { GetAllComputer, GetOneComputer } from "../Helpers/Api";
 
+
 const computerContext = createContext();
 
 const ProviderComputer = ({ children }) => {
@@ -14,8 +15,10 @@ const ProviderComputer = ({ children }) => {
     setComputer(computer);
   };
 
-  const getOneComputer = async (id, item) => {
-    await GetOneComputer(id);
+
+
+  const getOneComputer =  (id, item) => {
+     GetOneComputer(id);
     console.log("obtenido");
     const dato = {
       name: item.name,
@@ -34,6 +37,7 @@ const ProviderComputer = ({ children }) => {
 
     setDatas(dato);
   };
+
 
   const data = {
     computer,

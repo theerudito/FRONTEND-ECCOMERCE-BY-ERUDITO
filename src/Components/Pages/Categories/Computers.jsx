@@ -29,7 +29,7 @@ export const Computers = () => {
       <h2 className="titlecategory">COMPUTERS </h2>
       <div className="contenedorCard">
         {computer.map((item) => (
-          <div className="bodyCard" key={item.id}>
+          <div className="bodyCard" key={item._id}>
             <div className="containerImagen">
               <img className="imagenCard" src={item.pic1} alt="foto" />
             </div>
@@ -52,7 +52,7 @@ export const Computers = () => {
                 <button className="buttoAddCart">ADD TO CART</button>
                 <button
                   className="moreInfo"
-                  onClick={() => openModalMore(getOneComputer(item.id, item))}
+                  onClick={() => openModalMore(getOneComputer(item._id, item))}
                 >
                   MORE
                 </button>

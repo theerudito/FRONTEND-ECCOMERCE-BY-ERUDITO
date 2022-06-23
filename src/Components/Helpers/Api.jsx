@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const url = "http://localhost:5000/COMPUTER";
+const url = "https://eccomerce-erudito.herokuapp.com/api/v1/computers";
 
 export const GetAllComputer = async () => {
   try {
@@ -12,9 +12,9 @@ export const GetAllComputer = async () => {
   }
 };
 
-export const GetOneComputer = async (id) => {
+export const GetOneComputer = async (_id) => {
   try {
-    const res = await axios.get(`${url}/${id}`);
+    const res = await axios.get(`${url}/${_id}`);
     return res.data;
   } catch (error) {
     console.log(error);

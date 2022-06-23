@@ -69,6 +69,7 @@ export const DataModalBody = ({ item }) => {
 
 export const DataModalComputer = ({ item }) => {
   const { datas } = useContext(computerContext);
+  console.log(item)
 
   const result = {
     name: datas.name,
