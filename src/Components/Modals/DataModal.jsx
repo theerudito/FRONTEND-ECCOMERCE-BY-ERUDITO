@@ -69,7 +69,6 @@ export const DataModalBody = ({ item }) => {
 
 export const DataModalComputer = ({ item }) => {
   const { datas } = useContext(computerContext);
-  console.log(item)
 
   const result = {
     name: datas.name,
@@ -82,7 +81,7 @@ export const DataModalComputer = ({ item }) => {
     pic1: datas.pic1,
     pic2: datas.pic2,
     pic3: datas.pic3,
-    pic4: datas.pic4
+    pic4: datas.pic4,
   };
 
   return (
@@ -117,7 +116,7 @@ export const DataModalComputer = ({ item }) => {
               Price{" "}
             </p>
             <p>Price: {result.price} </p>
-            <p>Desc: {result.desc} </p>
+            <p>Desc: {result.desc}% </p>
             <p>PriceDesc: {result.priceDesc} </p>
             <p>Quantity</p>
             <input type="number" placeholder="1" />
