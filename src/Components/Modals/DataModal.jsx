@@ -74,9 +74,9 @@ export const DataModalComputer = ({ item }) => {
     name: datas.name,
     description: datas.description,
     marc: datas.marc,
-    price: datas.price,
-    priceDesc: datas.priceDesc,
-    desc: datas.desc,
+    price: parseFloat(datas.price),
+    priceDesc: parseFloat(datas.priceDesc),
+    desc: parseFloat(datas.desc) + "%",
     star: datas.star,
     pic1: datas.pic1,
     pic2: datas.pic2,
@@ -116,7 +116,7 @@ export const DataModalComputer = ({ item }) => {
               Price{" "}
             </p>
             <p>Price: {result.price} </p>
-            <p>Desc: {result.desc}% </p>
+            <p>Desc: {result.desc} </p>
             <p>PriceDesc: {result.priceDesc} </p>
             <p>Quantity</p>
             <input type="number" placeholder="1" />
