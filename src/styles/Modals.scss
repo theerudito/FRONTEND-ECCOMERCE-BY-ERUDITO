@@ -177,6 +177,7 @@ $height: 100%;
 
 
 .modal-close {
+  cursor: pointer;
   @media screen and (max-width: 320px) {
     background-color: tomato;
 }
@@ -416,6 +417,7 @@ $height: 100%;
 }
 
 .carrosusel {
+  cursor: pointer;
 @include carrosusel(50px, 50px, white, flex, 10px, repeat(3, 1fr), 15px, 0px);
 
 @media screen and (max-width: 320px) {

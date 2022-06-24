@@ -10,11 +10,12 @@
           "marc": "Intel",
           "price": "$20.00",
           "priceDesc": "$19.00",
-          "desc": "10%",
+          "desc": "10",
           "star": "****",
-          "pic1": "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Ecommers%2Fcomputer%2F1.png?alt=media&token=23637959-ae5f-40f0-bd7f-dd5ccc23e996",
-          "pic2": "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Ecommers%2Fcomputer%2F1.png?alt=media&token=23637959-ae5f-40f0-bd7f-dd5ccc23e996",
-          "pic3": "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Ecommers%2Fcomputer%2F3.png?alt=media&token=0fd98682-696c-4266-a281-86303888cedc",
+          "stock" : "10",
+          "pic1": "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Ecommers%2Fcomputer%2F2.png?alt=media&token=39be7e85-f83c-4480-a45e-0cb94948067c",
+          "pic2": "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Ecommers%2Fcomputer%2F3.png?alt=media&token=0fd98682-696c-4266-a281-86303888cedc",
+          "pic3": "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Ecommers%2Fcomputer%2F4.png?alt=media&token=0e74fd6b-a8f9-4b36-8346-8b244a5005f4",
           "pic4": "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Ecommers%2Fcomputer%2F6.png?alt=media&token=5b57f9ed-6b94-4499-a155-8af0c8c2f6de"
         },
         {
