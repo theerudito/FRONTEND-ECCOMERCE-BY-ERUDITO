@@ -21,6 +21,15 @@ const ProviderComputer = ({ children }) => {
 
   //=======COUNTERS==============================
 
+  //=======CART==================================
+  const [cart, setCart] = useState([]);
+
+  const addCart = () => {
+    console.log("Add To cart");
+    setCart([...cart, datas]);
+  };
+  //=======CART==================================
+
   const getComputer = async () => {
     const computer = await GetAllComputer();
     setComputer(computer);
@@ -30,6 +39,7 @@ const ProviderComputer = ({ children }) => {
     GetOneComputer(id);
     console.log("obtenido");
     const dato = {
+      id: item._id,
       name: item.name,
       description: item.description,
       adictional: item.adictional,
@@ -60,6 +70,11 @@ const ProviderComputer = ({ children }) => {
 
     handleSum,
     handleRes,
+
+    // add Cart
+    cart,
+    setCart,
+    addCart,
   };
 
   return (

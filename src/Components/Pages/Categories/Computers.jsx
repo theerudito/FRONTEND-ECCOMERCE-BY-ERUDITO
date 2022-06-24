@@ -13,7 +13,7 @@ import { SocialMedia } from "../../SocialMedia/SocialMedia";
 
 export const Computers = () => {
   const [isOpenMore, openModalMore, closeModalMore] = useModal(false);
-  const { computer, getComputer, getOneComputer, loader } =
+  const { computer, getComputer, getOneComputer, loader, addCart } =
     useContext(computerContext);
 
   useEffect(() => {
@@ -51,7 +51,12 @@ export const Computers = () => {
                 </div>
 
                 <div className="buttonsAdd">
-                  <button className="buttoAddCart">ADD TO CART</button>
+                  <button
+                    className="buttoAddCart"
+                    onClick={() => addCart(getOneComputer(item.id, item))}
+                  >
+                    ADD TO CART
+                  </button>
                   <button
                     className="moreInfo"
                     onClick={() =>

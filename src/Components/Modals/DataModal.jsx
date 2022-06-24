@@ -68,7 +68,7 @@ export const DataModalBody = ({ item }) => {
 };
 
 export const DataModalComputer = () => {
-  const { datas, counter, setCounter, handleSum, handleRes } =
+  const { datas, counter, setCounter, handleSum, handleRes, addCart } =
     useContext(computerContext);
 
   const [image, setImage] = useState(true);
@@ -93,6 +93,8 @@ export const DataModalComputer = () => {
     setImage(false);
     setChangeImage(newImgen);
   };
+
+  
 
   return (
     <>
@@ -160,7 +162,7 @@ export const DataModalComputer = () => {
             <button onClick={handleSum}>+</button>
 
             <div className="contenedorBoton">
-              <button>Add Cart</button>
+              <button onClick={() => addCart(datas)}>Add Cart</button>
             </div>
           </div>
         </div>
