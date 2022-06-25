@@ -3,4 +3,4 @@
 https://ecommerce-react-nine.vercel.app/
 
 
-<div align="center"> <img src="https://github.com/theerudito/ecommerce-react/blob/master/ecomerce.png" width="400px"</img> </div>
+<div align="center"> <img src="https://raw.githubusercontent.com/theerudito/ecommerce-react/master/src/Imagens/e.png" width="600px"</img> </div>
