@@ -8,7 +8,8 @@ import computerContext from "../Providers/ProviderComputer";
 import { SocialMedia } from "../SocialMedia/SocialMedia";
 
 export const Cart = () => {
-  const { cart, setCart } = useContext(computerContext);
+  const data = useContext(computerContext);
+  const [cart, setCart] = data.carrito;
 
   const deleteCart = (itemId) => {
     const borrar = cart.filter((item) => item.id !== itemId);
@@ -59,11 +60,13 @@ export const Cart = () => {
             </div>
 
             <div className="payment">
-              <p>Descuent</p>
-              <p>Impuest</p>
-              <p>Subtotal</p>
-              <p>Total</p>
-              <button type="submit">Pay</button>
+              <form>
+                <p>Descuent</p>
+                <p>Impuest</p>
+                <p>Subtotal</p>
+                <p>Total</p>
+                <button type="submit">Pay</button>
+              </form>
             </div>
           </div>
         </div>

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 import { createContext } from "react";
 import { GetAllComputer, GetOneComputer } from "../Helpers/Api";
 
@@ -6,6 +7,7 @@ const computerContext = createContext();
 
 const ProviderComputer = ({ children }) => {
   const [computer, setComputer] = useState([]);
+
   const [datas, setDatas] = useState([]);
 
   //======LOADERS================================
@@ -58,12 +60,11 @@ const ProviderComputer = ({ children }) => {
   };
 
   const data = {
-    computer,
-    setComputer,
-    getComputer,
-    getOneComputer,
+    computer: [computer, setComputer],
+    getComputer: getComputer,
+    getOneComputer: getOneComputer,
     datas,
-    loader,
+    loader: [loader],
 
     counter,
     setCounter,
@@ -72,9 +73,8 @@ const ProviderComputer = ({ children }) => {
     handleRes,
 
     // add Cart
-    cart,
-    setCart,
-    addCart,
+    carrito: [cart, setCart],
+    addCart: addCart,
   };
 
   return (

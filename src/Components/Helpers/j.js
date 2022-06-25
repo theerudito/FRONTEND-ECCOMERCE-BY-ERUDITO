@@ -673,3 +673,12 @@ console.log(a);
 
 let ram = Math.floor(Math.random() * array[0]);
 console.log(ram.lenght);
+
+const factoria = (array) => {
+  let ram = Math.floor(Math.random() * array.length);
+  return array[ram];
+}
+
+const factorial = ()=>{
+  
+}

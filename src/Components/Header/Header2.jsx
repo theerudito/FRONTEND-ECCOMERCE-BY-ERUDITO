@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import computerContext from "../Providers/ProviderComputer";
 import { RoutesApps } from "../Router/Routers";
 
 export const Header2 = () => {
+  const data= useContext(computerContext);
+  const [cart] = data.carrito;
+ 
+
   return (
     <div className="header2">
       <div className="contenedorLogo1">
@@ -23,12 +28,14 @@ export const Header2 = () => {
       </div>
 
       <div className="containerCart">
-        <Link to={RoutesApps.cart}>
-          <span>
+        <Link to={RoutesApps.cart}  className="LinkCart">
+          <div className="contenedorsumado">
+            <span className="sumador">{cart.length}</span>
             <i className="fa-solid fa-cart-shopping"></i>
-          </span>
+            
+          </div>
         </Link>
-        <p>Credit: 10000</p>
+        {/* <p>Credit: 10000</p> */}
       </div>
     </div>
   );

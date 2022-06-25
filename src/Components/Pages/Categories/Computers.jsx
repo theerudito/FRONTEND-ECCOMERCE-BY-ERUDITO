@@ -13,8 +13,12 @@ import { SocialMedia } from "../../SocialMedia/SocialMedia";
 
 export const Computers = () => {
   const [isOpenMore, openModalMore, closeModalMore] = useModal(false);
-  const { computer, getComputer, getOneComputer, loader, addCart } =
-    useContext(computerContext);
+  const value = useContext(computerContext);
+  const [computer] = value.computer;
+  const getComputer = value.getComputer;
+  const getOneComputer = value.getOneComputer;
+  const [loader] = value.loader;
+  const addCart = value.addCart;
 
   useEffect(() => {
     setTimeout(() => {
@@ -24,6 +28,7 @@ export const Computers = () => {
 
   return (
     <>
+      <p>sdasdsd</p>
       <Header />
       <Header2 />
       <Menu />
