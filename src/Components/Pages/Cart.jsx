@@ -1,4 +1,3 @@
-import React from "react";
 import { useContext } from "react";
 import { Footer } from "../Footer/Footer";
 import { Header } from "../Header/Header";
@@ -10,9 +9,14 @@ import { SocialMedia } from "../SocialMedia/SocialMedia";
 export const Cart = () => {
   const data = useContext(computerContext);
   const [cart, setCart] = data.carrito;
+  const valorTotal = data.valorTotal;
+  const total = data.totalCart;
+  const acuCant = data.acuCant;
+
+
 
   const deleteCart = (itemId) => {
-    const borrar = cart.filter((item) => item.id !== itemId);
+    const borrar = cart.filter((item) => item._id !== itemId);
     setCart(borrar);
     console.log("borrando");
   };
@@ -25,23 +29,19 @@ export const Cart = () => {
       <div className="contenedorP">
         <div className="containerPayment">
           <div className="details">
-            <p className="pinture">Cant</p>
-            <p className="Name">Name</p>
-            <p>Desc</p>
-            <p>Price/Unit</p>
-            <p>Price/Total</p>
-            <p>Action</p>
+            <p className="cant">Cant</p>
+            <p className="name">Name</p>
+            <p className="priceUnitary">Price/Unit</p>
+            <p className="priceTotal">Price/Total</p>
+            <p className="action">Action</p>
           </div>
           {cart.map((item) => (
-            <div className="containerInfoPago" key={item.id}>
-              <p className="">Cant </p>
-
-              <p className="Name">{item.name} </p>
-              <p>Cant </p>
-              <p>{item.price} </p>
-              <p>Price/Total</p>
-
-              <span onClick={() => deleteCart(item.id)}>
+            <div className="containerInfoPago" key={item._id}>
+              <p className="cant">{acuCant}</p>
+              <p className="name">{item.name} </p>
+              <p className="priceUnitary"> {item.price} </p>
+              <p className="priceTotal">{valorTotal}</p>
+              <span onClick={() => deleteCart(item._id)}>
                 <i className="fa-solid fa-trash-can"></i>
               </span>
             </div>
@@ -61,10 +61,7 @@ export const Cart = () => {
 
             <div className="payment">
               <form>
-                <p>Descuent</p>
-                <p>Impuest</p>
-                <p>Subtotal</p>
-                <p>Total</p>
+                <p>Total: {total} </p>
                 <button type="submit">Pay</button>
               </form>
             </div>

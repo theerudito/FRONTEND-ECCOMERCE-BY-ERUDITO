@@ -28,7 +28,6 @@ export const Computers = () => {
 
   return (
     <>
-      <p>sdasdsd</p>
       <Header />
       <Header2 />
       <Menu />
@@ -58,7 +57,7 @@ export const Computers = () => {
                 <div className="buttonsAdd">
                   <button
                     className="buttoAddCart"
-                    onClick={() => addCart(getOneComputer(item.id, item))}
+                    onClick={() => getOneComputer(addCart(item))}
                   >
                     ADD TO CART
                   </button>

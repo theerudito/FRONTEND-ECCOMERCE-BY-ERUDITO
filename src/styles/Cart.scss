@@ -95,9 +95,7 @@ $marginR: 0px;
     
   }
 
-  .pinture {
-    display: none;
-  }
+  
 }
 
 @media screen and (min-width: 425px) {
@@ -113,9 +111,7 @@ $marginR: 0px;
   border-bottom: solid 1px silver;
   color: white;
 
-  .pinture {
-    display: none;
-  }
+ 
 
   .Name {
     width: 240px;
@@ -138,9 +134,7 @@ $marginR: 0px;
   border-bottom: solid 1px silver;
   color: white;
 
-  .pinture {
-    display: block;
-  }
+  
 
   .Name {
     width: 200px;
@@ -153,7 +147,7 @@ $marginR: 0px;
 @media screen and (min-width: 1024px) {
   background-color: #282C34;
   display: flex;
-  gap: 50px;
+  gap: 20px;
   margin: 1px auto;
   width: 800px;
   height: 30px;
@@ -163,16 +157,52 @@ $marginR: 0px;
   border-bottom: solid 1px silver;
   color: white;
 
-  .pinture {
-    display: block;
+  .cant {
+    background-color: #1253d6;
+    margin-right: auto;
+    padding-left: 5px;
+    width: 60px;
   }
 
-  .Name {
-    width: 240px;
+  .name {
+    background-color:red;
+    width: 500px;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
+
+   .priceUnitary{
+    color:black;
+    width: 100px;
+    background-color:red;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   }
+   .priceTotal {
+    color:black;
+    width: 100px;
+    background-color:red;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   }
+   .action {
+    color:black;
+    width: 100px;
+    background-color:red;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   }
 }
 
 @media screen and (min-width: 1440px) {
@@ -315,7 +345,7 @@ $marginR: 0px;
 }
 @media screen and (min-width: 1024px) {
   display: flex;
-  gap: 50px;
+  gap: 20px;
   margin: auto;
   width: 800px;
   height: 30px;
@@ -337,19 +367,50 @@ $marginR: 0px;
     //margin-left: -40px;
   }
 
-  p {
-    background-color: none;
+  .cant {
+    background-color: #1253d6;
+    margin-right: auto;
+    padding-left: 5px;
+    width: 60px;
   }
 
-  .Name {
-    width: 240px;
+  .name {
+    background-color:red;
+    width: 500px;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
+    margin-right: auto;
   }
+
+  .priceUnitary {
+    color:black;
+    width: 100px;
+    background-color:red;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .priceTotal {
+    color:black;
+    width: 100px;
+    background-color:red;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
 
   i {
     color: black;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:red;
+    width: 82px;
     &:hover {
      color: red;
     }
@@ -411,13 +472,14 @@ $marginR: 0px;
   display: grid;
   justify-content: center;
   margin: 10px;
-  width: 200px;
+  width: 100px;
   margin-left: auto;
 
     p {
       color: black;
       font-size: 14px;
       margin: 10px;
+      font-weight: bold;
     }
 }
 
@@ -483,13 +545,14 @@ button {
   display: grid;
   justify-content: center;
   margin: 10px;
-  width: 200px;
+  width: 100px;
   margin-left: auto;
 
     p {
       color: black;
       font-size: 14px;
       margin: 10px;
+      font-weight: bold;
     }
 }
 
@@ -551,13 +614,14 @@ button {
   display: grid;
   justify-content: center;
   margin: 10px;
-  width: 200px;
+  width: 100px;
   margin-left: auto;
 
     p {
       color: black;
       font-size: 14px;
       margin: 10px;
+      font-weight: bold;
     }
 }
 
@@ -617,13 +681,17 @@ button {
   display: grid;
   justify-content: center;
   margin: 10px;
-  width: 200px;
+  width: 100px;
   margin-left: auto;
-
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  
     p {
       color: black;
       font-size: 14px;
       margin: 10px;
+      font-weight: bold;
     }
 }
 

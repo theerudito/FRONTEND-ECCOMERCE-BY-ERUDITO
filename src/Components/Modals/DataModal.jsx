@@ -162,7 +162,7 @@ export const DataModalComputer = () => {
             <button onClick={handleSum}>+</button>
 
             <div className="contenedorBoton">
-              <button onClick={() => addCart(datas)}>Add Cart</button>
+              <button onClick={() =>  addCart(datas)}>Add Cart</button>
             </div>
           </div>
         </div>
