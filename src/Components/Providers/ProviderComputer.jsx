@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
-
 import { createContext } from "react";
-import { GetAllComputer, GetOneComputer } from "../Helpers/Api";
+import { GetAllComputer } from "../Helpers/Api";
+
+import Swal from "sweetalert2/dist/sweetalert2.js";
+
+import "sweetalert2/src/sweetalert2.scss";
 
 const computerContext = createContext();
 
@@ -26,8 +29,26 @@ const ProviderComputer = ({ children }) => {
   const [cant, setCant] = useState(0);
   const [vTotal, setVtotal] = useState([]);
   const [acuCant, setAcuCant] = useState(0);
+  const [user, setUser] = useState({ name: "", email: "" });
 
-  //console.log(cart);
+  const pay = (e) => {
+    e.preventDefault();
+    Swal.fire(
+      `Thanks for your purchase ${user.name}!`,
+      "You clicked the button!",
+      "success"
+    );
+    setCart([]);
+    setUser({ name: "", email: "" });
+  };
+
+  const handleChange = (e) => {
+    const target = e.target;
+    const value = e.target.value;
+    const name = target.name;
+    const email = target.email;
+    setUser({ ...user, [name]: value, [email]: value });
+  };
 
   const addCart = (item) => {
     console.log(item._id);
@@ -111,6 +132,15 @@ const ProviderComputer = ({ children }) => {
     valorTotal: valorTotal,
     totalCart: total,
     acuCant: acuCant,
+
+    // pay
+    pay: pay,
+
+    // user
+    user: [user, setUser],
+
+    // handleChange
+    handleChange: handleChange,
   };
 
   return (

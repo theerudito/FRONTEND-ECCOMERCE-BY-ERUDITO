@@ -11,7 +11,7 @@ export const PageHome = () => {
   return (
     <>
       <header>
-        <Header />
+        {/* <Header /> */}
         <Header2/>
       </header>
 

@@ -1,4 +1,7 @@
 import React from "react";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { getHeasets } from "../../../store/slices/heasets/heasets";
 import { Footer } from "../../Footer/Footer";
 import { Header } from "../../Header/Header";
 import { Header2 } from "../../Header/Header2";
@@ -8,14 +11,22 @@ import { Menu } from "../../Menu/Menu";
 import { SocialMedia } from "../../SocialMedia/SocialMedia";
 
 export const Headset = () => {
+  const dispatch = useDispatch();
+  const {heasets = []} = useSelector((state) => state.heasets);
+
+
+  useEffect(() => {
+    dispatch(getHeasets(STORE[0][1]));
+  }, [dispatch]);
+
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <Header2 />
       <Menu />
       <h2 className="titlecategory">HEADSETS</h2>
       <div className="contenedorCard">
-        {STORE[0][1].map((item) => (
+        {heasets.map((item) => (
           <div className="bodyCard" key={item.id}>
             <div className="containerImagen">
               <img className="imagenCard" src={item.pic} alt="foto" />

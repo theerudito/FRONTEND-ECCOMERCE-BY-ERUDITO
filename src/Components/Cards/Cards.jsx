@@ -1,4 +1,8 @@
-import React from "react";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { getColection } from "../../store/slices/colection";
+import { getproducts } from "../../store/slices/products";
+
 import { useModal } from "../CustomHooks/useModal";
 import { STORE } from "../Helpers/Data";
 import { DataModalBody } from "../Modals/DataModal";
@@ -6,16 +10,22 @@ import { ModalMore } from "../Modals/ModalMore";
 
 export const Cards = () => {
   //console.log(STORE[0]);
-
   const [isOpenMore, openModalMore, closeModalMore] = useModal(false);
 
-  let numRamdom = [0, 2, 3, 4, 5];
+  const dispatch = useDispatch();
+  const { products = [] } = useSelector((state) => state.products);
 
+  let numRamdom = [0, 2, 3, 4, 5];
   let ramdom = Math.floor(Math.random() * numRamdom.length);
+  ///STORE[0][ramdom].map
+
+  useEffect(() => {
+    dispatch(getproducts(STORE[0][ramdom]));
+  }, [dispatch]);
 
   return (
     <div className="contenedorCard">
-      {STORE[0][ramdom].map((item) => (
+      {products.map((item) => (
         <div className="bodyCard" key={item.id}>
           <div className="containerImagen">
             <img className="imagenCard" src={item.pic} alt="foto" />
@@ -37,10 +47,12 @@ export const Cards = () => {
 
             <div className="buttonsAdd">
               <button className="buttoAddCart">ADD TO CART</button>
-              <button className="moreInfo" onClick={openModalMore}>MORE</button>
-              
-              <ModalMore isOpen={isOpenMore} closeModal={closeModalMore} >
-                 <DataModalBody/>
+              <button className="moreInfo" onClick={openModalMore}>
+                MORE
+              </button>
+
+              <ModalMore isOpen={isOpenMore} closeModal={closeModalMore}>
+                <DataModalBody />
               </ModalMore>
             </div>
           </div>

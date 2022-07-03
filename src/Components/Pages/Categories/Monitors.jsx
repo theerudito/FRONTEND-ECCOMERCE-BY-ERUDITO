@@ -1,20 +1,30 @@
 import React from "react";
 import { Footer } from "../../Footer/Footer";
+import { useDispatch, useSelector } from "react-redux";
 import { Header } from "../../Header/Header";
 import { Header2 } from "../../Header/Header2";
 import { STORE } from "../../Helpers/Data";
 import { Menu } from "../../Menu/Menu";
 import { SocialMedia } from "../../SocialMedia/SocialMedia";
+import { getMonitors } from "../../../store/slices/monitors/monitors";
+import { useEffect } from "react";
 
 export const Monitors = () => {
+  const dispatch = useDispatch();
+  const { monitors = [] } = useSelector((state) => state.monitors);
+
+  useEffect(() => {
+    dispatch(getMonitors(STORE[0][3]));
+  }, [dispatch]);
+
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <Header2 />
       <Menu />
       <h2 className="titlecategory">MONITORS </h2>
       <div className="contenedorCard">
-        {STORE[0][3].map((item) => (
+        {monitors.map((item) => (
           <div className="bodyCard" key={item.id}>
             <div className="containerImagen">
               <img className="imagenCard" src={item.pic} alt="foto" />

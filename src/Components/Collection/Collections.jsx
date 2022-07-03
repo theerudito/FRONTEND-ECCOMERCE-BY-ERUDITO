@@ -1,11 +1,22 @@
 import React from "react";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { CATEGORIES } from "../Helpers/Data";
+import { getColection } from "../../store/slices/colection";
+
+import { COLECTIONS } from "../Helpers/Data";
 
 export const Collection = () => {
+  const dispatch = useDispatch();
+  const { colection = [] } = useSelector((state) => state.colections);
+
+  useEffect(() => {
+    dispatch(getColection(COLECTIONS));
+  }, [dispatch]);
+
   return (
     <div className="collection">
-      {CATEGORIES.map((item) => (
+      {colection.map((item) => (
         <div className="bodyColections" key={item.id}>
           <div>
             <h1 className="titleCollection">{item.Title} </h1>

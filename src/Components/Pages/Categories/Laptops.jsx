@@ -9,7 +9,7 @@ import { SocialMedia } from "../../SocialMedia/SocialMedia";
 export const Laptops = () => {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <Header2 />
       <Menu />
       <h2 className="titlecategory">LAPTOPS</h2>

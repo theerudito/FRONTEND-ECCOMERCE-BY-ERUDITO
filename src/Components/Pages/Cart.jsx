@@ -12,8 +12,9 @@ export const Cart = () => {
   const valorTotal = data.valorTotal;
   const total = data.totalCart;
   const acuCant = data.acuCant;
-
-
+  const pay = data.pay;
+  const handleChange = data.handleChange;
+  const [user] = data.user;
 
   const deleteCart = (itemId) => {
     const borrar = cart.filter((item) => item._id !== itemId);
@@ -35,10 +36,13 @@ export const Cart = () => {
             <p className="priceTotal">Price/Total</p>
             <p className="action">Action</p>
           </div>
+
           {cart.map((item) => (
             <div className="containerInfoPago" key={item._id}>
               <p className="cant">{acuCant}</p>
-              <p className="name">{item.name} </p>
+              <p className="name">
+                {item.name} {item.description} {item.marc}
+              </p>
               <p className="priceUnitary"> {item.price} </p>
               <p className="priceTotal">{valorTotal}</p>
               <span onClick={() => deleteCart(item._id)}>
@@ -48,22 +52,40 @@ export const Cart = () => {
           ))}
 
           <div className="containerTotals">
-            <div className="logo3">
+            <div className="total">
+              <p>Total: {total} </p>
+            </div>
+
+            <div className="contenderBody">
               <img
                 src="https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Avatares%2FCategories%2Flogo1.svg?alt=media&token=29b3a6cc-833a-4fa7-b739-fa02027db8bf"
                 alt="logo"
               />
               <div className="dataUser">
-                <input placeholder="Name" type="text" className="inputName" />
-                <input placeholder="Email" type="text" className="inputEmail" />
+                <form onSubmit={pay}>
+                  <input
+                    placeholder="Name"
+                    type="text"
+                    className="inputName"
+                    required
+                    name="name"
+                    value={user.name}
+                    onChange={handleChange}
+                  />
+                  <input
+                    placeholder="Email"
+                    type="email"
+                    className="inputEmail"
+                    required
+                    name="email"
+                    value={user.email}
+                    onChange={handleChange}
+                  />
+                  <div className="contendorBoton">
+                    <button type="submit">Pay</button>
+                  </div>
+                </form>
               </div>
-            </div>
-
-            <div className="payment">
-              <form>
-                <p>Total: {total} </p>
-                <button type="submit">Pay</button>
-              </form>
             </div>
           </div>
         </div>

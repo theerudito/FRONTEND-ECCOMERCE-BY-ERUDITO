@@ -124,7 +124,7 @@ $marginR: 0px;
 @media screen and (min-width: 768px) {
   background-color: #282C34;
   display: flex;
-  gap: 30px;
+  gap: 10px;
   margin: 1px auto;
   width: 600px;
   height: 30px;
@@ -136,11 +136,58 @@ $marginR: 0px;
 
   
 
-  .Name {
-    width: 200px;
+  .cant {
+    background-color: #1253d6;
+    margin-right: auto;
+    padding-left: 5px;
+    width: 60px;
+  }
+
+  .action { 
+    width: 100px;
+    background-color:red;
+  }
+
+  .name {
+    background-color:red;
+    width: 400px;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
+    margin-right: auto;
+  }
+
+  .priceUnitary {
+    color:black;
+    width: 100px;
+    background-color:red;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .priceTotal {
+    color:black;
+    width: 100px;
+    background-color:red;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+  i {
+    color: black;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:red;
+    width: 82px;
+    &:hover {
+     color: red;
+    }
   }
   
 }
@@ -163,6 +210,8 @@ $marginR: 0px;
     padding-left: 5px;
     width: 60px;
   }
+
+  
 
   .name {
     background-color:red;
@@ -302,9 +351,9 @@ $marginR: 0px;
 
 @media screen and (min-width: 768px) {
   display: flex;
-  gap: 30px;
+  gap:10px;
   margin: auto;
-  width: 600px;
+  width: 605px;
   height: 30px;
   align-items: center;
   justify-content: center;
@@ -323,20 +372,57 @@ $marginR: 0px;
     display: block;
   }
 
-  p {
-    background-color: none;
-
+  .cant {
+    background-color: #1253d6;
+    margin-right: auto;
+    padding-left: 5px;
+    width: 60px;
   }
 
-  .Name {
-    width: 180px;
+  .name {
+    background-color:red;
+    width: 400px;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
+    margin-right: auto;
   }
+
+  .priceUnitary {
+    color:black;
+    width: 100px;
+    background-color:red;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+  .priceTotal {
+    color:black;
+    width: 100px;
+    background-color:red;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .action { 
+    width: 100px;
+    background-color:red;
+  }
+
 
   i {
     color: black;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:red;
+    width: 82px;
     &:hover {
      color: red;
     }
@@ -428,299 +514,205 @@ $marginR: 0px;
 
 
 .containerTotals {
-@media screen and (max-width: 320px) {
- 
+  width: auto;
+  height: auto;
+  background-color: red;
+
+
+
+  @media screen and (min-width: 425px) {
+    .total {
+      border: 1px solid silver;
+      border-radius: 5px;
+      width: 100px;
+      height: 40px;
+      margin-top: 50px;
+      margin-left: auto;
+      margin-right: 10px  ;
+        p {
+          color: black;
+          font-size: 14px;
+          margin: 10px;
+          font-weight: bold;
+        }
+    }
+  }  
+
+  @media screen and (min-width: 1024px) {
+    .total {
+      border: 1px solid silver;
+      border-radius: 5px;
+      width: 150px;
+      height: 40px;
+      margin-top: 50px;
+      margin-left: auto;
+      margin-right: 10px  ;
+        p {
+          color: black;
+          font-size: 14px;
+          margin: 10px;
+          font-weight: bold;
+        }
+    }
+  }  
 }
 
-@media screen and (min-width: 375px) {
-  display: grid;
-  margin: auto;
-  grid-template-columns: auto auto;
-  width: 360px;
-  img {
-    width: 50px;
-    height: 50px;
-    padding-left: 5px;
-    margin-top: 60px;
-  }
 
-  .logo3 {
-  width: 200px;
-  margin: auto;
-  margin-top: 70px;
-}
-.dataUser {
-  height: 55px;
-  display: grid;
-  margin-top: -50px;
-  margin-left: 70px;
+.contenderBody{
+
+  @media screen and (min-width: 425px) {
+    background-color:orange;
+    width: 400px;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    display: flex;
+    gap: 10px;
+    
+    img {
+      background-color: red;
+      width: 50px;
+      height: 50px;
+    }
   
-  input {
+    .dataUser {
+      width: auto;
+      height: 20px;
+      
+      input {   
+        margin:  auto;
+        display:grid;
+        grid-template-columns: auto auto;
+        width: 150px;
+        height: 20px;
+        border: none;
+        margin-left: 10px;
+        border-radius: 5px;
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+  
+  
+  .contendorBoton {
+      button {
+        position: absolute;
+        margin-left: 375px;
+        border: none;
+        border-radius: 5px;
+        width: 100px;
+        height: 30px;
+        font-weight: bold;
+        user-select: none;
+        margin-top: -30px;
+      cursor: pointer;
+        color: white;
+        background-color: purple;
+      &:hover {
+      background-color: rgb(180, 66, 180);
+      color: black;
+      font-weight: bold;
+      }
+      }
+  }
+  
+  .total {
+    border: 1px solid silver;
+    border-radius: 5px;
     width: 150px;
-    border: none;
-    margin: 0 2px;
-    border-radius: 5px;
-    height: 20px;
-    background-color: silver;
-    &:focus {
-      outline: none;
-    }
-  }
-}
+    height: 40px;
+    margin-top: 50px;
+    margin-left: 620px;
+      p {
+        color: black;
+        font-size: 14px;
+        margin: 10px;
+        font-weight: bold;
+      }
+   }
+  }  
 
-.payment {
-  display: grid;
-  justify-content: center;
-  margin: 10px;
-  width: 100px;
-  margin-left: auto;
 
-    p {
-      color: black;
-      font-size: 14px;
-      margin: 10px;
-      font-weight: bold;
-    }
-}
 
-button {
-  border: none;
-  border-radius: 10px;
-  width: 80px;
-  height: 25px;
-  font-weight: bold;
-  user-select: none;
-  cursor: pointer;
-  color: white;
-  margin: 10px;
-  background-color: purple;
-  &:hover {
-  background-color: rgb(180, 66, 180);
-  color: black;
-  font-weight: bold;
- }
-}
 
-}
 
-@media screen and (min-width: 425px) {
-  display: grid;
-  margin: auto;
-  grid-template-columns: auto auto;
-  
-  width: 400px;
-  img {
-    width: 50px;
-    height: 50px;
-    padding-left: 5px;
-    margin-top: 40px;
-  }
-
-  .logo3 {
-  width: 200px;
-  margin: auto;
-  margin-top: 90px;
-}
-.dataUser {
-  height: 60px;
-  display: grid;
-  margin-top: -50px;
-  margin-left: 70px;
-
-  input {
-    width: 150px;
-    height: 20px;
-    border: none;
-    margin: 0 2px;
-    border-radius: 5px;
-    background-color: silver;
-    color: black;
-    &:focus {
-      outline: none;
-    }
-  }
-}
-
-.payment {
-  display: grid;
-  justify-content: center;
-  margin: 10px;
-  width: 100px;
-  margin-left: auto;
-
-    p {
-      color: black;
-      font-size: 14px;
-      margin: 10px;
-      font-weight: bold;
-    }
-}
-
-button {
-  border: none;
-  border-radius: 10px;
-  width: 100px;
-  height: 30px;
-  font-weight: bold;
-  user-select: none;
-  cursor: pointer;
-  color: white;
-  margin-left: 10px;
-  background-color: purple;
-  &:hover {
-  background-color: rgb(180, 66, 180);
-  color: black;
-  font-weight: bold;
- }
-}
 
   
-}
+  @media screen and (min-width: 1024px) {
+      background-color:orange;
+      width: auto;
+      margin: auto;
+      height: 80px;
+      gap: 10px;
+      grid-template-columns: auto auto;
+      margin-left: 20px;
+    
+      img {
+        background-color: red;
+        width: 50px;
+        height: 50px;
+      }
+    
+      .dataUser {
+        width: auto;
+        height: 20px;
+        display: flex;
+        form {
+          input {   
+            display:flex;
+            margin:  auto;
+            width: 150px;
+            height: 20px;
+            border: none;
+            margin-left: 10px;
+            border-radius: 5px;
+            &:focus {
+              outline: none;
+            }
+          }
+        }
 
-@media screen and (min-width: 768px) {
-  display: grid;
-  margin: auto;
-  grid-template-columns: auto auto;
-  width: 600px;
-  img {
-    width: 50px;
-    height: 50px;
-  }
-
-  .logo3 {
-  width: 200px;
-  margin: auto;
-  margin-top: 90px;
-}
-.dataUser {
-  height: 30px;
-  display: flex;
-  margin-top: -25px;
-  margin-left: 100px;
-  
-  input {
-    background-color: silver;
-    width: 120px;
-    border: none;
-    margin: 0 2px;
-    border-radius: 5px;
-    &:focus {
-      outline: none;
+        
+      }
+    
+    
+    .contendorBoton {
+        button {
+          position: absolute;
+          margin-left: 375px;
+          border: none;
+          border-radius: 5px;
+          width: 100px;
+          height: 30px;
+          font-weight: bold;
+          user-select: none;
+          margin-top: -30px;
+        cursor: pointer;
+          color: white;
+          background-color: purple;
+        &:hover {
+        background-color: rgb(180, 66, 180);
+        color: black;
+        font-weight: bold;
+        }
+        }
     }
-  }
-}
-
-.payment {
-  display: grid;
-  justify-content: center;
-  margin: 10px;
-  width: 100px;
-  margin-left: auto;
-
-    p {
-      color: black;
-      font-size: 14px;
-      margin: 10px;
-      font-weight: bold;
+    
+    .total {
+      border: 1px solid silver;
+      border-radius: 5px;
+      width: 150px;
+      height: 40px;
+      margin-top: 50px;
+      margin-left: 620px;
+        p {
+          color: black;
+          font-size: 14px;
+          margin: 10px;
+          font-weight: bold;
+        }
+     }
     }
-}
-
-button {
-  border: none;
-  border-radius: 10px;
-  width: 100px;
-  height: 30px;
-  font-weight: bold;
-  user-select: none;
-  cursor: pointer;
-  color: white;
-  background-color: purple;
-  &:hover {
-  background-color: rgb(180, 66, 180);
-  color: black;
-  font-weight: bold;
- }
-}
-
-}
-
-
-@media screen and (min-width: 1024px) {
-  display: grid;
-  margin: auto;
-  grid-template-columns: auto auto;
-  width: 800px;
-  img {
-    width: 50px;
-    height: 50px;
-  }
-
-  .logo3 {
-  width: 200px;
-  margin: auto;
-  margin-top: 90px;
-}
-.dataUser {
-  height: 30px;
-  display: flex;
-  margin-top: -30px;
-  margin-left: 140px;
-  
-  input {
-    width: 150px;
-    border: none;
-    margin: 0 2px;
-    border-radius: 5px;
-    &:focus {
-      outline: none;
-    }
-  }
-}
-
-.payment {
-  display: grid;
-  justify-content: center;
-  margin: 10px;
-  width: 100px;
-  margin-left: auto;
-  display: flex;
-  align-items: center;
-  justify-self: center;
-  
-    p {
-      color: black;
-      font-size: 14px;
-      margin: 10px;
-      font-weight: bold;
-    }
-}
-
-button {
-    margin-left: 10px;
-    border: none;
-    border-radius: 5px;
-    width: 100px;
-    height: 30px;
-    font-weight: bold;
-    user-select: none;
-    cursor: pointer;
-    color: white;
-    background-color: purple;
-    &:hover {
-    background-color: rgb(180, 66, 180);
-    color: black;
-    font-weight: bold;
-  }
-}
-
-}
-
-
-@media screen and (min-width: 1440px) {
-  
-}
-
-@media screen and (min-width: 2560px) {
-  
-}  
 }

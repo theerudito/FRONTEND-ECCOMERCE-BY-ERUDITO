@@ -1,4 +1,7 @@
 import React from "react";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { getKeyboards } from "../../../store/slices/keyboards/keyboards";
 import { Footer } from "../../Footer/Footer";
 import { Header } from "../../Header/Header";
 import { Header2 } from "../../Header/Header2";
@@ -7,14 +10,21 @@ import { Menu } from "../../Menu/Menu";
 import { SocialMedia } from "../../SocialMedia/SocialMedia";
 
 export const Keyboards = () => {
+  const dispatch = useDispatch();
+  const { keyboards = [] } = useSelector((state) => state.keyboards);
+
+  useEffect(() => {
+    dispatch(getKeyboards(STORE[0][4]));
+  }, [dispatch]);
+
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <Header2 />
       <Menu />
       <h2 className="titlecategory">KEYBOARDS </h2>
       <div className="contenedorCard">
-        {STORE[0][4].map((item) => (
+        {keyboards.map((item) => (
           <div className="bodyCard" key={item.id}>
             <div className="containerImagen">
               <img className="imagenCard" src={item.pic} alt="foto" />

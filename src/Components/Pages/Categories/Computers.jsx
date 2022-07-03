@@ -28,7 +28,7 @@ export const Computers = () => {
 
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <Header2 />
       <Menu />
       <h2 className="titlecategory">COMPUTERS </h2>

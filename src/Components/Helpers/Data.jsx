@@ -1,4 +1,4 @@
-export const CATEGORIES = [
+export const COLECTIONS = [
   {
     id: 1,
     Title: "COMPUTERS",
@@ -42,6 +42,9 @@ export const CATEGORIES = [
     categogy: "/accessories",
   },
 ];
+
+
+
 
 export const STORE = [
   {
