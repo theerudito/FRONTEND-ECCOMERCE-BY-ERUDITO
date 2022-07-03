@@ -1,8 +1,6 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getColection } from "../../store/slices/colection";
 import { getproducts } from "../../store/slices/products";
-
 import { useModal } from "../CustomHooks/useModal";
 import { STORE } from "../Helpers/Data";
 import { DataModalBody } from "../Modals/DataModal";

@@ -3,7 +3,6 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { getColection } from "../../store/slices/colection";
-
 import { COLECTIONS } from "../Helpers/Data";
 
 export const Collection = () => {
