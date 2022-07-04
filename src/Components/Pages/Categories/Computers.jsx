@@ -1,30 +1,40 @@
 import { useContext, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { addCart } from "../../../store/slices/cart/cart";
+import {
+  getComputer,
+  oneComputer,
+} from "../../../store/slices/computer/computer";
 import { useModal } from "../../CustomHooks/useModal";
 import { Footer } from "../../Footer/Footer";
 import { Header } from "../../Header/Header";
 import { Header2 } from "../../Header/Header2";
+import { GetAllComputerApi } from "../../Helpers/Api";
 import { Loader } from "../../Loaders/LoadersCards";
 import { Menu } from "../../Menu/Menu";
 import { DataModalComputer } from "../../Modals/DataModal";
-
 import { ModalMore } from "../../Modals/ModalMore";
-import computerContext from "../../Providers/ProviderComputer";
 import { SocialMedia } from "../../SocialMedia/SocialMedia";
+
 
 export const Computers = () => {
   const [isOpenMore, openModalMore, closeModalMore] = useModal(false);
-  const value = useContext(computerContext);
-  const [computer] = value.computer;
-  const getComputer = value.getComputer;
-  const getOneComputer = value.getOneComputer;
-  const [loader] = value.loader;
-  const addCart = value.addCart;
+
+  const dispatch = useDispatch();
+  const { computer = [], isLoading } = useSelector((state) => state.computers);
+
 
   useEffect(() => {
-    setTimeout(() => {
-      getComputer();
-    }, 1000);
-  }, []);
+    GetAllComputerApi().then((res) => {
+      dispatch(getComputer(res));
+    });
+  }, [dispatch]);
+  
+
+  const handleModal = (item) => {
+    openModalMore();
+    dispatch(oneComputer(item));
+  };
 
   return (
     <>
@@ -57,15 +67,13 @@ export const Computers = () => {
                 <div className="buttonsAdd">
                   <button
                     className="buttoAddCart"
-                    onClick={() => getOneComputer(addCart(item))}
+                    onClick={() => dispatch(addCart(item))}
                   >
                     ADD TO CART
                   </button>
                   <button
                     className="moreInfo"
-                    onClick={() =>
-                      openModalMore(getOneComputer(item._id, item))
-                    }
+                    onClick={() => handleModal(item)}
                   >
                     MORE
                   </button>
@@ -78,7 +86,7 @@ export const Computers = () => {
             </div>
           ))
         ) : (
-          <div>{loader && <Loader />}</div>
+          <div>{isLoading && <Loader />}</div>
         )}
       </div>
       <SocialMedia />

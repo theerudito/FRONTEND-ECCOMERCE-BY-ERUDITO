@@ -1,6 +1,16 @@
 import React, { useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
 import { useContext } from "react";
 import computerContext from "../Providers/ProviderComputer";
+import { addCart, getCounter } from "../../store/slices/cart/cart";
+import { useEffect } from "react";
+import { GetOneComputerApi } from "../Helpers/Api";
+import {
+  decrement,
+  getComputer,
+  getOneComputer,
+  increment,
+} from "../../store/slices/computer/computer";
 
 export const DataModalBody = ({ item }) => {
   return (
@@ -67,25 +77,27 @@ export const DataModalBody = ({ item }) => {
   );
 };
 
-export const DataModalComputer = () => {
-  const { datas, counter, setCounter, handleSum, handleRes, addCart } =
-    useContext(computerContext);
-
+export const DataModalComputer = ({ item }) => {
   const [image, setImage] = useState(true);
   const [changeImage, setChangeImage] = useState("");
 
+  const dispatch = useDispatch();
+  const { cart = [] } = useSelector((state) => state.cart);
+  const { oneComputer, counter } = useSelector((state) => state.computers);
+
+  
   const result = {
-    name: datas.name,
-    description: datas.description,
-    marc: datas.marc,
-    price: parseFloat(Number(datas.price).toFixed(2)),
-    priceDesc: parseFloat(Number(datas.priceDesc).toFixed(2)),
-    desc: datas.desc + "%",
-    star: datas.star,
-    pic1: datas.pic1,
-    pic2: datas.pic2,
-    pic3: datas.pic3,
-    pic4: datas.pic4,
+    name: oneComputer.name,
+    description: oneComputer.description,
+    marc: oneComputer.marc,
+    price: parseFloat(Number(oneComputer.price).toFixed(2)),
+    priceDesc: parseFloat(Number(oneComputer.priceDesc).toFixed(2)),
+    desc: oneComputer.desc + "%",
+    star: oneComputer.star,
+    pic1: oneComputer.pic1,
+    pic2: oneComputer.pic2,
+    pic3: oneComputer.pic3,
+    pic4: oneComputer.pic4,
   };
 
   const addImage = (image) => {
@@ -93,8 +105,6 @@ export const DataModalComputer = () => {
     setImage(false);
     setChangeImage(newImgen);
   };
-
-  
 
   return (
     <>
@@ -155,14 +165,16 @@ export const DataModalComputer = () => {
               type="number"
               placeholder="0"
               value={counter}
-              onChange={(e) => setCounter(e.target.value)}
+              onChange={(e) => counter(e.target.value)}
             />
 
-            <button onClick={handleRes}>-</button>
-            <button onClick={handleSum}>+</button>
+            <button onClick={() => dispatch(decrement())}>-</button>
+            <button onClick={() => dispatch(increment())}>+</button>
 
             <div className="contenedorBoton">
-              <button onClick={() =>  addCart(datas)}>Add Cart</button>
+              <button onClick={() => dispatch(addCart(oneComputer))} >
+                Add Cart
+              </button>
             </div>
           </div>
         </div>

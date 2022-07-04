@@ -3,28 +3,24 @@ import { Footer } from "../Footer/Footer";
 import { Header } from "../Header/Header";
 import { Header2 } from "../Header/Header2";
 import { Menu } from "../Menu/Menu";
+import { useDispatch, useSelector } from "react-redux";
 import computerContext from "../Providers/ProviderComputer";
 import { SocialMedia } from "../SocialMedia/SocialMedia";
+import { deleteCart } from "../../store/slices/cart/cart";
 
 export const Cart = () => {
   const data = useContext(computerContext);
-  const [cart, setCart] = data.carrito;
-  const valorTotal = data.valorTotal;
-  const total = data.totalCart;
-  const acuCant = data.acuCant;
   const pay = data.pay;
   const handleChange = data.handleChange;
   const [user] = data.user;
 
-  const deleteCart = (itemId) => {
-    const borrar = cart.filter((item) => item._id !== itemId);
-    setCart(borrar);
-    console.log("borrando");
-  };
+  const dispatch = useDispatch();
+
+  const { cart = [] } = useSelector((state) => state.cart);
 
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <Header2 />
       <Menu />
       <div className="contenedorP">
@@ -39,13 +35,13 @@ export const Cart = () => {
 
           {cart.map((item) => (
             <div className="containerInfoPago" key={item._id}>
-              <p className="cant">{acuCant}</p>
+              <p className="cant">{cart.length} </p>
               <p className="name">
                 {item.name} {item.description} {item.marc}
               </p>
               <p className="priceUnitary"> {item.price} </p>
-              <p className="priceTotal">{valorTotal}</p>
-              <span onClick={() => deleteCart(item._id)}>
+              <p className="priceTotal"></p>
+              <span onClick={() => dispatch(deleteCart(item._id))}>
                 <i className="fa-solid fa-trash-can"></i>
               </span>
             </div>
@@ -53,7 +49,7 @@ export const Cart = () => {
 
           <div className="containerTotals">
             <div className="total">
-              <p>Total: {total} </p>
+              <p>Total: </p>
             </div>
 
             <div className="contenderBody">

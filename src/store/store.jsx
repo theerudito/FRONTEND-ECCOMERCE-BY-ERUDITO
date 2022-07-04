@@ -7,6 +7,7 @@ import { laptopsSlice } from "./slices/laptops/";
 import { monitorsSlice } from "./slices/monitors/monitors";
 import { keyboardsSlice } from "./slices/keyboards/keyboards";
 import { accessoriesSlice } from "./slices/accessories/accessories";
+import { cartSlice } from "./slices/cart";
 
 export const store = configureStore({
   reducer: {
@@ -18,5 +19,6 @@ export const store = configureStore({
     monitors: monitorsSlice.reducer,
     keyboards: keyboardsSlice.reducer,
     accessories: accessoriesSlice.reducer,
+    cart: cartSlice.reducer,
   },
 });

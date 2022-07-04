@@ -1,12 +1,9 @@
-import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import computerContext from "../Providers/ProviderComputer";
+import { useSelector } from "react-redux";
 import { RoutesApps } from "../Router/Routers";
 
 export const Header2 = () => {
-  const data= useContext(computerContext);
-  const [cart] = data.carrito;
- 
+  const { cart = [] } = useSelector((state) => state.cart);
 
   return (
     <div className="header2">
@@ -28,11 +25,10 @@ export const Header2 = () => {
       </div>
 
       <div className="containerCart">
-        <Link to={RoutesApps.cart}  className="LinkCart">
+        <Link to={RoutesApps.cart} className="LinkCart">
           <div className="contenedorsumado">
             <span className="sumador">{cart.length}</span>
             <i className="fa-solid fa-cart-shopping"></i>
-            
           </div>
         </Link>
         {/* <p>Credit: 10000</p> */}

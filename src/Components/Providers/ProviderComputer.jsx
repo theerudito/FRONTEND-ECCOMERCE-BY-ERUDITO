@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
 import { createContext } from "react";
-import { GetAllComputer } from "../Helpers/Api";
+import { GetAllComputerApi } from "../Helpers/Api";
 
 import Swal from "sweetalert2/dist/sweetalert2.js";
 
@@ -81,16 +81,15 @@ const ProviderComputer = ({ children }) => {
 
   useEffect(() => {
     setVtotal(vTotal, valorTotal, total);
-  }, []);
+  }, [vTotal, valorTotal, total]);
   //=======CART==================================
 
   const getComputer = async () => {
-    const computer = await GetAllComputer();
+    const computer = await GetAllComputerApi();
     setComputer(computer);
   };
 
-  const getOneComputer = (id, item) => {
-    console.log("obtenido");
+  const getOneComputer = (item) => {
     const dato = {
       _id: item._id,
       name: item.name,
