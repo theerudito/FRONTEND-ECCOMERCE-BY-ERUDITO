@@ -91,13 +91,16 @@ $marginR: 0px;
     margin-right: auto;
     padding-left: 5px;
     width: 60px;
+    font-size: 12px;
   }
 
   .action { 
     width: 100px;
+    font-size: 12px;
   }
 
   .name {
+    font-size: 12px;
     width: 400px;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -106,6 +109,7 @@ $marginR: 0px;
   }
 
   .priceUnitary {
+    font-size: 12px;
     color:white;
     width: 100px;
     margin: auto;
@@ -114,6 +118,7 @@ $marginR: 0px;
     justify-content: center;
   }
   .priceTotal {
+    font-size: 12px;
     color:white;
     width: 100px;
     margin: auto;
@@ -124,6 +129,7 @@ $marginR: 0px;
 
 
   i {
+    font-size: 12px;
     color: black;
     margin: auto;
     display: flex;
@@ -264,7 +270,7 @@ $marginR: 0px;
 }
 
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   background-color: #282C34;
   display: flex;
   gap: 10px;
@@ -278,16 +284,19 @@ $marginR: 0px;
   color: white;
 
   .cant {
+    font-size: 16px;
     margin-right: auto;
     padding-left: 5px;
     width: 60px;
   }
 
   .action { 
+    font-size: 16px;
     width: 100px;
   }
 
   .name {
+    font-size: 16px;
     width: 400px;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -296,6 +305,7 @@ $marginR: 0px;
   }
 
   .priceUnitary {
+    font-size: 16px;
     color:white;
     width: 100px;
     margin: auto;
@@ -304,6 +314,7 @@ $marginR: 0px;
     justify-content: center;
   }
   .priceTotal {
+    font-size: 16px;
     color:white;
     width: 100px;
     margin: auto;
@@ -372,10 +383,12 @@ $marginR: 0px;
     margin-right: auto;
     padding-left: 5px;
     width: 50px;
+    font-size: 12px;
   }
 
   .name {
-    width: 120px;
+    font-size: 12px;
+    width: 240px;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -389,6 +402,7 @@ $marginR: 0px;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 12px;
   }
 
 
@@ -399,10 +413,12 @@ $marginR: 0px;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 12px;
   }
 
 
   i {
+    font-size: 12px;
     color: black;
     margin: auto;
     display: flex;
@@ -441,13 +457,15 @@ $marginR: 0px;
   }
 
   .cant {
+    font-size: 12px;
     margin-right: auto;
     padding-left: 5px;
     width: 40px;
   }
 
   .name {
-    width: 180px;
+    font-size: 12px;
+    width: 280px;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -455,6 +473,7 @@ $marginR: 0px;
   }
 
   .priceUnitary {
+    font-size: 12px;
     color:black;
     width: 100px;
     margin: auto;
@@ -465,6 +484,7 @@ $marginR: 0px;
 
 
   .priceTotal {
+    font-size: 12px;
     color:black;
     width: 100px;
     margin: auto;
@@ -475,6 +495,7 @@ $marginR: 0px;
 
 
   i {
+    font-size: 12px;
     color: black;
     margin: auto;
     display: flex;
@@ -514,12 +535,14 @@ $marginR: 0px;
   }
 
   .cant {
+    font-size: 16px;
     margin-right: auto;
     padding-left: 5px;
     width: 60px;
   }
 
   .name {
+    font-size: 16px;
     width: 400px;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -528,6 +551,7 @@ $marginR: 0px;
   }
 
   .priceUnitary {
+    font-size: 16px;
     color:black;
     width: 100px;
     margin: auto;
@@ -538,6 +562,7 @@ $marginR: 0px;
 
 
   .priceTotal {
+    font-size: 16px;
     color:black;
     width: 100px;
     margin: auto;
@@ -548,6 +573,7 @@ $marginR: 0px;
 
   
   i {
+    font-size: 16px;
     color: black;
     margin: auto;
     display: flex;
@@ -587,13 +613,14 @@ $marginR: 0px;
   }
 
   .cant {
+    font-size: 16px;
     margin-right: auto;
     padding-left: 5px;
     width: 55px;
   }
 
   .name {
-    
+    font-size: 16px;
     width: 420px;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -602,6 +629,7 @@ $marginR: 0px;
   }
 
   .priceUnitary {
+    font-size: 16px;
     color:black;
     width: 100px;
     margin: auto;
@@ -610,6 +638,7 @@ $marginR: 0px;
     justify-content: center;
   }
   .priceTotal {
+    font-size: 16px;
     color:black;
     width: 100px;
     margin: auto;
@@ -620,6 +649,7 @@ $marginR: 0px;
 
 
   i {
+    font-size: 16px;
     color: black;
     margin: auto;
     display: flex;
@@ -748,7 +778,7 @@ $marginR: 0px;
 
     button {
       position: absolute;
-      background-color: #8a1154;
+      background-color: purple;
       width: 100px;
       height: 30px;
       margin: 5px;
@@ -757,7 +787,7 @@ $marginR: 0px;
       margin-left: 195px;
       margin-top: -30px;
       &:hover {
-        background-color: purple;
+        background-color: rgb(180, 66, 180);
         color: #fff;
       }
     }
@@ -791,7 +821,7 @@ $marginR: 0px;
 
     button {
       position: absolute;
-      background-color: #8a1154;
+      background-color: purple;
       width: 100px;
       height: 30px;
       margin: 5px;
@@ -800,7 +830,7 @@ $marginR: 0px;
       margin-left: 245px;
       margin-top: -30px;
       &:hover {
-        background-color: purple;
+        background-color: rgb(180, 66, 180);
         color: #fff;
       }
     }
@@ -833,7 +863,7 @@ $marginR: 0px;
 
     button {
       position: absolute;
-      background-color: #8a1154;
+      background-color: purple;
       width: 100px;
       height: 30px;
       margin: 5px;
@@ -843,7 +873,7 @@ $marginR: 0px;
       margin-top: -30px;
 
       &:hover {
-        background-color: purple;
+        background-color: rgb(180, 66, 180);
         color: #fff;
       }
     }
@@ -876,7 +906,7 @@ $marginR: 0px;
 
     button {
       position: absolute;
-      background-color: #8a1154;
+      background-color: purple;
       width: 100px;
       height: 30px;
       margin: 5px;
@@ -886,7 +916,7 @@ $marginR: 0px;
       margin-top: -30px;
 
       &:hover {
-        background-color: purple;
+        background-color: rgb(180, 66, 180);
         color: #fff;
       }
     }
