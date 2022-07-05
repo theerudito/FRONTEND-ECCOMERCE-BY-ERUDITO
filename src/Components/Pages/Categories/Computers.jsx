@@ -1,6 +1,6 @@
 import { useContext, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { addCart } from "../../../store/slices/cart/cart";
+import { addCart, getCounter, getPriceTotal } from "../../../store/slices/cart/cart";
 import {
   getComputer,
   oneComputer,
@@ -16,12 +16,14 @@ import { DataModalComputer } from "../../Modals/DataModal";
 import { ModalMore } from "../../Modals/ModalMore";
 import { SocialMedia } from "../../SocialMedia/SocialMedia";
 
-
 export const Computers = () => {
   const [isOpenMore, openModalMore, closeModalMore] = useModal(false);
 
   const dispatch = useDispatch();
   const { computer = [], isLoading } = useSelector((state) => state.computers);
+  const { counter,  } = useSelector((state) => state.cart);
+  console.log(counter)
+ 
 
 
   useEffect(() => {
@@ -29,12 +31,17 @@ export const Computers = () => {
       dispatch(getComputer(res));
     });
   }, [dispatch]);
-  
 
   const handleModal = (item) => {
     openModalMore();
     dispatch(oneComputer(item));
   };
+
+  const AddCart = (item) => {
+    dispatch(getPriceTotal(item.price));
+    dispatch(addCart(item));
+    dispatch(getCounter());
+  }
 
   return (
     <>
@@ -67,7 +74,7 @@ export const Computers = () => {
                 <div className="buttonsAdd">
                   <button
                     className="buttoAddCart"
-                    onClick={() => dispatch(addCart(item))}
+                    onClick={() => AddCart(item)}
                   >
                     ADD TO CART
                   </button>

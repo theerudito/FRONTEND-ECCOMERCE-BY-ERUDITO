@@ -1,22 +1,57 @@
-import { useContext } from "react";
+import { useRef } from "react";
 import { Footer } from "../Footer/Footer";
 import { Header } from "../Header/Header";
 import { Header2 } from "../Header/Header2";
 import { Menu } from "../Menu/Menu";
 import { useDispatch, useSelector } from "react-redux";
-import computerContext from "../Providers/ProviderComputer";
+
 import { SocialMedia } from "../SocialMedia/SocialMedia";
-import { deleteCart } from "../../store/slices/cart/cart";
+import { deleteCart, getPayment } from "../../store/slices/cart/cart";
+import "sweetalert2/src/sweetalert2.scss";
+import Swal from "sweetalert2/dist/sweetalert2.js";
 
 export const Cart = () => {
-  const data = useContext(computerContext);
-  const pay = data.pay;
-  const handleChange = data.handleChange;
-  const [user] = data.user;
-
   const dispatch = useDispatch();
+  const { cart = [], counter, priceTotal } = useSelector((state) => state.cart);
+  const nameRef = useRef("");
+  const emailRef = useRef("");
 
-  const { cart = [] } = useSelector((state) => state.cart);
+  const payment = () => {
+    let user = nameRef.current.value;
+    let email = emailRef.current.value;
+
+    if (user === "" || email === "" || cart.length === 0) {
+      Swal.fire({
+        title: "Error",
+        text: "Please you need to name and email",
+        icon: "error",
+
+        confirmButtonText: "Ok",
+      });
+
+      if (cart.length === 0) {
+        Swal.fire({
+          title: "Error",
+          text: "Add products to cart",
+          icon: "error",
+
+          confirmButtonText: "Ok",
+        });
+      }
+    } else {
+      Swal.fire(
+        `Thanks for your purchase ${user}!`,
+        "You clicked the button!",
+        "success"
+      );
+      dispatch(getPayment({ user, email }));
+      nameRef.current.value = "";
+      emailRef.current.value = "";
+
+      dispatch(getPayment(user, email));
+      dispatch(deleteCart());
+    }
+  };
 
   return (
     <>
@@ -35,12 +70,12 @@ export const Cart = () => {
 
           {cart.map((item) => (
             <div className="containerInfoPago" key={item._id}>
-              <p className="cant">{cart.length} </p>
+              <p className="cant">{counter} </p>
               <p className="name">
                 {item.name} {item.description} {item.marc}
               </p>
               <p className="priceUnitary"> {item.price} </p>
-              <p className="priceTotal">1000</p>
+              <p className="priceTotal">{priceTotal} </p>
               <span onClick={() => dispatch(deleteCart(item._id))}>
                 <i className="fa-solid fa-trash-can"></i>
               </span>
@@ -49,7 +84,7 @@ export const Cart = () => {
 
           <div className="containerTotals">
             <div className="total">
-              <p>Total: 100</p>
+              <p>Total: {priceTotal} </p>
             </div>
 
             <div className="contenderBody">
@@ -59,25 +94,26 @@ export const Cart = () => {
               />
               <div className="dataUser">
                 <div className="divformPay">
-                  <form onSubmit={pay}>
+                  <form
+                    onSubmit={(e) => {
+                      e.preventDefault();
+                      payment();
+                    }}
+                  >
                     <div className="divImputPay">
                       <input
                         placeholder="Name"
                         type="text"
                         className="inputName"
-                        required
                         name="name"
-                        value={user.name}
-                        onChange={handleChange}
+                        ref={nameRef}
                       />
                       <input
                         placeholder="Email"
-                        type="email"
+                        type="text"
                         className="inputEmail"
-                        required
                         name="email"
-                        value={user.email}
-                        onChange={handleChange}
+                        ref={emailRef}
                       />
                     </div>
 

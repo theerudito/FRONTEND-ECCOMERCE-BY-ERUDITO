@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { getCounter } from "../../store/slices/cart/cart";
 import { getproducts } from "../../store/slices/products";
 import { useModal } from "../CustomHooks/useModal";
 import { STORE } from "../Helpers/Data";
@@ -12,6 +13,8 @@ export const Cards = () => {
 
   const dispatch = useDispatch();
   const { products = [] } = useSelector((state) => state.products);
+  const { counter } = useSelector((state) => state.cart);
+
 
   let numRamdom = [0, 2, 3, 4, 5];
   let ramdom = Math.floor(Math.random() * numRamdom.length);
@@ -20,6 +23,11 @@ export const Cards = () => {
   useEffect(() => {
     dispatch(getproducts(STORE[0][ramdom]));
   }, [dispatch]);
+
+  const AddCar = () => {
+    console.log("add car");
+    dispatch(getCounter(1));
+  }
 
   return (
     <div className="contenedorCard">
@@ -44,7 +52,7 @@ export const Cards = () => {
             </div>
 
             <div className="buttonsAdd">
-              <button className="buttoAddCart">ADD TO CART</button>
+              <button className="buttoAddCart" onClick={() => AddCar()} >ADD TO CART</button>
               <button className="moreInfo" onClick={openModalMore}>
                 MORE
               </button>

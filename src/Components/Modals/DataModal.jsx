@@ -82,10 +82,8 @@ export const DataModalComputer = ({ item }) => {
   const [changeImage, setChangeImage] = useState("");
 
   const dispatch = useDispatch();
-  const { cart = [] } = useSelector((state) => state.cart);
   const { oneComputer, counter } = useSelector((state) => state.computers);
 
-  
   const result = {
     name: oneComputer.name,
     description: oneComputer.description,
@@ -104,6 +102,13 @@ export const DataModalComputer = ({ item }) => {
     let newImgen = image;
     setImage(false);
     setChangeImage(newImgen);
+  };
+
+  //const { counter } = useSelector((state) => state.cart);
+
+  const AddCart = (oneComputer) => {
+    dispatch(addCart(oneComputer));
+    dispatch(getCounter());
   };
 
   return (
@@ -172,9 +177,7 @@ export const DataModalComputer = ({ item }) => {
             <button onClick={() => dispatch(increment())}>+</button>
 
             <div className="contenedorBoton">
-              <button onClick={() => dispatch(addCart(oneComputer))} >
-                Add Cart
-              </button>
+              <button onClick={() => AddCart(oneComputer)}>Add Cart</button>
             </div>
           </div>
         </div>
