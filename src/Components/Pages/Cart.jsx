@@ -40,7 +40,7 @@ export const Cart = () => {
                 {item.name} {item.description} {item.marc}
               </p>
               <p className="priceUnitary"> {item.price} </p>
-              <p className="priceTotal"></p>
+              <p className="priceTotal">1000</p>
               <span onClick={() => dispatch(deleteCart(item._id))}>
                 <i className="fa-solid fa-trash-can"></i>
               </span>
@@ -49,7 +49,7 @@ export const Cart = () => {
 
           <div className="containerTotals">
             <div className="total">
-              <p>Total: </p>
+              <p>Total: 100</p>
             </div>
 
             <div className="contenderBody">
@@ -58,29 +58,34 @@ export const Cart = () => {
                 alt="logo"
               />
               <div className="dataUser">
-                <form onSubmit={pay}>
-                  <input
-                    placeholder="Name"
-                    type="text"
-                    className="inputName"
-                    required
-                    name="name"
-                    value={user.name}
-                    onChange={handleChange}
-                  />
-                  <input
-                    placeholder="Email"
-                    type="email"
-                    className="inputEmail"
-                    required
-                    name="email"
-                    value={user.email}
-                    onChange={handleChange}
-                  />
-                  <div className="contendorBoton">
-                    <button type="submit">Pay</button>
-                  </div>
-                </form>
+                <div className="divformPay">
+                  <form onSubmit={pay}>
+                    <div className="divImputPay">
+                      <input
+                        placeholder="Name"
+                        type="text"
+                        className="inputName"
+                        required
+                        name="name"
+                        value={user.name}
+                        onChange={handleChange}
+                      />
+                      <input
+                        placeholder="Email"
+                        type="email"
+                        className="inputEmail"
+                        required
+                        name="email"
+                        value={user.email}
+                        onChange={handleChange}
+                      />
+                    </div>
+
+                    <div className="contendorBoton">
+                      <button type="submit">Pay</button>
+                    </div>
+                  </form>
+                </div>
               </div>
             </div>
           </div>
