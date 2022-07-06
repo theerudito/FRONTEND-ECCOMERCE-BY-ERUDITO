@@ -6,15 +6,23 @@ import { Menu } from "../Menu/Menu";
 import { useDispatch, useSelector } from "react-redux";
 
 import { SocialMedia } from "../SocialMedia/SocialMedia";
-import { deleteCart, getPayment } from "../../store/slices/cart/cart";
+import { decrement, deleteCart, getPayment, increment } from "../../store/slices/cart/cart";
 import "sweetalert2/src/sweetalert2.scss";
 import Swal from "sweetalert2/dist/sweetalert2.js";
 
 export const Cart = () => {
   const dispatch = useDispatch();
-  const { cart = [], counter, priceTotal } = useSelector((state) => state.cart);
+  const {
+    cart = [],
+    counter,
+    priceTotal,
+    total,
+  } = useSelector((state) => state.cart);
+
   const nameRef = useRef("");
   const emailRef = useRef("");
+
+  console.log(counter);
 
   const payment = () => {
     let user = nameRef.current.value;
@@ -70,7 +78,17 @@ export const Cart = () => {
 
           {cart.map((item) => (
             <div className="containerInfoPago" key={item._id}>
+              <div className="conTotal">
+                  <button onClick={() => dispatch(decrement(1))} className="res">
+                -
+              </button>
               <p className="cant">{counter} </p>
+              <button onClick={() => dispatch(increment(1))} className="sum">
+                +
+              </button>
+              </div>
+            
+
               <p className="name">
                 {item.name} {item.description} {item.marc}
               </p>
@@ -84,7 +102,7 @@ export const Cart = () => {
 
           <div className="containerTotals">
             <div className="total">
-              <p>Total: {priceTotal} </p>
+              <p>Total: {total} </p>
             </div>
 
             <div className="contenderBody">

@@ -1,6 +1,6 @@
 import { useContext, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { addCart, getCounter, getPriceTotal } from "../../../store/slices/cart/cart";
+import { addCart, getCounter, getPriceTotal, getTotal } from "../../../store/slices/cart/cart";
 import {
   getComputer,
   oneComputer,
@@ -21,8 +21,8 @@ export const Computers = () => {
 
   const dispatch = useDispatch();
   const { computer = [], isLoading } = useSelector((state) => state.computers);
-  const { counter,  } = useSelector((state) => state.cart);
-  console.log(counter)
+
+  
  
 
 
@@ -40,7 +40,8 @@ export const Computers = () => {
   const AddCart = (item) => {
     dispatch(getPriceTotal(item.price));
     dispatch(addCart(item));
-    dispatch(getCounter());
+    dispatch(getCounter(1));
+    dispatch(getTotal())
   }
 
   return (

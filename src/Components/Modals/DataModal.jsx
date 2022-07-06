@@ -2,15 +2,19 @@ import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useContext } from "react";
 import computerContext from "../Providers/ProviderComputer";
-import { addCart, getCounter } from "../../store/slices/cart/cart";
+import {
+  addCart,
+  decrement,
+  getCounter,
+  increment,
+} from "../../store/slices/cart/cart";
 import { useEffect } from "react";
 import { GetOneComputerApi } from "../Helpers/Api";
 import {
-  decrement,
   getComputer,
   getOneComputer,
-  increment,
 } from "../../store/slices/computer/computer";
+import { useRef } from "react";
 
 export const DataModalBody = ({ item }) => {
   return (
@@ -77,12 +81,14 @@ export const DataModalBody = ({ item }) => {
   );
 };
 
-export const DataModalComputer = ({ item }) => {
+export const DataModalComputer = () => {
   const [image, setImage] = useState(true);
   const [changeImage, setChangeImage] = useState("");
-
+  const [input, setInput] = useState(1);
   const dispatch = useDispatch();
-  const { oneComputer, counter } = useSelector((state) => state.computers);
+  const { oneComputer } = useSelector((state) => state.computers);
+  const { counter } = useSelector((state) => state.cart);
+  const imputRef = useRef(1);
 
   const result = {
     name: oneComputer.name,
@@ -104,11 +110,18 @@ export const DataModalComputer = ({ item }) => {
     setChangeImage(newImgen);
   };
 
-  //const { counter } = useSelector((state) => state.cart);
-
   const AddCart = (oneComputer) => {
+    const value = Number(imputRef.current.value);
     dispatch(addCart(oneComputer));
-    dispatch(getCounter());
+    dispatch(getCounter(value));
+  };
+
+  const sum = () => {
+    setInput(input + 1);
+  };
+
+  const res = () => {
+    setInput(input - 1);
   };
 
   return (
@@ -166,15 +179,17 @@ export const DataModalComputer = ({ item }) => {
             <p>Desc: {result.desc} </p>
             <p>PriceDesc: {parseFloat(result.priceDesc).toFixed(2)} </p>
             <p>Quantity</p>
+
             <input
+              ref={imputRef}
               type="number"
-              placeholder="0"
-              value={counter}
-              onChange={(e) => counter(e.target.value)}
+              placeholder={input}
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
             />
 
-            <button onClick={() => dispatch(decrement())}>-</button>
-            <button onClick={() => dispatch(increment())}>+</button>
+            <button onClick={() => res()}>-</button>
+            <button onClick={() => sum()}>+</button>
 
             <div className="contenedorBoton">
               <button onClick={() => AddCart(oneComputer)}>Add Cart</button>

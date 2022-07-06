@@ -379,12 +379,39 @@ $marginR: 0px;
     display: block;
   }
 
-  .cant {
-    margin-right: auto;
-    padding-left: 5px;
+
+  .conTotal {
+    height: 30px;
     width: 50px;
+    display: flex;
+
+    .cant {
     font-size: 12px;
+    padding: 0px;
+    margin-top: 5px;
+    margin-left: 5px
   }
+
+  .sum {
+    background-color: orange;
+    border: none;
+    height: 15px;
+    margin-top: 5px;
+    width: 15px;
+    margin-left: 3px;
+  }
+
+  .res {
+    background-color: orange;
+    border: none;
+    height: 15px;
+    margin-top: 5px;
+    width: 15px;
+  }
+
+}
+
+
 
   .name {
     font-size: 12px;
@@ -456,12 +483,40 @@ $marginR: 0px;
     display: block;
   }
 
-  .cant {
+  .conTotal {
+    height: 30px;
+    width: 50px;
+    display: flex;
+
+    .cant {
     font-size: 12px;
-    margin-right: auto;
-    padding-left: 5px;
-    width: 40px;
+    padding: 0px;
+    margin-top: 5px;
+    margin-left: 5px
   }
+
+  .sum {
+    background-color: orange;
+    border: none;
+    height: 15px;
+    margin-top: 5px;
+    width: 15px;
+    margin-left: 3px;
+  }
+
+  .res {
+    background-color: orange;
+    border: none;
+    height: 15px;
+    margin-top: 5px;
+    width: 15px;
+  }
+
+}
+
+  
+
+ 
 
   .name {
     font-size: 12px;
@@ -534,12 +589,39 @@ $marginR: 0px;
     display: block;
   }
 
-  .cant {
+  .conTotal {
+    height: 30px;
+    width: 50px;
+    display: flex;
+
+    .cant {
     font-size: 16px;
-    margin-right: auto;
-    padding-left: 5px;
-    width: 60px;
+    padding-left:-60px;
+    padding: 0px;
+    margin-top: 5px;
   }
+
+  .sum {
+    background-color: orange;
+    border: none;
+    height: 15px;
+    margin-top: 5px;
+    width: 20px;
+    margin-left: 5px;
+  }
+
+  .res {
+    background-color: orange;
+    border: none;
+    height: 15px;
+    margin-top: 5px;
+    width: 20px;
+  }
+}
+
+  
+
+ 
 
   .name {
     font-size: 16px;
@@ -612,12 +694,39 @@ $marginR: 0px;
     //margin-left: -40px;
   }
 
-  .cant {
+  .conTotal {
+    height: 30px;
+    width: 50px;
+    display: flex;
+
+    .cant {
     font-size: 16px;
-    margin-right: auto;
-    padding-left: 5px;
-    width: 55px;
+    padding-left:-60px;
+    padding: 0px;
+    margin-top: 5px;
   }
+
+  .sum {
+    background-color: orange;
+    border: none;
+    height: 15px;
+    margin-top: 5px;
+    width: 20px;
+    margin-left: 5px;
+  }
+
+  .res {
+    background-color: orange;
+    border: none;
+    height: 15px;
+    margin-top: 5px;
+    width: 20px;
+  }
+}
+
+  
+
+ 
 
   .name {
     font-size: 16px;
@@ -660,6 +769,8 @@ $marginR: 0px;
      color: red;
     }
   }
+
+ 
 }
 
 @media screen and (min-width: 1440px) {
