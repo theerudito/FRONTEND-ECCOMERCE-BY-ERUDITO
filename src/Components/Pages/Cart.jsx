@@ -6,23 +6,31 @@ import { Menu } from "../Menu/Menu";
 import { useDispatch, useSelector } from "react-redux";
 
 import { SocialMedia } from "../SocialMedia/SocialMedia";
-import { decrement, deleteCart, getPayment, increment } from "../../store/slices/cart/cart";
+import {
+  decrement,
+  deleteCart,
+  getCounter,
+  getPayment,
+  getPriceTotal,
+  getTotal,
+  increment,
+} from "../../store/slices/cart/cart";
 import "sweetalert2/src/sweetalert2.scss";
 import Swal from "sweetalert2/dist/sweetalert2.js";
+import { useEffect } from "react";
 
 export const Cart = () => {
   const dispatch = useDispatch();
   const {
     cart = [],
     counter,
-    priceTotal,
     total,
   } = useSelector((state) => state.cart);
 
+  console.log(cart);
+
   const nameRef = useRef("");
   const emailRef = useRef("");
-
-  console.log(counter);
 
   const payment = () => {
     let user = nameRef.current.value;
@@ -61,6 +69,10 @@ export const Cart = () => {
     }
   };
 
+  useEffect(() => {
+    dispatch(getPriceTotal());
+  }, [dispatch]);
+
   return (
     <>
       {/* <Header /> */}
@@ -79,21 +91,20 @@ export const Cart = () => {
           {cart.map((item) => (
             <div className="containerInfoPago" key={item._id}>
               <div className="conTotal">
-                  <button onClick={() => dispatch(decrement(1))} className="res">
-                -
-              </button>
-              <p className="cant">{counter} </p>
-              <button onClick={() => dispatch(increment(1))} className="sum">
-                +
-              </button>
+                <button onClick={() => dispatch(decrement())} className="res">
+                  -
+                </button>
+                <p className="cant">{counter} </p>
+                <button onClick={() => dispatch(increment())} className="sum">
+                  +
+                </button>
               </div>
-            
 
               <p className="name">
                 {item.name} {item.description} {item.marc}
               </p>
               <p className="priceUnitary"> {item.price} </p>
-              <p className="priceTotal">{priceTotal} </p>
+              <p className="priceTotal">{item.valueTotal} </p>
               <span onClick={() => dispatch(deleteCart(item._id))}>
                 <i className="fa-solid fa-trash-can"></i>
               </span>

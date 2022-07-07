@@ -668,17 +668,39 @@ let array = [
   },
 ]
 
-let a = array[0];
-console.log(a);
 
-let ram = Math.floor(Math.random() * array[0]);
-console.log(ram.lenght);
 
-const factoria = (array) => {
-  let ram = Math.floor(Math.random() * array.length);
-  return array[ram];
+
+const productos1 = {
+  id: 0,
+  name: "Camisa1",
+  description: "Shirts new",
+  cant: 1
 }
 
-const factorial = ()=>{
+const productos2 = {
+  id: 0,
+  name: "Camisa2",
+  description: "Shirts new",
   
 }
+
+const productos3 = {
+  id: 0,
+  name: "Camisa2",
+  description: "Shirts new",
+  
+}
+
+const  state = [productos1]
+
+const agregar = (state, producto) => {
+  if  (state.findIndex((itemOld) => itemOld.id === producto.id ) < 0) {
+        return [...state, { ...producto, cant: 1 }]
+  } else {
+        return state.map(itemOld => itemOld.id === producto.id ? { ...itemOld, cant: itemOld.cant + 1 } : itemOld)
+  }
+}
+
+const result = agregar(state, productos3)
+console.log(result);

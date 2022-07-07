@@ -7,31 +7,42 @@ export const cartSlice = createSlice({
     isLoading: false,
     counter: 0,
     increment: 0,
-    priceTotal: 0,
     total: 0,
     data: { user: "", email: "" },
   },
   reducers: {
     addCart: (state, action) => {
-      state.total = 0;
-      let id = action.payload._id;
-      const check = state.cart.every((item) => {
-        return item._id !== id;
-      });
-
-      if (check) {
-        state.cart = [...state.cart, action.payload];
-        state.counter = 0;
+      const id = action.payload._id;
+      if (state.cart.findIndex((itemOld) => itemOld._id === id) < 0) {
+        state.cart = [
+          ...state.cart,
+          { ...action.payload, cantidad: 1, valueTotal: 0 },
+        ];
+      } else {
+        state.cart = state.cart.map((itemOld) => {
+          if (itemOld._id === id) {
+            return {
+              ...itemOld,
+              cantidad: itemOld.cantidad + 1,
+              valueTotal: itemOld.price * (itemOld.cantidad + 1),
+            };
+          } else {
+            return itemOld;
+          }
+        });
       }
     },
-    getPriceTotal: (state, action) => {
-      let price = Number(action.payload);
-      console.log(price);
-      state.priceTotal += price;
-      
+
+    getPriceTotal: (state) => {
+      const cant = state.cart.map((item) => item.valueTotal);
+      const vTotal = cant.reduce((cant, priceUni) => cant + priceUni, 0);
+      state.priceTotal += vTotal;
     },
     getTotal: (state) => {
-      state.total += state.priceTotal;
+      const Total = state.cart
+        .map((item) => item.valueTotal)
+        .reduce((a, b) => a + b, 0);
+      state.total += Total;
     },
     deleteCart: (state, action) => {
       state.cart = state.cart.filter((item) => item._id !== action.payload);
@@ -46,14 +57,13 @@ export const cartSlice = createSlice({
       state.cart = [];
     },
     getCounter: (state, action) => {
-      console.log(action.payload);
-      state.counter += action.payload;
+      state.counter = action.payload ? action.payload : 0;
     },
-    increment: (state, action) => {
-      state.counter += action.payload;
+    increment: (state) => {
+      state.counter += 1;
     },
-    decrement: (state, action) => {
-      state.counter -= action.payload;
+    decrement: (state) => {
+      state.counter -= 1;
     },
   },
 });
