@@ -9,9 +9,7 @@ import { SocialMedia } from "../SocialMedia/SocialMedia";
 import {
   decrement,
   deleteCart,
-  getCounter,
   getPayment,
-  getPriceTotal,
   getTotal,
   increment,
 } from "../../store/slices/cart/cart";
@@ -21,12 +19,9 @@ import { useEffect } from "react";
 
 export const Cart = () => {
   const dispatch = useDispatch();
-  const {
-    cart = [],
-    counter,
-    total,
-  } = useSelector((state) => state.cart);
+  const { cart = [], counter, total } = useSelector((state) => state.cart);
 
+  console.log(total);
   console.log(cart);
 
   const nameRef = useRef("");
@@ -70,7 +65,7 @@ export const Cart = () => {
   };
 
   useEffect(() => {
-    dispatch(getPriceTotal());
+    dispatch(getTotal());
   }, [dispatch]);
 
   return (
@@ -91,20 +86,20 @@ export const Cart = () => {
           {cart.map((item) => (
             <div className="containerInfoPago" key={item._id}>
               <div className="conTotal">
-                <button onClick={() => dispatch(decrement())} className="res">
+                {/* <button onClick={() => dispatch(decrement())} className="res">
                   -
-                </button>
-                <p className="cant">{counter} </p>
-                <button onClick={() => dispatch(increment())} className="sum">
+                </button> */}
+                <p className="cant">{item.cant} </p>
+                {/* <button onClick={() => dispatch(increment())} className="sum">
                   +
-                </button>
+                </button> */}
               </div>
 
               <p className="name">
                 {item.name} {item.description} {item.marc}
               </p>
-              <p className="priceUnitary"> {item.price} </p>
-              <p className="priceTotal">{item.valueTotal} </p>
+              <p className="priceUnitary"> {item.priceDesc} </p>
+              <p className="priceTotal">{item.priceTotal} </p>
               <span onClick={() => dispatch(deleteCart(item._id))}>
                 <i className="fa-solid fa-trash-can"></i>
               </span>
