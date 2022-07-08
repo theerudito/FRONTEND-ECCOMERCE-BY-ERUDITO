@@ -5,6 +5,7 @@ export const heasetsSlice = createSlice({
   initialState: {
     heasets: [],
     isLoading: false,
+    oneHeaset: {},
   },
   reducers: {
     getHeasets: (state, action) => {

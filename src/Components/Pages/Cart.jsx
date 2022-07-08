@@ -21,9 +21,6 @@ export const Cart = () => {
   const dispatch = useDispatch();
   const { cart = [], counter, total } = useSelector((state) => state.cart);
 
-  console.log(total);
-  console.log(cart);
-
   const nameRef = useRef("");
   const emailRef = useRef("");
 
@@ -99,7 +96,7 @@ export const Cart = () => {
                 {item.name} {item.description} {item.marc}
               </p>
               <p className="priceUnitary"> {item.priceDesc} </p>
-              <p className="priceTotal">{item.priceTotal} </p>
+              <p className="priceTotal">{item.priceTotal.toFixed(2)} </p>
               <span onClick={() => dispatch(deleteCart(item._id))}>
                 <i className="fa-solid fa-trash-can"></i>
               </span>

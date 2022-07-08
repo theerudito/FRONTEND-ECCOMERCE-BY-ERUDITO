@@ -27,7 +27,7 @@ export const Accessories = () => {
         {accessorie.map((item) => (
           <div className="bodyCard" key={item.id}>
             <div className="containerImagen">
-              <img className="imagenCard" src={item.pic} alt="foto" />
+              <img className="imagenCard" src={item.pic1} alt="foto" />
             </div>
 
             <div className="containerInforCard">

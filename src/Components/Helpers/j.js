@@ -220,84 +220,131 @@ const STORE = [
 
         HEADSET: [
           {
-            id: 1,
-            name: "Camisa1",
-            description: "Shirts new",
-            pic: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Ecommers%2Fheadset%2F1.png?alt=media&token=92b9f26a-8e67-45bd-b139-92b4cd2b1e34",
-            price: "$20.00",
-            priceDesc: "$19.00",
+            id: 9,
+            name: "HEADSET",
+            description: "gaming",
+            adictional: "8GB RAM",
+            marc: "aoc",
+
+            price: "10.00",
+            priceDesc: "9.00",
             desc: "10%",
             star: "****",
+            stock: "10",
+            pic1: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Ecommers%2Fheadset%2F1.png?alt=media&token=92b9f26a-8e67-45bd-b139-92b4cd2b1e34",
+            pic2: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Ecommers%2Fcomputer%2F1.png?alt=media&token=23637959-ae5f-40f0-bd7f-dd5ccc23e996",
+            pic3: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Ecommers%2Fcomputer%2F3.png?alt=media&token=0fd98682-696c-4266-a281-86303888cedc",
+            pic4: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Ecommers%2Fcomputer%2F6.png?alt=media&token=5b57f9ed-6b94-4499-a155-8af0c8c2f6de",
           },
           {
-            id: 2,
-            name: "Camisa2",
-            description: "Shirts new",
-            pic: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Ecommers%2Fheadset%2F2.png?alt=media&token=9703a61a-e1f0-4701-8f32-bd4181e130dd",
-            price: "$20.00",
-            priceDesc: "$19.00",
+            id: 10,
+            name: "HEADSET TWIN",
+            description: "gaming",
+            adictional: "8GB RAM",
+            marc: "hp",
+            price: "50.00",
+            priceDesc: "49.00",
             desc: "10%",
             star: "****",
+            stock: "10",
+            pic1: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Ecommers%2Fheadset%2F2.png?alt=media&token=9703a61a-e1f0-4701-8f32-bd4181e130dd",
+            pic2: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Ecommers%2Fcomputer%2F1.png?alt=media&token=23637959-ae5f-40f0-bd7f-dd5ccc23e996",
+            pic3: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Ecommers%2Fcomputer%2F3.png?alt=media&token=0fd98682-696c-4266-a281-86303888cedc",
+            pic4: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Ecommers%2Fcomputer%2F6.png?alt=media&token=5b57f9ed-6b94-4499-a155-8af0c8c2f6de",
           },
           {
-            id: 3,
-            name: "Camisa3",
-            description: "Shirts new",
-            pic: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Ecommers%2Fheadset%2F3.png?alt=media&token=d9ce5538-7855-4428-954b-2db081903887",
-            price: "$20.00",
-            priceDesc: "$19.00",
+            id: 11,
+            name: "HEADSET DUO",
+            description: "Tracking",
+            adictional: "8GB RAM",
+            marc: "AMD",
+            price: "500.00",
+            priceDesc: "489.00",
             desc: "10%",
             star: "****",
+            stock: "10",
+            pic1: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Ecommers%2Fheadset%2F3.png?alt=media&token=d9ce5538-7855-4428-954b-2db081903887",
+            pic2: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Ecommers%2Fcomputer%2F1.png?alt=media&token=23637959-ae5f-40f0-bd7f-dd5ccc23e996",
+            pic3: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Ecommers%2Fcomputer%2F3.png?alt=media&token=0fd98682-696c-4266-a281-86303888cedc",
+            pic4: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Ecommers%2Fcomputer%2F6.png?alt=media&token=5b57f9ed-6b94-4499-a155-8af0c8c2f6de",
           },
           {
-            id: 4,
-            name: "Camisa4",
-            description: "Shirts new",
-            pic: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Ecommers%2Fheadset%2F4.png?alt=media&token=4c8d9bd1-4416-46ff-ba9e-6bb8f83dc0bb",
-            price: "$20.00",
-            priceDesc: "$19.00",
+            id: 12,
+            name: "HEADSET TRACKING",
+            description: "all in one",
+            adictional: "8GB RAM",
+            marc: "MEETION",
+            price: "55.00",
+            priceDesc: "54.00",
             desc: "10%",
             star: "****",
+            stock: "10",
+            pic1: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Ecommers%2Fheadset%2F4.png?alt=media&token=4c8d9bd1-4416-46ff-ba9e-6bb8f83dc0bb",
+            pic2: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Ecommers%2Fcomputer%2F1.png?alt=media&token=23637959-ae5f-40f0-bd7f-dd5ccc23e996",
+            pic3: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Ecommers%2Fcomputer%2F3.png?alt=media&token=0fd98682-696c-4266-a281-86303888cedc",
+            pic4: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Ecommers%2Fcomputer%2F6.png?alt=media&token=5b57f9ed-6b94-4499-a155-8af0c8c2f6de",
           },
           {
-            id: 5,
-            name: "Camisa5",
-            description: "Shirts new",
-            pic: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Ecommers%2Fheadset%2F5.png?alt=media&token=0d1d3698-c257-4724-a11e-73b556aaf4fe",
-            price: "$20.00",
-            priceDesc: "$19.00",
+            id: 13,
+            name: "HEADSET TWIN",
+            description: "gaming",
+            adictional: "8GB RAM",
+            marc: "hp",
+            price: "20.00",
+            priceDesc: "19.00",
             desc: "10%",
             star: "****",
+            stock: "10",
+            pic1: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Ecommers%2Fheadset%2F5.png?alt=media&token=0d1d3698-c257-4724-a11e-73b556aaf4fe",
+            pic2: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Ecommers%2Fcomputer%2F1.png?alt=media&token=23637959-ae5f-40f0-bd7f-dd5ccc23e996",
+            pic3: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Ecommers%2Fcomputer%2F3.png?alt=media&token=0fd98682-696c-4266-a281-86303888cedc",
+            pic4: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Ecommers%2Fcomputer%2F6.png?alt=media&token=5b57f9ed-6b94-4499-a155-8af0c8c2f6de",
           },
           {
-            id: 6,
-            name: "Camisa6",
-            description: "Shirts new",
-            pic: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Ecommers%2Fheadset%2F6.png?alt=media&token=7555b53e-6611-47a9-928b-40a0f09c9f02",
-            price: "$20.00",
-            priceDesc: "$19.00",
+            id: 14,
+            name: "HEADSET TRACKING",
+            description: "all in one",
+            adictional: "8GB RAM",
+            marc: "MEETION",
+            price: "60.00",
+            priceDesc: "59.00",
             desc: "10%",
             star: "****",
+            stock: "10",
+            pic1: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Ecommers%2Fheadset%2F6.png?alt=media&token=7555b53e-6611-47a9-928b-40a0f09c9f02",
+            pic2: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Ecommers%2Fcomputer%2F1.png?alt=media&token=23637959-ae5f-40f0-bd7f-dd5ccc23e996",
+            pic3: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Ecommers%2Fcomputer%2F3.png?alt=media&token=0fd98682-696c-4266-a281-86303888cedc",
+            pic4: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Ecommers%2Fcomputer%2F6.png?alt=media&token=5b57f9ed-6b94-4499-a155-8af0c8c2f6de",
           },
           {
-            id: 7,
-            name: "Pants ",
-            description: "Red Pants",
-            pic: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Ecommers%2Fheadset%2F2.png?alt=media&token=9703a61a-e1f0-4701-8f32-bd4181e130dd",
-            price: "$45.00",
-            priceDesc: "$39.99",
+            id: 15,
+            name: "HEADSET DUO",
+            description: "Tracking",
+            adictional: "8GB RAM",
+            price: "45.00",
+            priceDesc: "39.99",
             desc: "50%",
             star: "**",
+            stock: "10",
+            pic1: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Ecommers%2Fheadset%2F2.png?alt=media&token=9703a61a-e1f0-4701-8f32-bd4181e130dd",
+            pic2: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Ecommers%2Fcomputer%2F1.png?alt=media&token=23637959-ae5f-40f0-bd7f-dd5ccc23e996",
+            pic3: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Ecommers%2Fcomputer%2F3.png?alt=media&token=0fd98682-696c-4266-a281-86303888cedc",
+            pic4: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Ecommers%2Fcomputer%2F6.png?alt=media&token=5b57f9ed-6b94-4499-a155-8af0c8c2f6de",
           },
           {
-            id: 8,
-            name: "Bluse",
-            description: "Bluse new",
-            pic: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Ecommers%2Fheadset%2F4.png?alt=media&token=4c8d9bd1-4416-46ff-ba9e-6bb8f83dc0bb",
-            price: "$40.00",
-            //priceDesc: "$38.00",
-            //desc: "8%",
+            id: 16,
+            name: "HEADSET TWIN",
+            description: "gaming",
+            adictional: "8GB RAM",
+            marc: "hp",
+            price: "23.00",
+            priceDesc: "22.99",
             star: "*****",
+            stock: "10",
+            pic1: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Ecommers%2Fheadset%2F4.png?alt=media&token=4c8d9bd1-4416-46ff-ba9e-6bb8f83dc0bb",
+            pic2: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Ecommers%2Fcomputer%2F1.png?alt=media&token=23637959-ae5f-40f0-bd7f-dd5ccc23e996",
+            pic3: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Ecommers%2Fcomputer%2F3.png?alt=media&token=0fd98682-696c-4266-a281-86303888cedc",
+            pic4: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Ecommers%2Fcomputer%2F6.png?alt=media&token=5b57f9ed-6b94-4499-a155-8af0c8c2f6de",
           },
         ],
 
@@ -666,41 +713,40 @@ let array = [
     3: [{ id, nombre: "Camisa4", precio: "20.00" }],
     4: [{ id, nombre: "Camisa4", precio: "25.00" }],
   },
-]
-
-
-
+];
 
 const productos1 = {
   id: 0,
   name: "Camisa1",
   description: "Shirts new",
-  cant: 1
-}
+  cant: 1,
+};
 
 const productos2 = {
   id: 0,
   name: "Camisa2",
   description: "Shirts new",
-  
-}
+};
 
 const productos3 = {
   id: 0,
   name: "Camisa2",
   description: "Shirts new",
-  
-}
+};
 
-const  state = [productos1]
+const state = [productos1];
 
 const agregar = (state, producto) => {
-  if  (state.findIndex((itemOld) => itemOld.id === producto.id ) < 0) {
-        return [...state, { ...producto, cant: 1 }]
+  if (state.findIndex((itemOld) => itemOld.id === producto.id) < 0) {
+    return [...state, { ...producto, cant: 1 }];
   } else {
-        return state.map(itemOld => itemOld.id === producto.id ? { ...itemOld, cant: itemOld.cant + 1 } : itemOld)
+    return state.map((itemOld) =>
+      itemOld.id === producto.id
+        ? { ...itemOld, cant: itemOld.cant + 1 }
+        : itemOld
+    );
   }
-}
+};
 
-const result = agregar(state, productos3)
+const result = agregar(state, productos3);
 console.log(result);

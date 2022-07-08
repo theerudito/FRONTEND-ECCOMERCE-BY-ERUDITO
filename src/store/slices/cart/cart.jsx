@@ -42,7 +42,6 @@ export const cartSlice = createSlice({
 
     getTotal: (state) => {
       const vTotal = state.cart.map((item) => item.priceTotal).reduce((a, b) => a + b, 0);
-      console.log(vTotal.toFixed(2));
       state.total = vTotal.toFixed(2);
     },
 

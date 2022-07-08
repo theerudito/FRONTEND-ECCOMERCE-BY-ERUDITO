@@ -5,6 +5,7 @@ export const productsSlice = createSlice({
   initialState: {
     products: [],
     isLoading: false,
+    oneComputer: {},
   },
   reducers: {
     getproducts: (state, action) => {

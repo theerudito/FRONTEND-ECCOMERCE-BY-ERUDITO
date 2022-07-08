@@ -1,22 +1,9 @@
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { useContext } from "react";
-import computerContext from "../Providers/ProviderComputer";
-import {
-  addCart,
-  decrement,
-  getCounter,
-  increment,
-} from "../../store/slices/cart/cart";
-import { useEffect } from "react";
-import { GetOneComputerApi } from "../Helpers/Api";
-import {
-  getComputer,
-  getOneComputer,
-} from "../../store/slices/computer/computer";
+import { addCart, getCounter } from "../../store/slices/cart/cart";
 import { useRef } from "react";
 
-export const DataModalBody = ({ item }) => {
+export const DataModalBody = () => {
   return (
     <>
       <div className="contaninerModal">

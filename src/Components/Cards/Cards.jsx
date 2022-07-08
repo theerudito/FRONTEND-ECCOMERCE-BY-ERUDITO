@@ -1,6 +1,10 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getCounter } from "../../store/slices/cart/cart";
+import {
+  addCart,
+  getCounter,
+  getPriceTotal,
+} from "../../store/slices/cart/cart";
 import { getproducts } from "../../store/slices/products";
 import { useModal } from "../CustomHooks/useModal";
 import { STORE } from "../Helpers/Data";
@@ -13,28 +17,37 @@ export const Cards = () => {
 
   const dispatch = useDispatch();
   const { products = [] } = useSelector((state) => state.products);
-  const { counter } = useSelector((state) => state.cart);
 
+  // useEffect(() => {
+  //   GetAllComputerApi().then((res) => {
+  //     dispatch(getComputer(res));
+  //   });
+  // }, [dispatch]);
+
+  const handleModal = (item) => {
+    openModalMore();
+    //dispatch(oneComputer(item));
+  };
+
+  const AddCart = (item) => {
+    dispatch(getPriceTotal(item.price));
+    dispatch(addCart(item));
+    dispatch(getCounter(1));
+  };
 
   let numRamdom = [0, 2, 3, 4, 5];
   let ramdom = Math.floor(Math.random() * numRamdom.length);
-  ///STORE[0][ramdom].map
 
   useEffect(() => {
     dispatch(getproducts(STORE[0][ramdom]));
   }, [dispatch]);
-
-  const AddCar = () => {
-    console.log("add car");
-    dispatch(getCounter(1));
-  }
 
   return (
     <div className="contenedorCard">
       {products.map((item) => (
         <div className="bodyCard" key={item.id}>
           <div className="containerImagen">
-            <img className="imagenCard" src={item.pic} alt="foto" />
+            <img className="imagenCard" src={item.pic1} alt="foto" />
           </div>
 
           <div className="containerInforCard">
@@ -52,8 +65,10 @@ export const Cards = () => {
             </div>
 
             <div className="buttonsAdd">
-              <button className="buttoAddCart" onClick={() => AddCar()} >ADD TO CART</button>
-              <button className="moreInfo" onClick={openModalMore}>
+              <button className="buttoAddCart" onClick={() => AddCart(item)}>
+                ADD TO CART
+              </button>
+              <button className="moreInfo" onClick={() => handleModal()}>
                 MORE
               </button>
 
