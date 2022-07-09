@@ -18,11 +18,8 @@ import { SocialMedia } from "../../SocialMedia/SocialMedia";
 
 export const Computers = () => {
   const [isOpenMore, openModalMore, closeModalMore] = useModal(false);
-
   const dispatch = useDispatch();
   const { computer = [], isLoading } = useSelector((state) => state.computers);
-
-
 
   useEffect(() => {
     GetAllComputerApi().then((res) => {

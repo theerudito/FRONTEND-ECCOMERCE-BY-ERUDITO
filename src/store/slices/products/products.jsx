@@ -4,15 +4,19 @@ export const productsSlice = createSlice({
   name: "products",
   initialState: {
     products: [],
-    isLoading: false,
-    oneComputer: {},
+    isLoading: true,
+    oneProduct: {},
   },
   reducers: {
-    getproducts: (state, action) => {
+    getProduct: (state, action) => {
       state.products = action.payload;
+      state.isLoading = false;
+    },
+    oneProductModal: (state,action) => {
+      state.oneProduct = action.payload
     },
   },
 });
 
 // actions para el reducer
-export const { getproducts } = productsSlice.actions;
+export const { getProduct, oneProductModal } = productsSlice.actions;

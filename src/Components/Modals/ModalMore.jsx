@@ -1,7 +1,6 @@
 import React from "react";
 
 export const ModalMore = ({ children, isOpen, closeModal }) => {
-
   const handleModalClick = (e) => {
     e.stopPropagation();
     e.preventDefault();

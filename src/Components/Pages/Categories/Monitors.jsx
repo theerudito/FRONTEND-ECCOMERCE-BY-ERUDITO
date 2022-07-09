@@ -6,16 +6,34 @@ import { Header2 } from "../../Header/Header2";
 import { STORE } from "../../Helpers/Data";
 import { Menu } from "../../Menu/Menu";
 import { SocialMedia } from "../../SocialMedia/SocialMedia";
-import { getMonitors } from "../../../store/slices/monitors/monitors";
+import {getMonitors, oneMonitorModal} from "../../../store/slices/monitors/";
 import { useEffect } from "react";
+import {oneHeadsetModal} from "../../../store/slices/heasets";
+import {addCart, getCounter, getPriceTotal} from "../../../store/slices/cart";
+import {useModal} from "../../CustomHooks/useModal";
+import {ModalMore} from "../../Modals/ModalMore";
+import {DataModalMonitors} from "../../Modals/DataModal";
 
 export const Monitors = () => {
+    const [isOpenMore, openModalMore, closeModalMore] = useModal(false);
   const dispatch = useDispatch();
   const { monitors = [] } = useSelector((state) => state.monitors);
 
   useEffect(() => {
     dispatch(getMonitors(STORE[0][3]));
   }, [dispatch]);
+
+
+    const handleModal = (item) => {
+        openModalMore();
+        dispatch(oneMonitorModal( item));
+    };
+
+    const AddCart = (item) => {
+        dispatch(getPriceTotal(item.price));
+        dispatch(addCart(item));
+        dispatch(getCounter(1));
+    };
 
   return (
     <>
@@ -25,7 +43,7 @@ export const Monitors = () => {
       <h2 className="titlecategory">MONITORS </h2>
       <div className="contenedorCard">
         {monitors.map((item) => (
-          <div className="bodyCard" key={item.id}>
+          <div className="bodyCard" key={item._id}>
             <div className="containerImagen">
               <img className="imagenCard" src={item.pic1} alt="foto" />
             </div>
@@ -45,8 +63,12 @@ export const Monitors = () => {
               </div>
 
               <div className="buttonsAdd">
-                <button className="buttoAddCart">ADD TO CART</button>
-                <button className="moreInfo">MORE</button>
+                <button className="buttoAddCart" onClick={() => AddCart(item)}>ADD TO CART</button>
+                <button className="moreInfo" onClick={() => handleModal(item)}>MORE</button>
+
+                  <ModalMore isOpen={isOpenMore} closeModal={closeModalMore}>
+                      <DataModalMonitors  />
+                  </ModalMore>
               </div>
             </div>
           </div>

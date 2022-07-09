@@ -47,7 +47,7 @@ export const STORE = [
   {
     0: [
       {
-        id: 1,
+        _id: 1,
         name: "COMPUTER",
         description: "Intel Core i7-9750H",
         adictional: "8GB RAM",
@@ -63,7 +63,7 @@ export const STORE = [
         pic4: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Ecommers%2Fcomputer%2F6.png?alt=media&token=5b57f9ed-6b94-4499-a155-8af0c8c2f6de",
       },
       {
-        id: 2,
+        _id: 2,
         name: "CPC",
         description: "all in one",
         adictional: "8GB RAM",
@@ -79,7 +79,7 @@ export const STORE = [
         pic4: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Ecommers%2Fcomputer%2F6.png?alt=media&token=5b57f9ed-6b94-4499-a155-8af0c8c2f6de",
       },
       {
-        id: 3,
+        _id: 3,
         name: "PROSESADOR",
         description: "Rayzen 5",
         adictional: "2.5 GHz 2GB VRAM",
@@ -95,7 +95,7 @@ export const STORE = [
         pic4: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Ecommers%2Fcomputer%2F6.png?alt=media&token=5b57f9ed-6b94-4499-a155-8af0c8c2f6de",
       },
       {
-        id: 4,
+        _id: 4,
         name: "CPU",
         description: "gaming",
         adictional: "8GB RAM",
@@ -111,7 +111,7 @@ export const STORE = [
         pic4: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Ecommers%2Fcomputer%2F6.png?alt=media&token=5b57f9ed-6b94-4499-a155-8af0c8c2f6de",
       },
       {
-        id: 5,
+        _id: 5,
         name: "SERVIDOR",
         description: "server xeon",
         adictional: "8GB RAM",
@@ -127,7 +127,7 @@ export const STORE = [
         pic4: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Ecommers%2Fcomputer%2F6.png?alt=media&token=5b57f9ed-6b94-4499-a155-8af0c8c2f6de",
       },
       {
-        id: 6,
+        _id: 6,
         name: "servidor",
         description: "Lunux",
         adictional: "8GB RAM",
@@ -143,7 +143,7 @@ export const STORE = [
         pic4: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Ecommers%2Fcomputer%2F6.png?alt=media&token=5b57f9ed-6b94-4499-a155-8af0c8c2f6de",
       },
       {
-        id: 7,
+        _id: 7,
         name: "PC",
         description: "all in one",
         adictional: "8GB RAM",
@@ -159,10 +159,10 @@ export const STORE = [
         pic4: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Ecommers%2Fcomputer%2F6.png?alt=media&token=5b57f9ed-6b94-4499-a155-8af0c8c2f6de",
       },
       {
-        id: 8,
+        _id: 8,
         name: "pc escritorio",
         description: "gaming",
-        adictional: "8GB RAM",
+        _adictional: "8GB RAM",
         marc: "red dragon",
         price: "40.00",
         priceDesc: "38.00",
@@ -177,7 +177,7 @@ export const STORE = [
     ],
     1: [
       {
-        id: 9,
+        _id: 9,
         name: "HEADSET",
         description: "gaming",
         adictional: "8GB RAM",
@@ -194,7 +194,7 @@ export const STORE = [
         pic4: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Ecommers%2Fcomputer%2F6.png?alt=media&token=5b57f9ed-6b94-4499-a155-8af0c8c2f6de",
       },
       {
-        id: 10,
+        _id: 10,
         name: "HEADSET TWIN",
         description: "gaming",
         adictional: "8GB RAM",
@@ -210,7 +210,7 @@ export const STORE = [
         pic4: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Ecommers%2Fcomputer%2F6.png?alt=media&token=5b57f9ed-6b94-4499-a155-8af0c8c2f6de",
       },
       {
-        id: 11,
+        _id: 11,
         name: "HEADSET DUO",
         description: "Tracking",
         adictional: "8GB RAM",
@@ -226,7 +226,7 @@ export const STORE = [
         pic4: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Ecommers%2Fcomputer%2F6.png?alt=media&token=5b57f9ed-6b94-4499-a155-8af0c8c2f6de",
       },
       {
-        id: 12,
+        _id: 12,
         name: "HEADSET TRACKING",
         description: "all in one",
         adictional: "8GB RAM",
@@ -242,7 +242,7 @@ export const STORE = [
         pic4: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Ecommers%2Fcomputer%2F6.png?alt=media&token=5b57f9ed-6b94-4499-a155-8af0c8c2f6de",
       },
       {
-        id: 13,
+        _id: 13,
         name: "HEADSET TWIN",
         description: "gaming",
         adictional: "8GB RAM",
@@ -258,7 +258,7 @@ export const STORE = [
         pic4: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Ecommers%2Fcomputer%2F6.png?alt=media&token=5b57f9ed-6b94-4499-a155-8af0c8c2f6de",
       },
       {
-        id: 14,
+        _id: 14,
         name: "HEADSET TRACKING",
         description: "all in one",
         adictional: "8GB RAM",
@@ -274,7 +274,7 @@ export const STORE = [
         pic4: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Ecommers%2Fcomputer%2F6.png?alt=media&token=5b57f9ed-6b94-4499-a155-8af0c8c2f6de",
       },
       {
-        id: 15,
+        _id: 15,
         name: "HEADSET DUO",
         description: "Tracking",
         adictional: "8GB RAM",
@@ -289,7 +289,7 @@ export const STORE = [
         pic4: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Ecommers%2Fcomputer%2F6.png?alt=media&token=5b57f9ed-6b94-4499-a155-8af0c8c2f6de",
       },
       {
-        id: 16,
+        _id: 16,
         name: "HEADSET TWIN",
         description: "gaming",
         adictional: "8GB RAM",
@@ -306,7 +306,7 @@ export const STORE = [
     ],
     2: [
       {
-        id: 17,
+        _id: 17,
         name: "laptop",
         description: "gaming",
         adictional: "8GB RAM",
@@ -322,7 +322,7 @@ export const STORE = [
         pic4: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Ecommers%2Fcomputer%2F6.png?alt=media&token=5b57f9ed-6b94-4499-a155-8af0c8c2f6de",
       },
       {
-        id: 18,
+        _id: 18,
         name: "lapto",
         description: "slim",
         adictional: "8GB RAM",
@@ -338,7 +338,7 @@ export const STORE = [
         pic4: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Ecommers%2Fcomputer%2F6.png?alt=media&token=5b57f9ed-6b94-4499-a155-8af0c8c2f6de",
       },
       {
-        id: 19,
+        _id: 19,
         name: "laptop",
         description: "pecfect",
         adictional: "8GB RAM",
@@ -354,7 +354,7 @@ export const STORE = [
         pic4: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Ecommers%2Fcomputer%2F6.png?alt=media&token=5b57f9ed-6b94-4499-a155-8af0c8c2f6de",
       },
       {
-        id: 20,
+        _id: 20,
         name: "lapto",
         description: "programing",
         adictional: "8GB RAM",
@@ -370,7 +370,7 @@ export const STORE = [
         pic4: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Ecommers%2Fcomputer%2F6.png?alt=media&token=5b57f9ed-6b94-4499-a155-8af0c8c2f6de",
       },
       {
-        id: 21,
+        _id: 21,
         name: "laptop",
         description: "gaming",
         adictional: "8GB RAM",
@@ -386,7 +386,7 @@ export const STORE = [
         pic4: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Ecommers%2Fcomputer%2F6.png?alt=media&token=5b57f9ed-6b94-4499-a155-8af0c8c2f6de",
       },
       {
-        id: 22,
+        _id: 22,
         name: "lapto",
         description: "slim",
         adictional: "8GB RAM",
@@ -402,7 +402,7 @@ export const STORE = [
         pic4: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Ecommers%2Fcomputer%2F6.png?alt=media&token=5b57f9ed-6b94-4499-a155-8af0c8c2f6de",
       },
       {
-        id: 23,
+        _id: 23,
         name: "lapto",
         description: "programing",
         adictional: "8GB RAM",
@@ -418,7 +418,7 @@ export const STORE = [
         pic4: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Ecommers%2Fcomputer%2F6.png?alt=media&token=5b57f9ed-6b94-4499-a155-8af0c8c2f6de",
       },
       {
-        id: 24,
+        _id: 24,
         name: "laptop",
         description: "pecfect",
         adictional: "8GB RAM",
@@ -437,7 +437,7 @@ export const STORE = [
 
     3: [
       {
-        id: 25,
+        _id: 25,
         name: "Monitor",
         description: "widescreen",
         adictional: "8GB RAM",
@@ -453,7 +453,7 @@ export const STORE = [
         pic4: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Ecommers%2Fcomputer%2F6.png?alt=media&token=5b57f9ed-6b94-4499-a155-8af0c8c2f6de",
       },
       {
-        id: 26,
+        _id: 26,
         name: "Monitor",
         description: "22' wide",
         adictional: "8GB RAM",
@@ -469,7 +469,7 @@ export const STORE = [
         pic4: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Ecommers%2Fcomputer%2F6.png?alt=media&token=5b57f9ed-6b94-4499-a155-8af0c8c2f6de",
       },
       {
-        id: 27,
+        _id: 27,
         name: "Monitor",
         description: "22' wide",
         adictional: "8GB RAM",
@@ -485,7 +485,7 @@ export const STORE = [
         pic4: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Ecommers%2Fcomputer%2F6.png?alt=media&token=5b57f9ed-6b94-4499-a155-8af0c8c2f6de",
       },
       {
-        id: 28,
+        _id: 28,
         name: "Monitor",
         description: "15' wide",
         adictional: "8GB RAM",
@@ -501,7 +501,7 @@ export const STORE = [
         pic4: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Ecommers%2Fcomputer%2F6.png?alt=media&token=5b57f9ed-6b94-4499-a155-8af0c8c2f6de",
       },
       {
-        id: 29,
+        _id: 29,
         name: "Monitor",
         description: "22' wide",
         adictional: "8GB RAM",
@@ -517,7 +517,7 @@ export const STORE = [
         pic4: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Ecommers%2Fcomputer%2F6.png?alt=media&token=5b57f9ed-6b94-4499-a155-8af0c8c2f6de",
       },
       {
-        id: 30,
+        _id: 30,
         name: "Monitor",
         description: "widescreen",
         adictional: "8GB RAM",
@@ -533,8 +533,8 @@ export const STORE = [
         pic4: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Ecommers%2Fcomputer%2F6.png?alt=media&token=5b57f9ed-6b94-4499-a155-8af0c8c2f6de",
       },
       {
-        id: 31,
-        name: "Monitor",
+        _id: 31,
+        _name: "Monitor",
         description: "15' wide",
         adictional: "8GB RAM",
         marc: "LG",
@@ -549,7 +549,7 @@ export const STORE = [
         pic4: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Ecommers%2Fcomputer%2F6.png?alt=media&token=5b57f9ed-6b94-4499-a155-8af0c8c2f6de",
       },
       {
-        id: 32,
+        _id: 32,
         name: "Monitor",
         description: "15' wide",
         adictional: "8GB RAM",
@@ -567,7 +567,7 @@ export const STORE = [
     ],
     4: [
       {
-        id: 33,
+        _id: 33,
         name: "Camisa1",
         description: "Shirts new",
         adictional: "8GB RAM",
@@ -583,7 +583,7 @@ export const STORE = [
         pic4: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Ecommers%2Fcomputer%2F6.png?alt=media&token=5b57f9ed-6b94-4499-a155-8af0c8c2f6de",
       },
       {
-        id: 34,
+        _id: 34,
         name: "Camisa2",
         description: "Shirts new",
         adictional: "8GB RAM",
@@ -599,7 +599,7 @@ export const STORE = [
         pic4: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Ecommers%2Fcomputer%2F6.png?alt=media&token=5b57f9ed-6b94-4499-a155-8af0c8c2f6de",
       },
       {
-        id: 35,
+        _id: 35,
         name: "Camisa3",
         description: "Shirts new",
         adictional: "8GB RAM",
@@ -615,7 +615,7 @@ export const STORE = [
         pic4: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Ecommers%2Fcomputer%2F6.png?alt=media&token=5b57f9ed-6b94-4499-a155-8af0c8c2f6de",
       },
       {
-        id: 36,
+        _id: 36,
         name: "Camisa4",
         description: "Shirts new",
         adictional: "8GB RAM",
@@ -631,7 +631,7 @@ export const STORE = [
         pic4: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Ecommers%2Fcomputer%2F6.png?alt=media&token=5b57f9ed-6b94-4499-a155-8af0c8c2f6de",
       },
       {
-        id: 37,
+        _id: 37,
         name: "Camisa5",
         description: "Shirts new",
         adictional: "8GB RAM",
@@ -647,7 +647,7 @@ export const STORE = [
         pic4: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Ecommers%2Fcomputer%2F6.png?alt=media&token=5b57f9ed-6b94-4499-a155-8af0c8c2f6de",
       },
       {
-        id: 38,
+        _id: 38,
         name: "Camisa6",
         description: "Shirts new",
         adictional: "8GB RAM",
@@ -663,7 +663,7 @@ export const STORE = [
         pic4: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Ecommers%2Fcomputer%2F6.png?alt=media&token=5b57f9ed-6b94-4499-a155-8af0c8c2f6de",
       },
       {
-        id: 39,
+        _id: 39,
         name: "Pants ",
         description: "Red Pants",
         adictional: "8GB RAM",
@@ -679,7 +679,7 @@ export const STORE = [
         pic4: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Ecommers%2Fcomputer%2F6.png?alt=media&token=5b57f9ed-6b94-4499-a155-8af0c8c2f6de",
       },
       {
-        id: 40,
+        _id: 40,
         name: "Bluse",
         description: "Bluse new",
         adictional: "8GB RAM",
@@ -697,7 +697,7 @@ export const STORE = [
     ],
     5: [
       {
-        id: 41,
+        _id: 41,
         name: "Camisa1",
         description: "Shirts new",
         adictional: "8GB RAM",
@@ -713,7 +713,7 @@ export const STORE = [
         pic4: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Ecommers%2Fcomputer%2F6.png?alt=media&token=5b57f9ed-6b94-4499-a155-8af0c8c2f6de",
       },
       {
-        id: 42,
+        _id: 42,
         name: "Camisa2",
         description: "Shirts new",
         adictional: "8GB RAM",
@@ -729,7 +729,7 @@ export const STORE = [
         pic4: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Ecommers%2Fcomputer%2F6.png?alt=media&token=5b57f9ed-6b94-4499-a155-8af0c8c2f6de",
       },
       {
-        id: 43,
+        _id: 43,
         name: "Camisa3",
         description: "Shirts new",
         adictional: "8GB RAM",
@@ -745,7 +745,7 @@ export const STORE = [
         pic4: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Ecommers%2Fcomputer%2F6.png?alt=media&token=5b57f9ed-6b94-4499-a155-8af0c8c2f6de",
       },
       {
-        id: 44,
+        _id: 44,
         name: "Camisa4",
         description: "Shirts new",
         adictional: "8GB RAM",
@@ -761,7 +761,7 @@ export const STORE = [
         pic4: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Ecommers%2Fcomputer%2F6.png?alt=media&token=5b57f9ed-6b94-4499-a155-8af0c8c2f6de",
       },
       {
-        id: 45,
+        _id: 45,
         name: "Camisa5",
         description: "Shirts new",
         adictional: "8GB RAM",
@@ -777,7 +777,7 @@ export const STORE = [
         pic4: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Ecommers%2Fcomputer%2F6.png?alt=media&token=5b57f9ed-6b94-4499-a155-8af0c8c2f6de",
       },
       {
-        id: 46,
+        _id: 46,
         name: "Camisa6",
         description: "Shirts new",
         adictional: "8GB RAM",
@@ -793,7 +793,7 @@ export const STORE = [
         pic4: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Ecommers%2Fcomputer%2F6.png?alt=media&token=5b57f9ed-6b94-4499-a155-8af0c8c2f6de",
       },
       {
-        id: 47,
+        _id: 47,
         name: "Pants ",
         description: "Red Pants",
         adictional: "8GB RAM",
@@ -809,7 +809,7 @@ export const STORE = [
         pic4: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Ecommers%2Fcomputer%2F6.png?alt=media&token=5b57f9ed-6b94-4499-a155-8af0c8c2f6de",
       },
       {
-        id: 48,
+        _id: 48,
         name: "Bluse",
         description: "Bluse new",
         adictional: "8GB RAM",

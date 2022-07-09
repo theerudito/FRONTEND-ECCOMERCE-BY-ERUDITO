@@ -12,7 +12,7 @@ export const computerSlice = createSlice({
       state.computer = action.payload;
       state.isLoading = false;
     },
-    oneComputer: (state, action) => {
+    oneComputer: (state,action) => {
       state.oneComputer = action.payload;
     },
   },

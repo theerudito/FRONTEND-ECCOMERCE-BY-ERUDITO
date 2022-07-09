@@ -1,21 +1,39 @@
 import React from "react";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getAccessories } from "../../../store/slices/accessories/accessories";
+import {getAccessories, oneAccessoriesModal} from "../../../store/slices/accessories/accessories";
 import { Footer } from "../../Footer/Footer";
 import { Header } from "../../Header/Header";
 import { Header2 } from "../../Header/Header2";
 import { STORE } from "../../Helpers/Data";
 import { Menu } from "../../Menu/Menu";
 import { SocialMedia } from "../../SocialMedia/SocialMedia";
+import {oneLaptopModal} from "../../../store/slices/laptops";
+import {addCart, getCounter, getPriceTotal} from "../../../store/slices/cart";
+import {ModalMore} from "../../Modals/ModalMore";
+import {DataModalAccessories} from "../../Modals/DataModal";
+import {useModal} from "../../CustomHooks/useModal";
 
 export const Accessories = () => {
+    const [isOpenMore, openModalMore, closeModalMore] = useModal(false);
   const dispatch = useDispatch();
-  const { accessorie = [] } = useSelector((state) => state.accessories);
+  const { accessories = [] } = useSelector((state) => state.accessories);
 
   useEffect(() => {
     dispatch(getAccessories(STORE[0][5]));
   }, [dispatch]);
+
+    const handleModal = (item) => {
+        openModalMore();
+        dispatch(oneAccessoriesModal( item));
+    };
+
+    const AddCart = (item) => {
+        dispatch(getPriceTotal(item.price));
+        dispatch(addCart(item));
+        dispatch(getCounter(1));
+    };
+
 
   return (
     <>
@@ -24,8 +42,8 @@ export const Accessories = () => {
       <Menu />
       <h2 className="titlecategory">COMPUTERS </h2>
       <div className="contenedorCard">
-        {accessorie.map((item) => (
-          <div className="bodyCard" key={item.id}>
+        {accessories.map((item) => (
+          <div className="bodyCard" key={item._id}>
             <div className="containerImagen">
               <img className="imagenCard" src={item.pic1} alt="foto" />
             </div>
@@ -45,8 +63,12 @@ export const Accessories = () => {
               </div>
 
               <div className="buttonsAdd">
-                <button className="buttoAddCart">ADD TO CART</button>
-                <button className="moreInfo">MORE</button>
+                <button className="buttoAddCart" onClick={() => AddCart(item)}>ADD TO CART</button>
+                <button className="moreInfo" onClick={() => handleModal(item)} >MORE</button>
+
+                  <ModalMore isOpen={isOpenMore} closeModal={closeModalMore}>
+                      <DataModalAccessories/>
+                  </ModalMore>
               </div>
             </div>
           </div>

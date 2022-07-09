@@ -1,7 +1,7 @@
 import React from "react";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getHeasets } from "../../../store/slices/heasets/heasets";
+import {getHeadsets, oneHeadsetModal} from "../../../store/slices/heasets";
 import { Footer } from "../../Footer/Footer";
 import { Header } from "../../Header/Header";
 import { Header2 } from "../../Header/Header2";
@@ -9,28 +9,29 @@ import { STORE } from "../../Helpers/Data";
 import { useModal } from "../../CustomHooks/useModal";
 import { Menu } from "../../Menu/Menu";
 import { SocialMedia } from "../../SocialMedia/SocialMedia";
-import { addCart } from "../../../store/slices/cart/cart";
+import {addCart, getCounter, getPriceTotal} from "../../../store/slices/cart";
 import { ModalMore } from "../../Modals/ModalMore";
-import { DataModalComputer } from "../../Modals/DataModal";
+import {DataModalHeadsets} from "../../Modals/DataModal";
 
 export const Headset = () => {
   const [isOpenMore, openModalMore, closeModalMore] = useModal(false);
   const dispatch = useDispatch();
-  const { heasets = [] } = useSelector((state) => state.heasets);
+  const { headsets = [] } = useSelector((state) => state.headsets);
+
 
   useEffect(() => {
-    dispatch(getHeasets(STORE[0][1]));
+    dispatch(getHeadsets(STORE[0][1]));
   }, [dispatch]);
 
   const handleModal = (item) => {
     openModalMore();
-    //dispatch((item));
+    dispatch(oneHeadsetModal( item));
   };
 
   const AddCart = (item) => {
-    //dispatch(getPriceTotal(item.price));
+    dispatch(getPriceTotal(item.price));
     dispatch(addCart(item));
-    //dispatch(getCounter(1));
+    dispatch(getCounter(1));
   };
 
   return (
@@ -40,8 +41,8 @@ export const Headset = () => {
       <Menu />
       <h2 className="titlecategory">HEADSETS</h2>
       <div className="contenedorCard">
-        {heasets.map((item) => (
-          <div className="bodyCard" key={item.id}>
+        {headsets.map((item) => (
+          <div className="bodyCard" key={item._id}>
             <div className="containerImagen">
               <img className="imagenCard" src={item.pic1} alt="foto" />
             </div>
@@ -69,7 +70,7 @@ export const Headset = () => {
                 </button>
 
                 <ModalMore isOpen={isOpenMore} closeModal={closeModalMore}>
-                  <DataModalComputer item={item} />
+                  <DataModalHeadsets  />
                 </ModalMore>
               </div>
             </div>

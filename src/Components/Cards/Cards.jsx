@@ -5,28 +5,25 @@ import {
   getCounter,
   getPriceTotal,
 } from "../../store/slices/cart";
-import { getproducts } from "../../store/slices/products";
+import {getProduct, oneProductModal} from "../../store/slices/products";
 import { useModal } from "../CustomHooks/useModal";
 import { STORE } from "../Helpers/Data";
-import { DataModalBody } from "../Modals/DataModal";
+import {DataModalProducts} from "../Modals/DataModal";
 import { ModalMore } from "../Modals/ModalMore";
 
 export const Cards = () => {
   //console.log(STORE[0]);
   const [isOpenMore, openModalMore, closeModalMore] = useModal(false);
-
   const dispatch = useDispatch();
   const { products = [] } = useSelector((state) => state.products);
 
-  // useEffect(() => {
-  //   GetAllComputerApi().then((res) => {
-  //     dispatch(getComputer(res));
-  //   });
-  // }, [dispatch]);
+  useEffect(() => {
+    dispatch(getProduct());
+  },[dispatch]);
 
   const handleModal = (item) => {
     openModalMore();
-    //dispatch(oneComputer(item));
+    dispatch(oneProductModal(item));
   };
 
   const AddCart = (item) => {
@@ -39,13 +36,13 @@ export const Cards = () => {
   let ramdom = Math.floor(Math.random() * numRamdom.length);
 
   useEffect(() => {
-    dispatch(getproducts(STORE[0][ramdom]));
+    dispatch(getProduct(STORE[0][ramdom]));
   }, [dispatch]);
 
   return (
     <div className="contenedorCard">
       {products.map((item) => (
-        <div className="bodyCard" key={item.id}>
+        <div className="bodyCard" key={item._id}>
           <div className="containerImagen">
             <img className="imagenCard" src={item.pic1} alt="foto" />
           </div>
@@ -68,12 +65,12 @@ export const Cards = () => {
               <button className="buttoAddCart" onClick={() => AddCart(item)}>
                 ADD TO CART
               </button>
-              <button className="moreInfo" onClick={() => handleModal()}>
+              <button className="moreInfo" onClick={() => handleModal(item)}>
                 MORE
               </button>
 
               <ModalMore isOpen={isOpenMore} closeModal={closeModalMore}>
-                <DataModalBody />
+                <DataModalProducts />
               </ModalMore>
             </div>
           </div>

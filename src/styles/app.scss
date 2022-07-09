@@ -652,9 +652,7 @@ body {
   
   .carrousel {
     background-color: #FFFFFF;
-    width: 100%; 
-
-    
+    width: 100%;
     .dot {
       background-color: rgb(70, 187, 86);
     }
@@ -872,6 +870,7 @@ body {
   .buttonShop {
     margin-left: 15px;
     border: none;
+    cursor: pointer;
     background-color: purple;
     border-radius: 10px;
     height: 30px;
@@ -1050,9 +1049,10 @@ body {
     gap: $gap;
     align-items: $align-items;
     justify-content: $justify-content;
+    cursor: pointer;
 
     .buttoAddCart {
-    
+      cursor: pointer;
     color: purple;
     background-color: white;
     border: solid 1px #E3E7E8;
@@ -1064,6 +1064,7 @@ body {
     }
   }
   .moreInfo {
+    cursor: pointer;
     background-color: purple;
     border: solid 1px #E3E7E8;
     color: white;
