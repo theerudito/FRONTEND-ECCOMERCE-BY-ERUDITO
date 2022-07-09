@@ -4,7 +4,7 @@ import {
   addCart,
   getCounter,
   getPriceTotal,
-} from "../../store/slices/cart/cart";
+} from "../../store/slices/cart";
 import { getproducts } from "../../store/slices/products";
 import { useModal } from "../CustomHooks/useModal";
 import { STORE } from "../Helpers/Data";
