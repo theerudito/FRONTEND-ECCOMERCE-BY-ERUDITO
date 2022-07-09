@@ -5,13 +5,17 @@ export const keyboardsSlice = createSlice({
   initialState: {
     keyboards: [],
     isLoading: false,
+    oneKeyboard: {},
   },
   reducers: {
     getKeyboards: (state, action) => {
       state.keyboards = action.payload;
     },
+    oneKeyboardModal: (state, action) => {
+        state.oneKeyboard = action.payload;
+    }
   },
 });
 
 // actions para el reducer
-export const { getKeyboards } = keyboardsSlice.actions;
+export const { getKeyboards, oneKeyboardModal } = keyboardsSlice.actions;

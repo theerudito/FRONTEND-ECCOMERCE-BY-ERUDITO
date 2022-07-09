@@ -14,7 +14,7 @@ export const Menu = () => {
 
         <li>
           <Link className="Link" to={RoutesApps.headsets}>
-            HEASETS
+            HEADSETS
           </Link>
         </li>
 

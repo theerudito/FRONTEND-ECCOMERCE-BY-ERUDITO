@@ -1,18 +1,21 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-export const heasetsSlice = createSlice({
-  name: "heasets",
+export const headsetsSlice = createSlice({
+  name: "headsets",
   initialState: {
-    heasets: [],
-    isLoading: false,
-    oneHeaset: {},
+    headsets: [],
+    isLoading: true,
+    oneHeadset: {},
   },
   reducers: {
-    getHeasets: (state, action) => {
-      state.heasets = action.payload;
+    getHeadsets: (state, action) => {
+      state.headsets = action.payload;
     },
+    oneHeadsetModal: (state, action) => {
+      state.oneHeadset = action.payload;
+    }
   },
 });
 
 // actions para el reducer
-export const { getHeasets } = heasetsSlice.actions;
+export const { getHeadsets, oneHeadsetModal } = headsetsSlice.actions;

@@ -4,14 +4,18 @@ export const laptopsSlice = createSlice({
   name: "laptops",
   initialState: {
     laptops: [],
-    isLoading: false,
+    isLoading: true,
+    oneLaptop: {},
   },
   reducers: {
     getLaptops: (state, action) => {
       state.laptops = action.payload;
     },
+    oneLaptopModal: (state, action) => {
+        state.oneLaptop = action.payload;
+    }
   },
 });
 
 // actions para el reducer
-export const { getLaptops } = laptopsSlice.actions;
+export const { getLaptops, oneLaptopModal } = laptopsSlice.actions;
