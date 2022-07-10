@@ -22,16 +22,30 @@ export const productsSlice = createSlice({
     oneProductModal: (state,action) => {
       state.oneProduct = action.payload
     },
+
+
     //=======================PRODUCTS==============================
     getHeadsets: (state, action) => {
         state.headsets = action.payload;
         state.isLoading = false;
     },
+    //=======================COMPUTERS=============================
+
+    //=======================COMPUTERS=============================
+
+
     //=======================HEADSETS==============================
     oneHeadsetModal: (state,action) => {
       state.oneProduct = action.payload
     },
     //=======================HEADSETS==============================
+
+    //========================LAPTOPS==============================
+    //========================LAPTOPS==============================
+
+    //=======================MONITORS==============================
+    //=======================MONITORS==============================
+
   },
 });
 
