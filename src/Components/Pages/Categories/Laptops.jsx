@@ -9,14 +9,15 @@ import {useModal} from "../../CustomHooks/useModal";
 import {useDispatch, useSelector} from "react-redux";
 import {addCart, getCounter, getPriceTotal} from "../../../store/slices/cart";
 import {ModalMore} from "../../Modals/ModalMore";
-import {DataModalLaptops} from "../../Modals/DataModal";
-import {getLaptops, oneLaptopModal} from "../../../store/slices/laptops";
+import {DataModalProducts} from "../../Modals/DataModal";
+import {getLaptops, oneLaptopModal} from "../../../store/slices/products";
+
 
 export const Laptops = () => {
     const [isOpenMore, openModalMore, closeModalMore] = useModal(false);
     const dispatch = useDispatch();
-    const { laptops = [] } = useSelector((state) => state.laptops);
 
+    const { laptops = [], isLoading } = useSelector((state) => state.products);
 
     useEffect(() => {
         dispatch(getLaptops(STORE[0][2]));
@@ -65,7 +66,7 @@ export const Laptops = () => {
                 <button className="moreInfo" onClick={() => handleModal(item)}>MORE</button>
 
                   <ModalMore isOpen={isOpenMore} closeModal={closeModalMore}>
-                      <DataModalLaptops  />
+                      <DataModalProducts />
                   </ModalMore>
               </div>
             </div>

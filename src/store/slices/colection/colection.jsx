@@ -14,4 +14,4 @@ export const colectionSlice = createSlice({
 });
 
 // actions para el reducer
-export const { getColection } = colectionSlice.actions;
+//export const { getColection } = colectionSlice.actions;

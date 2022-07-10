@@ -12,7 +12,6 @@ export const DataModalProducts = () => {
   const { counter } = useSelector((state) => state.cart);
   const inputRef = useRef(1);
 
-
     const result = {
     name: oneProduct.name,
     description: oneProduct.description,
@@ -61,7 +60,7 @@ export const DataModalProducts = () => {
 
               <div className="carrosusel">
                 <img
-                    src={result.pic1}
+                    src={result.pic1 || result.pic1}
                     alt="pic"
                     onClick={() => addImage(result.pic1)}
                 />
@@ -242,7 +241,6 @@ export const DataModalComputer = () => {
     </>
   );
 };
-
 
 
 export const DataModalHeadsets = () => {

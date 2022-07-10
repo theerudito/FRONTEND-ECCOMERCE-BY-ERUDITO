@@ -1,23 +1,22 @@
 import React from "react";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import {getKeyboards, oneKeyboardModal} from "../../../store/slices/keyboards";
 import { Footer } from "../../Footer/Footer";
 import { Header } from "../../Header/Header";
 import { Header2 } from "../../Header/Header2";
 import { STORE } from "../../Helpers/Data";
 import { Menu } from "../../Menu/Menu";
 import { SocialMedia } from "../../SocialMedia/SocialMedia";
-import {oneLaptopModal} from "../../../store/slices/laptops";
 import {addCart, getCounter, getPriceTotal} from "../../../store/slices/cart";
 import {ModalMore} from "../../Modals/ModalMore";
-import {DataModalKeyboards} from "../../Modals/DataModal";
+import {DataModalKeyboards, DataModalProducts} from "../../Modals/DataModal";
 import {useModal} from "../../CustomHooks/useModal";
+import {getKeyboards, oneKeyboardModal} from "../../../store/slices/products";
 
 export const Keyboards = () => {
     const [isOpenMore, openModalMore, closeModalMore] = useModal(false);
   const dispatch = useDispatch();
-  const { keyboards = [] } = useSelector((state) => state.keyboards);
+  const { keyboards = [] } = useSelector((state) => state.products);
 
   useEffect(() => {
     dispatch(getKeyboards(STORE[0][4]));
@@ -67,7 +66,7 @@ export const Keyboards = () => {
                 <button className="moreInfo" onClick={() => handleModal(item)} >MORE</button>
 
                   <ModalMore  isOpen={isOpenMore} closeModal={closeModalMore}>
-                      <DataModalKeyboards/>
+                      <DataModalProducts/>
                   </ModalMore>
               </div>
             </div>

@@ -2,20 +2,20 @@ import React from "react";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { getColection } from "../../store/slices/colection";
 import { COLECTIONS } from "../Helpers/Data";
+import {getCollection} from "../../store/slices/products";
 
 export const Collection = () => {
   const dispatch = useDispatch();
-  const { colection = [] } = useSelector((state) => state.colections);
+  const { collection = [] } = useSelector((state) => state.products);
 
   useEffect(() => {
-    dispatch(getColection(COLECTIONS));
+    dispatch(getCollection(COLECTIONS));
   }, [dispatch]);
 
   return (
     <div className="collection">
-      {colection.map((item) => (
+      {collection.map((item) => (
         <div className="bodyColections" key={item.id}>
           <div>
             <h1 className="titleCollection">{item.Title} </h1>

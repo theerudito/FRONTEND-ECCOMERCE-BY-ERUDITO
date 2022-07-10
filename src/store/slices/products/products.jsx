@@ -3,6 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 export const productsSlice = createSlice({
   name: "products",
   initialState: {
+    collection: [],
     products: [],
     computers: [],
     headsets: [],
@@ -14,6 +15,15 @@ export const productsSlice = createSlice({
     oneProduct: {},
   },
   reducers: {
+
+    //======================COLLECTIONS=============================
+    getCollection: (state, actions) => {
+            state.collection = actions.payload;
+            state.isLoading = false;
+      },
+    //======================COLLECTIONS============================
+
+
     //=======================PRODUCTS==============================
     getProduct: (state, action) => {
       state.products = action.payload;
@@ -23,31 +33,84 @@ export const productsSlice = createSlice({
       state.oneProduct = action.payload
     },
 
-
     //=======================PRODUCTS==============================
-    getHeadsets: (state, action) => {
-        state.headsets = action.payload;
+
+
+    //=======================COMPUTERS=============================
+    getComputers: (state, action) => {
+        state.computers = action.payload;
         state.isLoading = false;
     },
-    //=======================COMPUTERS=============================
-
+    oneComputerModal: (state,action) => {
+        console.log(action.payload);
+        state.oneProduct = action.payload
+    },
     //=======================COMPUTERS=============================
 
 
     //=======================HEADSETS==============================
+    getHeadsets: (state, action) => {
+      state.headsets = action.payload;
+      state.isLoading = false;
+    },
     oneHeadsetModal: (state,action) => {
       state.oneProduct = action.payload
     },
     //=======================HEADSETS==============================
 
-    //========================LAPTOPS==============================
-    //========================LAPTOPS==============================
 
-    //=======================MONITORS==============================
-    //=======================MONITORS==============================
+    //========================LAPTOPS==============================
+    getLaptops: (state, action) => {
+        state.laptops = action.payload;
+        state.isLoading = false;
+    },
+    oneLaptopModal: (state,action) => {
+        state.oneProduct = action.payload
+    },
+    //========================LAPTOPS===============================
 
+
+    //=======================MONITORS===============================
+    getMonitors: (state, action) => {
+        state.monitors = action.payload;
+        state.isLoading = false;
+    },
+    oneMonitorModal: (state,action) => {
+        state.oneProduct = action.payload
+    },
+    //========================MONITORS==============================
+
+
+    //=======================KEYBOARDS==============================
+    getKeyboards: (state, action) => {
+        state.keyboards = action.payload;
+        state.isLoading = false;
+    },
+    oneKeyboardModal: (state,action) => {
+        state.oneProduct = action.payload
+    },
+    //=======================KEYBOARDS==============================
+
+
+    //=======================ACCESSORIES============================
+    getAccessories: (state, action) => {
+        state.accessories = action.payload;
+        state.isLoading = false;
+    },
+    oneAccessoryModal: (state,action) => {
+        state.oneProduct = action.payload
+    }
   },
 });
 
 // actions para el reducer
-export const { getProduct, oneProductModal, getHeadsets, oneHeadsetModal } = productsSlice.actions;
+export const {
+  getCollection,
+  getProduct, oneProductModal,
+  getComputers, oneComputerModal,
+  getHeadsets, oneHeadsetModal,
+  getLaptops, oneLaptopModal,
+  getMonitors, oneMonitorModal,
+  getKeyboards, oneKeyboardModal,
+  getAccessories, oneAccessoryModal
+} = productsSlice.actions;

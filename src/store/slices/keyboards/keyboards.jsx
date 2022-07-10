@@ -18,4 +18,4 @@ export const keyboardsSlice = createSlice({
 });
 
 // actions para el reducer
-export const { getKeyboards, oneKeyboardModal } = keyboardsSlice.actions;
+//export const { getKeyboards, oneKeyboardModal } = keyboardsSlice.actions;

@@ -1,7 +1,6 @@
 import React from "react";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import {getHeadsets, oneHeadsetModal} from "../../../store/slices/heasets";
 import { Footer } from "../../Footer/Footer";
 import { Header } from "../../Header/Header";
 import { Header2 } from "../../Header/Header2";
@@ -11,13 +10,13 @@ import { Menu } from "../../Menu/Menu";
 import { SocialMedia } from "../../SocialMedia/SocialMedia";
 import {addCart, getCounter, getPriceTotal} from "../../../store/slices/cart";
 import { ModalMore } from "../../Modals/ModalMore";
-import {DataModalHeadsets} from "../../Modals/DataModal";
+import {DataModalProducts} from "../../Modals/DataModal";
+import {getHeadsets, oneHeadsetModal} from "../../../store/slices/products";
 
 export const Headset = () => {
   const [isOpenMore, openModalMore, closeModalMore] = useModal(false);
   const dispatch = useDispatch();
-  const { headsets = [] } = useSelector((state) => state.headsets);
-
+  const { headsets = [] } = useSelector((state) => state.products);
 
   useEffect(() => {
     dispatch(getHeadsets(STORE[0][1]));
@@ -70,7 +69,7 @@ export const Headset = () => {
                 </button>
 
                 <ModalMore isOpen={isOpenMore} closeModal={closeModalMore}>
-                  <DataModalHeadsets  />
+                  <DataModalProducts  />
                 </ModalMore>
               </div>
             </div>

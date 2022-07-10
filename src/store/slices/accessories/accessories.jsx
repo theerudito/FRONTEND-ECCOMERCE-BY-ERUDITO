@@ -18,4 +18,4 @@ export const accessoriesSlice = createSlice({
 });
 
 // actions para el reducer
-export const { getAccessories, oneAccessoriesModal } = accessoriesSlice.actions;
+//export const { getAccessories, oneAccessoriesModal } = accessoriesSlice.actions;

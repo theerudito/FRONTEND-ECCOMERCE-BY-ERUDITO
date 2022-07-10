@@ -18,4 +18,4 @@ export const laptopsSlice = createSlice({
 });
 
 // actions para el reducer
-export const { getLaptops, oneLaptopModal } = laptopsSlice.actions;
+//export const { getLaptops, oneLaptopModal } = laptopsSlice.actions;

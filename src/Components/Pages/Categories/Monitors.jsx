@@ -6,18 +6,17 @@ import { Header2 } from "../../Header/Header2";
 import { STORE } from "../../Helpers/Data";
 import { Menu } from "../../Menu/Menu";
 import { SocialMedia } from "../../SocialMedia/SocialMedia";
-import {getMonitors, oneMonitorModal} from "../../../store/slices/monitors/";
 import { useEffect } from "react";
-import {oneHeadsetModal} from "../../../store/slices/heasets";
 import {addCart, getCounter, getPriceTotal} from "../../../store/slices/cart";
 import {useModal} from "../../CustomHooks/useModal";
 import {ModalMore} from "../../Modals/ModalMore";
-import {DataModalMonitors} from "../../Modals/DataModal";
+import {DataModalProducts} from "../../Modals/DataModal";
+import {getMonitors, oneMonitorModal} from "../../../store/slices/products";
 
 export const Monitors = () => {
     const [isOpenMore, openModalMore, closeModalMore] = useModal(false);
   const dispatch = useDispatch();
-  const { monitors = [] } = useSelector((state) => state.monitors);
+  const { monitors = [] } = useSelector((state) => state.products);
 
   useEffect(() => {
     dispatch(getMonitors(STORE[0][3]));
@@ -26,7 +25,7 @@ export const Monitors = () => {
 
     const handleModal = (item) => {
         openModalMore();
-        dispatch(oneMonitorModal( item));
+        dispatch(oneMonitorModal(item));
     };
 
     const AddCart = (item) => {
@@ -67,7 +66,7 @@ export const Monitors = () => {
                 <button className="moreInfo" onClick={() => handleModal(item)}>MORE</button>
 
                   <ModalMore isOpen={isOpenMore} closeModal={closeModalMore}>
-                      <DataModalMonitors  />
+                      <DataModalProducts  />
                   </ModalMore>
               </div>
             </div>

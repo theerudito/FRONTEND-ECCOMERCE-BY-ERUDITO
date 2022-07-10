@@ -18,4 +18,4 @@ export const headsetsSlice = createSlice({
 });
 
 // actions para el reducer
-export const { getHeadsets, oneHeadsetModal } = headsetsSlice.actions;
+//export const { d } = headsetsSlice.actions;

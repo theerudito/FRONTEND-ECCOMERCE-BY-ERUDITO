@@ -18,4 +18,4 @@ export const monitorsSlice = createSlice({
 });
 
 // actions para el reducer
-export const { getMonitors, oneMonitorModal } = monitorsSlice.actions;
+//export const { getMonitors, oneMonitorModal } = monitorsSlice.actions;

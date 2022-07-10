@@ -19,4 +19,4 @@ export const computerSlice = createSlice({
 });
 
 // actions para el reducer
-export const { getComputer, oneComputer } = computerSlice.actions;
+//export const { getComputer, oneComputer } = computerSlice.actions;

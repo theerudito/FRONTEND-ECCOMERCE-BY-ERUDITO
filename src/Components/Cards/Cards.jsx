@@ -17,6 +17,9 @@ export const Cards = () => {
   const dispatch = useDispatch();
   const { products = [] } = useSelector((state) => state.products);
 
+
+
+
   useEffect(() => {
     dispatch(getProduct());
   },[dispatch]);
