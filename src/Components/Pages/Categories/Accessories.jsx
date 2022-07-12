@@ -9,12 +9,15 @@ import {addCart, getCounter, getPriceTotal} from "../../../store/slices/cart";
 import {ModalMore} from "../../Modals/ModalMore";
 import {DataModalProducts} from "../../Modals/DataModal";
 import {useModal} from "../../CustomHooks/useModal";
-import {getAccessories, oneAccessoryModal} from "../../../store/slices/products";
+import {getAccessories, getImageModal, oneAccessoryModal} from "../../../store/slices/products";
+import {ModalImage} from "../../Modals/Modal-Image";
+import {DataImage} from "../../Modals/DataImage";
 
 export const Accessories = () => {
     const [isOpenMore, openModalMore, closeModalMore] = useModal(false);
   const dispatch = useDispatch();
   const { accessories = [] } = useSelector((state) => state.products);
+  const [isOpenImage, openModalImage, closeModalImage] = useModal(false);
 
   useEffect(() => {
     dispatch(getAccessories(STORE[0][5]));
@@ -31,6 +34,11 @@ export const Accessories = () => {
         dispatch(getCounter(1));
     };
 
+    const openImage = (item) => {
+        openModalImage()
+        dispatch(getImageModal(item));
+    }
+
 
   return (
     <>
@@ -42,7 +50,12 @@ export const Accessories = () => {
         {accessories.map((item) => (
           <div className="bodyCard" key={item._id}>
             <div className="containerImagen">
-              <img className="imagenCard" src={item.pic1} alt="foto" />
+              <img className="imagenCard" src={item.pic1} alt="foto"  onClick={() => openImage(item)}/>
+
+                <ModalImage isOpen={isOpenImage} closeModal={closeModalImage}>
+                    <DataImage />
+                </ModalImage>
+
             </div>
 
             <div className="containerInforCard">

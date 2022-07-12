@@ -26,9 +26,9 @@ export const DataModalProducts = () => {
   };
 
   const addImage = (image) => {
-    let newImgen = image;
+    let newImage = image;
     setImage(false);
-    setChangeImage(newImgen);
+    setChangeImage(newImage);
   };
 
   const AddCart = (oneProduct) => {
@@ -59,7 +59,7 @@ export const DataModalProducts = () => {
 
               <div className="carrosusel">
                 <img
-                    src={result.pic1 || result.pic1}
+                    src={result.pic1 }
                     alt="pic"
                     onClick={() => addImage(result.pic1)}
                 />

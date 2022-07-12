@@ -10,10 +10,13 @@ import {Menu} from "../../Menu/Menu";
 import {DataModalProducts} from "../../Modals/DataModal";
 import {ModalMore} from "../../Modals/ModalMore";
 import {SocialMedia} from "../../SocialMedia/SocialMedia";
-import {getComputers, oneComputerModal} from "../../../store/slices/products";
+import {getComputers, getImageModal, oneComputerModal} from "../../../store/slices/products";
+import {DataImage} from "../../Modals/DataImage";
+import {ModalImage} from "../../Modals/Modal-Image";
 
 export const Computers = () => {
   const [isOpenMore, openModalMore, closeModalMore] = useModal(false);
+  const [isOpenImage, openModalImage, closeModalImage] = useModal(false);
   const dispatch = useDispatch();
 
   const { computers = [], isLoading } = useSelector((state) => state.products);
@@ -36,6 +39,12 @@ export const Computers = () => {
     dispatch(getCounter(1));
   }
 
+    const openImage = (item) => {
+        openModalImage()
+        dispatch(getImageModal(item));
+    }
+
+
   return (
     <>
       {/* <Header /> */}
@@ -47,7 +56,11 @@ export const Computers = () => {
           computers.map((item) => (
             <div className="bodyCard" key={item._id}>
               <div className="containerImagen">
-                <img className="imagenCard" src={item.pic1} alt="foto" />
+                <img className="imagenCard" src={item.pic1} alt="foto" onClick={() => openImage(item)} />
+
+                  <ModalImage isOpen={isOpenImage} closeModal={closeModalImage}>
+                      <DataImage />
+                  </ModalImage>
               </div>
 
               <div className="containerInforCard">

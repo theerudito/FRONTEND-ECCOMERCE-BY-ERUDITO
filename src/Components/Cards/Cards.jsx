@@ -42,7 +42,6 @@ export const Cards = () => {
   const openImage = (item) => {
     openModalImage()
     dispatch(getImageModal(item));
-    console.log("abrir imagen");
   }
 
   return (
@@ -55,6 +54,7 @@ export const Cards = () => {
             <ModalImage isOpen={isOpenImage} closeModal={closeModalImage}>
               <DataImage />
             </ModalImage>
+
           </div>
 
           <div className="containerInforCard">

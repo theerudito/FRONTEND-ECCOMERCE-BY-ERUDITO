@@ -9,13 +9,15 @@ import {useDispatch, useSelector} from "react-redux";
 import {addCart, getCounter, getPriceTotal} from "../../../store/slices/cart";
 import {ModalMore} from "../../Modals/ModalMore";
 import {DataModalProducts} from "../../Modals/DataModal";
-import {getLaptops, oneLaptopModal} from "../../../store/slices/products";
+import {getImageModal, getLaptops, oneLaptopModal} from "../../../store/slices/products";
+import {ModalImage} from "../../Modals/Modal-Image";
+import {DataImage} from "../../Modals/DataImage";
 
 
 export const Laptops = () => {
     const [isOpenMore, openModalMore, closeModalMore] = useModal(false);
+    const [isOpenImage, openModalImage, closeModalImage] = useModal(false);
     const dispatch = useDispatch();
-
     const { laptops = [], isLoading } = useSelector((state) => state.products);
 
     useEffect(() => {
@@ -33,6 +35,11 @@ export const Laptops = () => {
         dispatch(getCounter(1));
     };
 
+    const openImage = (item) => {
+        openModalImage()
+        dispatch(getImageModal(item));
+    }
+
   return (
     <>
       {/* <Header /> */}
@@ -43,7 +50,12 @@ export const Laptops = () => {
         {laptops.map((item) => (
           <div className="bodyCard" key={item._id}>
             <div className="containerImagen">
-              <img className="imagenCard" src={item.pic1} alt="foto" />
+              <img className="imagenCard" src={item.pic1} alt="foto"  onClick={() => openImage(item)}/>
+
+                <ModalImage isOpen={isOpenImage} closeModal={closeModalImage}>
+                    <DataImage />
+                </ModalImage>
+
             </div>
 
             <div className="containerInforCard">
