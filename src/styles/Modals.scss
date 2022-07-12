@@ -372,7 +372,6 @@ $height: 100%;
 }
 
 @media screen and (min-width: 375px) {
-   
   @include containerImagenModal(100px, 100px, none,  1px solid #E3E7E8, cover, auto, 10px, 5px);
   margin: 15px 5px 5px 5px;
 }
@@ -570,7 +569,12 @@ $height: 100%;
 }
 
 .containerPrices {
-
+  .price {
+    font-size: 12px;
+    padding-left: 5px;
+    text-decoration: line-through 1px solid;
+    color: red;
+  }
 @media screen and (max-width: 320px) {
     
 }
@@ -654,6 +658,7 @@ $height: 100%;
 @media screen and (min-width: 1024px) {
   
   @include containerPrices(200px, 220px, none,  auto, 30px);
+
   p {
     color: black;
     font-size: 12px;

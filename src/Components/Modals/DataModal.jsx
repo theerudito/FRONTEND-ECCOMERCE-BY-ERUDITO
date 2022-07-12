@@ -1,7 +1,6 @@
-import React, { useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { addCart, getCounter } from "../../store/slices/cart";
-import { useRef } from "react";
+import React, {useRef, useState} from "react";
+import {useDispatch, useSelector} from "react-redux";
+import {addCart, getCounter} from "../../store/slices/cart";
 
 export const DataModalProducts = () => {
   const [image, setImage] = useState(true);
@@ -96,7 +95,7 @@ export const DataModalProducts = () => {
               <p style={{ color: "black", fontSize: "16px", fontWeight: "bold" }}>
                 Price{" "}
               </p>
-              <p>Price: {parseFloat(result.price).toFixed(2)} </p>
+              <p className="price">Price: {parseFloat(result.price).toFixed(2)} </p>
               <p>Desc: {result.desc} </p>
               <p>PriceDesc: {parseFloat(result.priceDesc).toFixed(2)} </p>
               <p>Quantity</p>

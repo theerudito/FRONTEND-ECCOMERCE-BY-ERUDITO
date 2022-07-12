@@ -1,5 +1,6 @@
 @import "./Modals.scss";
 @import "./Cart.scss";
+@import "src/styles/Modal-Image";
 
 $margin: 0px;
 $padding: 0px;
@@ -960,6 +961,7 @@ body {
   .containerImagen {
     display: $display;
     margin: auto;
+    cursor: pointer ;
     list-style: $list-item;
     gap: $gap;
     align-items: $align-items;
@@ -1076,12 +1078,8 @@ body {
     }
   }
   }
-  
-
 }
 
-  
-  
 }
 
 

@@ -1,12 +1,10 @@
-import React from "react";
-import { Footer } from "../../Footer/Footer";
-import { useDispatch, useSelector } from "react-redux";
-import { Header } from "../../Header/Header";
-import { Header2 } from "../../Header/Header2";
-import { STORE } from "../../Helpers/Data";
-import { Menu } from "../../Menu/Menu";
-import { SocialMedia } from "../../SocialMedia/SocialMedia";
-import { useEffect } from "react";
+import React, {useEffect} from "react";
+import {Footer} from "../../Footer/Footer";
+import {useDispatch, useSelector} from "react-redux";
+import {Header2} from "../../Header/Header2";
+import {STORE} from "../../Helpers/Data";
+import {Menu} from "../../Menu/Menu";
+import {SocialMedia} from "../../SocialMedia/SocialMedia";
 import {addCart, getCounter, getPriceTotal} from "../../../store/slices/cart";
 import {useModal} from "../../CustomHooks/useModal";
 import {ModalMore} from "../../Modals/ModalMore";
@@ -56,8 +54,8 @@ export const Monitors = () => {
               </div>
 
               <div className="containerInforPrice">
-                <p className="price">{item.price} </p>
-                <p className="offert">{item.priceDesc}</p>
+                <p className="price">{item.priceDesc} </p>
+                <p className="offert">{item.price}</p>
                 <p className="desc">{item.desc} </p>
               </div>
 

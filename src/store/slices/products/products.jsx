@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import {createSlice} from "@reduxjs/toolkit";
 
 export const productsSlice = createSlice({
   name: "products",
@@ -13,8 +13,15 @@ export const productsSlice = createSlice({
     accessories: [],
     isLoading: true,
     oneProduct: {},
+    imageModal: {}
   },
   reducers: {
+    //======================IMAGE MODAL=============================
+      getImageModal: (state, action) => {
+        state.imageModal = action.payload;
+      },
+    //======================IMAGE MODAL=============================
+
 
     //======================COLLECTIONS=============================
     getCollection: (state, actions) => {
@@ -42,7 +49,6 @@ export const productsSlice = createSlice({
         state.isLoading = false;
     },
     oneComputerModal: (state,action) => {
-        console.log(action.payload);
         state.oneProduct = action.payload
     },
     //=======================COMPUTERS=============================
@@ -105,7 +111,7 @@ export const productsSlice = createSlice({
 
 // actions para el reducer
 export const {
-  getCollection,
+  getCollection, getImageModal,
   getProduct, oneProductModal,
   getComputers, oneComputerModal,
   getHeadsets, oneHeadsetModal,

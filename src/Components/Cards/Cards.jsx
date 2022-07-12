@@ -1,23 +1,20 @@
-import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import {
-  addCart,
-  getCounter,
-  getPriceTotal,
-} from "../../store/slices/cart";
-import {getProduct, oneProductModal} from "../../store/slices/products";
-import { useModal } from "../CustomHooks/useModal";
-import { STORE } from "../Helpers/Data";
+import {useEffect} from "react";
+import {useDispatch, useSelector} from "react-redux";
+import {addCart, getCounter, getPriceTotal,} from "../../store/slices/cart";
+import {getImageModal, getProduct, oneProductModal} from "../../store/slices/products";
+import {useModal} from "../CustomHooks/useModal";
+import {STORE} from "../Helpers/Data";
 import {DataModalProducts} from "../Modals/DataModal";
-import { ModalMore } from "../Modals/ModalMore";
+import {ModalMore} from "../Modals/ModalMore";
+import {ModalImage} from "../Modals/Modal-Image";
+import {DataImage} from "../Modals/DataImage";
 
 export const Cards = () => {
   //console.log(STORE[0]);
   const [isOpenMore, openModalMore, closeModalMore] = useModal(false);
+  const [isOpenImage, openModalImage, closeModalImage] = useModal(false);
   const dispatch = useDispatch();
   const { products = [] } = useSelector((state) => state.products);
-
-
 
 
   useEffect(() => {
@@ -42,12 +39,22 @@ export const Cards = () => {
     dispatch(getProduct(STORE[0][ramdom]));
   }, [dispatch]);
 
+  const openImage = (item) => {
+    openModalImage()
+    dispatch(getImageModal(item));
+    console.log("abrir imagen");
+  }
+
   return (
     <div className="contenedorCard">
       {products.map((item) => (
         <div className="bodyCard" key={item._id}>
           <div className="containerImagen">
-            <img className="imagenCard" src={item.pic1} alt="foto" />
+            <img className="imagenCard" src={item.pic1} alt="foto" onClick={() =>  openImage(item)} />
+
+            <ModalImage isOpen={isOpenImage} closeModal={closeModalImage}>
+              <DataImage />
+            </ModalImage>
           </div>
 
           <div className="containerInforCard">
@@ -59,8 +66,8 @@ export const Cards = () => {
             </div>
 
             <div className="containerInforPrice">
-              <p className="price">{item.price} </p>
-              <p className="offert">{item.priceDesc}</p>
+              <p className="price">{item.priceDesc} </p>
+              <p className="offert">{item.price}</p>
               <p className="desc">{item.desc} </p>
             </div>
 
