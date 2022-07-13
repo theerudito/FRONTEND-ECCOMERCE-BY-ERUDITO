@@ -1,9 +1,22 @@
 import { Link } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { RoutesApps } from "../Router/Routers";
+import { useEffect, useState } from "react";
+import { getSearch } from "../../store/slices/products";
 
 export const Header2 = () => {
+  const [search, setSeach] = useState("");
+  const dispatch = useDispatch();
   const { cart = [] } = useSelector((state) => state.cart);
+
+
+  useEffect(() => {
+    dispatch(getSearch(search));
+  }, [dispatch, search]);
+
+  let searchProduct = (e) => {
+    setSeach(e.target.value);
+  };
 
   return (
     <div className="header2">
@@ -18,7 +31,14 @@ export const Header2 = () => {
       </div>
 
       <div className="containerSeach">
-        <input type="text" placeholder="Search" className="seach" />
+        <input
+          value={search}
+          onChange={searchProduct}
+          type="text"
+          placeholder="Search"
+          className="seach"
+        />
+
         <button className="lupa">
           <i className="fa-solid fa-magnifying-glass"></i>
         </button>

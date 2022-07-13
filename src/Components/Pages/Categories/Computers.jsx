@@ -1,26 +1,36 @@
-import {useEffect} from "react";
-import {useDispatch, useSelector} from "react-redux";
-import {addCart, getCounter, getPriceTotal,} from "../../../store/slices/cart";
-import {useModal} from "../../CustomHooks/useModal";
-import {Footer} from "../../Footer/Footer";
-import {Header2} from "../../Header/Header2";
-import {GetAllComputerApi} from "../../Helpers/Api";
-import {Loader} from "../../Loaders/LoadersCards";
-import {Menu} from "../../Menu/Menu";
-import {DataModalProducts} from "../../Modals/DataModal";
-import {ModalMore} from "../../Modals/ModalMore";
-import {SocialMedia} from "../../SocialMedia/SocialMedia";
-import {getComputers, getImageModal, oneComputerModal} from "../../../store/slices/products";
-import {DataImage} from "../../Modals/DataImage";
-import {ModalImage} from "../../Modals/Modal-Image";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { addCart, getCounter, getPriceTotal } from "../../../store/slices/cart";
+import { useModal } from "../../CustomHooks/useModal";
+import { Footer } from "../../Footer/Footer";
+import { Header2 } from "../../Header/Header2";
+import { GetAllComputerApi } from "../../Helpers/Api";
+import { Loader } from "../../Loaders/LoadersCards";
+import { Menu } from "../../Menu/Menu";
+import { DataModalProducts } from "../../Modals/DataModal";
+import { ModalMore } from "../../Modals/ModalMore";
+import { SocialMedia } from "../../SocialMedia/SocialMedia";
+import {
+  getComputers,
+  getImageModal,
+  oneComputerModal,
+} from "../../../store/slices/products";
+import { DataImage } from "../../Modals/DataImage";
+import { ModalImage } from "../../Modals/Modal-Image";
 
 export const Computers = () => {
   const [isOpenMore, openModalMore, closeModalMore] = useModal(false);
   const [isOpenImage, openModalImage, closeModalImage] = useModal(false);
+
   const dispatch = useDispatch();
 
-  const { computers = [], isLoading } = useSelector((state) => state.products);
+  const {
+    products = [],
+    isLoading,
+    searchingProduct,
+  } = useSelector((state) => state.products);
 
+  let result = !products ? products : searchingProduct;
 
   useEffect(() => {
     GetAllComputerApi().then((res) => {
@@ -37,13 +47,12 @@ export const Computers = () => {
     dispatch(getPriceTotal(item.price));
     dispatch(addCart(item));
     dispatch(getCounter(1));
-  }
+  };
 
-    const openImage = (item) => {
-        openModalImage()
-        dispatch(getImageModal(item));
-    }
-
+  const openImage = (item) => {
+    openModalImage();
+    dispatch(getImageModal(item));
+  };
 
   return (
     <>
@@ -52,15 +61,20 @@ export const Computers = () => {
       <Menu />
       <h2 className="titlecategory">COMPUTERS </h2>
       <div className="contenedorCard">
-        {computers.length > 0 ? (
-          computers.map((item) => (
+        {result.length > 0 ? (
+          result.map((item) => (
             <div className="bodyCard" key={item._id}>
               <div className="containerImagen">
-                <img className="imagenCard" src={item.pic1} alt="foto" onClick={() => openImage(item)} />
+                <img
+                  className="imagenCard"
+                  src={item.pic1}
+                  alt="foto"
+                  onClick={() => openImage(item)}
+                />
 
-                  <ModalImage isOpen={isOpenImage} closeModal={closeModalImage}>
-                      <DataImage />
-                  </ModalImage>
+                <ModalImage isOpen={isOpenImage} closeModal={closeModalImage}>
+                  <DataImage />
+                </ModalImage>
               </div>
 
               <div className="containerInforCard">
@@ -99,7 +113,7 @@ export const Computers = () => {
             </div>
           ))
         ) : (
-          <div>{isLoading && <Loader />}</div>
+          <div>{isLoading ? null : <Loader />} </div>
         )}
       </div>
       <SocialMedia />
