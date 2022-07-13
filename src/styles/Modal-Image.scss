@@ -22,11 +22,13 @@ $height: 100%;
   display: grid;
   justify-content: $justify-content;
   align-items: $align-items;
-  width: 360px;
-  height: 420px;
+  width: auto;
+  height: auto;
   grid-auto-columns: auto auto;
   border-radius: 5px;
   background-color: #fff;
+  border: solid 1px silver;
+  
 
 
   .containerImgPrev   {
