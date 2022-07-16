@@ -1,7 +1,9 @@
-import React from 'react'
+import React from "react";
 
 export const Page404 = () => {
   return (
-    <div>Page404</div>
-  )
-}
+    <>
+      <p>Page 404</p>
+    </>
+  );
+};
