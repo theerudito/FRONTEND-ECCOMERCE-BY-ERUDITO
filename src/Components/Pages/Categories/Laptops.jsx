@@ -86,7 +86,7 @@ export const Laptops = () => {
                 <div className="containerInforPrice">
                   <p className="price">{item.priceDesc} </p>
                   <p className="offert">{item.price}</p>
-                  <p className="desc">{item.desc} </p>
+                  <p className="desc">{item.desc}% </p>
                 </div>
 
                 <div className="buttonsAdd">

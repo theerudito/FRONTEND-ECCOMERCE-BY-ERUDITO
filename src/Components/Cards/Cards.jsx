@@ -25,15 +25,12 @@ export const Cards = () => {
     searchingProduct,
   } = useSelector((state) => state.products);
 
-
-  let result = !products ?  products : searchingProduct;
-
+  let result = !products ? products : searchingProduct;
 
   const handleModal = (item) => {
     openModalMore();
     dispatch(oneProductModal(item));
   };
-
 
   const AddCart = (item) => {
     dispatch(getPriceTotal(item.price));
@@ -41,21 +38,17 @@ export const Cards = () => {
     dispatch(getCounter(1));
   };
 
-
   let numRamdom = [0, 2, 3, 4, 5];
   let ramdom = Math.floor(Math.random() * numRamdom.length);
-
 
   useEffect(() => {
     dispatch(getProduct(STORE[0][ramdom]));
   }, [dispatch]);
 
-
   const openImage = (item) => {
     openModalImage();
     dispatch(getImageModal(item));
   };
-
 
   return (
     <div className="contenedorCard">
@@ -86,7 +79,7 @@ export const Cards = () => {
               <div className="containerInforPrice">
                 <p className="price">{item.priceDesc} </p>
                 <p className="offert">{item.price}</p>
-                <p className="desc">{item.desc} </p>
+                <p className="desc">{item.desc}% </p>
               </div>
 
               <div className="buttonsAdd">
