@@ -1,7 +1,11 @@
-import React from "react";
+
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
 export const Header = () => {
+  const { login } = useSelector((state) => state.account);
+
+
   return (
     <>
       <div className="header1">
@@ -10,7 +14,7 @@ export const Header = () => {
           <li>English</li>
           <li>Current: USD</li>
           <Link to="/login" style={{ textDecoration: "none", color: "black" }}>
-            <li>Login</li>{" "}
+            <li>{login ? "Logout" : " Login"}</li>{" "}
           </Link>
         </ul>
       </div>

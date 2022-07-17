@@ -1,5 +1,6 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
+import { IndexPage } from "../Pages/IndexPage";
 import { Cart } from "../Pages/Cart";
 import { Accessories } from "../Pages/Categories/Accessories";
 import { Account } from "../Pages/Categories/account";
@@ -15,7 +16,8 @@ import { Page404 } from "../Pages/Page404";
 import { Register } from "../Pages/Register";
 
 export const RoutesApps = {
-  home: "/",
+  index: "/",
+  home: "/home",
   computers: "/computers",
   headsets: "/headsets",
   laptops: "/laptops",
@@ -33,6 +35,7 @@ export const Router = () => {
   return (
     <>
       <Routes>
+        <Route path={RoutesApps.index} element={<IndexPage />} />
         <Route path={RoutesApps.home} element={<PageHome />} />
         <Route path={RoutesApps.computers} element={<Computers />} />
         <Route path={RoutesApps.headsets} element={<Headset />} />

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { getUser } from "../../store/slices/account/account";
@@ -6,15 +6,18 @@ import { Footer } from "../Footer/Footer";
 import { RoutesApps } from "../Router/Routers";
 
 export const Login = () => {
-  const dispatch = useDispatch();
 
+  const dispatch = useDispatch();
   const userRef = useRef();
+
   const passwordRef = useRef();
 
   const navigate = useNavigate();
 
-  const data = useSelector((state) => state.account.data);
-  
+  const {data} = useSelector((state) => state.account);
+
+
+
   const handleSubmit = (e) => {
     const user = userRef.current.value;
     const password = passwordRef.current.value;
@@ -23,8 +26,10 @@ export const Login = () => {
 
     if (data.user === user && data.password === password) {
       navigate("/account");
-    }
+    } 
   };
+
+
 
   return (
     <>
@@ -35,7 +40,7 @@ export const Login = () => {
             alt="logo"
           />
         </article>
-        <hr />
+
         <article className="containerForm">
           <form onClick={handleSubmit}>
             <input
@@ -54,13 +59,11 @@ export const Login = () => {
               required
             />
 
-            <button type="submit">Login</button>
-            
+            <button type="submit">Login </button>
           </form>
         </article>
 
         <article className="containerRegister">
-
           <p>Don't have an account?</p>
           <Link to={RoutesApps.register} className="Link">
             <button>Sing up</button>
