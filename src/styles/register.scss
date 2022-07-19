@@ -1,14 +1,11 @@
-
-
-.containerDataLoginUser {
+.containerDataRegisterUser {
   background-color: #E6E6E6;
   display: grid;
   margin: auto;
   align-items: center;
   justify-content: center;
-  border-radius: 5px;
   
-  .containerLogoLogin {
+  .containerLogo {
     width: 80px;
     display: flex;
     margin: 10px auto;
@@ -16,7 +13,7 @@
     align-items: center;
   }
 
-  .containerLogin {
+  .containerRegister {
     width: 300px;
     height: auto;
     background-color: #E6E6E6;

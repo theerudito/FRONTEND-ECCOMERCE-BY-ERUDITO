@@ -1,0 +1,57 @@
+
+.containerBackground {
+  background-color: #f5f5f5;
+  display: flex;
+}
+
+.containerDataUser {
+  background-color: #E6E6E6;
+  width: 300px;
+  height: auto;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  
+
+  button {
+    border: none;
+    background-color: #6C63FF;
+    color: white;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 280px;
+    border-radius: 5px;
+    user-select: none;
+    margin: 10px;
+    
+    
+
+    &:hover {
+      background-color: #4d45e9;
+      color: black;
+    }
+  }
+
+  p {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    font-size: 12px
+  };
+}
+
+
+.logoIndex {
+  width: 100px;
+  height: 100px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
