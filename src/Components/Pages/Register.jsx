@@ -1,9 +1,32 @@
-import React from "react";
-import { Link } from "react-router-dom";
-
+import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { goLogin } from "../../store/slices/account/account";
+import { RegisterAPI } from "../Helpers/Api";
 import { RoutesApps } from "../Router/Routers";
 
 export const Register = () => {
+  const [data, setData] = useState({ name: "", email: "", password: "" });
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const handleChange = ({ currentTarget: imput }) => {
+    setData({ ...data, [imput.name]: imput.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const dataToken = await RegisterAPI(data);
+
+    localStorage.setItem("token", dataToken.accestoken);
+
+    navigate(RoutesApps.account);
+    window.location.reload();
+
+    console.log("Registrado");
+  };
+
   return (
     <>
       <article className="containerDataRegisterUser">
@@ -17,14 +40,33 @@ export const Register = () => {
 
         <div className="containerRegister">
           <p>Register </p>
-          <form>
-            <input type="text" placeholder="Name" />
-            <input type="password" placeholder="Email" />
-            <input type="password" placeholder="Password" />
+          <form onSubmit={handleSubmit}>
+            <input
+              value={data.name}
+              onChange={handleChange}
+              name="name"
+              type="text"
+              placeholder="Name"
+            />
+            <input
+              value={data.email}
+              onChange={handleChange}
+              name="email"
+              type="text"
+              placeholder="Email"
+            />
+            <input
+              value={data.password}
+              onChange={handleChange}
+              name="password"
+              type="password"
+              placeholder="Password"
+            />
 
-            <Link to={RoutesApps.login} className="Link">
-              <button>Register</button>
-            </Link>
+            <button type="submit">Register</button>
+            <button type="submit" onClick={() => dispatch(goLogin(true))}>
+              Login
+            </button>
           </form>
         </div>
       </article>

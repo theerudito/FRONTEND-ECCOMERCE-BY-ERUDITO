@@ -32,6 +32,8 @@ export const RoutesApps = {
 };
 
 export const Router = () => {
+  const user = localStorage.getItem("token");
+
   return (
     <>
       <Routes>
@@ -47,7 +49,10 @@ export const Router = () => {
         <Route path={RoutesApps.register} element={<Register />} />
         <Route path={RoutesApps.login} element={<Login />} />
         <Route path={RoutesApps.logout} element={<Logout />} />
-        <Route path={RoutesApps.account} element={<Account />} />
+        <Route
+          path={RoutesApps.account}
+          element={user ? <Account /> : <IndexPage />}
+        />
         <Route path="*" element={<Page404 />} />
       </Routes>
     </>

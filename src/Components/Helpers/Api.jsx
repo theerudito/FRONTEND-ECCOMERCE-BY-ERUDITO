@@ -2,7 +2,12 @@ import axios from "axios";
 
 const urlProducts = "https://eccomerce-erudito.herokuapp.com/api/v1/computers";
 
-const urlUsers = "https://eccomerce-erudito.herokuapp.com/api/v1/users";
+//const urlRegisterLocal = "http://localhost:5000/api/v1/users/register";
+const urlRegister =
+  "https://eccomerce-erudito.herokuapp.com/api/v1/users/register";
+
+//const urlLoginLocal = "http://localhost:5000/api/v1/users/login";
+const urlLogin = "https://eccomerce-erudito.herokuapp.com/api/v1/users/login";
 
 export const GetAllComputerApi = async () => {
   try {
@@ -26,8 +31,18 @@ export const GetOneComputerApi = async (_id) => {
 
 export const LoginAPI = async (data) => {
   try {
-    const res = await axios.post(urlUsers, data);
-    return res;
+    const res = await axios.post(urlLogin, data);
+
+    return res.data.dataUser;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const RegisterAPI = async (data) => {
+  try {
+    const res = await axios.post(urlRegister, data);
+    return res.data.dataUser;
   } catch (error) {
     console.log(error);
   }

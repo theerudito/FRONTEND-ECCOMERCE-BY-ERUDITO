@@ -1,30 +1,32 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link, useNavigate } from "react-router-dom";
-import { getUser } from "../../store/slices/account/account";
+import { useNavigate } from "react-router-dom";
+import { goRegister } from "../../store/slices/account/account";
 import { LoginAPI } from "../Helpers/Api";
 import { RoutesApps } from "../Router/Routers";
 
 export const Login = () => {
-  const emailRef = useRef();
-  const passwordRef = useRef();
-
+  const [data, setData] = useState({ email: "", password: "" });
+  const [error, setError] = useState(false);
   const dispatch = useDispatch();
-
   const navigate = useNavigate();
 
-  //const { data } = useSelector((state) => state.account);
+  const handleChange = ({ currentTarget: imput }) => {
+    setData({ ...data, [imput.name]: imput.value });
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const dataForm = {
-      email: emailRef.current.value,
-      password: passwordRef.current.value,
-    };
+    const dataToken = await LoginAPI(data);
 
-    const dataUser = await LoginAPI(dataForm);
-    console.log(dataUser);
+    localStorage.setItem("token", dataToken.accesToken);
+    const token = localStorage.getItem("token", dataToken);
+
+    if (token) {
+      navigate(RoutesApps.account);
+      window.location.reload();
+    }
   };
 
   return (
@@ -40,12 +42,28 @@ export const Login = () => {
 
         <div className="containerLogin">
           <p>Welcome </p>
-          <form onClick={handleSubmit}>
-            <input ref={emailRef} type="text" placeholder="User" />
-            <input ref={passwordRef} type="password" placeholder="Password" />
+          <form onSubmit={handleSubmit}>
+            <input
+              value={data.email}
+              onChange={handleChange}
+              type="text"
+              name="email"
+              placeholder="Email"
+            />
+            <input
+              value={data.password}
+              onChange={handleChange}
+              type="password"
+              name="password"
+              placeholder="Password"
+            />
 
-            <button>Login</button>
+            <button type="submit">Login</button>
+            <button type="submit" onClick={() => dispatch(goRegister(true))}>
+              Register
+            </button>
           </form>
+          {error && <p>Usuario o contraseña incorrectos</p>}
         </div>
       </article>
     </>
