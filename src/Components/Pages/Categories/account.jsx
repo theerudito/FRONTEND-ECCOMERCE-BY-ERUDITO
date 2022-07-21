@@ -15,12 +15,14 @@ export const Account = () => {
 
   return (
     <>
-      <h2>!Hi Welcome Erudito</h2>
+      <h2>!Hi Welcome {data.name} </h2>
+      <p>{data.email}</p>
+      <p>{data.token}</p>
       <div className="containerPrincipalAccount">
         <div className="box">
           <h1>STORE</h1>
           <img src="https://placeimg.com/640/480/any" alt="porfile" />
-          <p>Jorge Loor</p>
+          <p>Home </p>
           <Link to={RoutesApps.home} className="Link">
             <button>GO STORE</button>
           </Link>
@@ -29,7 +31,7 @@ export const Account = () => {
         <div>
           <h1>PROFILE</h1>
           <img src="https://placeimg.com/640/480/any" alt="porfile" />
-          <p>Jorge Loor</p>
+          <p>{data.name} </p>
           <button onClick={handleLogout}>LOGOUT</button>
         </div>
 

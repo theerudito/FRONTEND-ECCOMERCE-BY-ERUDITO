@@ -32,7 +32,7 @@ export const RoutesApps = {
 };
 
 export const Router = () => {
-  const user = localStorage.getItem("token");
+  const LocalStorage = JSON.parse(localStorage.getItem("token"));
 
   return (
     <>
@@ -51,7 +51,7 @@ export const Router = () => {
         <Route path={RoutesApps.logout} element={<Logout />} />
         <Route
           path={RoutesApps.account}
-          element={user ? <Account /> : <IndexPage />}
+          element={LocalStorage ? <Account /> : <IndexPage />}
         />
         <Route path="*" element={<Page404 />} />
       </Routes>

@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { goRegister } from "../../store/slices/account/account";
+import { getUser, goRegister } from "../../store/slices/account/account";
 import { LoginAPI } from "../Helpers/Api";
 import { RoutesApps } from "../Router/Routers";
 
 export const Login = () => {
   const [data, setData] = useState({ email: "", password: "" });
-  const [error, setError] = useState(false);
+
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -20,8 +20,8 @@ export const Login = () => {
 
     const dataToken = await LoginAPI(data);
 
-    localStorage.setItem("token", dataToken.accesToken);
-    const token = localStorage.getItem("token", dataToken);
+    dispatch(getUser(localStorage.setItem("token", JSON.stringify(dataToken))));
+    const token = JSON.parse(localStorage.getItem("token"));
 
     if (token) {
       navigate(RoutesApps.account);
@@ -63,7 +63,6 @@ export const Login = () => {
               Register
             </button>
           </form>
-          {error && <p>Usuario o contraseña incorrectos</p>}
         </div>
       </article>
     </>

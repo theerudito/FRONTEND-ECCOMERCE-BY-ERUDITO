@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { goLogin } from "../../store/slices/account/account";
+import { getUser, goLogin } from "../../store/slices/account/account";
 import { RegisterAPI } from "../Helpers/Api";
 import { RoutesApps } from "../Router/Routers";
 
@@ -16,15 +16,10 @@ export const Register = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     const dataToken = await RegisterAPI(data);
-
-    localStorage.setItem("token", dataToken.accestoken);
-
+    dispatch(getUser(localStorage.setItem("token", JSON.stringify(dataToken))));
     navigate(RoutesApps.account);
     window.location.reload();
-
-    console.log("Registrado");
   };
 
   return (
