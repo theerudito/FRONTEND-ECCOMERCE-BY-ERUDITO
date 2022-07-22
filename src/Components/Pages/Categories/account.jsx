@@ -19,7 +19,9 @@ export const Account = () => {
 
   return (
     <>
-      <h2>!Hi Welcome {data.name} </h2>
+      <div className="titleAccount">
+        <h2>!Hi Welcome {data.name} </h2>
+      </div>
 
       <div className="containerPrincipalAccount">
         <div className="box">
