@@ -17,11 +17,10 @@ export const IndexPage = () => {
     }
 
     console.log("LocalStorage");
-  }, [LocalStorage, navigate]);
+  }, []);
 
   return (
     <div className="containerBackground">
-      
       <div className="containerLogoIndex">
         <img src={fondo} alt="da" />
       </div>
