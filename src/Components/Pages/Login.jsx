@@ -7,6 +7,7 @@ import { RoutesApps } from "../Router/Routers";
 
 export const Login = () => {
   const [data, setData] = useState({ email: "", password: "" });
+  const [error, setError] = useState(false);
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -22,7 +23,7 @@ export const Login = () => {
 
     dispatch(getUser(localStorage.setItem("token", JSON.stringify(dataToken))));
     const token = JSON.parse(localStorage.getItem("token"));
-
+    setError(true)
     if (token) {
       navigate(RoutesApps.account);
       window.location.reload();
@@ -41,7 +42,7 @@ export const Login = () => {
         </div>
 
         <div className="containerLogin">
-          <p>Welcome </p>
+          <p>Login </p>
           <form onSubmit={handleSubmit}>
             <input
               value={data.email}
@@ -49,6 +50,7 @@ export const Login = () => {
               type="text"
               name="email"
               placeholder="Email"
+              required
             />
             <input
               value={data.password}
@@ -56,9 +58,12 @@ export const Login = () => {
               type="password"
               name="password"
               placeholder="Password"
+              required
             />
 
-            <button type="submit">Login</button>
+            <button type="submit"  >
+              Login
+            </button>
             <button type="submit" onClick={() => dispatch(goRegister(true))}>
               Register
             </button>

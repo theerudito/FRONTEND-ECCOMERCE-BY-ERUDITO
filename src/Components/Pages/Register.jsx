@@ -42,6 +42,7 @@ export const Register = () => {
               name="name"
               type="text"
               placeholder="Name"
+              required
             />
             <input
               value={data.email}
@@ -49,6 +50,7 @@ export const Register = () => {
               name="email"
               type="text"
               placeholder="Email"
+              required
             />
             <input
               value={data.password}
@@ -56,6 +58,7 @@ export const Register = () => {
               name="password"
               type="password"
               placeholder="Password"
+              required
             />
 
             <button type="submit">Register</button>
