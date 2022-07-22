@@ -1,12 +1,183 @@
 .containerDataRegisterUser {
+
+  @media screen and (max-width: 320px) {
+    background-color: tomato;
+}
+
+@media screen and (min-width: 375px) {
   background-color: #E6E6E6;
+  border-radius: 5px;
   display: grid;
   margin: auto;
   align-items: center;
   justify-content: center;
+  width: 255px;
+  height: auto;
   
   .containerLogo {
-    width: 80px;
+    width: 60px;
+    display: flex;
+    margin: 10px auto;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .containerRegister {
+    width: 220px;
+    height: auto;
+    background-color: #E6E6E6;
+
+    p {
+      color: black;
+      font-size: 20px;
+      display: grid;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+    }
+
+    form {
+      display: grid;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+    }
+    
+    input {
+      margin: 10px auto;
+      display: grid;
+      grid-template-columns: auto auto auto;
+      height: 30px;
+      width: 200px;
+      border-radius: 5px;
+      border: solid 1px silver;
+    
+      &:focus {
+        outline: none;
+        border: solid 1px gray;
+      }
+    }
+
+    button {
+      border: none;
+      background-color: #6C63FF;
+      color: white;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 200px;
+      border-radius: 5px;
+      user-select: none;
+      margin: 10px;
+      font-weight: bold;
+  
+      &:hover {
+        background-color: #4d45e9;
+        color: black;
+      }
+    }
+
+    .Link {
+      text-decoration: none;
+      color: black;
+      }
+  }
+}
+
+@media screen and (min-width: 425px) {
+  background-color: #E6E6E6;
+  border-radius: 5px;
+  display: grid;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  width: 255px;
+  height: auto;
+  
+  .containerLogo {
+    width: 60px;
+    display: flex;
+    margin: 10px auto;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .containerRegister {
+    width: 220px;
+    height: auto;
+    background-color: #E6E6E6;
+
+    p {
+      color: black;
+      font-size: 20px;
+      display: grid;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+    }
+
+    form {
+      display: grid;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+    }
+    
+    input {
+      margin: 10px auto;
+      display: grid;
+      grid-template-columns: auto auto auto;
+      height: 30px;
+      width: 200px;
+      border-radius: 5px;
+      border: solid 1px silver;
+    
+      &:focus {
+        outline: none;
+        border: solid 1px gray;
+      }
+    }
+
+    button {
+      border: none;
+      background-color: #6C63FF;
+      color: white;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 200px;
+      border-radius: 5px;
+      user-select: none;
+      margin: 10px;
+      font-weight: bold;
+  
+      &:hover {
+        background-color: #4d45e9;
+        color: black;
+      }
+    }
+
+    .Link {
+      text-decoration: none;
+      color: black;
+      }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  background-color: #E6E6E6;
+  border-radius: 5px;
+  display: grid;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: auto;
+  
+  .containerLogo {
+    width: 60px;
     display: flex;
     margin: 10px auto;
     justify-content: center;
@@ -19,7 +190,8 @@
     background-color: #E6E6E6;
 
     p {
-      color: gray;
+      color: black;
+      font-size: 20px;
       display: grid;
       justify-content: center;
       align-items: center;
@@ -56,10 +228,11 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 280px;
+      width: 250px;
       border-radius: 5px;
       user-select: none;
       margin: 10px;
+      font-weight: bold;
   
       &:hover {
         background-color: #4d45e9;
@@ -72,4 +245,97 @@
       color: black;
       }
   }
+}
+@media screen and (min-width: 1024px) {
+  background-color: #E6E6E6;
+  border-radius: 5px;
+  display: grid;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: auto;
+  
+  .containerLogo {
+    width: 60px;
+    display: flex;
+    margin: 10px auto;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .containerRegister {
+    width: 300px;
+    height: auto;
+    background-color: #E6E6E6;
+
+    p {
+      color: black;
+      font-size: 20px;
+      display: grid;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+    }
+
+    form {
+      display: grid;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+    }
+    
+    input {
+      margin: 10px auto;
+      display: grid;
+      grid-template-columns: auto auto auto;
+      height: 30px;
+      width: 250px;
+      border-radius: 5px;
+      border: solid 1px silver;
+    
+      &:focus {
+        outline: none;
+        border: solid 1px gray;
+      }
+    }
+
+    button {
+      border: none;
+      background-color: #6C63FF;
+      color: white;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 250px;
+      border-radius: 5px;
+      user-select: none;
+      margin: 10px;
+      font-weight: bold;
+  
+      &:hover {
+        background-color: #4d45e9;
+        color: black;
+      }
+    }
+
+    .Link {
+      text-decoration: none;
+      color: black;
+      }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  background-color: red;
+}
+
+@media screen and (min-width: 2560px) {
+  background-color: purple;
+}  
+
+
+
+  
 }

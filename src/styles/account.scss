@@ -1,4 +1,5 @@
 
+
   h2 {
     font-size: 30px;
     margin: 50px 0px 0px 0px;
@@ -8,11 +9,18 @@
   }
 
 .containerPrincipalAccount {
+  @media screen and (max-width: 320px) {
+    background-color: tomato;
+}
+
+@media screen and (min-width: 375px) {
+  
+
   width: auto;
   height: auto;
-  display: flex;
+  display: grid;
   margin: 40px auto;
-  flex-direction: row;
+  grid-template-columns: auto auto ;
   justify-content: center;
   align-items: center;
   gap: 10px ;
@@ -21,7 +29,179 @@
     text-decoration: none;
   }
 
+  div {
+    background-color: rgb(56, 55, 52);
+    width: 180px;
+    height: 350px;
+    border-radius: 10px;
+    border: 1px solid silver;
+    &:hover {
+      background-color: rgb(97, 96, 93);
+      border: 1px solid #00bcd4;
+    }
+  }
+
+  p{
+    margin: -20px auto;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    min-width: 160px;
+    color: white;
+    height: 40px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  h1 {
+    background-color: greenyellow;
+    margin: 30px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    border-radius: 10px;
+    color: black;
+    height: 40px;
+  }
+
+  img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 30px auto;
+    display: grid;
+    border: 1px solid silver;
+    object-fit: contain;
+  }
+
+  button {
+    background-color: #6C63FF;
+    width: 150px;
+    height: 40px;
+    margin: 20px auto;
+    display: grid;
+    border: none ;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-weight: bold;
+    &:hover {
+      background-color: #4039d6;
+      color: white;
+    }
+  }
+
+
+}
+
+@media screen and (min-width: 425px) {
   
+
+  width: auto;
+  height: auto;
+  display: grid;
+  margin: 40px auto;
+  grid-template-columns: auto auto ;
+  justify-content: center;
+  align-items: center;
+  gap: 10px ;
+
+  .Link {
+    text-decoration: none;
+  }
+
+  div {
+    background-color: rgb(56, 55, 52);
+    width: 220px;
+    height: 400px;
+    border-radius: 10px;
+    border: 1px solid silver;
+    &:hover {
+      background-color: rgb(97, 96, 93);
+      border: 1px solid #00bcd4;
+    }
+  }
+
+  p{
+    margin: -10px auto;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    min-width: 160px;
+    color: white;
+    height: 40px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+
+  h1 {
+    background-color: greenyellow;
+    margin: 30px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    border-radius: 10px;
+    color: black;
+    height: 40px;
+  }
+
+  img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 30px auto;
+    display: grid;
+    border: 1px solid silver;
+    object-fit: contain;
+  }
+
+  button {
+    background-color: #6C63FF;
+    width: 150px;
+    height: 40px;
+    margin: 20px auto;
+    display: grid;
+    border: none ;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-weight: bold;
+    &:hover {
+      background-color: #4039d6;
+      color: white;
+    }
+  }
+
+
+
+}
+
+@media screen and (min-width: 768px) {
+  
+
+
+  width: auto;
+  height: auto;
+  display: grid;
+  margin: 40px auto;
+  grid-template-columns: auto auto ;
+  justify-content: center;
+  align-items: center;
+  gap: 10px ;
+
+  .Link {
+    text-decoration: none;
+  }
+
   div {
     background-color: rgb(56, 55, 52);
     width: 300px;
@@ -35,15 +215,103 @@
   }
 
   p{
+    margin: -10px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    min-width: 180px;
+    color: white;
+    height: 40px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  h1 {
     background-color: greenyellow;
     margin: 30px auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 200px;
+    width: 150px;
     border-radius: 10px;
     color: black;
     height: 40px;
+  }
+
+  img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 30px auto;
+    display: grid;
+    border: 1px solid silver;
+    object-fit: contain;
+  }
+
+  button {
+    background-color: #6C63FF;
+    width: 180px;
+    height: 40px;
+    margin: 20px auto;
+    display: grid;
+    border: none ;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-weight: bold;
+    &:hover {
+      background-color: #4039d6;
+      color: white;
+    }
+  }
+
+
+
+
+}
+@media screen and (min-width: 1024px) {
+  
+
+  width: auto;
+  height: auto;
+  display: flex;
+  margin: 40px auto;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px ;
+
+  .Link {
+    text-decoration: none;
+  }
+
+  div {
+    background-color: rgb(56, 55, 52);
+    width: 300px;
+    height: 400px;
+    border-radius: 10px;
+    border: 1px solid silver;
+    &:hover {
+      background-color: rgb(97, 96, 93);
+      border: 1px solid #00bcd4;
+    }
+  }
+
+  p{
+    margin: -10px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    min-width: 180px;
+    color: white;
+    height: 40px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
   }
 
   h1 {
@@ -62,25 +330,209 @@
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    margin: auto;
+    margin: 30px auto;
     display: grid;
     border: 1px solid silver;
+    object-fit: contain;
   }
 
   button {
-    background-color: purple;
+    background-color: #6C63FF;
     width: 200px;
     height: 40px;
-    margin: 50px auto;
+    margin: 20px auto;
     display: grid;
     border: none ;
     border-radius: 10px;
     justify-content: center;
     align-items: center;
-    color: azure;
+    color: black;
+    font-weight: bold;
     &:hover {
-      background-color: rgb(226, 7, 226);
-      color: black;
+      background-color: #4039d6;
+      color: white;
     }
   }
+
+
+}
+
+@media screen and (min-width: 1440px) {
+
+
+
+  width: auto;
+  height: auto;
+  display: flex;
+  margin: 40px auto;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px ;
+
+  .Link {
+    text-decoration: none;
+  }
+
+  div {
+    background-color: rgb(56, 55, 52);
+    width: 300px;
+    height: 400px;
+    border-radius: 10px;
+    border: 1px solid silver;
+    &:hover {
+      background-color: rgb(97, 96, 93);
+      border: 1px solid #00bcd4;
+    }
+  }
+
+  p{
+    margin: -10px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    min-width: 180px;
+    color: white;
+    height: 40px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  h1 {
+    background-color: greenyellow;
+    margin: 30px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    border-radius: 10px;
+    color: black;
+    height: 40px;
+  }
+
+  img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 30px auto;
+    display: grid;
+    border: 1px solid silver;
+    object-fit: contain;
+  }
+
+  button {
+    background-color: #6C63FF;
+    width: 200px;
+    height: 40px;
+    margin: 20px auto;
+    display: grid;
+    border: none ;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-weight: bold;
+    &:hover {
+      background-color: #4039d6;
+      color: white;
+    }
+  }
+
+}
+
+@media screen and (min-width: 2560px) {
+  
+
+
+  width: auto;
+  height: auto;
+  display: flex;
+  margin: 40px auto;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px ;
+
+  .Link {
+    text-decoration: none;
+  }
+
+  div {
+    background-color: rgb(56, 55, 52);
+    width: 300px;
+    height: 400px;
+    border-radius: 10px;
+    border: 1px solid silver;
+    &:hover {
+      background-color: rgb(97, 96, 93);
+      border: 1px solid #00bcd4;
+    }
+  }
+
+  p{
+    margin: -10px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    min-width: 180px;
+    color: white;
+    height: 40px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  h1 {
+    background-color: greenyellow;
+    margin: 30px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    border-radius: 10px;
+    color: black;
+    height: 40px;
+  }
+
+  img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 30px auto;
+    display: grid;
+    border: 1px solid silver;
+    object-fit: contain;
+  }
+
+  button {
+    background-color: #6C63FF;
+    width: 200px;
+    height: 40px;
+    margin: 20px auto;
+    display: grid;
+    border: none ;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-weight: bold;
+    &:hover {
+      background-color: #4039d6;
+      color: white;
+    }
+  }
+
+}  
+
+
+
+
+
+  
+
+  
+  
 }

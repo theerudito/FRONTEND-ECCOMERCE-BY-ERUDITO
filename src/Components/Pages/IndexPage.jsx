@@ -21,6 +21,7 @@ export const IndexPage = () => {
 
   return (
     <div className="containerBackground">
+      
       <div className="containerLogoIndex">
         <img src={fondo} alt="da" />
       </div>

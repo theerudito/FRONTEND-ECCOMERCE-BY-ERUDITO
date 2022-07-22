@@ -1,57 +1,134 @@
 
 .containerBackground {
-  background-color: #f5f5f5;
+  background-color: white;
   display: flex;
+
+
+  @media screen and (max-width: 320px) {
+    
 }
 
-.containerDataUser {
-  background-color: #E6E6E6;
-  width: 300px;
-  height: auto;
-  display: grid;
-  grid-template-columns: auto auto auto;
-  margin: auto;
-  align-items: center;
-  justify-content: center;
-  border-radius: 5px;
-  
+@media screen and (min-width: 375px) {
 
-  button {
-    border: none;
-    background-color: #6C63FF;
-    color: white;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 280px;
-    border-radius: 5px;
-    user-select: none;
-    margin: 10px;
-    
-    
 
-    &:hover {
-      background-color: #4d45e9;
-      color: black;
+  .containerLogoIndex {
+    width: 400px;
+    height: 570px;
+
+    img {
+      width: 400px;
+      height: 560px;
     }
   }
 
-  p {
+  .containerDataUser {
+    width: 400px;
+    height: 400px;
+    margin-top: 50px;
+    position: relative;
+    margin-left: -440px;
+  }
+
+}
+
+@media screen and (min-width: 425px) {
+  
+  .containerLogoIndex {
+    width: 400px;
+    height: 580px;
+
+    img {
+      width: 485px;
+      height: 560px;
+    }
+  }
+
+  .containerDataUser {
+    width: 400px;
+    height: 400px;
+    margin-top: 50px;
+    position: relative;
+    margin-left: -440px;
+  }
+
+}
+
+@media screen and (min-width: 768px) {
+
+  .containerLogoIndex {
+    width: 400px;
+    height: 590px;
+
+    img {
+      width: 485px;
+      height: 560px;
+    }
+  }
+
+  .containerDataUser {
+    width: 400px;
+    height: 400px;
+    margin-top: 50px;
+    position: relative;
+    margin-left: auto;
+  }
+
+
+}
+@media screen and (min-width: 1024px) {
+  .containerLogoIndex {
+    width: 400px;
+    height: 600px;
+
+    img {
+      width: 485px;
+      height: 560px;
+    }
+  }    
+
+  .containerDataUser {
+    width: 300px;
+    height: auto;
     display: grid;
-    justify-content: center;
-    align-items: center;
+    grid-template-columns: auto auto auto;
     margin: auto;
-    font-size: 12px
-  };
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+  }
+
+  
 }
 
+@media screen and (min-width: 1440px) {
 
-.logoIndex {
-  width: 100px;
-  height: 100px;
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
+  .containerDataUser {
+    width: 300px;
+    height: auto;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+  }
+  
 }
+
+@media screen and (min-width: 2560px) {
+
+  .containerDataUser {
+    width: 300px;
+    height: auto;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+  }
+  
+}  
+
+}
+
