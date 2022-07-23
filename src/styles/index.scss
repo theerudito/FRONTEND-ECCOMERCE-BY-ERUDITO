@@ -5,8 +5,6 @@
     margin-bottom: 1rem;
   }
   
-
-
 .containerBackground {
   display: flex;
   align-items: center;
@@ -34,7 +32,6 @@
   }
 
   .containerDataUser {
-    
     width: 400px;
     height: auto;
     margin: auto;
@@ -45,23 +42,22 @@
 
 @media screen and (min-width: 425px) {
   
-  .containerLogoIndex {
-    width: 400px;
-    height: 580px;
-
-    img { 
+  .containerLogoIndex {  
+    display: block;
+    img {
       display: block;
-      width: 485px;
+      width: auto;
       height: 560px;
     }
   }
 
   .containerDataUser {
     width: 400px;
-    height: 400px;
-    margin-top: 50px;
+    height: auto;
+    margin: auto;
+    padding: 40px;
     position: relative;
-    margin-left: -440px;
+    margin-left: -650px;
   }
 
 }
@@ -69,20 +65,23 @@
 @media screen and (min-width: 768px) {
 
   .containerLogoIndex {
-    width: 400px;
+    
+    width: 300px;
     height: 590px;
+    display: block;
 
     img {
       display: block;
-      width: 485px;
+      width: 768px;
       height: 560px;
     }
   }
 
   .containerDataUser {
     width: 400px;
-    height: 400px;
-    margin-top: 50px;
+    height: auto;
+    margin: auto;
+    padding: 40px;
     position: relative;
     margin-left: auto;
   }
@@ -91,11 +90,11 @@
 }
 @media screen and (min-width: 1024px) {
   .containerLogoIndex {
-    width: 400px;
+    width: 800px;
     height: 600px;
 
     img {
-      width: 485px;
+      width: 800px;
       height: 560px;
     }
   }    
