@@ -15,9 +15,11 @@ export const accountSlice = createSlice({
   },
   reducers: {
     getUser: (state, action) => {
+      console.log(action.payload);
       state.data = action.payload;
     },
     goLogin: (state, action) => {
+      console.log(action.payload);
       state.login = action.payload;
       state.register = false;
     },

@@ -31,6 +31,18 @@ export const RoutesApps = {
   cart: "/cart",
 };
 
+// {LocalStorage ? (
+//   <Route path={RoutesApps.account} element={<Account />} />
+// ) : (
+// )}
+
+{
+  /* <Route
+            path={RoutesApps.account}
+            element={LocalStorage ? <Account /> : <IndexPage />}
+          /> */
+}
+
 export const Router = () => {
   const LocalStorage = JSON.parse(localStorage.getItem("token"));
 
@@ -49,10 +61,12 @@ export const Router = () => {
         <Route path={RoutesApps.register} element={<Register />} />
         <Route path={RoutesApps.login} element={<Login />} />
         <Route path={RoutesApps.logout} element={<Logout />} />
-        <Route
-          path={RoutesApps.account}
-          element={LocalStorage ? <Account /> : <IndexPage />}
-        />
+        {LocalStorage ? (
+          <Route path={RoutesApps.account} element={<Account />} />
+        ) : (
+          <Route path={RoutesApps.account} element={<IndexPage />} />
+        )}
+
         <Route path="*" element={<Page404 />} />
       </Routes>
     </>
