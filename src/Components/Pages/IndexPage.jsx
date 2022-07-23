@@ -22,7 +22,7 @@ export const IndexPage = () => {
   return (
     <div className="containerBackground">
       <div className="containerLogoIndex">
-        <img src={fondo} alt="da" />
+        <img src={fondo} alt="da" className="baner" />
       </div>
 
       <div className="containerDataUser">

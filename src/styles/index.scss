@@ -1,34 +1,23 @@
-html {
-  background-color: aqua;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  width: 100%;
-  height: 100%;
-  
-}
-
-
 .containerBackground {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  margin: 40px auto;
+  background-color: #fff;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
  
   @media screen and (max-width: 320px) {
     
 }
 
 @media screen and (min-width: 375px) {
-  background-color: aquamarine;
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  margin: 40px auto;
-  width: auto;
-  white-space: nowrap;
 
   .containerLogoIndex {  
-    width: 375px;
-    height: 375px;
-  
+    display: none;
+    
 
     img {
       display: none;
@@ -38,11 +27,11 @@ html {
   }
 
   .containerDataUser {
-    width: 400px;
-    height: 400px;
-    position: absolute;
-    margin: 70px auto;
     
+    width: 400px;
+    height: auto;
+    margin: auto;
+    padding: 40px;
   }
 
 }
