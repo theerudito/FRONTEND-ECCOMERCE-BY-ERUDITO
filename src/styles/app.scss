@@ -6,7 +6,6 @@
 @import "src/styles/index";
 @import "src/styles/account";
 
-
 $margin: 0px;
 $padding: 0px;
 $box-sizing: border-box;
@@ -27,30 +26,30 @@ $bottom: 0;
 
 body {
   background-color: #f1ebeb;
-  font-family: 'Josefin Sans', sans-serif;
-  font-family: 'Merriweather Sans', sans-serif;
+  font-family: "Josefin Sans", sans-serif;
+  font-family: "Merriweather Sans", sans-serif;
 }
 
-
-
 .titlecategory {
-
   @media screen and (max-width: 320px) {
-    
+    font-size: 12px;
+    color: #1877f2;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
   }
 
   @media screen and (min-width: 375px) {
     font-size: 12px;
-    color: #1877F2;
+    color: #1877f2;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
-    
   }
 
   @media screen and (min-width: 425px) {
     font-size: 14px;
-    color: #1877F2;
+    color: #1877f2;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -58,67 +57,74 @@ body {
 
   @media screen and (min-width: 768px) {
     font-size: 16px;
-    color: #1877F2;
+    color: #1877f2;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
   }
   @media screen and (min-width: 1024px) {
     font-size: 20px;
-    color: #1877F2;
+    color: #1877f2;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
   }
 
   @media screen and (min-width: 1440px) {
-    
+    font-size: 20px;
+    color: #1877f2;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
   }
 
   @media screen and (min-width: 2560px) {
-    
-  }  
+    font-size: 20px;
+    color: #1877f2;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
 }
-
-
 
 .header1 {
   font-size: 12px;
- 
+
   @media screen and (max-width: 320px) {
-    background-color: #eef218;
-  }
-
-  @media screen and (min-width: 375px) {
-
     ul {
       display: $display;
       margin-left: auto;
       font-size: 12px;
       li {
-      list-style: $list-item;
-      margin: 10px;
+        list-style: $list-item;
+        margin: 10px;
+      }
+    }
+  }
+
+  @media screen and (min-width: 375px) {
+    ul {
+      display: $display;
+      margin-left: auto;
+      font-size: 12px;
+      li {
+        list-style: $list-item;
+        margin: 10px;
       }
     }
   }
 
   @media screen and (min-width: 425px) {
-    
-
     ul {
       display: $display;
       margin-left: auto;
       font-size: 12px;
       li {
-      list-style: $list-item;
-      margin: 10px;
+        list-style: $list-item;
+        margin: 10px;
       }
     }
-
-    
   }
-
-  
 
   @media screen and (min-width: 768px) {
     ul {
@@ -126,8 +132,8 @@ body {
       margin-left: auto;
       font-size: 14px;
       li {
-      list-style: $list-item;
-      margin: 10px;
+        list-style: $list-item;
+        margin: 10px;
       }
     }
   }
@@ -138,27 +144,80 @@ body {
       margin-left: auto;
       font-size: 15px;
       li {
-      list-style: $list-item;
-      margin: 10px;
+        list-style: $list-item;
+        margin: 10px;
       }
     }
   }
 
   @media screen and (min-width: 1440px) {
-    
+    ul {
+      display: $display;
+      margin-left: auto;
+      font-size: 15px;
+      li {
+        list-style: $list-item;
+        margin: 10px;
+      }
+    }
   }
 
   @media screen and (min-width: 2560px) {
-    
-  }  
+    ul {
+      display: $display;
+      margin-left: auto;
+      font-size: 15px;
+      li {
+        list-style: $list-item;
+        margin: 10px;
+      }
+    }
+  }
 }
 
-
 .header2 {
-  background-color: #282C34;
+  background-color: #282c34;
   cursor: pointer;
   @media screen and (max-width: 320px) {
-    
+    display: $display;
+    margin: 0px $margin;
+    list-style: $list-item;
+    gap: 10px;
+    align-items: $align-items;
+    justify-content: $justify-content;
+    .contenedorLogo1 {
+      height: 50px;
+      .logo1 {
+        width: 40px;
+        height: 40px;
+        margin-top: 5px;
+      }
+    }
+
+    .containerSeach {
+      .seach {
+        color: black;
+        border: $border;
+        width: 200px;
+        height: 30px;
+        border-radius: 5px;
+        &:focus {
+          outline: none;
+        }
+      }
+      .lupa {
+        background-color: rgb(180, 66, 180);
+        color: white;
+        border: $border;
+        width: 30px;
+        height: 32px;
+        margin-left: -30px;
+        border-radius: 0px 3px 3px 0px;
+        &:hover {
+          color: black;
+        }
+      }
+    }
   }
   @media screen and (min-width: 375px) {
     display: $display;
@@ -175,17 +234,17 @@ body {
         margin-top: 5px;
       }
     }
-    
-      .containerSeach {
-        .seach {
-          color: black;
-          border: $border;
-          width: 200px;
-          height: 30px;
-          border-radius: 5px ;
-          &:focus {
-            outline: none;
-          }
+
+    .containerSeach {
+      .seach {
+        color: black;
+        border: $border;
+        width: 200px;
+        height: 30px;
+        border-radius: 5px;
+        &:focus {
+          outline: none;
+        }
       }
       .lupa {
         background-color: rgb(180, 66, 180);
@@ -199,10 +258,8 @@ body {
           color: black;
         }
       }
-  
-     }
-  
-}
+    }
+  }
 
   @media screen and (min-width: 425px) {
     display: $display;
@@ -224,25 +281,25 @@ body {
         border: $border;
         width: 240px;
         height: 30px;
-        border-radius: 5px ;
+        border-radius: 5px;
         &:focus {
           outline: none;
         }
       }
     }
 
-   .lupa {
-    background-color: rgb(180, 66, 180);
-    color: white;
-    border: $border;
-    width: 30px;
-    height: 32px;
-    margin-left: -30px;
-    border-radius: 0px 3px 3px 0px;
-    &:hover {
-      color: black;
+    .lupa {
+      background-color: rgb(180, 66, 180);
+      color: white;
+      border: $border;
+      width: 30px;
+      height: 32px;
+      margin-left: -30px;
+      border-radius: 0px 3px 3px 0px;
+      &:hover {
+        color: black;
+      }
     }
-  }
   }
 
   @media screen and (min-width: 768px) {
@@ -268,24 +325,23 @@ body {
         border: $border;
         width: 300px;
         height: 30px;
-        border-radius: 5px ;
+        border-radius: 5px;
         &:focus {
           outline: none;
         }
-    }
-    .lupa {
-      background-color: rgb(180, 66, 180);
-      color: white;
-      border: $border;
-      width: 30px;
-      height: 32px;
-      margin-left: -30px;
-      border-radius: 0px 3px 3px 0px;
-      &:hover {
-        color: black;
       }
-    }
-
+      .lupa {
+        background-color: rgb(180, 66, 180);
+        color: white;
+        border: $border;
+        width: 30px;
+        height: 32px;
+        margin-left: -30px;
+        border-radius: 0px 3px 3px 0px;
+        &:hover {
+          color: black;
+        }
+      }
     }
   }
 
@@ -314,47 +370,115 @@ body {
         &:focus {
           outline: none;
         }
-    }
-    .lupa {
-      background-color: rgb(180, 66, 180);
-      border: $border;
-      width: 30px;
-      height: 32px;
-      margin-left: -30px;
-      color: white;
-      border-radius: 0px 3px 3px 0px;
-      &:hover {
-        color: black;
+      }
+      .lupa {
+        background-color: rgb(180, 66, 180);
+        border: $border;
+        width: 30px;
+        height: 32px;
+        margin-left: -30px;
+        color: white;
+        border-radius: 0px 3px 3px 0px;
+        &:hover {
+          color: black;
+        }
       }
     }
   }
 
   @media screen and (min-width: 1440px) {
-    
+    display: $display;
+    margin: 0px $margin;
+    list-style: $list-item;
+    gap: 200px;
+    align-items: $align-items;
+    justify-content: $justify-content;
+    .contenedorLogo1 {
+      height: 50px;
+      .logo1 {
+        width: 40px;
+        height: 40px;
+        margin-top: 5px;
+      }
+    }
+    .containerSeach {
+      .seach {
+        color: black;
+        border: $border;
+        width: 400px;
+        height: 30px;
+        border-radius: 5px;
+        &:focus {
+          outline: none;
+        }
+      }
+      .lupa {
+        background-color: rgb(180, 66, 180);
+        border: $border;
+        width: 30px;
+        height: 32px;
+        margin-left: -30px;
+        color: white;
+        border-radius: 0px 3px 3px 0px;
+        &:hover {
+          color: black;
+        }
+      }
+    }
   }
 
   @media screen and (min-width: 2560px) {
-    
-  }
-
+    display: $display;
+    margin: 0px $margin;
+    list-style: $list-item;
+    gap: 200px;
+    align-items: $align-items;
+    justify-content: $justify-content;
+    .contenedorLogo1 {
+      height: 50px;
+      .logo1 {
+        width: 40px;
+        height: 40px;
+        margin-top: 5px;
+      }
+    }
+    .containerSeach {
+      .seach {
+        color: black;
+        border: $border;
+        width: 400px;
+        height: 30px;
+        border-radius: 5px;
+        &:focus {
+          outline: none;
+        }
+      }
+      .lupa {
+        background-color: rgb(180, 66, 180);
+        border: $border;
+        width: 30px;
+        height: 32px;
+        margin-left: -30px;
+        color: white;
+        border-radius: 0px 3px 3px 0px;
+        &:hover {
+          color: black;
+        }
+      }
+    }
   }
 
   .containerCart {
     @media screen and (max-width: 320px) {
-      
-  }
-  
-  @media screen and (min-width: 375px) {
-    height:35px;
-    width: 30px;
-    
-    .contenedorsumado{
-
+      height: 35px;
       width: 30px;
+
+      .contenedorsumado {
+        width: 30px;
         .sumador {
           color: white;
-          background-color:red;
-          border-radius:50%;
+          background-color: red;
+          border-radius: 50%;
           width: 20px;
           height: 20px;
           max-height: 25px;
@@ -377,37 +501,82 @@ body {
           font-size: 22px;
           margin-top: -20px;
           width: 10px;
-        } 
+        }
+      }
+
+      .LinkCart {
+        text-decoration: none;
+      }
+
+      p {
+        font-size: 12px;
+        color: white;
+        margin-top: 20px;
+        margin-left: 10px;
+      }
     }
 
-    .LinkCart {
-      text-decoration: none;
-    }
-    
-    p {
-      font-size: 12px;
-      color: white;
-      margin-top: 20px;
-      margin-left: 10px;
-    }
+    @media screen and (min-width: 375px) {
+      height: 35px;
+      width: 30px;
 
-
-  }
-  
-  @media screen and (min-width: 425px) {
-    width: 120px;
-    display: $display;
-    height: 30px;
-    gap: 10px;
-    align-items: $align-items;
-    justify-content: $justify-content;
-    
-    .contenedorsumado{
-      width: 40px;
+      .contenedorsumado {
+        width: 30px;
         .sumador {
           color: white;
-          background-color:red;
-          border-radius:50%;
+          background-color: red;
+          border-radius: 50%;
+          width: 20px;
+          height: 20px;
+          max-height: 25px;
+          margin: auto;
+          display: $display;
+          align-items: $align-items;
+          justify-content: $justify-content;
+          font-size: 11px;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          margin-left: 18px;
+          margin-top: -2px;
+          position: relative;
+          text-decoration: none;
+        }
+
+        i {
+          color: white;
+          font-size: 22px;
+          margin-top: -20px;
+          width: 10px;
+        }
+      }
+
+      .LinkCart {
+        text-decoration: none;
+      }
+
+      p {
+        font-size: 12px;
+        color: white;
+        margin-top: 20px;
+        margin-left: 10px;
+      }
+    }
+
+    @media screen and (min-width: 425px) {
+      width: 120px;
+      display: $display;
+      height: 30px;
+      gap: 10px;
+      align-items: $align-items;
+      justify-content: $justify-content;
+
+      .contenedorsumado {
+        width: 40px;
+        .sumador {
+          color: white;
+          background-color: red;
+          border-radius: 50%;
           width: 20px;
           height: 20px;
           max-height: 25px;
@@ -429,31 +598,28 @@ body {
           color: white;
           font-size: 22px;
           margin-top: -20px;
-        } 
+        }
+      }
+
+      .LinkCart {
+        text-decoration: none;
+      }
+
+      p {
+        font-size: 12px;
+        color: white;
+        margin-top: 20px;
+        margin-left: 10px;
+      }
     }
 
-    .LinkCart {
-      text-decoration: none;
-    }
-    
-    p {
-      font-size: 12px;
-      color: white;
-      margin-top: 20px;
-      margin-left: 10px; 
-    }
-
-
-  }
-  
-  @media screen and (min-width: 768px) {
-    
-    .contenedorsumado{
-      width: 40px;
+    @media screen and (min-width: 768px) {
+      .contenedorsumado {
+        width: 40px;
         .sumador {
           color: white;
-          background-color:red;
-          border-radius:50%;
+          background-color: red;
+          border-radius: 50%;
           width: 20px;
           height: 20px;
           max-height: 25px;
@@ -475,34 +641,34 @@ body {
           color: white;
           font-size: 22px;
           margin-top: -20px;
-        } 
-    }
+        }
+      }
 
-    .LinkCart {
-      text-decoration: none;
-    }
-    
-    p {
-      font-size: 12px;
-      color: white;
-      margin-top: 20px;
-      margin-left: 10px;
-    }
-  }
-  @media screen and (min-width: 1024px) {
-    width: 150px;
-    display: $display;
-    height: 30px;
-    gap: 10px;
-    align-items: $align-items;
-    justify-content: $justify-content;
+      .LinkCart {
+        text-decoration: none;
+      }
 
-    .contenedorsumado{
-      width: 40px;
+      p {
+        font-size: 12px;
+        color: white;
+        margin-top: 20px;
+        margin-left: 10px;
+      }
+    }
+    @media screen and (min-width: 1024px) {
+      width: 150px;
+      display: $display;
+      height: 30px;
+      gap: 10px;
+      align-items: $align-items;
+      justify-content: $justify-content;
+
+      .contenedorsumado {
+        width: 40px;
         .sumador {
           color: white;
-          background-color:red;
-          border-radius:50%;
+          background-color: red;
+          border-radius: 50%;
           width: 20px;
           height: 20px;
           max-height: 25px;
@@ -524,33 +690,121 @@ body {
           color: white;
           font-size: 22px;
           margin-top: -20px;
-        } 
+        }
+      }
+
+      .LinkCart {
+        text-decoration: none;
+      }
+
+      p {
+        font-size: 12px;
+        color: white;
+        margin-top: 20px;
+        margin-left: 10px;
+      }
     }
 
-    .LinkCart {
-      text-decoration: none;
+    @media screen and (min-width: 1440px) {
+      width: 150px;
+      display: $display;
+      height: 30px;
+      gap: 10px;
+      align-items: $align-items;
+      justify-content: $justify-content;
+
+      .contenedorsumado {
+        width: 40px;
+        .sumador {
+          color: white;
+          background-color: red;
+          border-radius: 50%;
+          width: 20px;
+          height: 20px;
+          max-height: 25px;
+          margin: auto;
+          display: $display;
+          align-items: $align-items;
+          justify-content: $justify-content;
+          font-size: 11px;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          margin-left: 15px;
+          margin-top: 1px;
+          position: relative;
+          text-decoration: none;
+        }
+
+        i {
+          color: white;
+          font-size: 22px;
+          margin-top: -20px;
+        }
+      }
+
+      .LinkCart {
+        text-decoration: none;
+      }
+
+      p {
+        font-size: 12px;
+        color: white;
+        margin-top: 20px;
+        margin-left: 10px;
+      }
     }
-    
-    p {
-      font-size: 12px;
-      color: white;
-      margin-top: 20px;
-      margin-left: 10px;
+
+    @media screen and (min-width: 2560px) {
+      width: 150px;
+      display: $display;
+      height: 30px;
+      gap: 10px;
+      align-items: $align-items;
+      justify-content: $justify-content;
+
+      .contenedorsumado {
+        width: 40px;
+        .sumador {
+          color: white;
+          background-color: red;
+          border-radius: 50%;
+          width: 20px;
+          height: 20px;
+          max-height: 25px;
+          margin: auto;
+          display: $display;
+          align-items: $align-items;
+          justify-content: $justify-content;
+          font-size: 11px;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          margin-left: 15px;
+          margin-top: 1px;
+          position: relative;
+          text-decoration: none;
+        }
+
+        i {
+          color: white;
+          font-size: 22px;
+          margin-top: -20px;
+        }
+      }
+
+      .LinkCart {
+        text-decoration: none;
+      }
+
+      p {
+        font-size: 12px;
+        color: white;
+        margin-top: 20px;
+        margin-left: 10px;
+      }
     }
   }
-  
-  @media screen and (min-width: 1440px) {
-  
-  }
-  
-  @media screen and (min-width: 2560px) {
-  
-  }  
-
-
-
-} 
-
 }
 
 .menu {
@@ -561,18 +815,35 @@ body {
       color: rgb(214, 75, 11);
     }
   }
- 
+
   li {
-     cursor: pointer;
-     user-select: none;    
+    cursor: pointer;
+    user-select: none;
   }
- 
+
   @media screen and (max-width: 320px) {
-    background-color: #282C34;
+    background-color: #282c34;
+    font-size: 18px;
+    width: auto;
+    height: 60px;
+    display: $display;
+    margin: 10px auto;
+    align-items: $align-items;
+    justify-content: $justify-content;
+    padding-right: 35px;
+
+    .ulMenu {
+      display: flex;
+      margin: auto;
+      list-style: $list-item;
+      gap: 10px;
+      color: $color;
+      font-size: 8px;
+    }
   }
 
   @media screen and (min-width: 375px) {
-    background-color: #282C34;
+    background-color: #282c34;
     font-size: 18px;
     width: auto;
     height: 60px;
@@ -593,7 +864,7 @@ body {
   }
 
   @media screen and (min-width: 425px) {
-    background-color: #282C34;
+    background-color: #282c34;
     width: auto;
     height: 60px;
     display: $display;
@@ -613,18 +884,32 @@ body {
   }
 
   @media screen and (min-width: 768px) {
-    
+    background-color: #282c34;
+    width: auto;
+    height: 60px;
+    display: $display;
+    margin: 10px auto;
+    align-items: $align-items;
+    justify-content: $justify-content;
+    padding-right: 40px;
+
+    .ulMenu {
+      display: flex;
+      margin: auto;
+      list-style: $list-item;
+      gap: 10px;
+      color: $color;
+      font-size: 12px;
+    }
   }
 
   @media screen and (min-width: 1024px) {
-    
     width: auto;
     height: 60px;
     display: $display;
     margin: 5px auto;
     align-items: $align-items;
     justify-content: $justify-content;
-  
 
     .ulMenu {
       display: flex;
@@ -637,15 +922,40 @@ body {
   }
 
   @media screen and (min-width: 1440px) {
-    
+    width: auto;
+    height: 60px;
+    display: $display;
+    margin: 5px auto;
+    align-items: $align-items;
+    justify-content: $justify-content;
+
+    .ulMenu {
+      display: flex;
+      margin: auto;
+      list-style: $list-item;
+      gap: 20px;
+      color: $color;
+      font-size: 20px;
+    }
   }
 
   @media screen and (min-width: 2560px) {
-    
+    width: auto;
+    height: 60px;
+    display: $display;
+    margin: 5px auto;
+    align-items: $align-items;
+    justify-content: $justify-content;
+
+    .ulMenu {
+      display: flex;
+      margin: auto;
+      list-style: $list-item;
+      gap: 20px;
+      color: $color;
+      font-size: 20px;
+    }
   }
-
-
-  
 }
 
 .divCarrousel {
@@ -654,16 +964,13 @@ body {
   margin: $margin;
   align-items: $align-items;
   justify-content: $justify-content;
-  
-  
+
   .carrousel {
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     width: 100%;
     .dot {
       background-color: rgb(70, 187, 86);
     }
-
-    
 
     li.dot {
       background: orange;
@@ -672,35 +979,80 @@ body {
     li.dot.selected {
       background: purple;
     }
-
   }
 
   .thumbs {
     display: none;
-   
   }
- 
+
   .contenedorImagen {
-    background-color: #1877F2;
-    width: 100%;   
+    background-color: #1877f2;
+    width: 100%;
   }
-  
+
   .carro {
     background-color: #21965f;
     width: 100%;
-    height: 100%; 
+    height: 100%;
   }
 
   .imgcarrousel {
     width: 100%;
     height: 400px;
-  } 
+  }
 }
 
-
-.collection{
+.collection {
   @media screen and (max-width: 320px) {
-  
+    background-color: white;
+    display: grid;
+    margin: 5px auto;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    width: auto;
+    height: auto;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    align-items: $align-items;
+    justify-content: $justify-content;
+    gap: 10px;
+
+    .bodyColections {
+      width: 365px;
+      height: 200px;
+      border: solid 1px silver;
+      background-color: #f5f5f5;
+      display: grid;
+      margin: auto;
+      grid-template-columns: repeat(2, 1fr);
+      align-items: $align-items;
+      justify-content: $justify-content;
+
+      &:hover {
+        background-color: #e0d9d9;
+
+        .titleCollection {
+          color: rgb(218, 69, 24);
+        }
+        .infoColection {
+          color: rgb(218, 69, 24);
+        }
+      }
+
+      .containerImageCollection {
+        width: 140px;
+        height: 140px;
+        display: grid;
+        margin: auto;
+        align-items: $align-items;
+        justify-content: $justify-content;
+
+        .imageCollection {
+          width: 100px;
+          height: 100px;
+          margin-left: 15px;
+        }
+      }
+    }
   }
 
   @media screen and (min-width: 375px) {
@@ -709,52 +1061,50 @@ body {
     margin: 5px auto;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     width: auto;
-    height:auto;
+    height: auto;
     padding-top: 5px;
     padding-bottom: 5px;
     align-items: $align-items;
     justify-content: $justify-content;
     gap: 10px;
 
-
-    
-  .bodyColections {
-    width: 365px;
-    height: 200px;
-    border: solid 1px silver;
-    background-color: #F5F5F5;
-    display: grid;
-    margin: auto;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: $align-items;
-    justify-content: $justify-content;
-    
-    &:hover {
-      background-color: #e0d9d9;
-
-      .titleCollection {
-        color: rgb(218, 69, 24);
-      }
-      .infoColection {
-        color: rgb(218, 69, 24);
-      }
-    }
-
-    .containerImageCollection { 
-      width: 140px;
-      height: 140px;
+    .bodyColections {
+      width: 365px;
+      height: 200px;
+      border: solid 1px silver;
+      background-color: #f5f5f5;
       display: grid;
       margin: auto;
+      grid-template-columns: repeat(2, 1fr);
       align-items: $align-items;
       justify-content: $justify-content;
 
-      .imageCollection {
-       width: 100px;
-       height: 100px;
-       margin-left: 15px;
+      &:hover {
+        background-color: #e0d9d9;
+
+        .titleCollection {
+          color: rgb(218, 69, 24);
+        }
+        .infoColection {
+          color: rgb(218, 69, 24);
+        }
+      }
+
+      .containerImageCollection {
+        width: 140px;
+        height: 140px;
+        display: grid;
+        margin: auto;
+        align-items: $align-items;
+        justify-content: $justify-content;
+
+        .imageCollection {
+          width: 100px;
+          height: 100px;
+          margin-left: 15px;
+        }
+      }
     }
-    }
-  }
   }
 
   @media screen and (min-width: 425px) {
@@ -763,7 +1113,7 @@ body {
     margin: 5px auto;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     width: auto;
-    height:auto;
+    height: auto;
     padding-top: 5px;
     padding-bottom: 5px;
     align-items: $align-items;
@@ -774,24 +1124,24 @@ body {
   @media screen and (min-width: 768px) {
     display: grid;
     margin: 5px auto;
-    grid-template-columns: repeat(2 , 1fr);
+    grid-template-columns: repeat(2, 1fr);
     width: auto;
-    height:auto;
+    height: auto;
 
     .bodyColections {
       width: 350px;
       height: 200px;
       border: solid 1px silver;
-      background-color: #F5F5F5;
+      background-color: #f5f5f5;
       display: grid;
       margin: auto;
       grid-template-columns: auto auto;
       align-items: $align-items;
       justify-content: $justify-content;
-      
+
       &:hover {
         background-color: #e0d9d9;
-  
+
         .titleCollection {
           color: rgb(218, 69, 24);
         }
@@ -808,66 +1158,160 @@ body {
     margin: 5px auto;
     grid-template-columns: auto auto auto;
     width: auto;
-    height:auto;
+    height: auto;
     padding-top: 5px;
     padding-bottom: 5px;
     align-items: $align-items;
     justify-content: $justify-content;
     gap: 20px;
 
-    
-  .bodyColections {
-    width: 400px;
-    height: 200px;
-    border: solid 1px silver;
-    background-color: #F5F5F5;
-    display: grid;
-    margin: auto;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: $align-items;
-    justify-content: $justify-content;
-    
-    &:hover {
-      background-color: #e0d9d9;
-
-      .titleCollection {
-        color: rgb(218, 69, 24);
-      }
-      .infoColection {
-        color: rgb(218, 69, 24);
-      }
-    }
-
-    .containerImageCollection { 
-      width: 140px;
-      height: 140px;
+    .bodyColections {
+      width: 400px;
+      height: 200px;
+      border: solid 1px silver;
+      background-color: #f5f5f5;
       display: grid;
       margin: auto;
+      grid-template-columns: repeat(2, 1fr);
       align-items: $align-items;
       justify-content: $justify-content;
 
-      .imageCollection {
-       width: 160px;
-       height: 160px;
-       margin-left: 15px;
+      &:hover {
+        background-color: #e0d9d9;
+
+        .titleCollection {
+          color: rgb(218, 69, 24);
+        }
+        .infoColection {
+          color: rgb(218, 69, 24);
+        }
+      }
+
+      .containerImageCollection {
+        width: 140px;
+        height: 140px;
+        display: grid;
+        margin: auto;
+        align-items: $align-items;
+        justify-content: $justify-content;
+
+        .imageCollection {
+          width: 160px;
+          height: 160px;
+          margin-left: 15px;
+        }
+      }
     }
-    }
-  }
   }
 
   @media screen and (min-width: 1440px) {
+    background-color: white;
+    display: grid;
+    margin: 5px auto;
+    grid-template-columns: auto auto auto;
+    width: auto;
+    height: auto;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    align-items: $align-items;
+    justify-content: $justify-content;
+    gap: 20px;
+
+    .bodyColections {
+      width: 400px;
+      height: 200px;
+      border: solid 1px silver;
+      background-color: #f5f5f5;
+      display: grid;
+      margin: auto;
+      grid-template-columns: repeat(2, 1fr);
+      align-items: $align-items;
+      justify-content: $justify-content;
+
+      &:hover {
+        background-color: #e0d9d9;
+
+        .titleCollection {
+          color: rgb(218, 69, 24);
+        }
+        .infoColection {
+          color: rgb(218, 69, 24);
+        }
+      }
+
+      .containerImageCollection {
+        width: 140px;
+        height: 140px;
+        display: grid;
+        margin: auto;
+        align-items: $align-items;
+        justify-content: $justify-content;
+
+        .imageCollection {
+          width: 160px;
+          height: 160px;
+          margin-left: 15px;
+        }
+      }
+    }
   }
 
   @media screen and (min-width: 2560px) {
+    background-color: white;
+    display: grid;
+    margin: 5px auto;
+    grid-template-columns: auto auto auto;
+    width: auto;
+    height: auto;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    align-items: $align-items;
+    justify-content: $justify-content;
+    gap: 20px;
+
+    .bodyColections {
+      width: 400px;
+      height: 200px;
+      border: solid 1px silver;
+      background-color: #f5f5f5;
+      display: grid;
+      margin: auto;
+      grid-template-columns: repeat(2, 1fr);
+      align-items: $align-items;
+      justify-content: $justify-content;
+
+      &:hover {
+        background-color: #e0d9d9;
+
+        .titleCollection {
+          color: rgb(218, 69, 24);
+        }
+        .infoColection {
+          color: rgb(218, 69, 24);
+        }
+      }
+
+      .containerImageCollection {
+        width: 140px;
+        height: 140px;
+        display: grid;
+        margin: auto;
+        align-items: $align-items;
+        justify-content: $justify-content;
+
+        .imageCollection {
+          width: 160px;
+          height: 160px;
+          margin-left: 15px;
+        }
+      }
+    }
   }
-
-
 
   .titleCollection {
     font-size: 28px;
-    margin-left: 15px;  
+    margin-left: 15px;
   }
-  
 
   .infoColection {
     margin-left: 15px;
@@ -880,21 +1324,27 @@ body {
     background-color: purple;
     border-radius: 10px;
     height: 30px;
-    color: #E3E7E8;
+    color: #e3e7e8;
     &:hover {
       background-color: rgb(180, 66, 180);
       color: black;
     }
-  }  
-  
+  }
 }
 
-
 .contenedorCard {
-
   @media screen and (max-width: 320px) {
+    background-color: #fff;
+    margin: 10px auto;
+    display: grid;
+    grid-template-columns: repeat(1);
+    align-items: $align-items;
+    justify-content: $justify-content;
+    gap: 30px;
+    padding-top: 30px;
+    padding-bottom: 10px;
   }
-  
+
   @media screen and (min-width: 375px) {
     background-color: #fff;
     margin: 10px auto;
@@ -906,7 +1356,7 @@ body {
     padding-top: 30px;
     padding-bottom: 10px;
   }
-  
+
   @media screen and (min-width: 425px) {
     background-color: #fff;
     margin: 10px auto;
@@ -918,9 +1368,8 @@ body {
     padding-top: 30px;
     padding-bottom: 10px;
   }
-  
-  @media screen and (min-width: 768px) {
 
+  @media screen and (min-width: 768px) {
     margin: 10px auto;
     display: grid;
     grid-template-columns: auto auto;
@@ -930,7 +1379,7 @@ body {
     padding-top: 30px;
     padding-bottom: 10px;
   }
-  
+
   @media screen and (min-width: 1024px) {
     background-color: #fff;
     margin: 10px auto;
@@ -942,157 +1391,160 @@ body {
     padding-top: 30px;
     padding-bottom: 10px;
   }
-  
+
   @media screen and (min-width: 1440px) {
-  }
-  
-  @media screen and (min-width: 2560px) {
-  }
-
-  
-.bodyCard {
-
-  border: #E3E7E8 1px solid;
-  width: 280px;
-  height: 430px;
-  background-color: #F5F5F5;
-  
-
-
-  &:hover {
-    background-color: #e0d9d9;
-  }
-
-  .containerImagen {
-    display: $display;
-    margin: auto;
-    cursor: pointer ;
-    list-style: $list-item;
-    gap: $gap;
+    background-color: #fff;
+    margin: 10px auto;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
     align-items: $align-items;
     justify-content: $justify-content;
-    margin-top: -20px;
-    width: 260px;
-    height: 200px;
+    gap: 30px;
+    padding-top: 30px;
+    padding-bottom: 10px;
+  }
 
-    border: solid 1px #E3E7E8;
+  @media screen and (min-width: 2560px) {
     background-color: #fff;
-  
-    
-    .imagenCard {
+    margin: 10px auto;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    align-items: $align-items;
+    justify-content: $justify-content;
+    gap: 30px;
+    padding-top: 30px;
+    padding-bottom: 10px;
+  }
+
+  .bodyCard {
+    border: #e3e7e8 1px solid;
+    width: 280px;
+    height: 430px;
+    background-color: #f5f5f5;
+
+    &:hover {
+      background-color: #e0d9d9;
+    }
+
+    .containerImagen {
+      display: $display;
+      margin: auto;
+      cursor: pointer;
+      list-style: $list-item;
+      gap: $gap;
+      align-items: $align-items;
+      justify-content: $justify-content;
+      margin-top: -20px;
+      width: 260px;
+      height: 200px;
+
+      border: solid 1px #e3e7e8;
+      background-color: #fff;
+
+      .imagenCard {
         object-fit: cover;
         width: 150px;
         height: 150px;
-        
       }
-  }
+    }
 
-  .containerInforCard {
-    .info {
-      width: 260px;
-      margin-left: 10px;
-      h1 {
-        margin-left: 10px; 
-        width: 240px;
-        font-size: 18px;
-        text-transform: uppercase;
+    .containerInforCard {
+      .info {
+        width: 260px;
+        margin-left: 10px;
+        h1 {
+          margin-left: 10px;
+          width: 240px;
+          font-size: 18px;
+          text-transform: uppercase;
+        }
+
+        .description {
+          margin-left: 10px;
+          width: 240px;
+          margin-top: -10px;
+          text-transform: capitalize;
+        }
+
+        .marc {
+          margin-left: 10px;
+          width: 240px;
+          margin-top: -10px;
+          text-transform: uppercase;
+        }
       }
-
-      .description {
-        margin-left: 10px; 
+      .starts {
+        color: purple;
+        margin-left: 10px;
         width: 240px;
         margin-top: -10px;
-        text-transform: capitalize;
       }
-    
-    .marc {
-        margin-left: 10px; 
-        width: 240px;
-        margin-top: -10px;
-        text-transform:  uppercase;
-      }
-
-    }
-    .starts {
-      color: purple;
-      margin-left: 10px; 
-      width: 240px;
-      margin-top: -10px;
     }
 
-   
-  }
-
-
-  .containerInforPrice {
-    background: none;
-    display: $display;
-    gap: $gap;
-    align-items: $align-items;
-    justify-content: $justify-content;
-    margin-top: -20px;
-
-    .price {
-      font-size: 24px;
-    }
-    .offert {
-      font-size: 20px;
-      text-decoration: line-through 1px solid;
-      color: red;
-    }
-    .desc {
-      background-color: red;
-      color: #fff;
-      width: 50px;
+    .containerInforPrice {
+      background: none;
       display: $display;
+      gap: $gap;
       align-items: $align-items;
       justify-content: $justify-content;
+      margin-top: -20px;
+
+      .price {
+        font-size: 24px;
+      }
+      .offert {
+        font-size: 20px;
+        text-decoration: line-through 1px solid;
+        color: red;
+      }
+      .desc {
+        background-color: red;
+        color: #fff;
+        width: 50px;
+        display: $display;
+        align-items: $align-items;
+        justify-content: $justify-content;
+      }
     }
-  } 
 
-  .buttonsAdd {
-    display: $display;
-    margin: $margin;
-    gap: $gap;
-    align-items: $align-items;
-    justify-content: $justify-content;
-    cursor: pointer;
-
-    .buttoAddCart {
+    .buttonsAdd {
+      display: $display;
+      margin: $margin;
+      gap: $gap;
+      align-items: $align-items;
+      justify-content: $justify-content;
       cursor: pointer;
-    color: purple;
-    background-color: white;
-    border: solid 1px #E3E7E8;
-    width: 120px;
-    height: 40px;
-    &:hover{
-      background-color: purple;
-      color: white;
+
+      .buttoAddCart {
+        cursor: pointer;
+        color: purple;
+        background-color: white;
+        border: solid 1px #e3e7e8;
+        width: 120px;
+        height: 40px;
+        &:hover {
+          background-color: purple;
+          color: white;
+        }
+      }
+      .moreInfo {
+        cursor: pointer;
+        background-color: purple;
+        border: solid 1px #e3e7e8;
+        color: white;
+        width: 120px;
+        height: 40px;
+        &:hover {
+          background-color: rgb(180, 66, 180);
+          color: black;
+        }
+      }
     }
-  }
-  .moreInfo {
-    cursor: pointer;
-    background-color: purple;
-    border: solid 1px #E3E7E8;
-    color: white;
-    width: 120px;
-    height: 40px;
-    &:hover{
-      background-color: rgb(180, 66, 180);
-      color: black;
-    }
-  }
   }
 }
 
-}
-
-
-.socialMedia { 
+.socialMedia {
   @media screen and (max-width: 320px) {
-  }
-  
-  @media screen and (min-width: 375px) {
     display: grid;
     margin: 10px auto;
     margin-top: -10px;
@@ -1109,7 +1561,7 @@ body {
     }
 
     .instagram {
-      border: solid 1px #E3E7E8;
+      border: solid 1px #e3e7e8;
       text-transform: uppercase;
       width: 365px;
       height: 30px;
@@ -1117,7 +1569,7 @@ body {
       display: flex;
       align-items: $align-items;
       justify-content: $justify-content;
-      
+
       .containerFollow {
         height: 20px;
         .titlefb {
@@ -1127,46 +1579,38 @@ body {
           align-items: $align-items;
           justify-content: $justify-content;
         }
-       }
+      }
 
-       .containderUser {
+      .containderUser {
         margin: $margin;
         padding-left: 10px;
         display: grid;
         align-items: $align-items;
         justify-content: $justify-content;
-    
-        
-        .user{
-        width: 80px;
-        margin: auto;
-        display: flex;
-        user-select: none;
-        align-items: $align-items;
-        justify-content: $justify-content;
-        height: 18px;
-        font-size: 12px;
-        text-transform: lowercase;
-        background-color: #1877F2;
-        border-radius: 10px;
-        color: white;
-        &:hover{
-          background-color: #0a5bc5;
+
+        .user {
+          width: 80px;
+          margin: auto;
+          display: flex;
+          user-select: none;
+          align-items: $align-items;
+          justify-content: $justify-content;
+          height: 18px;
+          font-size: 12px;
+          text-transform: lowercase;
+          background-color: #1877f2;
+          border-radius: 10px;
           color: white;
+          &:hover {
+            background-color: #0a5bc5;
+            color: white;
+          }
         }
-       }
-
-       }
-      
-      
-
-      
-
-
+      }
     }
 
     .offers {
-      border: solid 1px #E3E7E8;
+      border: solid 1px #e3e7e8;
       width: 365px;
       height: 200px;
       margin: $margin;
@@ -1186,25 +1630,24 @@ body {
         padding-left: 20px;
         font-size: 16px;
       }
-  
-        .listOfferts {
-          list-style: $list-item;
-  
-          li {
-            font-size: 12px;
-            margin: 0px 0px 2px 0px;
-  
-            i {
-              color: rgb(180, 66, 180);
-              padding-right: 5px;
-            }
+
+      .listOfferts {
+        list-style: $list-item;
+
+        li {
+          font-size: 12px;
+          margin: 0px 0px 2px 0px;
+
+          i {
+            color: rgb(180, 66, 180);
+            padding-right: 5px;
           }
         }
+      }
     }
-  
-  
+
     .store {
-      border: solid 1px #E3E7E8;
+      border: solid 1px #e3e7e8;
       width: 365px;
       height: 200px;
       margin: 0 0 10px 0;
@@ -1218,25 +1661,153 @@ body {
       }
       .listStore {
         list-style: $list-item;
-        
-  
+
         li {
           margin: 10px 0px 10px 0px;
-  
+
           i {
-          color: rgb(180, 66, 180);
-          padding-right: 10px;
-          width: 20px;
+            color: rgb(180, 66, 180);
+            padding-right: 10px;
+            width: 20px;
+          }
         }
-        }
-  
-        
       }
-    }     
+    }
   }
-  
+
+  @media screen and (min-width: 375px) {
+    display: grid;
+    margin: 10px auto;
+    margin-top: -10px;
+    grid-template-columns: repeat(1);
+    align-items: $align-items;
+    justify-content: $justify-content;
+    gap: $gap;
+    height: auto;
+    height: 475px;
+    background-color: #fff;
+    .contenedor {
+      display: grid;
+      gap: $gap;
+    }
+
+    .instagram {
+      border: solid 1px #e3e7e8;
+      text-transform: uppercase;
+      width: 365px;
+      height: 30px;
+      margin: auto;
+      display: flex;
+      align-items: $align-items;
+      justify-content: $justify-content;
+
+      .containerFollow {
+        height: 20px;
+        .titlefb {
+          font-size: 14px;
+          margin: $margin;
+          display: flex;
+          align-items: $align-items;
+          justify-content: $justify-content;
+        }
+      }
+
+      .containderUser {
+        margin: $margin;
+        padding-left: 10px;
+        display: grid;
+        align-items: $align-items;
+        justify-content: $justify-content;
+
+        .user {
+          width: 80px;
+          margin: auto;
+          display: flex;
+          user-select: none;
+          align-items: $align-items;
+          justify-content: $justify-content;
+          height: 18px;
+          font-size: 12px;
+          text-transform: lowercase;
+          background-color: #1877f2;
+          border-radius: 10px;
+          color: white;
+          &:hover {
+            background-color: #0a5bc5;
+            color: white;
+          }
+        }
+      }
+    }
+
+    .offers {
+      border: solid 1px #e3e7e8;
+      width: 365px;
+      height: 200px;
+      margin: $margin;
+      display: grid;
+      align-items: $align-items;
+      justify-content: $justify-content;
+
+      .titleOffers {
+        font-size: 18px;
+        padding-left: 35px;
+        margin: 0px $margin;
+        display: grid;
+        align-items: $align-items;
+        justify-content: $justify-content;
+      }
+      .titleDescription {
+        padding-left: 20px;
+        font-size: 16px;
+      }
+
+      .listOfferts {
+        list-style: $list-item;
+
+        li {
+          font-size: 12px;
+          margin: 0px 0px 2px 0px;
+
+          i {
+            color: rgb(180, 66, 180);
+            padding-right: 5px;
+          }
+        }
+      }
+    }
+
+    .store {
+      border: solid 1px #e3e7e8;
+      width: 365px;
+      height: 200px;
+      margin: 0 0 10px 0;
+
+      .titlestore {
+        font-size: 18px;
+        margin: 5px $margin;
+        display: flex;
+        align-items: $align-items;
+        justify-content: $justify-content;
+      }
+      .listStore {
+        list-style: $list-item;
+
+        li {
+          margin: 10px 0px 10px 0px;
+
+          i {
+            color: rgb(180, 66, 180);
+            padding-right: 10px;
+            width: 20px;
+          }
+        }
+      }
+    }
+  }
+
   @media screen and (min-width: 425px) {
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     display: grid;
     margin: 5px auto;
     grid-template-columns: repeat(1);
@@ -1250,15 +1821,14 @@ body {
       gap: $gap;
     }
 
-
     .instagram {
-      border: solid 1px #E3E7E8;
+      border: solid 1px #e3e7e8;
       width: auto;
       margin: $margin;
       display: flex;
       align-items: $align-items;
       justify-content: $justify-content;
-  
+
       .containerFollow {
         height: 20px;
         .titlefb {
@@ -1268,33 +1838,29 @@ body {
           align-items: $align-items;
           justify-content: $justify-content;
         }
-       }
+      }
 
-       .containderUser {
+      .containderUser {
         margin: $margin;
         padding-left: 10px;
         display: grid;
         align-items: $align-items;
         justify-content: $justify-content;
-    
-        
-        .user{
-        width: 80px;
-        user-select: none;
-        margin: auto;
-        display: flex;
-        align-items: $align-items;
-        justify-content: $justify-content;
-        height: 18px;
-       }
 
-       }
-      
+        .user {
+          width: 80px;
+          user-select: none;
+          margin: auto;
+          display: flex;
+          align-items: $align-items;
+          justify-content: $justify-content;
+          height: 18px;
+        }
+      }
     }
   }
-  
-  @media screen and (min-width: 768px) {
 
+  @media screen and (min-width: 768px) {
     height: auto;
     display: grid;
     margin: auto;
@@ -1306,7 +1872,6 @@ body {
       margin: 5px auto;
 
       .containerFollow {
-        
         height: 20px;
 
         .titlefb {
@@ -1316,29 +1881,26 @@ body {
           align-items: $align-items;
           justify-content: $justify-content;
         }
-       }
+      }
 
-       .containderUser {
+      .containderUser {
         margin: $margin;
         display: grid;
         align-items: $align-items;
         justify-content: $justify-content;
-        
-        .user{
-        width: 80px;
-        margin: auto;
-        display: flex;
-        align-items: $align-items;
-        justify-content: $justify-content;
-        height: 20px;
-       }
 
-       }
+        .user {
+          width: 80px;
+          margin: auto;
+          display: flex;
+          align-items: $align-items;
+          justify-content: $justify-content;
+          height: 20px;
+        }
+      }
     }
 
-
     .offers {
-      
       width: 360px;
       margin: 0px 0px 5px 0px;
     }
@@ -1349,41 +1911,35 @@ body {
 
     .contenedor {
       display: grid;
-      margin: auto ;
+      margin: auto;
       gap: $gap;
-      grid-template-columns: auto auto  ;
+      grid-template-columns: auto auto;
     }
-
-    
   }
-  
+
   @media screen and (min-width: 1024px) {
     height: 240px;
     display: grid;
     margin: auto;
-    grid-template-columns: auto auto  auto;
+    grid-template-columns: auto auto auto;
 
     .contenedor {
       display: grid;
-      margin: auto ;
+      margin: auto;
       gap: $gap;
-      grid-template-columns: auto auto ;
-
+      grid-template-columns: auto auto;
     }
 
-
     .instagram {
-      border: solid 1px #E3E7E8;
+      border: solid 1px #e3e7e8;
       transform: lowercase;
       width: 310px;
       height: 60px;
       display: grid;
-      margin: auto ;
-      grid-template-columns: repeat(1)  ;
+      margin: auto;
+      grid-template-columns: repeat(1);
 
-     
-       .containerFollow {
-        
+      .containerFollow {
         height: 20px;
 
         .titlefb {
@@ -1393,34 +1949,28 @@ body {
           align-items: $align-items;
           justify-content: $justify-content;
         }
-       }
+      }
 
-       .containderUser {
+      .containderUser {
         margin: $margin;
         display: grid;
         align-items: $align-items;
         justify-content: $justify-content;
-        
-        .user{
-        width: 80px;
-        user-select: none;
-        margin: auto;
-        display: flex;
-        align-items: $align-items;
-        justify-content: $justify-content;
-        height: 20px;
-       }
 
-       }
-
-      
+        .user {
+          width: 80px;
+          user-select: none;
+          margin: auto;
+          display: flex;
+          align-items: $align-items;
+          justify-content: $justify-content;
+          height: 20px;
+        }
+      }
     }
 
-
-    
-
     .offers {
-      border: solid 1px #E3E7E8;
+      border: solid 1px #e3e7e8;
       width: 400px;
       height: 200px;
 
@@ -1437,28 +1987,27 @@ body {
         font-size: 16px;
         margin-top: -20px;
       }
-  
-        .listOfferts {
-          list-style: $list-item;
-  
-          li {
-            font-size: 12px;
-            margin: 0px 0px 2px 0px;
-  
-            i {
-              color: purple;
-              padding-right: 5px;
-            }
+
+      .listOfferts {
+        list-style: $list-item;
+
+        li {
+          font-size: 12px;
+          margin: 0px 0px 2px 0px;
+
+          i {
+            color: purple;
+            padding-right: 5px;
           }
         }
+      }
     }
-  
-  
+
     .store {
-      border: solid 1px #E3E7E8;
+      border: solid 1px #e3e7e8;
       width: 400px;
       height: 200px;
-      
+
       .titlestore {
         font-size: 24px;
         margin: 5px $margin;
@@ -1468,44 +2017,313 @@ body {
       }
       .listStore {
         list-style: $list-item;
-        
-  
+
         li {
           margin: 10px 0px 10px 0px;
-  
+
           i {
-          color: purple;
-          padding-right: 10px;
-          width: 20px;
+            color: purple;
+            padding-right: 10px;
+            width: 20px;
+          }
         }
-        }
-  
-        
       }
-    }     
+    }
   }
-  
+
   @media screen and (min-width: 1440px) {
+    height: 240px;
+    display: grid;
+    margin: auto;
+    grid-template-columns: auto auto auto;
+
+    .contenedor {
+      display: grid;
+      margin: auto;
+      gap: $gap;
+      grid-template-columns: auto auto;
+    }
+
+    .instagram {
+      border: solid 1px #e3e7e8;
+      transform: lowercase;
+      width: 310px;
+      height: 60px;
+      display: grid;
+      margin: auto;
+      grid-template-columns: repeat(1);
+
+      .containerFollow {
+        height: 20px;
+
+        .titlefb {
+          font-size: 14px;
+          margin: $margin;
+          display: flex;
+          align-items: $align-items;
+          justify-content: $justify-content;
+        }
+      }
+
+      .containderUser {
+        margin: $margin;
+        display: grid;
+        align-items: $align-items;
+        justify-content: $justify-content;
+
+        .user {
+          width: 80px;
+          user-select: none;
+          margin: auto;
+          display: flex;
+          align-items: $align-items;
+          justify-content: $justify-content;
+          height: 20px;
+        }
+      }
+    }
+
+    .offers {
+      border: solid 1px #e3e7e8;
+      width: 400px;
+      height: 200px;
+
+      .titleOffers {
+        font-size: 24px;
+        padding-left: 35px;
+        margin: 20px $margin;
+        display: grid;
+        align-items: $align-items;
+        justify-content: $justify-content;
+      }
+      .titleDescription {
+        padding-left: 20px;
+        font-size: 16px;
+        margin-top: -20px;
+      }
+
+      .listOfferts {
+        list-style: $list-item;
+
+        li {
+          font-size: 12px;
+          margin: 0px 0px 2px 0px;
+
+          i {
+            color: purple;
+            padding-right: 5px;
+          }
+        }
+      }
+    }
+
+    .store {
+      border: solid 1px #e3e7e8;
+      width: 400px;
+      height: 200px;
+
+      .titlestore {
+        font-size: 24px;
+        margin: 5px $margin;
+        display: flex;
+        align-items: $align-items;
+        justify-content: $justify-content;
+      }
+      .listStore {
+        list-style: $list-item;
+
+        li {
+          margin: 10px 0px 10px 0px;
+
+          i {
+            color: purple;
+            padding-right: 10px;
+            width: 20px;
+          }
+        }
+      }
+    }
   }
-  
+
   @media screen and (min-width: 2560px) {
+    height: 240px;
+    display: grid;
+    margin: auto;
+    grid-template-columns: auto auto auto;
+
+    .contenedor {
+      display: grid;
+      margin: auto;
+      gap: $gap;
+      grid-template-columns: auto auto;
+    }
+
+    .instagram {
+      border: solid 1px #e3e7e8;
+      transform: lowercase;
+      width: 310px;
+      height: 60px;
+      display: grid;
+      margin: auto;
+      grid-template-columns: repeat(1);
+
+      .containerFollow {
+        height: 20px;
+
+        .titlefb {
+          font-size: 14px;
+          margin: $margin;
+          display: flex;
+          align-items: $align-items;
+          justify-content: $justify-content;
+        }
+      }
+
+      .containderUser {
+        margin: $margin;
+        display: grid;
+        align-items: $align-items;
+        justify-content: $justify-content;
+
+        .user {
+          width: 80px;
+          user-select: none;
+          margin: auto;
+          display: flex;
+          align-items: $align-items;
+          justify-content: $justify-content;
+          height: 20px;
+        }
+      }
+    }
+
+    .offers {
+      border: solid 1px #e3e7e8;
+      width: 400px;
+      height: 200px;
+
+      .titleOffers {
+        font-size: 24px;
+        padding-left: 35px;
+        margin: 20px $margin;
+        display: grid;
+        align-items: $align-items;
+        justify-content: $justify-content;
+      }
+      .titleDescription {
+        padding-left: 20px;
+        font-size: 16px;
+        margin-top: -20px;
+      }
+
+      .listOfferts {
+        list-style: $list-item;
+
+        li {
+          font-size: 12px;
+          margin: 0px 0px 2px 0px;
+
+          i {
+            color: purple;
+            padding-right: 5px;
+          }
+        }
+      }
+    }
+
+    .store {
+      border: solid 1px #e3e7e8;
+      width: 400px;
+      height: 200px;
+
+      .titlestore {
+        font-size: 24px;
+        margin: 5px $margin;
+        display: flex;
+        align-items: $align-items;
+        justify-content: $justify-content;
+      }
+      .listStore {
+        list-style: $list-item;
+
+        li {
+          margin: 10px 0px 10px 0px;
+
+          i {
+            color: purple;
+            padding-right: 10px;
+            width: 20px;
+          }
+        }
+      }
+    }
   }
-   
 }
 
-
-
-
-
-
-
-
 .containerFooter {
-
   @media screen and (max-width: 320px) {
+    display: grid;
+    margin: $margin;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: $align-items;
+    justify-content: $justify-content;
+    gap: $gap;
 
+    .containerLogo2 {
+      display: $display;
+      margin: $margin;
+      align-items: $align-items;
+      justify-content: $justify-content;
+      width: 100px;
+      height: 100px;
+      .logo2 {
+        object-fit: contain;
+        width: 90px;
+        height: 120px;
+        margin: auto;
+        margin-left: 5px;
+      }
+      .build {
+        font-size: 16px;
+        margin-left: 5px;
+        background-color: red;
+      }
+    }
+    .information {
+      h1 {
+        font-size: 12px;
+        border-bottom: silver solid 1px;
+      }
+      p {
+        margin-left: px;
+        color: black;
+        font-size: 11px;
+      }
+    }
+    .account {
+      h1 {
+        font-size: 12px;
+        border-bottom: silver solid 1px;
+      }
+      p {
+        margin-left: 5px;
+        color: black;
+        font-size: 11px;
+      }
+    }
+    .follow {
+      h1 {
+        font-size: 12px;
+        border-bottom: silver solid 1px;
+      }
+      p {
+        margin-left: 5px;
+        color: black;
+        font-size: 11px;
+      }
+    }
   }
-  
+
   @media screen and (min-width: 375px) {
     display: grid;
     margin: $margin;
@@ -1534,10 +2352,10 @@ body {
         background-color: red;
       }
     }
-    .information {  
+    .information {
       h1 {
-      font-size: 12px;
-      border-bottom: silver solid 1px;
+        font-size: 12px;
+        border-bottom: silver solid 1px;
       }
       p {
         margin-left: px;
@@ -1549,28 +2367,26 @@ body {
       h1 {
         font-size: 12px;
         border-bottom: silver solid 1px;
-        }
-        p {
-          margin-left: 5px;
-          color: black;
-          font-size: 11px;
-        }
+      }
+      p {
+        margin-left: 5px;
+        color: black;
+        font-size: 11px;
+      }
     }
     .follow {
       h1 {
         font-size: 12px;
         border-bottom: silver solid 1px;
-        }
-        p {
-          margin-left: 5px;
-          color: black;
-          font-size: 11px;
-        }
+      }
+      p {
+        margin-left: 5px;
+        color: black;
+        font-size: 11px;
+      }
     }
-
-
   }
-  
+
   @media screen and (min-width: 425px) {
     display: grid;
     margin: $margin;
@@ -1599,10 +2415,10 @@ body {
         background-color: red;
       }
     }
-    .information {  
+    .information {
       h1 {
-      font-size: 16px;
-      border-bottom: silver solid 1px;
+        font-size: 16px;
+        border-bottom: silver solid 1px;
       }
       p {
         margin-left: px;
@@ -1614,30 +2430,89 @@ body {
       h1 {
         font-size: 16px;
         border-bottom: silver solid 1px;
-        }
-        p {
-          margin-left: 5px;
-          color: black;
-          font-size: 14px;
-        }
+      }
+      p {
+        margin-left: 5px;
+        color: black;
+        font-size: 14px;
+      }
     }
     .follow {
       h1 {
         font-size: 16px;
         border-bottom: silver solid 1px;
-        }
-        p {
-          margin-left: 5px;
-          color: black;
-          font-size: 14px;
-        }
+      }
+      p {
+        margin-left: 5px;
+        color: black;
+        font-size: 14px;
+      }
     }
   }
-  
+
   @media screen and (min-width: 768px) {
-    
+    display: grid;
+    margin: $margin;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: $align-items;
+    justify-content: $justify-content;
+    gap: $gap;
+
+    .containerLogo2 {
+      display: $display;
+      margin: $margin;
+      align-items: $align-items;
+      justify-content: $justify-content;
+      width: 100px;
+      height: 100px;
+      .logo2 {
+        object-fit: contain;
+        width: 100px;
+        height: 120px;
+        margin: auto;
+        margin-left: 5px;
+      }
+      .build {
+        font-size: 16px;
+        margin-left: 5px;
+        background-color: red;
+      }
+    }
+    .information {
+      h1 {
+        font-size: 16px;
+        border-bottom: silver solid 1px;
+      }
+      p {
+        margin-left: px;
+        color: black;
+        font-size: 14px;
+      }
+    }
+    .account {
+      h1 {
+        font-size: 16px;
+        border-bottom: silver solid 1px;
+      }
+      p {
+        margin-left: 5px;
+        color: black;
+        font-size: 14px;
+      }
+    }
+    .follow {
+      h1 {
+        font-size: 16px;
+        border-bottom: silver solid 1px;
+      }
+      p {
+        margin-left: 5px;
+        color: black;
+        font-size: 14px;
+      }
+    }
   }
-  
+
   @media screen and (min-width: 1024px) {
     display: $display;
     margin: $margin;
@@ -1664,10 +2539,10 @@ body {
         margin-left: 5px;
       }
     }
-    .information {  
+    .information {
       h1 {
-      font-size: 24px;
-      border-bottom: silver solid 1px;
+        font-size: 24px;
+        border-bottom: silver solid 1px;
       }
       p {
         margin-left: 5px;
@@ -1679,33 +2554,145 @@ body {
       h1 {
         font-size: 24px;
         border-bottom: silver solid 1px;
-        }
-        p {
-          margin-left: 5px;
-          color: black;
-          font-size: 16px;
-        }
+      }
+      p {
+        margin-left: 5px;
+        color: black;
+        font-size: 16px;
+      }
     }
     .follow {
       h1 {
         font-size: 24px;
         border-bottom: silver solid 1px;
-        }
-        p {
-          margin-left: 5px;
-          color: black;
-          font-size: 16px;
-        }
+      }
+      p {
+        margin-left: 5px;
+        color: black;
+        font-size: 16px;
+      }
     }
   }
-  
+
   @media screen and (min-width: 1440px) {
+    display: $display;
+    margin: $margin;
+    align-items: $align-items;
+    justify-content: $justify-content;
+    gap: 20px;
+
+    .containerLogo2 {
+      display: $display;
+      margin: $margin;
+      align-items: $align-items;
+      justify-content: $justify-content;
+      width: 330px;
+      height: 100px;
+      .logo2 {
+        object-fit: contain;
+        width: 300px;
+        height: 120px;
+        margin: auto;
+        margin-left: 5px;
+      }
+      .build {
+        font-size: 16px;
+        margin-left: 5px;
+      }
+    }
+    .information {
+      h1 {
+        font-size: 24px;
+        border-bottom: silver solid 1px;
+      }
+      p {
+        margin-left: 5px;
+        color: black;
+        font-size: 16px;
+      }
+    }
+    .account {
+      h1 {
+        font-size: 24px;
+        border-bottom: silver solid 1px;
+      }
+      p {
+        margin-left: 5px;
+        color: black;
+        font-size: 16px;
+      }
+    }
+    .follow {
+      h1 {
+        font-size: 24px;
+        border-bottom: silver solid 1px;
+      }
+      p {
+        margin-left: 5px;
+        color: black;
+        font-size: 16px;
+      }
+    }
   }
-  
+
   @media screen and (min-width: 2560px) {
+    display: $display;
+    margin: $margin;
+    align-items: $align-items;
+    justify-content: $justify-content;
+    gap: 20px;
+
+    .containerLogo2 {
+      display: $display;
+      margin: $margin;
+      align-items: $align-items;
+      justify-content: $justify-content;
+      width: 330px;
+      height: 100px;
+      .logo2 {
+        object-fit: contain;
+        width: 300px;
+        height: 120px;
+        margin: auto;
+        margin-left: 5px;
+      }
+      .build {
+        font-size: 16px;
+        margin-left: 5px;
+      }
+    }
+    .information {
+      h1 {
+        font-size: 24px;
+        border-bottom: silver solid 1px;
+      }
+      p {
+        margin-left: 5px;
+        color: black;
+        font-size: 16px;
+      }
+    }
+    .account {
+      h1 {
+        font-size: 24px;
+        border-bottom: silver solid 1px;
+      }
+      p {
+        margin-left: 5px;
+        color: black;
+        font-size: 16px;
+      }
+    }
+    .follow {
+      h1 {
+        font-size: 24px;
+        border-bottom: silver solid 1px;
+      }
+      p {
+        margin-left: 5px;
+        color: black;
+        font-size: 16px;
+      }
+    }
   }
-  
 }
-
-
-

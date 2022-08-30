@@ -1,10 +1,10 @@
-  article {
-    background-color: #f5f5f5;
-    padding: 1rem;
-    border-radius: 0.5rem;
-    margin-bottom: 1rem;
-  }
-  
+article {
+  background-color: #f5f5f5;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
 .containerBackground {
   display: flex;
   align-items: center;
@@ -15,133 +15,133 @@
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
- 
+
   @media screen and (max-width: 320px) {
-    
-}
-
-@media screen and (min-width: 375px) {
-  .containerLogoIndex {  
-    display: none;
-
-    img {
+    .containerLogoIndex {
       display: none;
-      width: 350px;
-      height: 560px;
+
+      img {
+        display: none;
+        width: 100px;
+        height: 100px;
+      }
+    }
+
+    .containerDataUser {
+      width: 300px;
+      height: auto;
+      margin: auto;
+      padding: 40px;
     }
   }
 
-  .containerDataUser {
-    width: 400px;
-    height: auto;
-    margin: auto;
-    padding: 40px;
+  @media screen and (min-width: 375px) {
+    .containerLogoIndex {
+      display: none;
+
+      img {
+        display: none;
+        width: 350px;
+        height: 560px;
+      }
+    }
+
+    .containerDataUser {
+      width: 400px;
+      height: auto;
+      margin: auto;
+      padding: 40px;
+    }
   }
 
-}
-
-@media screen and (min-width: 425px) {
-  
-  .containerLogoIndex {  
-    display: block;
-    img {
+  @media screen and (min-width: 425px) {
+    .containerLogoIndex {
       display: block;
-      width: auto;
-      height: 560px;
+      img {
+        display: block;
+        width: auto;
+        height: 560px;
+      }
+    }
+
+    .containerDataUser {
+      width: 400px;
+      height: auto;
+      margin: auto;
+      padding: 40px;
+      position: relative;
+      margin-left: -650px;
     }
   }
 
-  .containerDataUser {
-    width: 400px;
-    height: auto;
-    margin: auto;
-    padding: 40px;
-    position: relative;
-    margin-left: -650px;
-  }
-
-}
-
-@media screen and (min-width: 768px) {
-
-  .containerLogoIndex {
-    
-    width: 300px;
-    height: 590px;
-    display: block;
-
-    img {
+  @media screen and (min-width: 768px) {
+    .containerLogoIndex {
+      width: 300px;
+      height: 590px;
       display: block;
-      width: 768px;
-      height: 560px;
+
+      img {
+        display: block;
+        width: 768px;
+        height: 560px;
+      }
+    }
+
+    .containerDataUser {
+      width: 400px;
+      height: auto;
+      margin: auto;
+      padding: 40px;
+      position: relative;
+      margin-left: auto;
     }
   }
-
-  .containerDataUser {
-    width: 400px;
-    height: auto;
-    margin: auto;
-    padding: 40px;
-    position: relative;
-    margin-left: auto;
-  }
-
-
-}
-@media screen and (min-width: 1024px) {
-  .containerLogoIndex {
-    width: 800px;
-    height: 600px;
-
-    img {
+  @media screen and (min-width: 1024px) {
+    .containerLogoIndex {
       width: 800px;
-      height: 560px;
+      height: 600px;
+
+      img {
+        width: 800px;
+        height: 560px;
+      }
     }
-  }    
 
-  .containerDataUser {
-    width: 300px;
-    height: auto;
-    display: grid;
-    grid-template-columns: auto auto auto;
-    margin: auto;
-    align-items: center;
-    justify-content: center;
-    border-radius: 5px;
+    .containerDataUser {
+      width: 300px;
+      height: auto;
+      display: grid;
+      grid-template-columns: auto auto auto;
+      margin: auto;
+      align-items: center;
+      justify-content: center;
+      border-radius: 5px;
+    }
   }
 
-  
-}
-
-@media screen and (min-width: 1440px) {
-
-  .containerDataUser {
-    width: 300px;
-    height: auto;
-    display: grid;
-    grid-template-columns: auto auto auto;
-    margin: auto;
-    align-items: center;
-    justify-content: center;
-    border-radius: 5px;
+  @media screen and (min-width: 1440px) {
+    .containerDataUser {
+      width: 300px;
+      height: auto;
+      display: grid;
+      grid-template-columns: auto auto auto;
+      margin: auto;
+      align-items: center;
+      justify-content: center;
+      border-radius: 5px;
+    }
   }
-  
-}
 
-@media screen and (min-width: 2560px) {
-
-  .containerDataUser {
-    width: 300px;
-    height: auto;
-    display: grid;
-    grid-template-columns: auto auto auto;
-    margin: auto;
-    align-items: center;
-    justify-content: center;
-    border-radius: 5px;
+  @media screen and (min-width: 2560px) {
+    .containerDataUser {
+      width: 300px;
+      height: auto;
+      display: grid;
+      grid-template-columns: auto auto auto;
+      margin: auto;
+      align-items: center;
+      justify-content: center;
+      border-radius: 5px;
+    }
   }
-  
-}  
-
 }
-

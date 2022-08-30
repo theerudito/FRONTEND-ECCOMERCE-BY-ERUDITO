@@ -19,228 +19,279 @@ $height: 100%;
 
 .modal {
   @media screen and (max-width: 320px) {
-   
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+    width: 100%;
+    min-height: 100vh;
+    display: none;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media screen and (min-width: 375px) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+    width: 100%;
+    min-height: 100vh;
+    display: none;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media screen and (min-width: 425px) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+    width: 100%;
+    min-height: 100vh;
+    display: none;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media screen and (min-width: 768px) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+    width: 100%;
+    min-height: 100vh;
+    display: none;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+  }
+  @media screen and (min-width: 1024px) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+    width: 100%;
+    min-height: 100vh;
+    display: none;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media screen and (min-width: 1440px) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+    width: 100%;
+    min-height: 100vh;
+    display: none;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media screen and (min-width: 2560px) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+    width: 100%;
+    min-height: 100vh;
+    display: none;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
-@media screen and (min-width: 375px) {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 99999;
-  width: 100%;
-  min-height: 100vh;
-  display: none;
-  margin: auto;
-  justify-content: center;
-  align-items: center;
-}
-
-@media screen and (min-width: 425px) {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 99999;
-  width: 100%;
-  min-height: 100vh;
-  display: none;
-  margin: auto;
-  justify-content: center;
-  align-items: center;
-}
-
-@media screen and (min-width: 768px) {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 99999;
-  width: 100%;
-  min-height: 100vh;
-  display: none;
-  margin: auto;
-  justify-content: center;
-  align-items: center;
-}
-@media screen and (min-width: 1024px) {
-
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 99999;
-  width: 100%;
-  min-height: 100vh;
-  display: none;
-  margin: auto;
-  justify-content: center;
-  align-items: center;
-}
-
-@media screen and (min-width: 1440px) {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 99999;
-  width: 100%;
-  min-height: 100vh;
-  display: none;
-  margin: auto;
-  justify-content: center;
-  align-items: center;
-}
-
-@media screen and (min-width: 2560px) {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 99999;
-  width: 100%;
-  min-height: 100vh;
-  display: none;
-  margin: auto;
-  justify-content: center;
-  align-items: center;
-}
-}
-
-
-.modal.is-open{
+.modal.is-open {
   display: flex;
 }
 
 .modal-container {
-    @media screen and (max-width: 320px) {
-    
-    }
-  
-    @media screen and (min-width: 375px) {
-      margin: auto;
-      min-width: 300px;
-      max-width: 310px;
-      min-height: 400px;
-      max-height: 400px;
-      overflow-y: auto;
-      padding: 1rem;
-      background-color: rgb(231, 226, 226);
-      border-radius: 5px;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-    }
-  
-    @media screen and (min-width: 425px) {
-      position: relative;
-      min-width: 400px;
-      max-width: 300px;
-      min-height: 300px;
-      max-height: 400px;
-      overflow-y: auto;
-      padding: 1rem;
-      background-color: rgb(231, 226, 226);
-      border-radius: 5px;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-    }
-  
-    @media screen and (min-width: 768px) {
-      position: relative;
-      min-width: 610px;
-      max-width: 650px;
-      min-height: 300px;
-      max-height: 400px;
-      overflow-y: auto;
-      padding: 1rem;
-      background-color: rgb(231, 226, 226);
-      border-radius: 5px;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-      
-    }
-    @media screen and (min-width: 1024px) {
+  @media screen and (max-width: 320px) {
+    margin: auto;
+    min-width: 300px;
+    max-width: 310px;
+    min-height: 400px;
+    max-height: 400px;
+    overflow-y: auto;
+    padding: 1rem;
+    background-color: rgb(231, 226, 226);
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  }
 
-      position: relative;
-      min-width: 610px;
-      max-width: 800px;
-      min-height: 300px;
-      max-height: 400px;
-      overflow-y: auto;
-      padding: 1rem;
-      background-color: rgb(231, 226, 226);
-      border-radius: 5px;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-    
-    }
-  
-    @media screen and (min-width: 1440px) {
+  @media screen and (min-width: 375px) {
+    margin: auto;
+    min-width: 300px;
+    max-width: 310px;
+    min-height: 400px;
+    max-height: 400px;
+    overflow-y: auto;
+    padding: 1rem;
+    background-color: rgb(231, 226, 226);
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  }
 
-    }
-  
-    @media screen and (min-width: 2560px) {
-      
-    }  
-  
+  @media screen and (min-width: 425px) {
+    position: relative;
+    min-width: 400px;
+    max-width: 300px;
+    min-height: 300px;
+    max-height: 400px;
+    overflow-y: auto;
+    padding: 1rem;
+    background-color: rgb(231, 226, 226);
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  }
+
+  @media screen and (min-width: 768px) {
+    position: relative;
+    min-width: 610px;
+    max-width: 650px;
+    min-height: 300px;
+    max-height: 400px;
+    overflow-y: auto;
+    padding: 1rem;
+    background-color: rgb(231, 226, 226);
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  }
+  @media screen and (min-width: 1024px) {
+    position: relative;
+    min-width: 610px;
+    max-width: 800px;
+    min-height: 300px;
+    max-height: 400px;
+    overflow-y: auto;
+    padding: 1rem;
+    background-color: rgb(231, 226, 226);
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  }
+
+  @media screen and (min-width: 1440px) {
+    position: relative;
+    min-width: 610px;
+    max-width: 800px;
+    min-height: 300px;
+    max-height: 400px;
+    overflow-y: auto;
+    padding: 1rem;
+    background-color: rgb(231, 226, 226);
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  }
+
+  @media screen and (min-width: 2560px) {
+    position: relative;
+    min-width: 610px;
+    max-width: 800px;
+    min-height: 300px;
+    max-height: 400px;
+    overflow-y: auto;
+    padding: 1rem;
+    background-color: rgb(231, 226, 226);
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  }
 }
-
 
 .modal-close {
   cursor: pointer;
   @media screen and (max-width: 320px) {
-    background-color: tomato;
-}
+    color: purple;
+    margin-top: -350px;
+    position: absolute;
+    margin-right: -250px;
+    border-radius: 50%;
+    font-size: 25px;
+    &:hover {
+      color: rgb(180, 66, 180);
+    }
+  }
 
-@media screen and (min-width: 375px) {
-  color: purple;
-  margin-top: -350px;
-  position: absolute;
-  margin-right: -250px;
-  border-radius: 50%;
-  font-size: 25px;
-  &:hover {
-    color: rgb(180, 66, 180);
+  @media screen and (min-width: 375px) {
+    color: purple;
+    margin-top: -350px;
+    position: absolute;
+    margin-right: -250px;
+    border-radius: 50%;
+    font-size: 25px;
+    &:hover {
+      color: rgb(180, 66, 180);
+    }
+  }
+
+  @media screen and (min-width: 425px) {
+    color: purple;
+    margin-top: -250px;
+    position: absolute;
+    margin-right: -345px;
+    border-radius: 50%;
+    font-size: 25px;
+    &:hover {
+      color: rgb(180, 66, 180);
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    color: orange;
+    margin-top: -250px;
+    position: absolute;
+    margin-right: -560px;
+    border-radius: 50%;
+    font-size: 25px;
+    &:hover {
+      color: orangered;
+    }
+  }
+  @media screen and (min-width: 1024px) {
+    color: purple;
+    margin-top: -345px;
+    position: absolute;
+    margin-right: -650px;
+    border-radius: 50%;
+    font-size: 25px;
+    &:hover {
+      color: rgb(180, 66, 180);
+    }
+  }
+
+  @media screen and (min-width: 1440px) {
+    color: purple;
+    margin-top: -345px;
+    position: absolute;
+    margin-right: -650px;
+    border-radius: 50%;
+    font-size: 25px;
+    &:hover {
+      color: rgb(180, 66, 180);
+    }
+  }
+
+  @media screen and (min-width: 2560px) {
+    color: purple;
+    margin-top: -345px;
+    position: absolute;
+    margin-right: -650px;
+    border-radius: 50%;
+    font-size: 25px;
+    &:hover {
+      color: rgb(180, 66, 180);
+    }
   }
 }
 
-@media screen and (min-width: 425px) {
-  color: purple;
-  margin-top: -250px;
-  position: absolute;
-  margin-right: -345px;
-  border-radius: 50%;
-  font-size: 25px;
-  &:hover {
-    color: rgb(180, 66, 180);
-  }
-}
-
-@media screen and (min-width: 768px) {
-  color: orange;
-  margin-top: -250px;
-  position: absolute;
-  margin-right: -560px;
-  border-radius: 50%;
-  font-size: 25px;
-  &:hover {
-    color: orangered;
-  }
-}
-@media screen and (min-width: 1024px) {
-  color: purple;
-  margin-top: -345px;
-  position: absolute;
-  margin-right: -650px;
-  border-radius: 50%;
-  font-size: 25px;
-  &:hover {
-    color: rgb(180, 66, 180);
-  }
-}
-
-@media screen and (min-width: 1440px) {
-  
-}
-
-@media screen and (min-width: 2560px) {
-  
-}  
-
-}
-
-
-@mixin contaninerModal ($background, $borderRadius) {
+@mixin contaninerModal($background, $borderRadius) {
   background-color: $background;
   border-radius: $borderRadius;
 }
@@ -250,53 +301,129 @@ $height: 100%;
   height: auto;
 }
 
-
-@mixin bodyModal ($background, $display, $margin, $templateColumns, $width, $height, $gap) {
-    background-color: $background;
-    display: $display;
-    margin: $margin;
-    grid-template-columns: $templateColumns;
-    width: $width;
-    height: $height;
-    gap: $gap;
+@mixin bodyModal(
+  $background,
+  $display,
+  $margin,
+  $templateColumns,
+  $width,
+  $height,
+  $gap
+) {
+  background-color: $background;
+  display: $display;
+  margin: $margin;
+  grid-template-columns: $templateColumns;
+  width: $width;
+  height: $height;
+  gap: $gap;
 }
-
 
 .bodyModal {
   border-radius: 5px;
   @media screen and (max-width: 320px) {
+    @include bodyModal(
+      white,
+      grid,
+      auto auto auto,
+      repeat(2, 1fr),
+      300px,
+      400px,
+      10px
+    );
+  }
+
+  @media screen and (min-width: 375px) {
+    @include bodyModal(
+      white,
+      grid,
+      auto auto auto,
+      repeat(2, 1fr),
+      300px,
+      400px,
+      10px
+    );
+  }
+
+  @media screen and (min-width: 425px) {
+    @include bodyModal(
+      white,
+      grid,
+      auto auto auto,
+      repeat(3, 1fr),
+      400px,
+      300px,
+      10px
+    );
+  }
+
+  @media screen and (min-width: 768px) {
+    @include bodyModal(
+      white,
+      grid,
+      auto auto auto,
+      repeat(3, 1fr),
+      400px,
+      300px,
+      10px
+    );
+  }
+  @media screen and (min-width: 1024px) {
+    @include bodyModal(
+      white,
+      grid,
+      auto auto auto,
+      repeat(3, 1fr),
+      700px,
+      400px,
+      10px
+    );
+  }
+
+  @media screen and (min-width: 1440px) {
+    @include bodyModal(
+      white,
+      grid,
+      auto auto auto,
+      repeat(3, 1fr),
+      700px,
+      400px,
+      10px
+    );
+  }
+
+  @media screen and (min-width: 2560px) {
+    @include bodyModal(
+      white,
+      grid,
+      auto auto auto,
+      repeat(3, 1fr),
+      700px,
+      400px,
+      10px
+    );
+  }
+  @include bodyModal(
+    none,
+    grid,
+    auto auto auto,
+    repeat(3, 1fr),
+    700px,
+    400px,
+    10px
+  );
 }
 
-@media screen and (min-width: 375px) {
-  @include bodyModal(white, grid, auto auto auto, repeat(2, 1fr),  300px, 400px, 10px);
-}
-
-@media screen and (min-width: 425px) {
-  @include bodyModal(white, grid, auto auto auto, repeat(3, 1fr),  400px, 300px, 10px);
-}
-
-@media screen and (min-width: 768px) {
-  
-  @include bodyModal(white, grid, auto auto auto, repeat(3, 1fr),  400px, 300px, 10px);
-}
-@media screen and (min-width: 1024px) {
-  
-  @include bodyModal(white, grid, auto auto auto, repeat(3, 1fr),  700px, 400px, 10px);
-}
-
-@media screen and (min-width: 1440px) {
-  
-}
-
-@media screen and (min-width: 2560px) {
-  
-}  
-  @include bodyModal(none, grid, auto auto auto, repeat(3, 1fr),  700px, 400px, 10px);
-
-}
-
-
-@mixin containerImagenModal ($width, $height, $background, $border, $cover,$margin, $marginT, $borderRadius) {
+@mixin containerImagenModal(
+  $width,
+  $height,
+  $background,
+  $border,
+  $cover,
+  $margin,
+  $marginT,
+  $borderRadius
+) {
   width: $width;
   height: $height;
   background-color: $background;
@@ -305,10 +432,16 @@ $height: 100%;
   margin: $margin;
   margin-top: $marginT;
   border-radius: $borderRadius;
-
 }
 
-@mixin imge ($margin, $display, $align-items, $justify-content, $width, $height) {
+@mixin imge(
+  $margin,
+  $display,
+  $align-items,
+  $justify-content,
+  $width,
+  $height
+) {
   margin: $margin;
   display: $display;
   align-items: $align-items;
@@ -319,91 +452,168 @@ $height: 100%;
 
 .img {
   @media screen and (max-width: 320px) {
-    
-}
+    @include imge(auto, flex, center, center, 100%, 100%);
+    img {
+      width: 100px;
+      height: 100px;
+    }
+  }
 
-@media screen and (min-width: 375px) {
-  
-  @include imge(auto, flex, center, center , 100%, 100%);
-  img {
-    width: 100px;
-    height: 100px;
+  @media screen and (min-width: 375px) {
+    @include imge(auto, flex, center, center, 100%, 100%);
+    img {
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  @media screen and (min-width: 425px) {
+    @include imge(auto, flex, center, center, 100%, 100%);
+    img {
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    @include imge(auto, flex, center, center, 100%, 100%);
+    img {
+      width: 100px;
+      height: 100px;
+    }
+  }
+  @media screen and (min-width: 1024px) {
+    img {
+      width: 200px;
+      height: 200px;
+    }
+  }
+
+  @media screen and (min-width: 1440px) {
+    img {
+      width: 200px;
+      height: 200px;
+    }
+  }
+
+  @media screen and (min-width: 2560px) {
+    img {
+      width: 200px;
+      height: 200px;
+    }
   }
 }
 
-@media screen and (min-width: 425px) {
-  @include imge(auto, flex, center, center , 100%, 100%);
-  img {
-    width: 100px;
-    height: 100px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  
-  @include imge(auto, flex, center, center , 100%, 100%);
-  img {
-    width: 100px;
-    height: 100px;
-  }
-}
-@media screen and (min-width: 1024px) {
-  
-  img {
-    width: 200px;
-    height: 200px;
-  }
-}
-
-@media screen and (min-width: 1440px) {
-  
-}
-
-@media screen and (min-width: 2560px) {
-  
-}  
-
-}
-
-
-.containerImagenModal  {
+.containerImagenModal {
   @media screen and (max-width: 320px) {
-    
+    @include containerImagenModal(
+      100px,
+      100px,
+      none,
+      1px solid #e3e7e8,
+      cover,
+      auto,
+      10px,
+      5px
+    );
+    margin: 15px 5px 5px 5px;
+  }
+
+  @media screen and (min-width: 375px) {
+    @include containerImagenModal(
+      100px,
+      100px,
+      none,
+      1px solid #e3e7e8,
+      cover,
+      auto,
+      10px,
+      5px
+    );
+    margin: 15px 5px 5px 5px;
+  }
+
+  @media screen and (min-width: 425px) {
+    @include containerImagenModal(
+      100px,
+      100px,
+      none,
+      1px solid #e3e7e8,
+      cover,
+      auto,
+      10px,
+      5px
+    );
+    margin: 15px 5px 5px 5px;
+  }
+
+  @media screen and (min-width: 768px) {
+    @include containerImagenModal(
+      200px,
+      200px,
+      none,
+      1px solid #e3e7e8,
+      cover,
+      auto,
+      10px,
+      5px
+    );
+    margin: 15px 5px 5px 5px;
+    margin-left: -100px;
+  }
+  @media screen and (min-width: 1024px) {
+    @include containerImagenModal(
+      250px,
+      290px,
+      none,
+      1px solid #e3e7e8,
+      cover,
+      auto,
+      10px,
+      5px
+    );
+    margin: 15px 5px 5px 5px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    @include containerImagenModal(
+      250px,
+      290px,
+      none,
+      1px solid #e3e7e8,
+      cover,
+      auto,
+      10px,
+      5px
+    );
+    margin: 15px 5px 5px 5px;
+  }
+
+  @media screen and (min-width: 2560px) {
+    @include containerImagenModal(
+      250px,
+      290px,
+      none,
+      1px solid #e3e7e8,
+      cover,
+      auto,
+      10px,
+      5px
+    );
+    margin: 15px 5px 5px 5px;
+  }
 }
 
-@media screen and (min-width: 375px) {
-  @include containerImagenModal(100px, 100px, none,  1px solid #E3E7E8, cover, auto, 10px, 5px);
-  margin: 15px 5px 5px 5px;
-}
-
-@media screen and (min-width: 425px) {
-  @include containerImagenModal(100px, 100px, none,  1px solid #E3E7E8, cover, auto, 10px, 5px);
-  margin: 15px 5px 5px 5px;
-}
-
-@media screen and (min-width: 768px) {
-  
-  @include containerImagenModal(200px, 200px, none,  1px solid #E3E7E8, cover, auto, 10px, 5px);
-  margin: 15px 5px 5px 5px;
-  margin-left: -100px;
-}
-@media screen and (min-width: 1024px) {
-  @include containerImagenModal(250px, 290px, none,  1px solid #E3E7E8, cover, auto, 10px, 5px);
-  margin: 15px 5px 5px 5px;
-}
-
-@media screen and (min-width: 1440px) {
-  
-}
-
-@media screen and (min-width: 2560px) {
-  
-}  
-
-}
-
-
-@mixin carrosusel ($width, $height, $background, $display, $margin, $templateColumns, $marginT, $marginL) {
+@mixin carrosusel(
+  $width,
+  $height,
+  $background,
+  $display,
+  $margin,
+  $templateColumns,
+  $marginT,
+  $marginL
+) {
   width: $width;
   height: $height;
   background-color: $background;
@@ -412,160 +622,198 @@ $height: 100%;
   grid-template-columns: $templateColumns;
   margin-top: $marginT;
   margin-left: $marginL;
-
 }
 
 .carrosusel {
   cursor: pointer;
-@include carrosusel(50px, 50px, white, flex, 10px, repeat(3, 1fr), 15px, 0px);
+  @include carrosusel(50px, 50px, white, flex, 10px, repeat(3, 1fr), 15px, 0px);
 
-@media screen and (max-width: 320px) {
-    
-}
+  @media screen and (max-width: 320px) {
+    margin-top: 180px;
+    img {
+      background-color: white;
+      border: 2px solid black;
+      gap: 5px;
+      width: 40px;
+      height: 40px;
+      margin: 0px 1px;
+    }
+  }
 
-@media screen and (min-width: 375px) {
-  margin-top: 180px;
-  img {
-    background-color: white;
-    border: 2px solid black;
-    gap: 5px;
-    width: 40px;
-    height: 40px;
-    margin: 0px 1px;
+  @media screen and (min-width: 375px) {
+    margin-top: 180px;
+    img {
+      background-color: white;
+      border: 2px solid black;
+      gap: 5px;
+      width: 40px;
+      height: 40px;
+      margin: 0px 1px;
+    }
+  }
+
+  @media screen and (min-width: 425px) {
+    margin-top: 120px;
+    img {
+      background-color: none;
+      border: 2px solid black;
+      gap: 5px;
+      width: 40px;
+      height: 40px;
+      margin: 0px 1px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-top: 15px;
+    img {
+      background-color: none;
+      border: 2px solid black;
+      gap: 5px;
+      width: 50px;
+      height: 50px;
+      margin: 0px 1px;
+    }
+  }
+  @media screen and (min-width: 1024px) {
+    margin-top: 15px;
+    img {
+      background-color: none;
+      border: 2px solid black;
+      gap: 5px;
+      width: 60px;
+      height: 60px;
+      margin: 0px 1px;
+    }
+  }
+
+  @media screen and (min-width: 1440px) {
+    margin-top: 15px;
+    img {
+      background-color: none;
+      border: 2px solid black;
+      gap: 5px;
+      width: 60px;
+      height: 60px;
+      margin: 0px 1px;
+    }
+  }
+
+  @media screen and (min-width: 2560px) {
+    margin-top: 15px;
+    img {
+      background-color: none;
+      border: 2px solid black;
+      gap: 5px;
+      width: 60px;
+      height: 60px;
+      margin: 0px 1px;
+    }
   }
 }
 
-@media screen and (min-width: 425px) {
-  margin-top: 120px;
-  img {
-    background-color: none;
-    border: 2px solid black;
-    gap: 5px;
-    width: 40px;
-    height: 40px;
-    margin: 0px 1px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  
-  margin-top: 15px;
-  img {
-    background-color: none;
-    border: 2px solid black;
-    gap: 5px;
-    width: 50px;
-    height: 50px;
-    margin: 0px 1px;
-  }
-}
-@media screen and (min-width: 1024px) {
-  
-  margin-top: 15px;
-  img {
-    background-color: none;
-    border: 2px solid black;
-    gap: 5px;
-    width: 60px;
-    height: 60px;
-    margin: 0px 1px;
-  }
-}
-
-@media screen and (min-width: 1440px) {
- 
-}
-
-@media screen and (min-width: 2560px) {
-  
-}  
-
-  
-}
-
-@mixin containerInfor ($width, $height, $background, $margin, $marginT) {
-  width: $width;
-  height: $height;
-  background-color: $background;
-  margin: $margin;
-  margin-top: $marginT
-}
-
-.containerInfor {
-  @media screen and (max-width: 320px) { 
-}
-
-@media screen and (min-width: 375px) {
-  
-  @include containerInfor(170px, 150px, none,  auto, 130px);
-  margin-left: -150px;
-  p {
-    color: black;
-    font-size: 12px;
-    padding-left: 5px;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-  }
-  
-}
-
-@media screen and (min-width: 425px) {
-  
-  @include containerInfor(150px, 170px, none,  auto, 30px);
-
-  p {
-    color: black;
-    font-size: 12px;
-    padding-left: 5px;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  @include containerInfor(215px, 170px, none,  auto, 30px);
-  p {
-    color: black;
-    font-size: 12px;
-    padding-left: 5px;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-  }
-}
-@media screen and (min-width: 1024px) {
-  
-  @include containerInfor(200px, 200px, none,  auto, 30px);
-  p {
-    color: black;
-    font-size: 12px;
-    padding-left: 5px;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-  }
-}
-
-@media screen and (min-width: 1440px) {
-  
-}
-
-@media screen and (min-width: 2560px) {
-  
-}  
-  
-}
-
-
-@mixin containerPrices ($width, $height, $background, $margin, $marginT) {
+@mixin containerInfor($width, $height, $background, $margin, $marginT) {
   width: $width;
   height: $height;
   background-color: $background;
   margin: $margin;
   margin-top: $marginT;
-  
+}
+
+.containerInfor {
+  @media screen and (max-width: 320px) {
+    @include containerInfor(170px, 150px, none, auto, 130px);
+    margin-left: -150px;
+    p {
+      color: black;
+      font-size: 12px;
+      padding-left: 5px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+  }
+
+  @media screen and (min-width: 375px) {
+    @include containerInfor(170px, 150px, none, auto, 130px);
+    margin-left: -150px;
+    p {
+      color: black;
+      font-size: 12px;
+      padding-left: 5px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+  }
+
+  @media screen and (min-width: 425px) {
+    @include containerInfor(150px, 170px, none, auto, 30px);
+
+    p {
+      color: black;
+      font-size: 12px;
+      padding-left: 5px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    @include containerInfor(215px, 170px, none, auto, 30px);
+    p {
+      color: black;
+      font-size: 12px;
+      padding-left: 5px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+  }
+  @media screen and (min-width: 1024px) {
+    @include containerInfor(200px, 200px, none, auto, 30px);
+    p {
+      color: black;
+      font-size: 12px;
+      padding-left: 5px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+  }
+
+  @media screen and (min-width: 1440px) {
+    @include containerInfor(200px, 200px, none, auto, 30px);
+    p {
+      color: black;
+      font-size: 12px;
+      padding-left: 5px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+  }
+
+  @media screen and (min-width: 2560px) {
+    @include containerInfor(200px, 200px, none, auto, 30px);
+    p {
+      color: black;
+      font-size: 12px;
+      padding-left: 5px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+  }
+}
+
+@mixin containerPrices($width, $height, $background, $margin, $marginT) {
+  width: $width;
+  height: $height;
+  background-color: $background;
+  margin: $margin;
+  margin-top: $marginT;
 }
 
 .containerPrices {
@@ -575,160 +823,178 @@ $height: 100%;
     text-decoration: line-through 1px solid;
     color: red;
   }
-@media screen and (max-width: 320px) {
-    
-}
-
-@media screen and (min-width: 375px) {
-  @include containerPrices(120px, 150px, none,  auto, -330px);
-  margin-right: -150px;
-  p {
-    color: black;
-    font-size: 12px;
-    padding-left: 5px;
-  }
-
-  input {
-    width: 40px;
-    display: flex;
-    margin: 5px;
-    
-  }
-  button {
-    width: 20px;
-    background-color: purple;
-    margin-left: 5px;
-    border: none;
-    color: white;
-    &:hover {
-      background-color: rgb(180, 66, 180);
+  @media screen and (max-width: 320px) {
+    @include containerPrices(120px, 150px, none, auto, -330px);
+    margin-right: -150px;
+    p {
       color: black;
+      font-size: 12px;
+      padding-left: 5px;
     }
-  }  
-  
-}
 
-@media screen and (min-width: 425px) {
- 
-  @include containerPrices(100px, 210px, none,  auto, 30px);
-  
-  p {
-    color: black;
-    font-size: 12px;
-    padding-left: 5px;
+    input {
+      width: 40px;
+      display: flex;
+      margin: 5px;
+    }
+    button {
+      width: 20px;
+      background-color: purple;
+      margin-left: 5px;
+      border: none;
+      color: white;
+      &:hover {
+        background-color: rgb(180, 66, 180);
+        color: black;
+      }
+    }
   }
 
-  input {
-    width: 40px;
-    display: flex;
-    margin: 5px;
-    
-  }
-  button {
-    width: 20px;
-    background-color: purple;
-    margin-left: 5px;
-    border: none;
-    color: white;
-    &:hover {
-      background-color: rgb(180, 66, 180);
+  @media screen and (min-width: 375px) {
+    @include containerPrices(120px, 150px, none, auto, -330px);
+    margin-right: -150px;
+    p {
       color: black;
+      font-size: 12px;
+      padding-left: 5px;
     }
-  }  
-}
 
-@media screen and (min-width: 768px) {
-  
-  @include containerPrices(140px, 210px, none,  auto, 30px);
-  p {
-    color: black;
-    font-size: 12px;
-    padding-left: 5px;
-  }
-  input {
-    width: 40px;
-    display: flex;
-    margin: 5px;
+    input {
+      width: 40px;
+      display: flex;
+      margin: 5px;
+    }
     button {
       width: 20px;
-    }  
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  
-  @include containerPrices(200px, 220px, none,  auto, 30px);
-
-  p {
-    color: black;
-    font-size: 12px;
-    padding-left: 5px;
-    display: grid;
+      background-color: purple;
+      margin-left: 5px;
+      border: none;
+      color: white;
+      &:hover {
+        background-color: rgb(180, 66, 180);
+        color: black;
+      }
+    }
   }
 
-  .botons {
-    width: 100px;
-    height: 100px;
-    display: flex;
-  }
+  @media screen and (min-width: 425px) {
+    @include containerPrices(100px, 210px, none, auto, 30px);
 
-  input {
-    width: 40px;
-    height: 20px;
-    display: flex;
-    margin: 5px;
+    p {
+      color: black;
+      font-size: 12px;
+      padding-left: 5px;
+    }
+
+    input {
+      width: 40px;
+      display: flex;
+      margin: 5px;
+    }
     button {
       width: 20px;
+      background-color: purple;
+      margin-left: 5px;
+      border: none;
+      color: white;
+      &:hover {
+        background-color: rgb(180, 66, 180);
+        color: black;
+      }
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    @include containerPrices(140px, 210px, none, auto, 30px);
+    p {
+      color: black;
+      font-size: 12px;
+      padding-left: 5px;
+    }
+    input {
+      width: 40px;
+      display: flex;
+      margin: 5px;
+      button {
+        width: 20px;
+      }
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    @include containerPrices(200px, 220px, none, auto, 30px);
+
+    p {
+      color: black;
+      font-size: 12px;
+      padding-left: 5px;
+      display: grid;
+    }
+
+    .botons {
+      width: 100px;
+      height: 100px;
+      display: flex;
+    }
+
+    input {
+      width: 40px;
       height: 20px;
-    }  
+      display: flex;
+      margin: 5px;
+      button {
+        width: 20px;
+        height: 20px;
+      }
+    }
   }
-}
 
-@media screen and (min-width: 1440px) {
-  
-  @include containerPrices(200px, 170px, none,  auto, 30px);
-  p {
-    color: black;
-    font-size: 12px;
-    padding-left: 5px;
-  }
-  input {
-    width: 50px;
-    height: 20px;
-    display: flex;
-    margin: 5px;
-    button {
-      width: 20px;
+  @media screen and (min-width: 1440px) {
+    @include containerPrices(200px, 170px, none, auto, 30px);
+    p {
+      color: black;
+      font-size: 12px;
+      padding-left: 5px;
+    }
+    input {
+      width: 50px;
       height: 20px;
-    }  
+      display: flex;
+      margin: 5px;
+      button {
+        width: 20px;
+        height: 20px;
+      }
+    }
   }
- 
-}
 
-@media screen and (min-width: 2560px) {
-  p {
-    color: black;
-    font-size: 12px;
-    padding-left: 5px;
-  }
-  input {
-    width: 50px;
-    height: 20px;
-    display: flex;
-    margin: 5px;
-    button {
-      
-      width: 20px;
+  @media screen and (min-width: 2560px) {
+    p {
+      color: black;
+      font-size: 12px;
+      padding-left: 5px;
+    }
+    input {
+      width: 50px;
       height: 20px;
-    }  
+      display: flex;
+      margin: 5px;
+      button {
+        width: 20px;
+        height: 20px;
+      }
+    }
   }
-}  
-  
 }
 
-
-
-@mixin contenedorBoton ($width, $height, $background, $margin, $marginT, $marginL) {
+@mixin contenedorBoton(
+  $width,
+  $height,
+  $background,
+  $margin,
+  $marginT,
+  $marginL
+) {
   width: $width;
   height: $height;
   background-color: $background;
@@ -738,39 +1004,59 @@ $height: 100%;
 }
 
 .contenedorBoton {
-  
-@media screen and (max-width: 320px) {
-    background-color: tomato;
-}
+  @media screen and (max-width: 320px) {
+    @include contenedorBoton(120px, 30px, none, auto, 145px, -80px);
 
-@media screen and (min-width: 375px) {
-  @include contenedorBoton(120px, 30px, none,  auto, 145px, -80px );
-
-  button {
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: none;
-    border-radius: 5px;
-    width: 100%;
-    height: 100%;
-    font-weight: bold;
-    user-select: none;
-    cursor: pointer;
-    color: white;
-    background-color: purple;
-    &:hover {
-      background-color: rgb(180, 66, 180);
-      color: black;
+    button {
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      border-radius: 5px;
+      width: 100%;
+      height: 100%;
       font-weight: bold;
+      user-select: none;
+      cursor: pointer;
+      color: white;
+      background-color: purple;
+      &:hover {
+        background-color: rgb(180, 66, 180);
+        color: black;
+        font-weight: bold;
+      }
     }
   }
-}
 
-@media screen and (min-width: 425px) {
-  @include contenedorBoton(120px, 30px, none,  auto, 25px, -30px);
-  
+  @media screen and (min-width: 375px) {
+    @include contenedorBoton(120px, 30px, none, auto, 145px, -80px);
+
+    button {
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      border-radius: 5px;
+      width: 100%;
+      height: 100%;
+      font-weight: bold;
+      user-select: none;
+      cursor: pointer;
+      color: white;
+      background-color: purple;
+      &:hover {
+        background-color: rgb(180, 66, 180);
+        color: black;
+        font-weight: bold;
+      }
+    }
+  }
+
+  @media screen and (min-width: 425px) {
+    @include contenedorBoton(120px, 30px, none, auto, 25px, -30px);
+
     button {
       background-color: purple;
       border: none;
@@ -781,66 +1067,97 @@ $height: 100%;
       user-select: none;
       cursor: pointer;
       color: white;
-  
+
       &:hover {
         background-color: rgb(180, 66, 180);
         color: black;
         font-weight: bold;
       }
     }
-}
+  }
 
-@media screen and (min-width: 768px) {
-  @include contenedorBoton(120px, 30px, none,  auto, 25px, 20px);
+  @media screen and (min-width: 768px) {
+    @include contenedorBoton(120px, 30px, none, auto, 25px, 20px);
 
-  button {
-    background-color: purple;
-    border: none;
-    border-radius: 5px;
-    width: 100%;
-    height: 100%;
-    font-weight: bold;
-    user-select: none;
-    cursor: pointer;
-    color: white;
-
-    &:hover {
-      background-color: rgb(180, 66, 180);
-      color: black;
+    button {
+      background-color: purple;
+      border: none;
+      border-radius: 5px;
+      width: 100%;
+      height: 100%;
       font-weight: bold;
+      user-select: none;
+      cursor: pointer;
+      color: white;
+
+      &:hover {
+        background-color: rgb(180, 66, 180);
+        color: black;
+        font-weight: bold;
+      }
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    @include contenedorBoton(140px, 40px, none, auto, 105px, 40px);
+    button {
+      background-color: purple;
+      border: none;
+      border-radius: 5px;
+      width: 100%;
+      height: 100%;
+      font-weight: bold;
+      user-select: none;
+      cursor: pointer;
+      color: white;
+
+      &:hover {
+        background-color: rgb(180, 66, 180);
+        color: black;
+        font-weight: bold;
+      }
+    }
+  }
+
+  @media screen and (min-width: 1440px) {
+    @include contenedorBoton(140px, 40px, none, auto, 105px, 40px);
+    button {
+      background-color: purple;
+      border: none;
+      border-radius: 5px;
+      width: 100%;
+      height: 100%;
+      font-weight: bold;
+      user-select: none;
+      cursor: pointer;
+      color: white;
+
+      &:hover {
+        background-color: rgb(180, 66, 180);
+        color: black;
+        font-weight: bold;
+      }
+    }
+  }
+
+  @media screen and (min-width: 2560px) {
+    @include contenedorBoton(140px, 40px, none, auto, 105px, 40px);
+    button {
+      background-color: purple;
+      border: none;
+      border-radius: 5px;
+      width: 100%;
+      height: 100%;
+      font-weight: bold;
+      user-select: none;
+      cursor: pointer;
+      color: white;
+
+      &:hover {
+        background-color: rgb(180, 66, 180);
+        color: black;
+        font-weight: bold;
+      }
     }
   }
 }
-
-
-@media screen and (min-width: 1024px) {
-  @include contenedorBoton(140px, 40px, none,  auto, 105px, 40px );
-  button {
-    background-color: purple;
-    border: none;
-    border-radius: 5px;
-    width: 100%;
-    height: 100%;
-    font-weight: bold;
-    user-select: none;
-    cursor: pointer;
-    color: white;
-
-    &:hover {
-      background-color: rgb(180, 66, 180);
-      color: black;
-      font-weight: bold;
-    }
-  }
-}
-
-@media screen and (min-width: 1440px) {
-}
-
-@media screen and (min-width: 2560px) {
-}  
-}
-
-
-
-
